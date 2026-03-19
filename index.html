@@ -1,1010 +1,506 @@
 <!DOCTYPE html>
 <html lang="bn">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <head>
-	<title>
-		HTML Mastery (এইচটিএমএল মাস্টারি)
-	</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML শিখি - বাংলায় HTML শেখার সম্পূর্ণ কোর্স</title>
+  <meta name="description" content="বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও প্র্যাকটিস সহ।">
+  <meta name="keywords" content="HTML, বাংলা, ওয়েব ডেভেলপমেন্ট, টিউটোরিয়াল, HTML5, শিখি">
+  <meta name="author" content="HTML Shikhi Team">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-
 <body>
-	<h1 id="top">HTML এ মাস্টারি করতে গেলে এই টপিকগুলো কভার করতে হবে।</h1>
-	<h2><a href="#fundamentals">HTML5 ফান্ডামেন্টালস</a></h2>
-	<ul>
-		<li>HTML কি?</li>
-		<li>HTML ভার্সন (HTML4 vs HTML5)</li>
-		<li>ব্যাসিক স্ট্রাকচার (doctype, html, head, body)</li>
-		<li>ইলিম্যান্ট এবং ট্যাগ</li>
-		<li>অ্যাট্রিবিউট্স</li>
-		<li>নেস্টিং এবং হায়ারারকি</li>
-		<li>কমেন্টস</li>
-	</ul>
-	<h2><a href="#document-metadata">ডকুমেন্ট মেটাডাটা</a></h2>
-	<ul>
-		<li>হেড ইলিমেন্টস (head)</li>
-		<li>টাইটেল (title)</li>
-		<li>মেটা ট্যাগ (charset, viewport, description, keywords, author)</li>
-		<li>বেস (base)</li>
-		<li>লিংক (favicon, stylesheets)</li>
-		<li>স্টাইল ট্যাগ (style)</li>
-		<li>স্ক্রিপ্ট ট্যাগ বেসিক (script)</li>
-	</ul>
-	<h2><a href="#text-content-element">টেক্সড কন্টেন্ট ইলিমেন্টস</a></h2>
-	<ul>
-		<li>হেডিংস (h1-h6)</li>
-		<li>প্যারাগ্রাফ (p)</li>
-		<li>লাইন ব্রেক (br)</li>
-		<li>হরাইজোন্টাল রুল (hr)</li>
-		<li>প্রিফরমেটেড টেক্সড (pre)</li>
-		<li>ব্লককুয়োড (blockquote)</li>
-		<li>ইনলাইন কোটেশন (q)</li>
-		<li>অ্যাব্রিভিয়েশন্স (abbr)</li>
-		<li>অ্যাড্রেস (address)</li>
-		<li>ছাইট (cite)</li>
-		<li>কোড (code)</li>
-		<li>মার্ক (mark)</li>
-		<li>স্মল (small)</li>
-		<li>স্ট্রং (strong)</li>
-		<li>ইম (em)</li>
-		<li>সাবস্ক্রিপ্ট (sub)</li>
-		<li>সুপারস্ক্রিপ্ট (sup)</li>
-		<li>টাইম (time)</li>
-		<li>ডেট (date)</li>
-	</ul>
-	<h2><a href="#grouping-content">গ্রুপিং কন্টেন্ট</a></h2>
-	<ul>
-		<li>ডিভ(div)</li>
-		<li>স্পেন (span)</li>
-		<li>সেকশন (section)</li>
-		<li>আর্টিকেল (article)</li>
-		<li>নেভ (nav)</li>
-		<li>এসাইড (aside)</li>
-		<li>হেডার (header)</li>
-		<li>ফুটার (footer)</li>
-		<li>মেইন (main)</li>
-	</ul>
-	<h2><a href="#list">লিস্ট</a></h2>
-	<ul>
-		<li>অর্ডার লিস্ট (ol)</li>
-		<li>আনওর্ডার লিস্ট (ul)</li>
-		<li>লিস্ট আইটেম (li)</li>
-		<li>ডিস্ক্রিপশন লিস্ট (dl, dt, dd)</li>
-	</ul>
-	<h2><a href="#link-navigation">লিংক এন্ড নেভিগেশন</a></h2>
-	<ul>
-		<li>অ্যাঙ্কর ট্যাগ (a)</li>
-		<li>ইন্টারনাল লিংক</li>
-		<li>এক্সার্টারনাল লিংক</li>
-		<li>ইমেইল লিংক (mailto)</li>
-		<li>টেলিফোন লিংক (tel)</li>
-		<li>টার্গেট লিংক</li>
-		<li>ডাউনলোড অ্যাট্রিবিউট</li>
-	</ul>
-	<h2><a href="#image-media">ইমেইজ এন্ড মিডিয়া</a></h2>
-	<ul>
-		<li>ইমেইজ ট্যাগ (img)</li>
-		<li>ইমেইজ অ্যাট্রিবিউট (src, alt, width, height)</li>
-		<li>রিসপনসিভ ইমেইজ (srcset, sizes)</li>
-		<li>ফিগার এন্ড ফিগক্যাপশন</li>
-		<li>পিকচার ইলিম্যান্ট</li>
-		<li>অডিও ইলিম্যান্ট</li>
-		<li>ভিডিও ইলিম্যান্ট</li>
-		<li>সোর্স এন্ড ট্র্যাক</li>
-		<li>আইফ্রেম</li>
-	</ul>
-	<h2><a href="#table">টেবল</a></h2>
-	<ul>
-		<li>টেবল (table)</li>
-		<li>টিআর, টিডি, টিএইচ (tr, td, th)</li>
-		<li>টিহেড, টিবডি, টিফুট (thead, tbody, tfoot)</li>
-		<li>ক্যাপশন (caption)</li>
-		<li>রোস্প্যান এন্ড কোলস্প্যান</li>
-		<li>স্কোপ অ্যাট্রিবিউট</li>
-	</ul>
-	<h2><a href="#form">ফর্মস</a></h2>
-	<ul>
-		<li>ফর্ম ইলিমেন্টস</li>
-		<li>ইনপুট টাইপস (text, password, email, number, tel, url, search, date, time, datetime-local, month, week,
-			color, range, file, checkbox, radio, submit, reset, button, hidden)</li>
-		<li>লেবেল (label)</li>
-		<li>টেক্সডএরিয়া (textarea)</li>
-		<li>সিলেক্ট, অপশন, অপটগ্রুপ (select, option, optgroup)</li>
-		<li>ফিল্ডসেট, লিজ্যান্ড (fieldset, legend)</li>
-		<li>ডাটালিস্ট (datalist)</li>
-		<li>আউটপুট (output)</li>
-		<li>প্রগ্রেস (progress)</li>
-		<li>মিটার (meter)</li>
-		<li>ফর্ম অ্যাট্রিবিউট (action, method, enctype, autocomplete, novalidate)</li>
-		<li>ইনপুট অ্যাট্রিবিউট (required, placeholder, pattern, min, max, step, readonly, disabled)</li>
-	</ul>
-	<h2><a href="#semantic">সিম্যান্টিক HTML5</a></h2>
-	<ul>
-		<li>সিমেন্টিক ইলিম্যান্টস এর গুরুত্ব</li>
-		<li>সেকশন vs আর্টিক্যাল</li>
-		<li>হেডার এবং ফুটারের ব্যবহার</li>
-		<li>নেভ ফর নেভিগেশন</li>
-		<li>এসাইড ফর সাইড কন্টেন্ট</li>
-		<li>মেইন ফর মেইন কন্টেন্ট</li>
-		<li>ফিগার এবং ফিগক্যাপশন</li>
-	</ul>
-	<h2><a href="#multimedia">মালটিমিডিয়া এবং এমবেডেড</a></h2>
-	<ul>
-		<li>অডিও ফরম্যাট</li>
-		<li>ভিডিও ফরম্যাট</li>
-		<li>কন্ট্রোল, অটোপ্লে, লুপ, মিউটেড</li>
-		<li>আইফ্রেম এমবেডিং (YouTube, maps)</li>
-		<li>এমবেড এবং অবজেক্ট</li>
-	</ul>
-	<h2><a href="#graphics">গ্রাফিক্স</a></h2>
-	<ul>
-		<li>ক্যানভাস ইলিমেন্টস</li>
-		<li>বেসিক ক্যানভাস ড্রয়িং</li>
-		<li>SVG বেসিকস</li>
-		<li>ইনলাইন SVG</li>
-	</ul>
-	<h2><a href="#api">APIs in HTML5</a></h2>
-	<ul>
-		<li>জিওলোকেশন API</li>
-		<li>ড্রাগ এবং ড্রপ API</li>
-		<li>ওয়েব স্টোরেজ API (localStorage, sessionStorage)</li>
-		<li>ওয়েব ওয়ার্কার্স</li>
-		<li>Server-Sent ইভেন্টস</li>
-		<li>WebSockets বেসিকস</li>
-	</ul>
-	<h2><a href="#form-validation">ফর্ম ভেলিডেশন</a></h2>
-	<ul>
-		<li>বিল্ট-ইন ভেলিডেশন</li>
-		<li>কন্সট্রেইন্ট ভেলিডেশন API</li>
-		<li>কাস্টম ভেলিডেশন</li>
-	</ul>
-	<h2><a href="#accessibility">অ্যাক্সেসসিবিলিটি (a11y)</a></h2>
-	<ul>
-		<li>ARIA রোলস</li>
-		<li>aria অ্যাট্রিবিউট</li>
-		<li>alt text বেস্ট প্র্যাকটিস</li>
-		<li>সিমেন্টিক স্ট্রাকচার ফর অ্যাক্সেসসিবিলিটি</li>
-		<li>কি-বোর্ড নেভিগেশন</li>
-	</ul>
-	<h2><a href="#seo">SEO বেসিকস</a></h2>
-	<ul>
-		<li>সিমেন্টিক HTML ফর SEO</li>
-		<li>meta tags ফর SEO</li>
-		<li>heading হায়ারারকি</li>
-		<li>alt অ্যাট্রিবিউট</li>
-	</ul>
-	<h2><a href="#performance">পারফর্ম্যান্স অবটিমাইজেশন</a></h2>
-	<ul>
-		<li>লেজি লোডিং ইমেইজ</li>
-		<li>মিনিমাইজিং DOM size</li>
-		<li>async and defer scripts</li>
-		<li>প্রি-লোডিং এবং প্রি-ফেসিং</li>
-	</ul>
-	<h2><a href="#html5">HTML5 বেস্ট প্র্যাকটিস</a></h2>
-	<ul>
-		<li>ক্লিন কোড স্ট্রাকচার</li>
-		<li>ইনডেন্টেশন এবং ফরম্যাটিং</li>
-		<li>অ্যাভয়ডিং ডেপ্রিক্যাটেড ট্যাগ</li>
-		<li>সেপারেশন অব কন্সার্নস (HTML, CSS, JS)</li>
-	</ul>
-	<h2><a href="#deprecated">ডেপ্রিক্যাটেড/অবসোলিট ইলিম্যান্ট</a></h2>
-	<ul>
-		<li>ফন্ট</li>
-		<li>সেন্টার</li>
-		<li>বিগ</li>
-		<li>স্টাইক</li>
-		<li>ফ্রেমসেট/ফ্রেম</li>
-		<li>অ্যাপলেট</li>
-	</ul>
-	<h2><a href="#global">গ্লোবাল অ্যাট্রিবিউট</a></h2>
-	<ul>
-		<li>আইডি</li>
-		<li>ক্লাস</li>
-		<li>স্টাইল</li>
-		<li>টাইটেল</li>
-		<li>ল্যাঙ্গ</li>
-		<li>ডিআইআর (dir)</li>
-		<li>হিডেন</li>
-		<li>ট্যাবইনডেক্স</li>
-		<li>কন্টেন্টইডিটেবল (contenteditable)</li>
-		<li>ড্রাগেবল</li>
-		<li>স্পেলচ্যাক</li>
-	</ul>
-	<h2><a href="#custom">কাস্টম ডাটা অ্যাট্রিবিউট</a></h2>
-	<ul>
-		<li>ডাটা-অ্যাট্রিবিউট</li>
-		<li>ডাটাসেট API</li>
-	</ul>
-	<h2><a href="#microdata">মাইক্রোডাটা এবং স্ট্র্যাকচার ডাটা</a></h2>
-	<ul>
-		<li>schema.org বেসিক</li>
-		<li>আইটেমপ্রোপ, আইটেমস্কোপ, আইটেমটাইপ (itemprop, itemscope, itemtype)</li>
-	</ul>
-	<h2><a href="#template">HTML টেমপ্লেট</a></h2>
-	<ul>
-		<li>টেমপ্লেট ট্যাগ</li>
-		<li>স্লট বেসিক (web components intro)</li>
-	</ul>
-	<h2><a href="#web">ওয়েব কম্পনেন্ট (Intro)</a></h2>
-	<ul>
-		<li>কাস্টম ইলিম্যান্ট</li>
-		<li>শেডো DOM বেসিক</li>
-		<li>HTML টেমপ্লেট এর ব্যবহার</li>
-	</ul>
-	<h2><a href="#css-javascript">CSS এবং JavaScript এর ব্যবহার</a></h2>
-	<ul>
-		<li>CSS লিংকিং</li>
-		<li>inline vs external styles</li>
-		<li>script প্লেসম্যান্ট</li>
-		<li>DOM ইন্টারেকশন বেসিক</li>
-	</ul>
-	<h2><a href="#responsive">রিসপোনসিভ ডিজাইন সাপোর্ট</a></h2>
-	<ul>
-		<li>viewport মেটা ট্যাগ</li>
-		<li>picture এবং srcset usage</li>
-	</ul>
-	<h2><a href="#internationalization">ইনটারন্যাশনালাইজেশন</a></h2>
-	<ul>
-		<li>lang অ্যাট্রিবিউট</li>
-		<li>dir অ্যাট্রিবিউট (ltr, rtl)</li>
-	</ul>
-	<h2><a href="#security">Security বেসিক</a></h2>
-	<ul>
-		<li>XSS অ্যাওয়ারনেস</li>
-		<li>নিরাপদ অ্যাট্রিবিউট এর ব্যবহার</li>
-	</ul>
-
-	<section id="fundamentals">
-		<h2>HTML5 ফান্ডামেন্টালস</h2>
-		<p>HTML হলো ওয়েবপেজ তৈরী করার স্ট্যান্ডার্ড ল্যাংগুয়েজ। HTML5 is the latest version, যা modern features এবং
-			multimedia এর জন্য better support দেয়। প্রতিটি HTML document একটি basic structure follow করে: doctype, html,
-			head, এবং body। Web pages তৈরি হয় elements (tags) ব্যবহার করে, যা content define করে। Attributes elements-এর
-			অতিরিক্ত information প্রদান করে। Elements একটির ভিতরে আরেকটি nested হয়ে structure তৈরি করতে পারে। Comments
-			কোডের ভিতরে note যোগ করতে ব্যবহার করা হয়, যা browser-এ প্রদর্শিত হয় না।</p>
-		<h3>Example:</h3>
-		<pre>
-				<code>
-					&lt;!DOCTYPE html&gt;
-					&lt;html lang="en"&gt;
-					&lt;head&gt;
-					&lt;meta charset="UTF-8"&gt;
-					&lt;title&gt;My First Page&lt;/title&gt;
-					&lt;/head&gt;
-					&lt;body&gt;
-					&lt;!-- This is a heading --&gt;
-					&lt;h1 class="title"&gt;Hello World&lt;/h1&gt;
-					&lt;!-- This is a paragraph --&gt;
-					&lt;p&gt;This is my first HTML5 page.&lt;/p&gt;
-					&lt;/body&gt;
-					&lt;/html&gt;
-				</code>
-			</pre>
-	</section>
-	<section id="document-metadata">
-		<h2>ডকুমেন্ট মেটাডাটা</h2>
-		<p>head element ডকুমেন্টের মেটাডাটা ধারণ করে, যা পেজ সম্পর্কে অতিরিক্ত তথ্য ব্রাউজারকে জানায়। title ব্রাউজার
-			ট্যাব-এ প্রদর্শিত পেজের নাম নির্ধারণ করে। meta tags ক্যারেক্টার এনকোডিং, রেসপনসিভনেস এবং এসইও সম্পর্কিত
-			গুরুত্বপূর্ণ তথ্য প্রদান করে। base tag সব রিলেটিভ লিংকের জন্য একটি বেস ইউআরএল নির্ধারণ করে। link tag
-			এক্সটার্নাল রিসোর্স যেমন স্টাইলশিট এবং ফ্যাভিকন যুক্ত করতে ব্যবহার করা হয়। style tag ইন্টারনাল সিএসএস লেখার
-			জন্য ব্যবহার করা হয়। script tag পেজে জাভাস্ক্রিপ্ট যোগ করার জন্য ব্যবহার করা হয়।</p>
-		<h3>Example:</h3>
-		<pre>
-					<code>
-					&lt;!DOCTYPE html&gt;
-					&lt;html lang="en"&gt;
-					&lt;head&gt;
-					&lt;!-- Page title --&gt;
-					&lt;title&gt;Document Metadata Example&lt;/title&gt;
-					&lt;!-- Meta tags --&gt;
-					&lt;meta charset="UTF-8"&gt;
-					&lt;meta name="viewport" content="width=device-width, initial-scan=1.0"&gt;
-					&lt;meta name="description" content="Example of HTML5 metadata"&gt;
-					&lt;meta name="keywords" content=HTML5, metadata, tutorial"&gt;
-					&lt;meta name="author" content="Saide Hossain"&gt;
-					&lt;!-- Base URL --&gt;
-					&lt;base href="https://example.com/"&gt;
-					&lt;!-- External resources --&gt;
-					&lt;link rel="icon" href="favicon.ico"&gt;
-					&lt;link rel="stylesheet" href="styles.css"&gt;
-					&lt!-- Internal CSS --&gt;
-					&lt;style&gt;
-						body {
-							font-family: Arial, sans-serif;
-						}
-					&lt;/style&gt;
-					&lt;script&gt;
-						console.log("Page loaded");
-					&lt;/script&gt;
-					&lt/head&gt;
-					&lt;body&gt;
-						&lt;h1&gt;Metadata Example Page&lt;/h1&gt;
-					&lt;/body&gt;
-					&lt;/html&gt;
-					</code>
-					</pre>
-	</section>
-	<section id="text-content-element">
-		<h2>টেক্সড কন্টেন্ট ইলিমেন্টস</h2>
-		<p>টেক্সট কন্টেন্ট ইলিমেন্টস ওয়েবপেজে লেখা (text) সুন্দরভাবে দেখানো এবং সাজানোর জন্য ব্যবহার করা হয়। হেডিংস
-			(h1-h6) বিভিন্ন স্তরের শিরোনাম তৈরি করতে ব্যবহার করা হয়। প্যারাগ্রাফ (p) সাধারণ লেখা প্রদর্শনের জন্য ব্যবহৃত
-			হয়। লাইন ব্রেক (br) একই লাইনের মধ্যে নতুন লাইন তৈরি করে। হরাইজোন্টাল রুল (hr) একটি দাগ (line) তৈরি করে, যা
-			কন্টেন্ট আলাদা করতে সাহায্য করে। প্রিফরমেটেড টেক্সট (pre) লেখার ফরম্যাট (space, line break) ঠিক রাখে।
-			ব্লককুয়োট (blockquote) বড় উক্তি বা quotation দেখানোর জন্য ব্যবহৃত হয়। ইনলাইন কোটেশন (q) ছোট উক্তি দেখানোর
-			জন্য ব্যবহৃত হয়। অ্যাব্রিভিয়েশন (abbr) সংক্ষিপ্ত শব্দের পূর্ণরূপ বোঝাতে ব্যবহার করা হয়। অ্যাড্রেস (address)
-			যোগাযোগ সংক্রান্ত তথ্য দেখাতে ব্যবহার করা হয়। সাইট (cite) কোনো বই, আর্টিকেল বা কাজের নাম বোঝাতে ব্যবহার করা
-			হয়। কোড (code) প্রোগ্রামিং কোড দেখানোর জন্য ব্যবহৃত হয়। মার্ক (mark) কোনো লেখা হাইলাইট করতে ব্যবহার করা হয়।
-			স্মল (small) ছোট লেখা দেখানোর জন্য ব্যবহৃত হয়। স্ট্রং (strong) গুরুত্বপূর্ণ লেখা বোঝাতে ব্যবহার করা হয়। ইম
-			(em) কোনো লেখায় জোর বা গুরুত্ব দিতে ব্যবহার করা হয়। সাবস্ক্রিপ্ট (sub) নিচের দিকে ছোট লেখা দেখায় (যেমন:
-			H₂O)। সুপারস্ক্রিপ্ট (sup) উপরের দিকে ছোট লেখা দেখায় (যেমন: x²)। টাইম (time) তারিখ বা সময় বোঝাতে ব্যবহার করা
-			হয়। ডেট (date) তারিখ সম্পর্কিত তথ্য দেখাতে ব্যবহৃত হয়।
-		</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<title>Text Content Example</title>
-			</head>
-
-			<body>
-				<h1>এটি একটি হেডিং</h1>
-				<p>এটি একটি প্যারাগ্রাফ।<br>এখানে লাইন ব্রেক হয়েছে।</p>
-				<hr>
-				<pre>
-				এই লেখা যেমন লিখা হয়েছে
-					ঠিক তেমনই দেখাবে।
-					</pre>
-				<blockquote>
-					এটি একটি বড় কোটেশন।
-				</blockquote>
-				<p>সে বলল <q>এটি ছোট কোটেশন</q></p>
-				<p><abbr title="HyperText Markup Language">HTML</abbr> একটি ওয়েব ল্যাংগুয়েজ</p>
-				<address>
-					Email: example@mail.com
-				</address>
-				<p><cite>Book Name</cite> এখানে ব্যবহার করা হয়েছে</p>
-				<p>কোড: <code>console.log("Hello")</code></p>
-				<p>এটি <mark>হাইলাইট</mark> করা টেক্সট</p>
-				<p><small>ছোট লেখা</small></p>
-				<p><strong>গুরুত্বপূর্ণ</strong> এবং <em>জোর দেওয়া</em> লেখা</p>
-				<p>H<sub>2</sub>O এবং x<sup>2</sup></p>
-				<p>সময়: <time datetime="2026-03-18">১৮ মার্চ ২০২৬</time></p>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="grouping-content">
-		<h2>গ্রুপিং কন্টেন্ট</h2>
-		<p>
-			এই ইলিমেন্টগুলো ওয়েবপেজের স্ট্রাকচার এবং কন্টেন্ট গ্রুপিং করার জন্য ব্যবহার করা হয়। ডিভ (div) একটি সাধারণ
-			কন্টেইনার, যা বিভিন্ন কন্টেন্ট একসাথে গ্রুপ করতে ব্যবহার করা হয়। স্পেন (span) ইনলাইন কন্টেন্ট গ্রুপ করতে
-			ব্যবহার করা হয়। সেকশন (section) পেজের একটি নির্দিষ্ট অংশ বা সেকশন বোঝাতে ব্যবহার করা হয়। আর্টিকেল (article)
-			স্বতন্ত্র বা আলাদা কন্টেন্ট (যেমন: ব্লগ পোস্ট, নিউজ) বোঝাতে ব্যবহৃত হয়। নেভ (nav) নেভিগেশন লিংকগুলো রাখার
-			জন্য ব্যবহার করা হয়। এসাইড (aside) মূল কন্টেন্টের পাশের অতিরিক্ত তথ্য (sidebar) দেখাতে ব্যবহৃত হয়। হেডার
-			(header) পেজ বা সেকশনের উপরের অংশ বোঝায় (যেমন: title, logo)। ফুটার (footer) পেজ বা সেকশনের নিচের অংশ বোঝায়
-			(যেমন: copyright, contact info)। মেইন (main) পেজের মূল (main) কন্টেন্ট ধারণ করে।
-		</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<title>Grouping Elements</title>
-			</head>
-
-			<body>
-				<header>
-					<h1>আমার ওয়েবসাইট</h1>
-				</header>
-				<nav>
-					<a href="#">Home</a>
-					<a href="#">About</a>
-				</nav>
-				<main>
-					<section>
-						<h2>সেকশন ১</h2>
-						<p>এটি একটি সেকশন</p>
-					</section>
-					<article>
-						<h2>আর্টিকেল</h2>
-						<p>এটি একটি আর্টিকেল কন্টেন্ট</p>
-					</article>
-					<aside>
-						<p>এটি সাইডবার কন্টেন্ট</p>
-					</aside>
-					<div>
-						<p>এটি div দিয়ে গ্রুপ করা হয়েছে</p>
-					</div>
-					<p>এটি একটি <span style="color:red;">inline span</span> উদাহরণ</p>
-				</main>
-				<footer>
-					<p>© 2026 আমার ওয়েবসাইট</p>
-				</footer>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="list">
-		<h2>লিস্ট</h2>
-		<p>লিস্ট ইলিমেন্টগুলো ওয়েবপেজে তথ্যকে তালিকার আকারে দেখানোর জন্য ব্যবহার করা হয়। অর্ডার লিস্ট (ol) ব্যবহার করা
-			হয় যেখানে আইটেমগুলোকে সংখ্যার ক্রমে দেখাতে হয়। আনওর্ডার লিস্ট (ul) ব্যবহার করা হয় যেখানে আইটেমগুলো বুলেট বা
-			ডট আকারে প্রদর্শিত হয়। লিস্ট আইটেম (li) প্রতিটি তালিকার একটি আইটেমকে নির্দেশ করে। ডিস্ক্রিপশন লিস্ট (dl)
-			শর্ত বা টার্ম এবং তার ব্যাখ্যা প্রদর্শনের জন্য ব্যবহৃত হয়, যেখানে dt শর্ত/টার্ম এবং dd তার বর্ণনা বা
-			ব্যাখ্যা বোঝায়।</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>লিস্ট উদাহরণ</title>
-			</head>
-
-			<body>
-				<h1>লিস্ট ইলিমেন্ট উদাহরণ</h1>
-
-				<h2>অর্ডার লিস্ট (Ordered List)</h2>
-				<ol>
-					<li>আপেল</li>
-					<li>কলা</li>
-					<li>আম</li>
-				</ol>
-
-				<h2>আনওর্ডার লিস্ট (Unordered List)</h2>
-				<ul>
-					<li>লেবু</li>
-					<li>কমলা</li>
-					<li>আনারস</li>
-				</ul>
-
-				<h2>ডিস্ক্রিপশন লিস্ট (Description List)</h2>
-				<dl>
-					<dt>HTML</dt>
-					<dd>ওয়েবপেজ তৈরি করার মার্কআপ ল্যাঙ্গুয়েজ।</dd>
-					<dt>CSS</dt>
-					<dd>ওয়েবপেজের স্টাইল এবং লেআউটের জন্য ব্যবহৃত হয়।</dd>
-					<dt>JavaScript</dt>
-					<dd>ওয়েবপেজকে ইন্টারঅ্যাকটিভ করার জন্য ব্যবহৃত হয়।</dd>
-				</dl>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="link-navigation">
-		<p>লিংক এবং নেভিগেশন ওয়েবপেজে ব্যবহারকারীদের জন্য পেজ এবং কন্টেন্টের মধ্যে ন্যাভিগেশন সহজ করে। অ্যাঙ্কর ট্যাগ
-			(a) হলো লিংক তৈরির প্রধান ইলিমেন্ট। ইন্টারনাল লিংক পেজের ভেতরের অন্য কোনো অংশে নেভিগেট করে, আর এক্সটারনাল
-			লিংক অন্য ওয়েবসাইটে নিয়ে যায়। ইমেইল লিংক (mailto) সরাসরি ইমেইল প্রোগ্রামে খোলে, এবং টেলিফোন লিংক (tel) ফোন
-			কল করার জন্য ব্যবহার হয়। টার্গেট অ্যাট্রিবিউট লিংক কোন উইন্ডো বা ট্যাবে খোলা হবে তা নির্ধারণ করে। ডাউনলোড
-			অ্যাট্রিবিউট ব্যবহার করে লিংক করা ফাইল ডাউনলোড করা যায়।</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>লিংক এবং নেভিগেশন উদাহরণ</title>
-			</head>
-
-			<body>
-				<h1>লিংক এবং নেভিগেশন উদাহরণ</h1>
-				<h2>ইন্টারনাল লিংক</h2>
-				<p><a href="#section2">সেকশন ২-এ যান</a></p>
-				<h2>এক্সটারনাল লিংক</h2>
-				<p><a href="https://www.google.com" target="_blank">Google-এ যান</a></p>
-				<h2>ইমেইল লিংক</h2>
-				<p><a href="mailto:example@example.com">আমাকে ইমেইল পাঠান</a></p>
-				<h2>টেলিফোন লিংক</h2>
-				<p><a href="tel:+880123456789">আমাকে কল করুন</a></p>
-				<h2>ডাউনলোড লিংক</h2>
-				<p><a href="sample.pdf" download>Sample PDF ডাউনলোড করুন</a></p>
-				<h2 id="section2">সেকশন ২</h2>
-				<p>এটি সেকশন ২। আপনি উপরের ইন্টারনাল লিংক থেকে এখানে এসেছেন।</p>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="image-media">
-		<h2>ইমেইজ এন্ড মিডিয়া</h2>
-		<p>ইমেজ এবং মিডিয়া ইলিমেন্ট ওয়েবপেজকে ভিজ্যুয়ালি সমৃদ্ধ করে। img ট্যাগ দিয়ে ইমেজ দেখানো হয় এবং এর জন্য src,
-			alt, width, height মতো অ্যাট্রিবিউট ব্যবহার করা হয়। রিসপনসিভ ইমেজের জন্য srcset ও sizes ব্যবহার করা হয়।
-			figure ও figcaption ইমেজের সাথে ক্যাপশন দেখাতে ব্যবহৃত হয়। picture ইলিমেন্ট দিয়ে বিভিন্ন স্ক্রিন সাইজের জন্য
-			ভিন্ন ইমেজ লোড করা যায়। অডিও (audio) এবং ভিডিও (video) ইলিমেন্ট ওয়েবপেজে মিডিয়া প্লে করতে সাহায্য করে,
-			যেখানে source দিয়ে ফাইল সংযুক্ত করা হয় এবং track সাবটাইটেল বা ক্যাপশন দেখাতে ব্যবহৃত হয়। আইফ্রেম (iframe)
-			দিয়ে অন্য ওয়েবপেজ বা মিডিয়া এম্বেড করা যায়।</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>ইমেজ এবং মিডিয়া উদাহরণ</title>
-			</head>
-
-			<body>
-				<h1>ইমেজ এবং মিডিয়া উদাহরণ</h1>
-				<h2>ইমেজ ট্যাগ এবং অ্যাট্রিবিউট</h2>
-				<img src="example.jpg" alt="উদাহরণ ইমেজ" width="300" height="200">
-				<h2>রিসপনসিভ ইমেজ</h2>
-				<picture>
-					<source srcset="example-large.jpg" media="(min-width: 800px)">
-					<source srcset="example-small.jpg" media="(max-width: 799px)">
-					<img src="example.jpg" alt="রিসপনসিভ ইমেজ">
-				</picture>
-
-				<h2>ফিগার এবং ফিগক্যাপশন</h2>
-				<figure>
-					<img src="example.jpg" alt="ফিগার উদাহরণ" width="300">
-					<figcaption>এটি ফিগার এবং ফিগক্যাপশন উদাহরণ।</figcaption>
-				</figure>
-
-				<h2>অডিও উদাহরণ</h2>
-				<audio controls>
-					<source src="example.mp3" type="audio/mpeg">
-					আপনার ব্রাউজার অডিও সাপোর্ট করে না।
-				</audio>
-
-				<h2>ভিডিও উদাহরণ</h2>
-				<video width="320" height="240" controls>
-					<source src="example.mp4" type="video/mp4">
-					<track src="example.vtt" kind="subtitles" srclang="bn" label="Bangla">
-					আপনার ব্রাউজার ভিডিও সাপোর্ট করে না।
-				</video>
-
-				<h2>আইফ্রেম উদাহরণ</h2>
-				<iframe src="https://www.example.com" width="400" height="300" title="Example Iframe"></iframe>
-
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="table">
-		<h2>টেবল</h2>
-		<p>টেবল ইলিমেন্ট ওয়েবপেজে ডাটা সুন্দরভাবে গ্রিড আকারে প্রদর্শনের জন্য ব্যবহৃত হয়। table হলো মূল টেবল কন্টেইনার।
-			প্রতিটি রো তৈরি করতে tr ব্যবহার হয়, কলাম বা সেল দেখানোর জন্য td (ডাটা সেল) এবং th (হেডার সেল) ব্যবহার হয়।
-			টেবলকে আরও সঠিকভাবে গঠন করতে thead, tbody, এবং tfoot ব্যবহার করা হয়। টেবলের জন্য শিরোনাম বা বিবরণ দিতে
-			caption ব্যবহার করা হয়। সেল মেশানোর জন্য rowspan (উল্লম্ব) এবং colspan (অনুভূমিক) ব্যবহার করা হয়। টেবলটির
-			ব্যাকগ্রাউন্ড, লেবেল বা স্কোপ সংজ্ঞায় scope অ্যাট্রিবিউট ব্যবহার করা হয়।</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>টেবল উদাহরণ</title>
-			</head>
-
-			<body>
-				<h1>টেবল উদাহরণ</h1>
-				<table>
-					<caption>ছাত্রদের মার্কশিট</caption>
-					<thead>
-						<tr>
-							<th scope="col">নাম</th>
-							<th scope="col">বিষয়</th>
-							<th scope="col">মার্কস</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td rowspan="2">রহিম</td>
-							<td>গণিত</td>
-							<td>85</td>
-						</tr>
-						<tr>
-							<td>বিজ্ঞান</td>
-							<td>90</td>
-						</tr>
-						<tr>
-							<td>করিম</td>
-							<td colspan="2">প্রকৌশল বিষয় (অংশগ্রহণ)</td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr>
-							<td colspan="3">মোট শিক্ষার্থী: 3</td>
-						</tr>
-					</tfoot>
-				</table>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="form">
-		<h2></h2>
-		<p>ফর্মস হলো HTML ইলিমেন্টগুলোর একটি গ্রুপ যা ব্যবহারকারীর ইনপুট সংগ্রহ এবং সাবমিশন করার জন্য ব্যবহৃত হয়। এতে
-			বিভিন্ন ইনপুট টাইপ (text, password, email, number, date, color, checkbox, radio, file, range ইত্যাদি),
-			লেবেল, টেক্সটএরিয়া, সিলেক্ট/অপশন, ফিল্ডসেট/লিজ্যান্ড, ডাটালিস্ট, আউটপুট, প্রগ্রেস ও মিটার ব্যবহার করা যায়।
-			ফর্ম এবং ইনপুট অ্যাট্রিবিউটগুলো (যেমন: action, method, required, placeholder, pattern, min, max, step,
-			readonly, disabled) ফর্মের কার্যকারিতা, ভ্যালিডেশন এবং ইউজার ইন্টারঅ্যাকশন নিয়ন্ত্রণ করে।</p>
-		<h2>Example:</h2>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>ফর্ম উদাহরণ</title>
-			</head>
-
-			<body>
-				<h1>ফর্ম উদাহরণ</h1>
-
-				<form action="/submit" method="post" enctype="multipart/form-data" autocomplete="on" novalidate>
-
-					<fieldset>
-						<legend>ব্যক্তিগত তথ্য</legend>
-
-						<label for="name">নাম:</label>
-						<input type="text" id="name" name="name" required placeholder="আপনার নাম লিখুন"><br><br>
-
-						<label for="email">ইমেইল:</label>
-						<input type="email" id="email" name="email" required placeholder="আপনার ইমেইল"><br><br>
-
-						<label for="password">পাসওয়ার্ড:</label>
-						<input type="password" id="password" name="password" required minlength="6"><br><br>
-
-						<label for="dob">জন্ম তারিখ:</label>
-						<input type="date" id="dob" name="dob"><br><br>
-
-						<label for="color">প্রিয় রং:</label>
-						<input type="color" id="color" name="color"><br><br>
-
-						<label>লিঙ্গ:</label>
-						<input type="radio" id="male" name="gender" value="male">
-						<label for="male">পুরুষ</label>
-						<input type="radio" id="female" name="gender" value="female">
-						<label for="female">মহিলা</label><br><br>
-
-						<label for="hobbies">শখ:</label>
-						<input type="checkbox" id="reading" name="hobbies" value="reading">
-						<label for="reading">পঠন</label>
-						<input type="checkbox" id="sports" name="hobbies" value="sports">
-						<label for="sports">খেলা</label><br><br>
-
-					</fieldset>
-
-					<fieldset>
-						<legend>ফাইল এবং তথ্য</legend>
-
-						<label for="file">ফাইল আপলোড:</label>
-						<input type="file" id="file" name="file"><br><br>
-
-						<label for="comments">মন্তব্য:</label><br>
-						<textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
-
-						<label for="country">দেশ:</label>
-						<select id="country" name="country">
-							<optgroup label="এশিয়া">
-								<option value="bd">বাংলাদেশ</option>
-								<option value="in">ভারত</option>
-							</optgroup>
-							<optgroup label="ইউরোপ">
-								<option value="uk">যুক্তরাজ্য</option>
-								<option value="fr">ফ্রান্স</option>
-							</optgroup>
-						</select><br><br>
-
-						<label for="range">পরিমাণ:</label>
-						<input type="range" id="range" name="range" min="0" max="100" step="10"><br><br>
-
-						<label for="number">বয়স:</label>
-						<input type="number" id="number" name="age" min="1" max="120"><br><br>
-
-						<label for="progress">প্রগতি:</label>
-						<progress id="progress" value="50" max="100"></progress><br><br>
-
-						<label for="score">স্কোর:</label>
-						<meter id="score" value="0.6" min="0" max="1"></meter><br><br>
-
-						<label for="browser">ব্রাউজার নির্বাচন:</label>
-						<input list="browsers" name="browser" id="browser">
-						<datalist id="browsers">
-							<option value="Chrome">
-							<option value="Firefox">
-							<option value="Edge">
-							<option value="Safari">
-						</datalist><br><br>
-
-						<output name="result" for="number range">রেজাল্ট এখানে দেখাবে</output><br><br>
-
-					</fieldset>
-
-					<input type="submit" value="সাবমিট">
-					<input type="reset" value="রিসেট">
-
-				</form>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="semantic">
-		<h2>সিম্যান্টিক HTML5</h2>
-		<p>সিম্যান্টিক HTML5 হলো এমন ইলিমেন্টস যা কন্টেন্টের অর্থ এবং কাঠামো স্পষ্টভাবে বোঝাতে সাহায্য করে। এর মাধ্যমে
-			ব্রাউজার, সার্চ ইঞ্জিন এবং অ্যাক্সেসিবিলিটি টুলস কন্টেন্ট বুঝতে পারে। উদাহরণস্বরূপ, সেকশন ও আর্টিকেল পেজের
-			বিভিন্ন অংশ আলাদা করে দেখায়, যেখানে আর্টিকেল স্বতন্ত্র কন্টেন্ট বোঝায়। হেডার এবং ফুটার পেজ বা সেকশনের উপরের
-			ও নিচের অংশ বোঝাতে ব্যবহার হয়। নেভ নেভিগেশন লিঙ্কের জন্য, এসাইড পাশে অতিরিক্ত কন্টেন্টের জন্য এবং মেইন পেজের
-			প্রধান কন্টেন্টের জন্য ব্যবহৃত হয়। ফিগার এবং ফিগক্যাপশন ছবি বা মিডিয়া এবং তার বর্ণনা প্রদর্শনের জন্য ব্যবহৃত
-			হয়।</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<title>সিম্যান্টিক HTML5 উদাহরণ</title>
-			</head>
-
-			<body>
-				<header>
-					<h1>আমার ওয়েবসাইট</h1>
-					<nav>
-						<ul>
-							<li><a href="#home">হোম</a></li>
-							<li><a href="#about">আমাদের সম্পর্কে</a></li>
-							<li><a href="#contact">যোগাযোগ</a></li>
-						</ul>
-					</nav>
-				</header>
-				<main>
-					<section id="home">
-						<h2>হোম সেকশন</h2>
-						<p>এই অংশটি ওয়েবসাইটের মূল কন্টেন্ট দেখায়।</p>
-					</section>
-					<article>
-						<h2>নতুন ব্লগ পোস্ট</h2>
-						<p>এই আর্টিকেলটি স্বতন্ত্র কন্টেন্ট হিসাবে বিবেচিত।</p>
-						<figure>
-							<img src="blog-image.jpg" alt="ব্লগ ছবি">
-							<figcaption>ছবির বর্ণনা এখানে।</figcaption>
-						</figure>
-					</article>
-					<aside>
-						<h3>সাইডবার তথ্য</h3>
-						<p>এই অংশে অতিরিক্ত তথ্য বা বিজ্ঞাপন রাখা যায়।</p>
-					</aside>
-				</main>
-				<footer>
-					<p>&copy; 2026 আমার ওয়েবসাইট. সব অধিকার সংরক্ষিত।</p>
-				</footer>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="multimedia">
-		<h2>মালটিমিডিয়া এবং এমবেডেড</h2>
-		<p>মালটিমিডিয়া এবং এমবেডেড ইলিমেন্টগুলো ওয়েবপেজে অডিও, ভিডিও, এবং অন্যান্য এক্সটার্নাল কন্টেন্ট প্রদর্শনের জন্য
-			ব্যবহার করা হয়। এতে ব্যবহারকারীরা সরাসরি ব্রাউজারে মিডিয়া কন্টেন্ট শুনতে বা দেখতে পারে। প্রধান ইলিমেন্টগুলো
-			হলো audio, video, iframe, embed, এবং object। অডিও/ভিডিওতে controls, autoplay, loop, muted অ্যাট্রিবিউট
-			ব্যবহার করা হয়। iframe দিয়ে YouTube ভিডিও, Google Maps বা অন্য ওয়েব কন্টেন্ট এমবেড করা যায়।</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<title>মালটিমিডিয়া এবং এমবেডেড উদাহরণ</title>
-			</head>
-
-			<body>
-
-				<h1>মালটিমিডিয়া উদাহরণ</h1>
-
-				<h2>অডিও প্লেয়ার</h2>
-				<audio controls autoplay loop>
-					<source src="music.mp3" type="audio/mpeg">
-					আপনার ব্রাউজার অডিও ট্যাগ সাপোর্ট করে না।
-				</audio>
-
-				<h2>ভিডিও প্লেয়ার</h2>
-				<video width="320" height="240" controls muted>
-					<source src="video.mp4" type="video/mp4">
-					আপনার ব্রাউজার ভিডিও ট্যাগ সাপোর্ট করে না।
-				</video>
-
-				<h2>YouTube ভিডিও এমবেড</h2>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-					title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-
-				<h2>এমবেড এবং অবজেক্ট উদাহরণ</h2>
-				<embed src="example.pdf" type="application/pdf" width="500" height="400">
-				<object data="example.pdf" type="application/pdf" width="500" height="400">
-					আপনার ব্রাউজার PDF দেখাতে সমর্থ নয়।
-				</object>
-
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="graphics">
-		<h2>গ্রাফিক্স</h2>
-		<p>ওয়েবপেজে গ্রাফিক্স তৈরি করতে HTML5 এ Canvas এবং SVG (Scalable Vector Graphics) ব্যবহার করা হয়।
-		<ul>
-			<li>Canvas একটি ক্যানভাস এলাকা প্রদান করে যেখানে JavaScript দিয়ে ড্রয়িং করা যায়। এটি পিক্সেল-বেসড গ্রাফিক্স।
-			</li>
-			<li>বেসিক ক্যানভাস ড্রয়িং এ লাইন্স, আর্ক, রেক্টেঙ্গল, সার্কেল ইত্যাদি আঁকা হয়।</li>
-			<li>SVG হলো ভেক্টর বেসড গ্রাফিক্স যা স্কেল করা যায় এবং HTML এর মধ্যে সরাসরি ইনলাইন করা যায়।</li>
-			<li>ইনলাইন SVG দিয়ে HTML এর মধ্যে সরাসরি shapes, paths, এবং texts যোগ করা যায়।</li>
-		</ul>
-		</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<title>গ্রাফিক্স উদাহরণ</title>
-			</head>
-
-			<body>
-				<h1>Canvas উদাহরণ</h1>
-				<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000000;">
-					আপনার ব্রাউজার ক্যানভাস সাপোর্ট করে না।
-				</canvas>
-				<script>
-					var canvas = document.getElementById("myCanvas");
-					var ctx = canvas.getContext("2d");
-					ctx.fillStyle = "#FF0000";
-					ctx.fillRect(20, 20, 100, 50); // লাল রেক্টেঙ্গল
-					ctx.beginPath();
-					ctx.arc(150, 75, 40, 0, 2 * Math.PI); // সার্কেল
-					ctx.stroke();
-				</script>
-				<h1>SVG উদাহরণ</h1>
-				<svg width="300" height="150" style="border:1px solid #000000;">
-					<rect x="10" y="10" width="100" height="50" fill="blue" />
-					<circle cx="200" cy="75" r="40" stroke="green" stroke-width="4" fill="yellow" />
-					<line x1="0" y1="0" x2="300" y2="150" stroke="red" stroke-width="2" />
-				</svg>
-			</body>
-
-			</html>
-		</xmp>
-	</section>
-	<section id="api">
-		<h2>APIs in HTML5</h2>
-		<p>HTML5 বিভিন্ন নতুন APIs প্রদান করে যা ওয়েব অ্যাপ্লিকেশনকে আরও ইন্টারেকটিভ ও শক্তিশালী করে:
-		<ul>
-			<li>জিওলোকেশন API → ব্যবহারকারীর লোকেশন (latitude, longitude) জানার জন্য।</li>
-			<li>ড্রাগ এবং ড্রপ API → ড্র্যাগেবল এলিমেন্ট তৈরি ও ড্রপ করা।</li>
-			<li>ওয়েব স্টোরেজ API → localStorage ও sessionStorage দিয়ে ব্রাউজারে ডাটা স্টোর করা।</li>
-			<li>ওয়েব ওয়ার্কার্স → ব্যাকগ্রাউন্ড থ্রেডে জাভাস্ক্রিপ্ট রান করানো।</li>
-			<li>Server-Sent Events (SSE) → সার্ভার থেকে ক্লায়েন্টে রিয়েল-টাইম আপডেট।</li>
-			<li>WebSockets → দুই-পক্ষের রিয়েল-টাইম কমিউনিকেশন।</li>
-		</ul>
-		</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-
-			<head>
-				<meta charset="UTF-8">
-				<title>HTML5 APIs উদাহরণ</title>
-			</head>
-
-			<body>
-
-				<h1>জিওলোকেশন API</h1>
-				<button onclick="getLocation()">আমার অবস্থান দেখাও</button>
-				<p id="location"></p>
-				<script>
-					function getLocation() {
-						if (navigator.geolocation) {
-							navigator.geolocation.getCurrentPosition(function (position) {
-								document.getElementById("location").innerText =
-									"Latitude: " + position.coords.latitude +
-									", Longitude: " + position.coords.longitude;
-							});
-						} else {
-							document.getElementById("location").innerText = "Geolocation সমর্থিত নয়।";
-						}
-					}
-				</script>
-				<h1>ড্র্যাগ এবং ড্রপ API</h1>
-				<p id="dragItem" draggable="true" ondragstart="drag(event)"
-					style="width:100px;height:50px;background:lightblue;">ড্র্যাগ করুন</p>
-				<div id="dropZone" ondrop="drop(event)" ondragover="allowDrop(event)"
-					style="width:200px;height:100px;border:2px dashed #000;">ড্রপ করুন</div>
-				<script>
-					function allowDrop(ev) { ev.preventDefault(); }
-					function drag(ev) { ev.dataTransfer.setData("text", ev.target.id); }
-					function drop(ev) {
-						ev.preventDefault();
-						var data = ev.dataTransfer.getData("text");
-						ev.target.appendChild(document.getElementById(data));
-					}
-				</script>
-				<h1>LocalStorage উদাহরণ</h1>
-				<input type="text" id="storageInput" placeholder="কিছু লিখুন">
-				<button onclick="saveStorage()">সেভ করুন</button>
-				<p id="storedData"></p>
-				<script>
-					function saveStorage() {
-						var value = document.getElementById("storageInput").value;
-						localStorage.setItem("myData", value);
-						document.getElementById("storedData").innerText = "Saved: " + localStorage.getItem("myData");
-					}
-				</script>
-			</body>
-			</html>
-		</xmp>
-	</section>
-	<section id="form-validation">
-		<h2></h2>
-		<p>HTML5 ফর্ম ভেলিডেশন ব্যবহার করে ইউজার ইনপুট সঠিক কিনা চেক করা যায়। এর মধ্যে তিনটি প্রধান ধাপ রয়েছে:
-			<ul>
-				<li>বিল্ট-ইন ভেলিডেশন → required, type="email", min, max ইত্যাদি ব্যবহার করে স্বয়ংক্রিয় চেক।</li>
-				<li>কন্সট্রেইন্ট ভেলিডেশন API → জাভাস্ক্রিপ্ট দিয়ে ফিল্ডের validity এবং checkValidity() চেক করা।</li>
-				<li>কাস্টম ভেলিডেশন → নিজস্ব নিয়ম দিয়ে ইনপুট যাচাই ও কাস্টম মেসেজ দেখানো।</li>
-			</ul>
-		</p>
-		<h3>Example:</h3>
-		<xmp>
-			<!DOCTYPE html>
-			<html lang="bn">
-			<head>
-				<meta charset="UTF-8">
-				<title>ফর্ম ভেলিডেশন উদাহরণ</title>
-			</head>
-			<body>
-			<h1>বিল্ট-ইন ভেলিডেশন</h1>
-			<form>
-				<label>ইমেইল: <input type="email" required placeholder="email@example.com"></label>
-				<br><br>
-				<label>পাসওয়ার্ড: <input type="password" required minlength="6"></label>
-				<br><br>
-				<button type="submit">সাবমিট</button>
-			</form>
-			<hr>
-			<h1>কাস্টম ভেলিডেশন</h1>
-			<form id="customForm">
-				<label>ইউজারনেম (5+ অক্ষর): <input type="text" id="username" required></label>
-				<br><br>
-				<button type="submit">সাবমিট</button>
-			</form>
-			<p id="errorMsg" style="color:red;"></p>
-			<script>
-			document.getElementById("customForm").addEventListener("submit", function(e){
-				var username = document.getElementById("username").value;
-				if(username.length < 5){
-					e.preventDefault();
-					document.getElementById("errorMsg").innerText = "ইউজারনেম অন্তত 5 অক্ষরের হতে হবে।";
-				} else {
-					document.getElementById("errorMsg").innerText = "";
-				}
-			});
-			</script>
-			</body>
-			</html>
-		</xmp>
-	</section>
-	<button><a href="#top">Go Top</a></button>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="HTML শিখি - বাংলায় HTML শেখার ওয়েবসাইট" width="180" height="50">
+        </a>
+      </div>
+      
+      <nav class="main-nav" aria-label="প্রধান নেভিগেশন">
+        <button class="mobile-menu-toggle" aria-label="মেনু খুলুন">☰</button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">হোম</a></li>
+          <li><a href="pages/introduction/">শুরু করুন</a></li>
+          <li><a href="pages/basics/">বেসিক</a></li>
+          <li><a href="pages/forms/">ফর্ম</a></li>
+          <li><a href="pages/exercises/">অনুশীলন</a></li>
+          <li><a href="pages/references/">রেফারেন্স</a></li>
+          <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Search option removed as requested -->
+      
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>বাংলায় HTML শিখুন, <br>হয়ে উঠুন ওয়েব ডেভেলপার</h1>
+          <p>একদম শুরু থেকে অ্যাডভান্সড পর্যন্ত HTML শেখার সম্পূর্ণ বাংলা টিউটোরিয়াল। প্রতিটি টপিক সহজ উদাহরণ, লাইভ প্রিভিউ এবং অনুশীলন সহ।</p>
+          <div class="hero-buttons">
+            <a href="pages/introduction/" class="btn btn-primary">শেখা শুরু করুন</a>
+            <a href="#topics" class="btn btn-secondary">আমাদের কোর্স দেখুন</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-illustration.svg" alt="HTML শেখার ইলাস্ট্রেশন" width="500" height="400">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2>কেন আমাদের ওয়েবসাইট?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="images/icons/bengali.svg" alt="" width="60" height="60">
+            <h3>সম্পূর্ণ বাংলায়</h3>
+            <p>প্রতিটি টপিক সহজ বাংলায় ব্যাখ্যা করা হয়েছে, যাতে আপনি খুব সহজেই বুঝতে পারেন।</p>
+          </div>
+          <div class="feature-card">
+            <img src="images/icons/example.svg" alt="" width="60" height="60">
+            <h3>লাইভ উদাহরণ</h3>
+            <p>প্রতিটি টপিকের সাথে সাথে লাইভ উদাহরণ দেওয়া আছে। নিজে চালিয়ে দেখতে পারেন।</p>
+          </div>
+          <div class="feature-card">
+            <img src="images/icons/exercise.svg" alt="" width="60" height="60">
+            <h3>অনুশীলন</h3>
+            <p>প্রতিটি অধ্যায় শেষে অনুশীলনী দেওয়া আছে, যা আপনার শেখাকে পাকাপোক্ত করবে।</p>
+          </div>
+          <div class="feature-card">
+            <img src="images/icons/project.svg" alt="" width="60" height="60">
+            <h3>প্রজেক্ট</h3>
+            <p>বাস্তব প্রজেক্ট করে শেখার সুযোগ, যা আপনাকে পোর্টফোলিও তৈরি করতে সাহায্য করবে।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+      <div class="container">
+        <h2>HTML কোর্সের সিলেবাস</h2>
+        <div class="topics-grid">
+          
+          <div class="topic-category">
+            <h3>📘 পরিচিতি</h3>
+            <ul>
+              <li><a href="pages/introduction/what-is-html.html">HTML কী?</a></li>
+              <li><a href="pages/introduction/history-of-html.html">HTML-এর ইতিহাস</a></li>
+              <li><a href="pages/introduction/html-versions.html">HTML-এর সংস্করণ</a></li>
+              <li><a href="pages/introduction/html-editors.html">HTML এডিটর সেটআপ</a></li>
+              <li><a href="pages/introduction/first-page.html">প্রথম HTML পৃষ্ঠা</a></li>
+              <li><a href="pages/introduction/basic-structure.html">মৌলিক কাঠামো</a></li>
+              <li><a href="pages/introduction/how-browser-works.html">ব্রাউজার কিভাবে কাজ করে</a></li>
+              <li><a href="pages/introduction/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>📝 বেসিক</h3>
+            <ul>
+              <li><a href="pages/basics/document-structure.html">ডকুমেন্ট স্ট্রাকচার</a></li>
+              <li><a href="pages/basics/headings.html">হেডিং (h1-h6)</a></li>
+              <li><a href="pages/basics/paragraphs.html">প্যারাগ্রাফ</a></li>
+              <li><a href="pages/basics/text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
+              <li><a href="pages/basics/comments.html">কমেন্ট</a></li>
+              <li><a href="pages/basics/colors.html">কালার</a></li>
+              <li><a href="pages/basics/attributes.html">অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/basics/global-attributes.html">গ্লোবাল অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/basics/event-attributes.html">ইভেন্ট অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/basics/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>🔗 লিংক ও ইমেজ</h3>
+            <ul>
+              <li><a href="pages/links-and-images/links.html">লিংক (a ট্যাগ)</a></li>
+              <li><a href="pages/links-and-images/images.html">ইমেজ (img ট্যাগ)</a></li>
+              <li><a href="pages/links-and-images/image-formats.html">ইমেজ ফরম্যাট</a></li>
+              <li><a href="pages/links-and-images/responsive-images.html">রেসপনসিভ ইমেজ</a></li>
+              <li><a href="pages/links-and-images/image-maps.html">ইমেজ ম্যাপ</a></li>
+              <li><a href="pages/links-and-images/favicon.html">ফ্যাভিকন</a></li>
+              <li><a href="pages/links-and-images/figure-caption.html">ফিগার ও ক্যাপশন</a></li>
+              <li><a href="pages/links-and-images/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>📋 লিস্ট</h3>
+            <ul>
+              <li><a href="pages/lists/unordered-lists.html">আনঅর্ডারড লিস্ট (ul)</a></li>
+              <li><a href="pages/lists/ordered-lists.html">অর্ডারড লিস্ট (ol)</a></li>
+              <li><a href="pages/lists/description-lists.html">ডেসক্রিপশন লিস্ট (dl)</a></li>
+              <li><a href="pages/lists/nested-lists.html">নেস্টেড লিস্ট</a></li>
+              <li><a href="pages/lists/list-styling.html">লিস্ট স্টাইলিং</a></li>
+              <li><a href="pages/lists/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>📊 টেবল</h3>
+            <ul>
+              <li><a href="pages/tables/basic-tables.html">বেসিক টেবল</a></li>
+              <li><a href="pages/tables/table-headers.html">টেবল হেডার</a></li>
+              <li><a href="pages/tables/colspan-rowspan.html">কলস্প্যান ও রোস্প্যান</a></li>
+              <li><a href="pages/tables/table-structure.html">টেবল স্ট্রাকচার (thead,tbody,tfoot)</a></li>
+              <li><a href="pages/tables/table-caption.html">টেবল ক্যাপশন</a></li>
+              <li><a href="pages/tables/colgroup.html">কলগ্রুপ</a></li>
+              <li><a href="pages/tables/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>📝 ফর্ম</h3>
+            <ul>
+              <li><a href="pages/forms/form-elements.html">ফর্ম এলিমেন্ট</a></li>
+              <li><a href="pages/forms/input-types.html">ইনপুট টাইপ</a></li>
+              <li><a href="pages/forms/input-attributes.html">ইনপুট অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/forms/select-dropdown.html">সিলেক্ট ও ড্রপডাউন</a></li>
+              <li><a href="pages/forms/textarea.html">টেক্সটএরিয়া</a></li>
+              <li><a href="pages/forms/fieldset-legend.html">ফিল্ডসেট ও লিজেন্ড</a></li>
+              <li><a href="pages/forms/datalist.html">ডাটালিস্ট</a></li>
+              <li><a href="pages/forms/output.html">আউটপুট</a></li>
+              <li><a href="pages/forms/progress-meter.html">প্রগ্রেস ও মিটার</a></li>
+              <li><a href="pages/forms/form-validation.html">ফর্ম ভ্যালিডেশন</a></li>
+              <li><a href="pages/forms/form-validation-api.html">কনস্ট্রেইন্ট ভ্যালিডেশন API</a></li>
+              <li><a href="pages/forms/custom-validation.html">কাস্টম ভ্যালিডেশন</a></li>
+              <li><a href="pages/forms/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>🏗️ সিম্যান্টিক HTML</h3>
+            <ul>
+              <li><a href="pages/semantic-html/what-is-semantic.html">সিম্যান্টিক HTML কী?</a></li>
+              <li><a href="pages/semantic-html/header-nav.html">header ও nav</a></li>
+              <li><a href="pages/semantic-html/section-article.html">section ও article</a></li>
+              <li><a href="pages/semantic-html/aside-footer.html">aside ও footer</a></li>
+              <li><a href="pages/semantic-html/main.html">main এলিমেন্ট</a></li>
+              <li><a href="pages/semantic-html/figure-figcaption.html">figure ও figcaption</a></li>
+              <li><a href="pages/semantic-html/mark-time.html">mark ও time</a></li>
+              <li><a href="pages/semantic-html/details-summary.html">details ও summary</a></li>
+              <li><a href="pages/semantic-html/dialog.html">dialog এলিমেন্ট</a></li>
+              <li><a href="pages/semantic-html/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>🎵 মাল্টিমিডিয়া</h3>
+            <ul>
+              <li><a href="pages/multimedia/audio.html">অডিও</a></li>
+              <li><a href="pages/multimedia/video.html">ভিডিও</a></li>
+              <li><a href="pages/multimedia/video-formats.html">ভিডিও ফরম্যাট</a></li>
+              <li><a href="pages/multimedia/audio-formats.html">অডিও ফরম্যাট</a></li>
+              <li><a href="pages/multimedia/source-tag.html">সোর্স ট্যাগ</a></li>
+              <li><a href="pages/multimedia/track-subtitles.html">ট্র্যাক ও সাবটাইটেল</a></li>
+              <li><a href="pages/multimedia/iframe.html">আইফ্রেম</a></li>
+              <li><a href="pages/multimedia/embed-object.html">এম্বেড ও অবজেক্ট</a></li>
+              <li><a href="pages/multimedia/youtube-embed.html">ইউটিউব এম্বেড</a></li>
+              <li><a href="pages/multimedia/maps-embed.html">গুগল ম্যাপ এম্বেড</a></li>
+              <li><a href="pages/multimedia/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>🎨 গ্রাফিক্স</h3>
+            <ul>
+              <li><a href="pages/graphics/canvas-basics.html">Canvas বেসিক</a></li>
+              <li><a href="pages/graphics/canvas-drawing.html">Canvas ড্রয়িং</a></li>
+              <li><a href="pages/graphics/canvas-colors.html">Canvas রং ও গ্রেডিয়েন্ট</a></li>
+              <li><a href="pages/graphics/canvas-text.html">Canvas টেক্সট</a></li>
+              <li><a href="pages/graphics/canvas-images.html">Canvas ছবি</a></li>
+              <li><a href="pages/graphics/canvas-animation.html">Canvas এনিমেশন</a></li>
+              <li><a href="pages/graphics/svg-basics.html">SVG বেসিক</a></li>
+              <li><a href="pages/graphics/svg-shapes.html">SVG শেপ</a></li>
+              <li><a href="pages/graphics/svg-paths.html">SVG পাথ</a></li>
+              <li><a href="pages/graphics/svg-text.html">SVG টেক্সট</a></li>
+              <li><a href="pages/graphics/svg-vs-canvas.html">Canvas vs SVG</a></li>
+              <li><a href="pages/graphics/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>⚡ অ্যাডভান্সড</h3>
+            <ul>
+              <li><a href="pages/advanced/meta-tags.html">মেটা ট্যাগস</a></li>
+              <li><a href="pages/advanced/meta-seo.html">SEO মেটা ট্যাগ</a></li>
+              <li><a href="pages/advanced/meta-social.html">সোশ্যাল মিডিয়া মেটা</a></li>
+              <li><a href="pages/advanced/viewport.html">ভিউপোর্ট</a></li>
+              <li><a href="pages/advanced/canonical.html">ক্যানোনিকাল URL</a></li>
+              <li><a href="pages/advanced/hreflang.html">হরেফল্যাং</a></li>
+              <li><a href="pages/advanced/accessibility.html">অ্যাক্সেসিবিলিটি</a></li>
+              <li><a href="pages/advanced/aria.html">ARIA রোলস ও অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/advanced/keyboard.html">কিবোর্ড নেভিগেশন</a></li>
+              <li><a href="pages/advanced/seo-basics.html">SEO বেসিক</a></li>
+              <li><a href="pages/advanced/microdata.html">মাইক্রোডাটা</a></li>
+              <li><a href="pages/advanced/json-ld.html">JSON-LD</a></li>
+              <li><a href="pages/advanced/character-entities.html">ক্যারেক্টার এনটিটি</a></li>
+              <li><a href="pages/advanced/url-encoding.html">URL এনকোডিং</a></li>
+              <li><a href="pages/advanced/data-attributes.html">ডাটা-* অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/advanced/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>⚙️ HTML5 APIs</h3>
+            <ul>
+              <li><a href="pages/apis/geolocation.html">জিওলোকেশন API</a></li>
+              <li><a href="pages/apis/drag-drop.html">ড্র্যাগ অ্যান্ড ড্রপ API</a></li>
+              <li><a href="pages/apis/web-storage.html">ওয়েব স্টোরেজ API</a></li>
+              <li><a href="pages/apis/localstorage.html">localStorage</a></li>
+              <li><a href="pages/apis/sessionstorage.html">sessionStorage</a></li>
+              <li><a href="pages/apis/web-workers.html">ওয়েব ওয়ার্কার্স</a></li>
+              <li><a href="pages/apis/server-sent-events.html">সার্ভার-সেন্ট ইভেন্ট</a></li>
+              <li><a href="pages/apis/file-api.html">ফাইল API</a></li>
+              <li><a href="pages/apis/getusermedia.html">getUserMedia (ক্যামেরা)</a></li>
+              <li><a href="pages/apis/notification.html">নোটিফিকেশন API</a></li>
+              <li><a href="pages/apis/page-visibility.html">পেজ ভিজিবিলিটি API</a></li>
+              <li><a href="pages/apis/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>⚡ পারফরম্যান্স</h3>
+            <ul>
+              <li><a href="pages/performance/page-speed.html">পেজ স্পিড</a></li>
+              <li><a href="pages/performance/lazy-loading.html">লেজি লোডিং</a></li>
+              <li><a href="pages/performance/preload-prefetch.html">প্রিলোড ও প্রিফেচ</a></li>
+              <li><a href="pages/performance/async-defer.html">অ্যাসিঙ্ক ও ডিফার</a></li>
+              <li><a href="pages/performance/image-optimization.html">ইমেজ অপটিমাইজেশন</a></li>
+              <li><a href="pages/performance/caching.html">ক্যাশিং</a></li>
+              <li><a href="pages/performance/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>🔒 সিকিউরিটি</h3>
+            <ul>
+              <li><a href="pages/security/xss.html">XSS প্রতিরোধ</a></li>
+              <li><a href="pages/security/csp.html">কন্টেন্ট সিকিউরিটি পলিসি</a></li>
+              <li><a href="pages/security/sandbox.html">স্যান্ডবক্স</a></li>
+              <li><a href="pages/security/sri.html">সাবরিসোর্স ইন্টিগ্রিটি</a></li>
+              <li><a href="pages/security/clickjacking.html">ক্লিকজ্যাকিং প্রতিরোধ</a></li>
+              <li><a href="pages/security/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>✅ বেস্ট প্র্যাকটিস</h3>
+            <ul>
+              <li><a href="pages/best-practices/coding-conventions.html">কোডিং কনভেনশন</a></li>
+              <li><a href="pages/best-practices/indentation.html">ইনডেন্টেশন ও ফরম্যাটিং</a></li>
+              <li><a href="pages/best-practices/naming-conventions.html">নেমিং কনভেনশন</a></li>
+              <li><a href="pages/best-practices/document-outline.html">ডকুমেন্ট আউটলাইন</a></li>
+              <li><a href="pages/best-practices/accessibility-best.html">অ্যাক্সেসিবিলিটি বেস্ট প্র্যাকটিস</a></li>
+              <li><a href="pages/best-practices/seo-best.html">SEO বেস্ট প্র্যাকটিস</a></li>
+              <li><a href="pages/best-practices/cross-browser.html">ক্রস-ব্রাউজার কম্প্যাটিবিলিটি</a></li>
+              <li><a href="pages/best-practices/mobile-first.html">মোবাইল-ফার্স্ট অ্যাপ্রোচ</a></li>
+              <li><a href="pages/best-practices/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>🔧 রেসপনসিভ ডিজাইন</h3>
+            <ul>
+              <li><a href="pages/responsive/viewport.html">ভিউপোর্ট</a></li>
+              <li><a href="pages/responsive/media-queries.html">মিডিয়া কোয়েরি</a></li>
+              <li><a href="pages/responsive/responsive-images.html">রেসপনসিভ ইমেজ</a></li>
+              <li><a href="pages/responsive/flexible-grids.html">ফ্লেক্সিবল গ্রিড</a></li>
+              <li><a href="pages/responsive/mobile-first.html">মোবাইল ফার্স্ট ডিজাইন</a></li>
+              <li><a href="pages/responsive/">সমস্ত টপিক দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>🚀 প্রজেক্ট</h3>
+            <ul>
+              <li><a href="pages/projects/portfolio.html">প্রজেক্ট ১: পোর্টফোলিও পৃষ্ঠা</a></li>
+              <li><a href="pages/projects/blog-post.html">প্রজেক্ট ২: ব্লগ পোস্ট</a></li>
+              <li><a href="pages/projects/contact-form.html">প্রজেক্ট ৩: যোগাযোগ ফর্ম</a></li>
+              <li><a href="pages/projects/price-table.html">প্রজেক্ট ৪: মূল্য তালিকা</a></li>
+              <li><a href="pages/projects/image-gallery.html">প্রজেক্ট ৫: ইমেজ গ্যালারি</a></li>
+              <li><a href="pages/projects/restaurant-menu.html">প্রজেক্ট ৬: রেস্টুরেন্ট মেনু</a></li>
+              <li><a href="pages/projects/news-homepage.html">প্রজেক্ট ৭: নিউজ হোমপেজ</a></li>
+              <li><a href="pages/projects/ecommerce-product.html">প্রজেক্ট ৮: ই-কমার্স পণ্য পৃষ্ঠা</a></li>
+              <li><a href="pages/projects/company-website.html">প্রজেক্ট ৯: কোম্পানি ওয়েবসাইট</a></li>
+              <li><a href="pages/projects/quiz-app.html">প্রজেক্ট ১০: কুইজ অ্যাপ</a></li>
+              <li><a href="pages/projects/">সমস্ত প্রজেক্ট দেখুন →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>📚 রেফারেন্স</h3>
+            <ul>
+              <li><a href="pages/references/html-tags-reference.html">HTML ট্যাগ রেফারেন্স</a></li>
+              <li><a href="pages/references/html-attributes-reference.html">HTML অ্যাট্রিবিউট রেফারেন্স</a></li>
+              <li><a href="pages/references/global-attributes.html">গ্লোবাল অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/references/event-attributes.html">ইভেন্ট অ্যাট্রিবিউট</a></li>
+              <li><a href="pages/references/input-types-reference.html">ইনপুট টাইপ রেফারেন্স</a></li>
+              <li><a href="pages/references/character-entities.html">ক্যারেক্টার এনটিটি</a></li>
+              <li><a href="pages/references/color-names.html">কালার নাম ও কোড</a></li>
+              <li><a href="pages/references/mime-types.html">মাইম টাইপ</a></li>
+              <li><a href="pages/references/cheat-sheet.html">চিট শিট</a></li>
+              <li><a href="pages/references/">সমস্ত রেফারেন্স →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>💡 টিপস ও ট্রিক্স</h3>
+            <ul>
+              <li><a href="pages/tips/shortcuts.html">VS Code শর্টকাট</a></li>
+              <li><a href="pages/tips/emmet.html">Emmet snippets</a></li>
+              <li><a href="pages/tips/debugging.html">ডিবাগিং টিপস</a></li>
+              <li><a href="pages/tips/common-mistakes.html">সাধারণ ভুল</a></li>
+              <li><a href="pages/tips/browser-tools.html">ব্রাউজার ডেভ টুলস</a></li>
+              <li><a href="pages/tips/">সমস্ত টিপস →</a></li>
+            </ul>
+          </div>
+          
+          <div class="topic-category">
+            <h3>📝 অনুশীলনী</h3>
+            <ul>
+              <li><a href="pages/exercises/beginner-exercises.html">শিক্ষানবিশ অনুশীলনী</a></li>
+              <li><a href="pages/exercises/intermediate-exercises.html">মাঝারি অনুশীলনী</a></li>
+              <li><a href="pages/exercises/advanced-exercises.html">অ্যাডভান্সড অনুশীলনী</a></li>
+              <li><a href="pages/exercises/mcq-quiz.html">MCQ কুইজ</a></li>
+              <li><a href="pages/exercises/coding-challenges.html">কোডিং চ্যালেঞ্জ</a></li>
+              <li><a href="pages/exercises/">সমস্ত অনুশীলনী →</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">২০০+</span>
+            <span class="stat-label">টপিক</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">৫০০+</span>
+            <span class="stat-label">উদাহরণ</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">১৫০+</span>
+            <span class="stat-label">অনুশীলনী</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">১০+</span>
+            <span class="stat-label">প্রজেক্ট</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>আজই শুরু করুন আপনার ওয়েব ডেভেলপমেন্ট যাত্রা</h2>
+        <p>HTML শেখা একদম সহজ। সঠিক গাইডলাইন ও উদাহরণ থাকলে আপনি খুব দ্রুত শিখতে পারবেন।</p>
+        <a href="pages/introduction/" class="btn btn-large">শেখা শুরু করুন</a>
+      </div>
+    </section>
+
+        <!-- Example Section -->
+    <section class="example-section">
+      <div class="container">
+        <h2>লাইভ উদাহরণ দেখুন</h2>
+        <div class="example-showcase">
+          <div class="example-tabs">
+            <button class="tab-button active" data-tab="basic">বেসিক HTML</button>
+            <button class="tab-button" data-tab="form">ফর্ম</button>
+            <button class="tab-button" data-tab="table">টেবল</button>
+          </div>
+          <div class="example-display">
+            <div class="code-display">
+              <pre><code>&lt;h1&gt;এইচটিএমএল শিখছি&lt;/h1&gt;
+&lt;p&gt;এটি একটি &lt;strong&gt;গুরুত্বপূর্ণ&lt;/strong&gt; প্যারাগ্রাফ&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;প্রথম আইটেম&lt;/li&gt;
+  &lt;li&gt;দ্বিতীয় আইটেম&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+            <div class="preview-display">
+              <h1>এইচটিএমএল শিখছি</h1>
+              <p>এটি একটি <strong>গুরুত্বপূর্ণ</strong> প্যারাগ্রাফ</p>
+              <ul>
+                <li>প্রথম আইটেম</li>
+                <li>দ্বিতীয় আইটেম</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="images/logo-white.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="contact.html">যোগাযোগ</a></li>
+            <li><a href="privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>টপিকস</h3>
+          <ul>
+            <li><a href="pages/introduction/">পরিচিতি</a></li>
+            <li><a href="pages/basics/">বেসিক</a></li>
+            <li><a href="pages/forms/">ফর্ম</a></li>
+            <li><a href="pages/advanced/">অ্যাডভান্সড</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>ইউটিউব: <a href="#">@saide-hossain</a></p>
+          <p>ইউটিউব: <a href="#">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>টেক্সট ফরম্যাটিং | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>বেসিক টপিকস</h3>
+        <ul>
+          <li><a href="document-structure.html">ডকুমেন্ট স্ট্রাকচার</a></li>
+          <li><a href="headings.html">হেডিং (h1-h6)</a></li>
+          <li><a href="paragraphs.html">প্যারাগ্রাফ (p)</a></li>
+          <li><a href="text-formatting.html" class="active">টেক্সট ফরম্যাটিং</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>টেক্সট ফরম্যাটিং</h1>
+
+        <section>
+          <h2>গুরুত্বপূর্ণ ট্যাগসমূহ</h2>
+          
+          <table class="reference-table">
+            <tr>
+              <th>ট্যাগ</th>
+              <th>বর্ণনা</th>
+              <th>উদাহরণ</th>
+            </tr>
+            <tr>
+              <td>&lt;strong&gt;</td>
+              <td>গুরুত্বপূর্ণ টেক্সট (বোল্ড)</td>
+              <td><strong>বোল্ড টেক্সট</strong></td>
+            </tr>
+            <tr>
+              <td>&lt;em&gt;</td>
+              <td>জোরালো টেক্সট (ইটালিক)</td>
+              <td><em>ইটালিক টেক্সট</em></td>
+            </tr>
+            <tr>
+              <td>&lt;mark&gt;</td>
+              <td>হাইলাইট করা টেক্সট</td>
+              <td><mark>হাইলাইটেড টেক্সট</mark></td>
+            </tr>
+            <tr>
+              <td>&lt;small&gt;</td>
+              <td>ছোট টেক্সট</td>
+              <td><small>ছোট টেক্সট</small></td>
+            </tr>
+            <tr>
+              <td>&lt;ins&gt;</td>
+              <td>যোগ করা টেক্সট (আন্ডারলাইন)</td>
+              <td><ins>যোগ করা টেক্সট</ins></td>
+            </tr>
+            <tr>
+              <td>&lt;del&gt;</td>
+              <td>মুছে ফেলা টেক্সট</td>
+              <td><del>মুছে ফেলা টেক্সট</del></td>
+            </tr>
+            <tr>
+              <td>&lt;sub&gt;</td>
+              <td>সাবস্ক্রিপ্ট</td>
+              <td>H<sub>2</sub>O</td>
+            </tr>
+            <tr>
+              <td>&lt;sup&gt;</td>
+              <td>সুপারস্ক্রিপ্ট</td>
+              <td>X<sup>2</sup></td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>উদাহরণ</h2>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;p&gt;
+  &lt;strong&gt;গুরুত্বপূর্ণ&lt;/strong&gt; এবং 
+  &lt;em&gt;জোরালো&lt;/em&gt; টেক্সট। 
+  &lt;mark&gt;হাইলাইট&lt;/mark&gt; করা অংশ।
+  &lt;small&gt;ছোট টেক্সট&lt;/small&gt;।
+  &lt;ins&gt;যোগ করা&lt;/ins&gt; এবং 
+  &lt;del&gt;মুছে ফেলা&lt;/del&gt; টেক্সট।
+  জল: H&lt;sub&gt;2&lt;/sub&gt;O, 
+  গণিত: X&lt;sup&gt;2&lt;/sup&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <p>
+                <strong>গুরুত্বপূর্ণ</strong> এবং 
+                <em>জোরালো</em> টেক্সট। 
+                <mark>হাইলাইট</mark> করা অংশ।
+                <small>ছোট টেক্সট</small>।
+                <ins>যোগ করা</ins> এবং 
+                <del>মুছে ফেলা</del> টেক্সট।
+                জল: H<sub>2</sub>O, 
+                গণিত: X<sup>2</sup>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>অনুশীলনী</h2>
+          <div class="try-it-yourself">
+            <h4>একটি প্যারাগ্রাফ তৈরি করুন যেখানে:</h4>
+            <ul>
+              <li>একটি শব্দ <strong>বোল্ড</strong> হবে</li>
+              <li>একটি শব্দ <em>ইটালিক</em> হবে</li>
+              <li>একটি শব্দ <mark>হাইলাইটেড</mark> হবে</li>
+              <li>একটি গাণিতিক সূত্র X<sup>2</sup> + Y<sup>2</sup> দেখাতে হবে</li>
+            </ul>
+            
+            <textarea class="code-editor" rows="6">&lt;p&gt;
+  &lt;strong&gt;HTML&lt;/strong&gt; শেখা 
+  &lt;em&gt;খুব&lt;/em&gt; সহজ। 
+  &lt;mark&gt;অনুশীলন&lt;/mark&gt; করা জরুরি।
+  X&lt;sup&gt;2&lt;/sup&gt; + Y&lt;sup&gt;2&lt;/sup&gt;
+&lt;/p&gt;</textarea>
+            <button class="run-btn">চালান</button>
+            <div class="live-result"></div>
+          </div>
+        </section>
+
+        <div class="topic-navigation">
+          <a href="paragraphs.html">← প্যারাগ্রাফ</a>
+          <a href="comments.html">কমেন্ট →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

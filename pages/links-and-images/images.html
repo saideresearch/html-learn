@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ইমেজ (img ট্যাগ) | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>লিংক ও ইমেজ</h3>
+        <ul>
+          <li><a href="links.html">লিংক (a ট্যাগ)</a></li>
+          <li><a href="images.html" class="active">ইমেজ (img ট্যাগ)</a></li>
+          <li><a href="image-maps.html">ইমেজ ম্যাপ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>ইমেজ (img ট্যাগ)</h1>
+
+        <section>
+          <h2>img ট্যাগ কী?</h2>
+          <p>img ট্যাগ দিয়ে ওয়েবপৃষ্ঠায় ছবি যোগ করা হয়। এটি একটি খালি ট্যাগ (ক্লোজিং ট্যাগের প্রয়োজন নেই)।</p>
+        </section>
+
+        <section>
+          <h2>মৌলিক গঠন</h2>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;img src="https://via.placeholder.com/300x200" 
+     alt="প্লেসহোল্ডার ইমেজ"&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <img src="https://via.placeholder.com/300x200" alt="প্লেসহোল্ডার ইমেজ">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>গুরুত্বপূর্ণ অ্যাট্রিবিউট</h2>
+          
+          <h3>src (source)</h3>
+          <p>ছবির ফাইলের পাথ বা URL নির্ধারণ করে।</p>
+          
+          <h3>alt (alternative text)</h3>
+          <p>ছবি লোড না হলে বা স্ক্রিন রিডারের জন্য বিকল্প টেক্সট। SEO ও অ্যাক্সেসিবিলিটির জন্য অত্যন্ত গুরুত্বপূর্ণ।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;img src="broken-link.jpg" 
+     alt="একটি সুন্দর প্রাকৃতিক দৃশ্য"&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <p>ছবি না থাকলে alt টেক্সট দেখাবে:</p>
+              <img src="broken-link.jpg" alt="একটি সুন্দর প্রাকৃতিক দৃশ্য">
+            </div>
+          </div>
+
+          <h3>width ও height</h3>
+          <p>ছবির প্রস্থ ও উচ্চতা নির্ধারণ করে।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;img src="https://via.placeholder.com/500x300" 
+     width="250" height="150" 
+     alt="ছোট সাইজের ইমেজ"&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <img src="https://via.placeholder.com/500x300" width="250" height="150" alt="ছোট সাইজের ইমেজ">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>ইমেজ লিংক</h2>
+          <p>ছবির উপর ক্লিক করলে লিংকে যেতে a ট্যাগের ভিতরে img ট্যাগ বসাতে হয়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;a href="https://www.google.com" target="_blank"&gt;
+  &lt;img src="https://via.placeholder.com/200x100" 
+       alt="গুগল লোগো"&gt;
+&lt;/a&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <a href="https://www.google.com" target="_blank">
+                <img src="https://via.placeholder.com/200x100" alt="গুগল লোগো">
+              </a>
+              <p>ছবিতে ক্লিক করলে গুগল খুলবে</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>ফিগার ও ফিগক্যাপশন</h2>
+          <p>figure ও figcaption ট্যাগ দিয়ে ছবির সাথে ক্যাপশন যোগ করা যায়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;figure&gt;
+  &lt;img src="https://via.placeholder.com/300x200" 
+       alt="প্রাকৃতিক দৃশ্য"&gt;
+  &lt;figcaption&gt;চিত্র ১: একটি সুন্দর প্রাকৃতিক দৃশ্য&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <figure>
+                <img src="https://via.placeholder.com/300x200" alt="প্রাকৃতিক দৃশ্য">
+                <figcaption>চিত্র ১: একটি সুন্দর প্রাকৃতিক দৃশ্য</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>অনুশীলনী</h2>
+          <ol class="exercise-list">
+            <li>একটি ছবি যোগ করুন যার width 400px, height 200px।</li>
+            <li>একটি অর্থপূর্ণ alt টেক্সট দিন।</li>
+            <li>figure ও figcaption ব্যবহার করে ছবির নিচে "আমার প্রিয় ছবি" লিখুন।</li>
+          </ol>
+          
+          <div class="try-it-yourself">
+            <textarea class="code-editor" rows="8">&lt;figure&gt;
+  &lt;img src="https://via.placeholder.com/400x200" 
+       alt="সূর্যাস্তের দৃশ্য"&gt;
+  &lt;figcaption&gt;আমার প্রিয় ছবি - সূর্যাস্ত&lt;/figcaption&gt;
+&lt;/figure&gt;</textarea>
+            <button class="run-btn">চালান</button>
+            <div class="live-result"></div>
+          </div>
+        </section>
+
+        <div class="topic-navigation">
+          <a href="links.html">← লিংক ট্যাগ</a>
+          <a href="image-maps.html">ইমেজ ম্যাপ →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

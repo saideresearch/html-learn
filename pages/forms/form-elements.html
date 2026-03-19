@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ফর্ম এলিমেন্ট | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>ফর্ম টপিকস</h3>
+        <ul>
+          <li><a href="form-elements.html" class="active">ফর্ম এলিমেন্ট</a></li>
+          <li><a href="input-types.html">ইনপুট টাইপ</a></li>
+          <li><a href="form-attributes.html">ফর্ম অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>ফর্ম এলিমেন্ট</h1>
+
+        <section>
+          <h2>&lt;form&gt; এলিমেন্ট</h2>
+          <p>form এলিমেন্ট ফর্মের মূল কন্টেইনার।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;!-- ফর্ম এলিমেন্ট এখানে বসবে --&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>&lt;label&gt; এলিমেন্ট</h2>
+          <p>label ট্যাগ ইনপুট ফিল্ডের জন্য লেবেল নির্ধারণ করে। for অ্যাট্রিবিউটে ইনপুটের id দিতে হয়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;label for="username"&gt;ইউজারনেম:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <label for="username">ইউজারনেম:</label>
+              <input type="text" id="username" name="username">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>&lt;input&gt; এলিমেন্ট</h2>
+          <p>input ট্যাগ বিভিন্ন ধরনের ইনপুট নেওয়ার জন্য। type অ্যাট্রিবিউট দিয়ে ইনপুটের ধরণ নির্ধারণ করা হয়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;input type="text" name="fullname" placeholder="আপনার নাম"&gt;
+&lt;input type="email" name="email" placeholder="ইমেইল"&gt;
+&lt;input type="password" name="password" placeholder="পাসওয়ার্ড"&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <input type="text" name="fullname" placeholder="আপনার নাম"><br><br>
+              <input type="email" name="email" placeholder="ইমেইল"><br><br>
+              <input type="password" name="password" placeholder="পাসওয়ার্ড">
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>&lt;button&gt; এলিমেন্ট</h2>
+          <p>button ট্যাগ দিয়ে বাটন তৈরি করা হয়। type submit দিলে ফর্ম সাবমিট হয়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;button type="submit"&gt;সাবমিট&lt;/button&gt;
+&lt;button type="reset"&gt;রিসেট&lt;/button&gt;
+&lt;button type="button" onclick="alert('ক্লিক')"&gt;ক্লিক করুন&lt;/button&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <button type="submit">সাবমিট</button>
+              <button type="reset">রিসেট</button>
+              <button type="button" onclick="alert('ক্লিক করেছেন')">ক্লিক করুন</button>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>&lt;fieldset&gt; ও &lt;legend&gt;</h2>
+          <p>fieldset দিয়ে সম্পর্কিত ফর্ম এলিমেন্ট গ্রুপ করা হয়। legend দিয়ে গ্রুপের শিরোনাম দেওয়া হয়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;ব্যক্তিগত তথ্য&lt;/legend&gt;
+  &lt;label&gt;নাম: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;ইমেইল: &lt;input type="email"&gt;&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <fieldset>
+                <legend>ব্যক্তিগত তথ্য</legend>
+                <label>নাম: <input type="text"></label><br>
+                <label>ইমেইল: <input type="email"></label>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>&lt;select&gt; ও &lt;option&gt;</h2>
+          <p>ড্রপডাউন মেনু তৈরি করতে।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;label for="country"&gt;দেশ:&lt;/label&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value="bd"&gt;বাংলাদেশ&lt;/option&gt;
+  &lt;option value="in"&gt;ভারত&lt;/option&gt;
+  &lt;option value="pk"&gt;পাকিস্তান&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <label for="country">দেশ:</label>
+              <select id="country" name="country">
+                <option value="bd">বাংলাদেশ</option>
+                <option value="in">ভারত</option>
+                <option value="pk">পাকিস্তান</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>&lt;textarea&gt;</h2>
+          <p>একাধিক লাইনের টেক্সট ইনপুট নেওয়ার জন্য।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;label for="message"&gt;বার্তা:&lt;/label&gt;&lt;br&gt;
+&lt;textarea id="message" rows="4" cols="50"&gt;
+আপনার বার্তা লিখুন...
+&lt;/textarea&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <label for="message">বার্তা:</label><br>
+              <textarea id="message" rows="4" cols="50">আপনার বার্তা লিখুন...</textarea>
+            </div>
+          </div>
+        </section>
+
+        <div class="topic-navigation">
+          <a href="index.html">← ফর্ম মূল পৃষ্ঠা</a>
+          <a href="input-types.html">ইনপুট টাইপ →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

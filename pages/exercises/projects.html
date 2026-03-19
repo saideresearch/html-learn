@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML প্রজেক্ট | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>প্রজেক্ট</h3>
+        <ul>
+          <li><a href="projects.html" class="active">প্রজেক্ট সমূহ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>HTML প্রজেক্ট (Projects)</h1>
+        
+        <p>নিচের প্রজেক্টগুলো করে আপনি বাস্তব অভিজ্ঞতা অর্জন করবেন। প্রতিটি প্রজেক্ট ধাপে ধাপে তৈরি করার চেষ্টা করুন।</p>
+
+        <div class="projects-list">
+          
+          <div class="project-card">
+            <h2>প্রজেক্ট ১: ব্যক্তিগত তথ্য পৃষ্ঠা</h2>
+            <p><strong>লেভেল:</strong> সহজ</p>
+            <p>আপনার সম্পর্কে একটি তথ্য পৃষ্ঠা তৈরি করুন। থাকবে:</p>
+            <ul>
+              <li>আপনার নাম ও ছবি</li>
+              <li>আপনার সম্পর্কে কয়েক লাইন</li>
+              <li>আপনার দক্ষতার তালিকা (ul ব্যবহার করে)</li>
+              <li>সোশ্যাল মিডিয়া লিংক (ফেসবুক, ইউটিউব, ইমেইল)</li>
+            </ul>
+            <details class="solution">
+              <summary>উদাহরণ দেখুন</summary>
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;আমার পরিচিতি&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;সাঈদ হোসেন&lt;/h1&gt;
+  &lt;img src="profile.jpg" alt="সাঈদ হোসেন" width="200"&gt;
+  
+  &lt;h2&gt;আমার সম্পর্কে&lt;/h2&gt;
+  &lt;p&gt;আমি একজন ওয়েব ডেভেলপার। HTML, CSS, JavaScript নিয়ে কাজ করি।&lt;/p&gt;
+  
+  &lt;h2&gt;দক্ষতা&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;HTML5&lt;/li&gt;
+    &lt;li&gt;CSS3&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;h2&gt;যোগাযোগ&lt;/h2&gt;
+  &lt;p&gt;
+    &lt;a href="https://facebook.com"&gt;ফেসবুক&lt;/a&gt; |
+    &lt;a href="https://youtube.com"&gt;ইউটিউব&lt;/a&gt; |
+    &lt;a href="mailto:info@example.com"&gt;ইমেইল&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </details>
+          </div>
+
+          <div class="project-card">
+            <h2>প্রজেক্ট ২: ব্লগ পোস্ট পৃষ্ঠা</h2>
+            <p><strong>লেভেল:</strong> সহজ</p>
+            <p>একটি ব্লগ পোস্ট পৃষ্ঠা তৈরি করুন। থাকবে:</p>
+            <ul>
+              <li>পোস্টের শিরোনাম (h1)</li>
+              <li>লেখকের নাম ও তারিখ</li>
+              <li>বিভিন্ন অনুচ্ছেদ (p ট্যাগ)</li>
+              <li>কয়েকটি ছবি (figure ও figcaption সহ)</li>
+              <li>সম্পর্কিত পোস্টের লিংক (ul লিস্ট)</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <h2>প্রজেক্ট ৩: যোগাযোগ ফর্ম</h2>
+            <p><strong>লেভেল:</strong> মাঝারি</p>
+            <p>একটি যোগাযোগ ফর্ম তৈরি করুন। থাকবে:</p>
+            <ul>
+              <li>নাম (text input)</li>
+              <li>ইমেইল (email input)</li>
+              <li>ফোন নম্বর (tel input)</li>
+              <li>বিষয় (select ড্রপডাউন)</li>
+              <li>বার্তা (textarea)</li>
+              <li>সাবমিট বাটন</li>
+              <li>fieldset ও legend ব্যবহার করে গ্রুপিং</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <h2>প্রজেক্ট ৪: পণ্যের মূল্য তালিকা</h2>
+            <p><strong>লেভেল:</strong> মাঝারি</p>
+            <p>একটি টেবিল তৈরি করুন যেখানে পণ্যের নাম, বিবরণ, মূল্য, এবং স্টক তথ্য থাকবে। ব্যবহার করুন:</p>
+            <ul>
+              <li>thead, tbody, tfoot</li>
+              <li>colspan যেখানে প্রয়োজন</li>
+              <li>rowspan যেখানে প্রয়োজন</li>
+              <li>caption ট্যাগ</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <h2>প্রজেক্ট ৫: ওয়েবসাইট হোম পেজ</h2>
+            <p><strong>লেভেল:</strong> অ্যাডভান্সড</p>
+            <p>একটি সম্পূর্ণ ওয়েবসাইটের হোম পেজ তৈরি করুন। থাকবে:</p>
+            <ul>
+              <li>header (লোগো ও নেভিগেশন)</li>
+              <li>main (হিরো সেকশন, ফিচার সেকশন, সার্ভিস সেকশন)</li>
+              <li>aside (সাইডবার)</li>
+              <li>footer (কপিরাইট ও লিংক)</li>
+              <li>সিম্যান্টিক HTML5 এলিমেন্ট ব্যবহার</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

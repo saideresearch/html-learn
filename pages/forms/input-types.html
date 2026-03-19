@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ইনপুট টাইপ | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>ফর্ম টপিকস</h3>
+        <ul>
+          <li><a href="form-elements.html">ফর্ম এলিমেন্ট</a></li>
+          <li><a href="input-types.html" class="active">ইনপুট টাইপ</a></li>
+          <li><a href="form-attributes.html">ফর্ম অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>ইনপুট টাইপ (Input Types)</h1>
+
+        <section>
+          <h2>টেক্সট ইনপুট</h2>
+          
+          <table class="reference-table">
+            <tr>
+              <th>টাইপ</th>
+              <th>বর্ণনা</th>
+              <th>উদাহরণ</th>
+            </tr>
+            <tr>
+              <td>text</td>
+              <td>সাধারণ টেক্সট</td>
+              <td><input type="text" placeholder="টেক্সট"></td>
+            </tr>
+            <tr>
+              <td>password</td>
+              <td>পাসওয়ার্ড (লুকানো)</td>
+              <td><input type="password" placeholder="পাসওয়ার্ড"></td>
+            </tr>
+            <tr>
+              <td>email</td>
+              <td>ইমেইল ঠিকানা</td>
+              <td><input type="email" placeholder="email@example.com"></td>
+            </tr>
+            <tr>
+              <td>number</td>
+              <td>সংখ্যা</td>
+              <td><input type="number" value="25"></td>
+            </tr>
+            <tr>
+              <td>tel</td>
+              <td>টেলিফোন নম্বর</td>
+              <td><input type="tel" placeholder="01712345678"></td>
+            </tr>
+            <tr>
+              <td>url</td>
+              <td>ওয়েবসাইট URL</td>
+              <td><input type="url" placeholder="https://example.com"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>ডেট ও টাইম ইনপুট</h2>
+          
+          <table class="reference-table">
+            <tr>
+              <th>টাইপ</th>
+              <th>বর্ণনা</th>
+              <th>উদাহরণ</th>
+            </tr>
+            <tr>
+              <td>date</td>
+              <td>তারিখ</td>
+              <td><input type="date"></td>
+            </tr>
+            <tr>
+              <td>time</td>
+              <td>সময়</td>
+              <td><input type="time"></td>
+            </tr>
+            <tr>
+              <td>datetime-local</td>
+              <td>তারিখ ও সময়</td>
+              <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+              <td>month</td>
+              <td>মাস ও বছর</td>
+              <td><input type="month"></td>
+            </tr>
+            <tr>
+              <td>week</td>
+              <td>সপ্তাহ ও বছর</td>
+              <td><input type="week"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>সিলেকশন ইনপুট</h2>
+          
+          <table class="reference-table">
+            <tr>
+              <th>টাইপ</th>
+              <th>বর্ণনা</th>
+              <th>উদাহরণ</th>
+            </tr>
+            <tr>
+              <td>checkbox</td>
+              <td>চেকবক্স (একাধিক নির্বাচন)</td>
+              <td>
+                <input type="checkbox" id="c1"><label for="c1">পড়া</label>
+                <input type="checkbox" id="c2"><label for="c2">গান</label>
+              </td>
+            </tr>
+            <tr>
+              <td>radio</td>
+              <td>রেডিও বাটন (একটি নির্বাচন)</td>
+              <td>
+                <input type="radio" name="gender" id="m"><label for="m">পুরুষ</label>
+                <input type="radio" name="gender" id="f"><label for="f">মহিলা</label>
+              </td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td>রং নির্বাচন</td>
+              <td><input type="color" value="#ff0000"></td>
+            </tr>
+            <tr>
+              <td>range</td>
+              <td>স্লাইডার</td>
+              <td><input type="range" min="0" max="100" value="50"></td>
+            </tr>
+            <tr>
+              <td>file</td>
+              <td>ফাইল আপলোড</td>
+              <td><input type="file"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>বাটন ইনপুট</h2>
+          
+          <table class="reference-table">
+            <tr>
+              <th>টাইপ</th>
+              <th>বর্ণনা</th>
+              <th>উদাহরণ</th>
+            </tr>
+            <tr>
+              <td>submit</td>
+              <td>ফর্ম জমা দেওয়ার বাটন</td>
+              <td><input type="submit" value="সাবমিট"></td>
+            </tr>
+            <tr>
+              <td>reset</td>
+              <td>ফর্ম রিসেট করার বাটন</td>
+              <td><input type="reset" value="রিসেট"></td>
+            </tr>
+            <tr>
+              <td>button</td>
+              <td>সাধারণ বাটন</td>
+              <td><input type="button" value="ক্লিক করুন" onclick="alert('হ্যালো')"></td>
+            </tr>
+            <tr>
+              <td>hidden</td>
+              <td>লুকানো ইনপুট</td>
+              <td><input type="hidden" value="12345"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>সম্পূর্ণ উদাহরণ</h2>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;form&gt;
+  &lt;label&gt;নাম: &lt;input type="text" placeholder="আপনার নাম"&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;ইমেইল: &lt;input type="email" placeholder="example@email.com"&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;পাসওয়ার্ড: &lt;input type="password"&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;জন্ম তারিখ: &lt;input type="date"&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;&lt;input type="checkbox"&gt; শর্তাবলী accept করছি&lt;/label&gt;&lt;br&gt;
+  &lt;input type="submit" value="নিবন্ধন"&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <form>
+                <label>নাম: <input type="text" placeholder="আপনার নাম"></label><br>
+                <label>ইমেইল: <input type="email" placeholder="example@email.com"></label><br>
+                <label>পাসওয়ার্ড: <input type="password"></label><br>
+                <label>জন্ম তারিখ: <input type="date"></label><br>
+                <label><input type="checkbox"> শর্তাবলী accept করছি</label><br>
+                <input type="submit" value="নিবন্ধন">
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <div class="topic-navigation">
+          <a href="form-elements.html">← ফর্ম এলিমেন্ট</a>
+          <a href="form-attributes.html">ফর্ম অ্যাট্রিবিউট →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

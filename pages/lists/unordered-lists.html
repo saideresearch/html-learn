@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আনঅর্ডারড লিস্ট (ul) | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>লিস্ট টপিকস</h3>
+        <ul>
+          <li><a href="unordered-lists.html" class="active">আনঅর্ডারড লিস্ট (ul)</a></li>
+          <li><a href="ordered-lists.html">অর্ডারড লিস্ট (ol)</a></li>
+          <li><a href="description-lists.html">ডেসক্রিপশন লিস্ট (dl)</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>আনঅর্ডারড লিস্ট (Unordered List)</h1>
+
+        <section>
+          <h2>ul ট্যাগ কী?</h2>
+          <p>ul (unordered list) ট্যাগ দিয়ে বুলেট পয়েন্ট সহ তালিকা তৈরি করা হয়। এখানে আইটেমের ক্রম গুরুত্বপূর্ণ নয়।</p>
+        </section>
+
+        <section>
+          <h2>মৌলিক গঠন</h2>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;ul&gt;
+  &lt;li&gt;আপেল&lt;/li&gt;
+  &lt;li&gt;কলা&lt;/li&gt;
+  &lt;li&gt;আম&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <ul>
+                <li>আপেল</li>
+                <li>কলা</li>
+                <li>আম</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>বুলেট স্টাইল পরিবর্তন</h2>
+          <p>CSS দিয়ে বুলেটের স্টাইল পরিবর্তন করা যায়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;ul style="list-style-type: square;"&gt;
+  &lt;li&gt;স্কয়ার বুলেট&lt;/li&gt;
+  &lt;li&gt;আইটেম ২&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style="list-style-type: circle;"&gt;
+  &lt;li&gt;সার্কেল বুলেট&lt;/li&gt;
+  &lt;li&gt;আইটেম ২&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style="list-style-type: none;"&gt;
+  &lt;li&gt;বুলেট ছাড়া&lt;/li&gt;
+  &lt;li&gt;আইটেম ২&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <ul style="list-style-type: square;">
+                <li>স্কয়ার বুলেট</li>
+                <li>আইটেম ২</li>
+              </ul>
+              <ul style="list-style-type: circle;">
+                <li>সার্কেল বুলেট</li>
+                <li>আইটেম ২</li>
+              </ul>
+              <ul style="list-style-type: none;">
+                <li>বুলেট ছাড়া</li>
+                <li>আইটেম ২</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>অনুশীলনী</h2>
+          <div class="try-it-yourself">
+            <h4>আপনার প্রিয় ৫টি খাবারের তালিকা তৈরি করুন:</h4>
+            <textarea class="code-editor" rows="6">&lt;h3&gt;আমার প্রিয় খাবার&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;বিরিয়ানি&lt;/li&gt;
+  &lt;li&gt;কাচ্চি&lt;/li&gt;
+  &lt;li&gt;ফুচকা&lt;/li&gt;
+  &lt;li&gt;চটপটি&lt;/li&gt;
+&lt;/ul&gt;</textarea>
+            <button class="run-btn">চালান</button>
+            <div class="live-result"></div>
+          </div>
+        </section>
+
+        <div class="topic-navigation">
+          <a href="index.html">← লিস্ট মূল পৃষ্ঠা</a>
+          <a href="ordered-lists.html">অর্ডারড লিস্ট →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

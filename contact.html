@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>যোগাযোগ | HTML শিখি</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'SolaimanLipi', Arial, sans-serif;
+    }
+    .contact-info {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .contact-info a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html">হোম</a></li>
+          <li><a href="pages/introduction/">শুরু করুন</a></li>
+          <li><a href="pages/basics/">বেসিক</a></li>
+          <li><a href="pages/forms/">ফর্ম</a></li>
+          <li><a href="pages/exercises/">অনুশীলন</a></li>
+          <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+          <li><a href="contact.html" class="active">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="contact-container">
+      <h1>যোগাযোগ করুন</h1>
+      
+      <div class="contact-info">
+        <h2>আমাদের ঠিকানা</h2>
+        <p><strong>ইমেইল:</strong> <a href="mailto:info@htmlshikhi.com">info@htmlshikhi.com</a></p>
+        <p><strong>ফোন:</strong> <a href="tel:+8801712345678">+৮৮০ ১৭১২-৩৪৫৬৭৮</a></p>
+        <p><strong>ঠিকানা:</strong> ঢাকা, বাংলাদেশ</p>
+        <p><strong>ফেসবুক:</strong> <a href="https://facebook.com/htmlshikhi" target="_blank">/htmlshikhi</a></p>
+        <p><strong>ইউটিউব:</strong> <a href="https://youtube.com/@htmlshikhi" target="_blank">@htmlshikhi</a></p>
+      </div>
+
+      <h2>আপনার মতামত দিন</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">আপনার নাম *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">ইমেইল ঠিকানা *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">বিষয়</label>
+          <select id="subject" name="subject">
+            <option value="">বেছে নিন</option>
+            <option value="feedback">মতামত</option>
+            <option value="question">প্রশ্ন</option>
+            <option value="suggestion">পরামর্শ</option>
+            <option value="other">অন্যান্য</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">বার্তা *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">পাঠান</button>
+          <button type="reset" class="btn btn-secondary">মুছে ফেলুন</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+/* ===== PAGE LAYOUT ===== */
+.page-wrapper {
+  display: flex;
+  min-height: calc(100vh - 80px - 300px);
+}
+
+.sidebar {
+  width: 280px;
+  background: var(--light-bg);
+  border-right: 1px solid var(--border-color);
+  padding: 30px 0;
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.sidebar-nav h3 {
+  padding: 0 20px 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary-color);
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav li {
+  margin-bottom: 5px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 8px 20px;
+  color: var(--text-color);
+  border-left: 3px solid transparent;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--secondary-color);
+  border-left-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.page-content {
+  flex: 1;
+  padding: 40px 0;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  background: none;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin: 0 10px;
+  color: var(--text-light);
+}
+
+.breadcrumb a {
+  color: var(--secondary-color);
+}
+
+.breadcrumb li:last-child {
+  color: var(--text-light);
+}
+
+/* ===== TOPIC ARTICLE ===== */
+.topic-article {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.topic-article h1 {
+  margin-bottom: 10px;
+}
+
+.topic-meta {
+  display: flex;
+  gap: 20px;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.topic-section {
+  margin-bottom: 40px;
+}
+
+.topic-section h2 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.topic-section h3 {
+  margin: 20px 0 15px;
+  color: var(--primary-color);
+}
+
+/* ===== EXAMPLE BOX ===== */
+.example-box {
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.code-preview {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin: 15px 0;
+  overflow-x: auto;
+}
+
+.code-preview pre {
+  margin: 0;
+  font-family: var(--font-code);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.live-preview {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 15px 0;
+}
+
+/* ===== TRY IT YOURSELF ===== */
+.try-it-yourself {
+  margin-top: 30px;
+  padding: 20px;
+  background: #e8f4f8;
+  border-radius: var(--border-radius);
+}
+
+.code-editor {
+  width: 100%;
+  padding: 15px;
+  font-family: var(--font-code);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin: 10px 0;
+  resize: vertical;
+}
+
+.run-btn {
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.live-result {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 15px;
+  margin-top: 15px;
+}
+
+/* ===== TIP BOX ===== */
+.tip-box {
+  background: #e7f3fe;
+  border-left: 4px solid var(--secondary-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.tip-box h4 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+/* ===== EXERCISE LIST ===== */
+.exercise-list {
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+.exercise-list li {
+  margin-bottom: 10px;
+}
+
+details.solution {
+  margin: 20px 0;
+  padding: 15px;
+  background: var(--light-bg);
+  border-radius: var(--border-radius);
+}
+
+summary {
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+details[open] summary {
+  margin-bottom: 15px;
+}
+
+/* ===== TOPIC NAVIGATION ===== */
+.topic-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.prev-topic,
+.next-topic {
+  padding: 10px 20px;
+  background: var(--light-bg);
+  border-radius: var(--border-radius);
+}
+
+/* ===== COMMENTS SECTION ===== */
+.comments-section {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+}
+
+.comments-section h3 {
+  margin-bottom: 20px;
+}
+
+.comment-form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font-main);
+}
+
+.comment-form button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc {
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.toc h3 {
+  margin-bottom: 15px;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin-bottom: 8px;
+}
+
+.toc a {
+  color: var(--text-color);
+}
+
+.toc a:hover {
+  color: var(--secondary-color);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .topic-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>লিংক (a ট্যাগ) | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>লিংক ও ইমেজ</h3>
+        <ul>
+          <li><a href="links.html" class="active">লিংক (a ট্যাগ)</a></li>
+          <li><a href="images.html">ইমেজ (img ট্যাগ)</a></li>
+          <li><a href="image-maps.html">ইমেজ ম্যাপ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>লিংক (a ট্যাগ)</h1>
+
+        <section>
+          <h2>লিংক কী?</h2>
+          <p>a (anchor) ট্যাগ দিয়ে হাইপারলিংক তৈরি করা হয়। ব্যবহারকারী লিংকে ক্লিক করলে অন্য পৃষ্ঠায়, অন্য ওয়েবসাইটে বা একই পৃষ্ঠার অন্য অংশে চলে যায়।</p>
+        </section>
+
+        <section>
+          <h2>মৌলিক গঠন</h2>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;a href="https://www.google.com"&gt;গুগলে যান&lt;/a&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <a href="https://www.google.com" target="_blank">গুগলে যান</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>গুরুত্বপূর্ণ অ্যাট্রিবিউট</h2>
+          
+          <h3>href</h3>
+          <p>লিংকের গন্তব্য নির্ধারণ করে।</p>
+          
+          <h3>target</h3>
+          <p>লিংক কোথায় খুলবে তা নির্ধারণ করে:</p>
+          <ul>
+            <li><code>target="_blank"</code> - নতুন ট্যাবে খোলে</li>
+            <li><code>target="_self"</code> - একই ট্যাবে খোলে (ডিফল্ট)</li>
+          </ul>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;a href="https://www.google.com" target="_blank"&gt;
+  নতুন ট্যাবে গুগল
+&lt;/a&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <a href="https://www.google.com" target="_blank">নতুন ট্যাবে গুগল</a>
+            </div>
+          </div>
+
+          <h3>title</h3>
+          <p>লিংকের উপর মাউস নিলে টুলটিপ দেখায়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;a href="https://www.google.com" title="গুগলে যান"&gt;
+  গুগল
+&lt;/a&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <a href="https://www.google.com" title="গুগলে যান">গুগল (মাউস নিয়ে দেখুন)</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>ইন্টারনাল লিংক</h2>
+          <p>একই ওয়েবসাইটের অন্য পৃষ্ঠায় লিংক।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;a href="/pages/basics/headings.html"&gt;
+  হেডিং ট্যাগ দেখুন
+&lt;/a&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <a href="/pages/basics/headings.html">হেডিং ট্যাগ দেখুন</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>অ্যাঙ্কর লিংক (একই পৃষ্ঠার মধ্যে)</h2>
+          <p>একই পৃষ্ঠার নির্দিষ্ট অংশে যেতে # ব্যবহার করা হয়।</p>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;a href="#section1"&gt;সেকশন ১-এ যান&lt;/a&gt;
+
+&lt;h2 id="section1"&gt;সেকশন ১&lt;/h2&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <a href="#section1">সেকশন ১-এ যান</a>
+              <h3 id="section1">সেকশন ১</h3>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>ইমেইল ও ফোন লিংক</h2>
+          
+          <div class="example-box">
+            <div class="code-preview">
+              <pre><code>&lt;a href="mailto:info@example.com"&gt;
+  ইমেইল পাঠান
+&lt;/a&gt;
+
+&lt;a href="tel:+880123456789"&gt;
+  কল করুন
+&lt;/a&gt;</code></pre>
+            </div>
+            <div class="live-preview">
+              <p><a href="mailto:info@example.com">ইমেইল পাঠান</a></p>
+              <p><a href="tel:+880123456789">কল করুন</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>অনুশীলনী</h2>
+          <div class="try-it-yourself">
+            <textarea class="code-editor" rows="8">&lt;p&gt;
+  &lt;a href="https://www.google.com" target="_blank"&gt;
+    গুগল (নতুন ট্যাবে)
+  &lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href="mailto:test@example.com"&gt;
+    ইমেইল পাঠান
+  &lt;/a&gt;
+&lt;/p&gt;</textarea>
+            <button class="run-btn">চালান</button>
+            <div class="live-result"></div>
+          </div>
+        </section>
+
+        <div class="topic-navigation">
+          <a href="index.html">← লিংক ও ইমেজ মূল পৃষ্ঠা</a>
+          <a href="images.html">ইমেজ ট্যাগ →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

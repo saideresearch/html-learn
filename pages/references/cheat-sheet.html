@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML চিট শিট | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+  <style>
+    .cheat-sheet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .cheat-section {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+    }
+    .cheat-section h2 {
+      background: #3498db;
+      color: white;
+      margin: -15px -15px 15px -15px;
+      padding: 10px 15px;
+      border-radius: 5px 5px 0 0;
+      font-size: 1.3rem;
+    }
+    .cheat-item {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    .cheat-tag {
+      font-weight: bold;
+      color: #e74c3c;
+      font-family: monospace;
+      font-size: 1.1rem;
+    }
+    .cheat-desc {
+      color: #555;
+      margin-top: 3px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>রেফারেন্স</h3>
+        <ul>
+          <li><a href="html-tags-reference.html">HTML ট্যাগ রেফারেন্স</a></li>
+          <li><a href="cheat-sheet.html" class="active">চিট শিট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>HTML চিট শিট (Cheat Sheet)</h1>
+        
+        <p>দ্রুত দেখার জন্য এক পৃষ্ঠায় গুরুত্বপূর্ণ HTML ট্যাগ ও অ্যাট্রিবিউটের তালিকা।</p>
+
+        <div class="cheat-sheet">
+          
+          <div class="cheat-section">
+            <h2>📄 মৌলিক কাঠামো</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;!DOCTYPE html&gt;</div>
+              <div class="cheat-desc">HTML5 ডকুমেন্ট টাইপ ঘোষণা</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;html&gt;&lt;/html&gt;</div>
+              <div class="cheat-desc">HTML ডকুমেন্টের মূল এলিমেন্ট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;head&gt;&lt;/head&gt;</div>
+              <div class="cheat-desc">মেটাডাটা, CSS লিংক, টাইটেল</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;title&gt;&lt;/title&gt;</div>
+              <div class="cheat-desc">ব্রাউজার ট্যাবে শিরোনাম</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;body&gt;&lt;/body&gt;</div>
+              <div class="cheat-desc">পৃষ্ঠার মূল কন্টেন্ট</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>🔤 টেক্সট ফরম্যাটিং</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;h1&gt; - &lt;h6&gt;</div>
+              <div class="cheat-desc">শিরোনাম (h1 বড়, h6 ছোট)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;p&gt;&lt;/p&gt;</div>
+              <div class="cheat-desc">প্যারাগ্রাফ</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;strong&gt;&lt;/strong&gt;</div>
+              <div class="cheat-desc">বোল্ড টেক্সট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;em&gt;&lt;/em&gt;</div>
+              <div class="cheat-desc">ইটালিক টেক্সট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;mark&gt;&lt;/mark&gt;</div>
+              <div class="cheat-desc">হাইলাইট করা টেক্সট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;small&gt;&lt;/small&gt;</div>
+              <div class="cheat-desc">ছোট টেক্সট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;del&gt;&lt;/del&gt;</div>
+              <div class="cheat-desc">মুছে ফেলা টেক্সট (স্ট্রাইক)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;ins&gt;&lt;/ins&gt;</div>
+              <div class="cheat-desc">যোগ করা টেক্সট (আন্ডারলাইন)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;sub&gt;&lt;/sub&gt;</div>
+              <div class="cheat-desc">সাবস্ক্রিপ্ট (H<sub>2</sub>O)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;sup&gt;&lt;/sup&gt;</div>
+              <div class="cheat-desc">সুপারস্ক্রিপ্ট (X<sup>2</sup>)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;br&gt;</div>
+              <div class="cheat-desc">লাইন ব্রেক</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;hr&gt;</div>
+              <div class="cheat-desc">অনুভূমিক রেখা</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>🔗 লিংক ও ইমেজ</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;a href="url"&gt;লিংক&lt;/a&gt;</div>
+              <div class="cheat-desc">হাইপারলিংক</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">target="_blank"</div>
+              <div class="cheat-desc">নতুন ট্যাবে খুলবে</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;img src="url" alt="text"&gt;</div>
+              <div class="cheat-desc">ছবি দেখান</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;figure&gt;&lt;/figure&gt;</div>
+              <div class="cheat-desc">ছবি/ডায়াগ্রাম কন্টেইনার</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;figcaption&gt;&lt;/figcaption&gt;</div>
+              <div class="cheat-desc">figure-এর ক্যাপশন</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>📋 লিস্ট</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</div>
+              <div class="cheat-desc">আনঅর্ডারড লিস্ট (বুলেট)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</div>
+              <div class="cheat-desc">অর্ডারড লিস্ট (সংখ্যা)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;</div>
+              <div class="cheat-desc">ডেসক্রিপশন লিস্ট</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>📊 টেবল</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;table&gt;&lt;/table&gt;</div>
+              <div class="cheat-desc">টেবল কন্টেইনার</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;tr&gt;&lt;/tr&gt;</div>
+              <div class="cheat-desc">টেবল রো (সারি)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;td&gt;&lt;/td&gt;</div>
+              <div class="cheat-desc">টেবল ডাটা সেল</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;th&gt;&lt;/th&gt;</div>
+              <div class="cheat-desc">টেবল হেডার সেল</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">colspan="2"</div>
+              <div class="cheat-desc">২টি কলাম জুড়ে বিস্তৃত</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">rowspan="2"</div>
+              <div class="cheat-desc">২টি সারি জুড়ে বিস্তৃত</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;caption&gt;&lt;/caption&gt;</div>
+              <div class="cheat-desc">টেবলের শিরোনাম</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>📝 ফর্ম</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;form&gt;&lt;/form&gt;</div>
+              <div class="cheat-desc">ফর্ম কন্টেইনার</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;input type="text"&gt;</div>
+              <div class="cheat-desc">টেক্সট ইনপুট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;input type="email"&gt;</div>
+              <div class="cheat-desc">ইমেইল ইনপুট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;input type="password"&gt;</div>
+              <div class="cheat-desc">পাসওয়ার্ড ইনপুট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;input type="number"&gt;</div>
+              <div class="cheat-desc">সংখ্যা ইনপুট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;input type="date"&gt;</div>
+              <div class="cheat-desc">তারিখ নির্বাচন</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;input type="checkbox"&gt;</div>
+              <div class="cheat-desc">চেকবক্স</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;input type="radio"&gt;</div>
+              <div class="cheat-desc">রেডিও বাটন</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;select&gt;&lt;option&gt;&lt;/select&gt;</div>
+              <div class="cheat-desc">ড্রপডাউন মেনু</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;textarea&gt;&lt;/textarea&gt;</div>
+              <div class="cheat-desc">বড় টেক্সট ইনপুট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;button&gt;&lt;/button&gt;</div>
+              <div class="cheat-desc">বাটন</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;label for="id"&gt;&lt;/label&gt;</div>
+              <div class="cheat-desc">ইনপুটের লেবেল</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">required</div>
+              <div class="cheat-desc">ফিল্ড পূরণ বাধ্যতামূলক</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">placeholder="text"</div>
+              <div class="cheat-desc">উদাহরণ টেক্সট</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>🏗️ সিম্যান্টিক HTML</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;header&gt;&lt;/header&gt;</div>
+              <div class="cheat-desc">পৃষ্ঠার হেডার</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;nav&gt;&lt;/nav&gt;</div>
+              <div class="cheat-desc">নেভিগেশন লিংক</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;main&gt;&lt;/main&gt;</div>
+              <div class="cheat-desc">মূল কন্টেন্ট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;section&gt;&lt;/section&gt;</div>
+              <div class="cheat-desc">পৃষ্ঠার অংশ</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;article&gt;&lt;/article&gt;</div>
+              <div class="cheat-desc">স্বতন্ত্র কন্টেন্ট</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;aside&gt;&lt;/aside&gt;</div>
+              <div class="cheat-desc">সাইডবার</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;footer&gt;&lt;/footer&gt;</div>
+              <div class="cheat-desc">পৃষ্ঠার ফুটার</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>🎵 মাল্টিমিডিয়া</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;audio controls&gt;&lt;/audio&gt;</div>
+              <div class="cheat-desc">অডিও প্লেয়ার</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;video controls&gt;&lt;/video&gt;</div>
+              <div class="cheat-desc">ভিডিও প্লেয়ার</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;iframe src=""&gt;&lt;/iframe&gt;</div>
+              <div class="cheat-desc">অন্য পৃষ্ঠা এম্বেড</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;embed src=""&gt;</div>
+              <div class="cheat-desc">PDF ইত্যাদি এম্বেড</div>
+            </div>
+          </div>
+
+          <div class="cheat-section">
+            <h2>⚙️ মেটা ট্যাগ</h2>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;meta charset="UTF-8"&gt;</div>
+              <div class="cheat-desc">ক্যারেক্টার এনকোডিং</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;meta name="viewport"&gt;</div>
+              <div class="cheat-desc">রেসপনসিভ ডিজাইন</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;meta name="description"&gt;</div>
+              <div class="cheat-desc">পৃষ্ঠার বিবরণ (SEO)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;meta name="keywords"&gt;</div>
+              <div class="cheat-desc">কীওয়ার্ড (SEO)</div>
+            </div>
+            <div class="cheat-item">
+              <div class="cheat-tag">&lt;meta name="author"&gt;</div>
+              <div class="cheat-desc">লেখকের নাম</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML কী? | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="./" class="active">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পরিচিতি টপিকস</h3>
+        <ul>
+          <li><a href="what-is-html.html" class="active">HTML কী?</a></li>
+          <li><a href="history-of-html.html">HTML-এর ইতিহাস</a></li>
+          <li><a href="html-versions.html">HTML-এর সংস্করণ</a></li>
+          <li><a href="html-editors.html">HTML এডিটর</a></li>
+          <li><a href="first-page.html">প্রথম HTML পৃষ্ঠা</a></li>
+          <li><a href="basic-structure.html">HTML মৌলিক কাঠামো</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="./">পরিচিতি</a></li>
+            <li>HTML কী?</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML কী? (What is HTML?)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১০ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML-এর পূর্ণরূপ</h2>
+            <p><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</p>
+            
+            <ul>
+              <li><strong>HyperText:</strong> একটি টেক্সট থেকে অন্য টেক্সটে লিংক করার ক্ষমতা</li>
+              <li><strong>Markup:</strong> ট্যাগ ব্যবহার করে কন্টেন্ট সাজানো</li>
+              <li><strong>Language:</strong> নির্দিষ্ট নিয়মে লেখা ভাষা</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML ট্যাগ কী?</h2>
+            <p>HTML ট্যাগ হলো কিছু নির্দিষ্ট কীওয়ার্ড যা কোণাকার ব্র্যাকেট < > এর ভিতরে লেখা হয়। ট্যাগ দিয়ে কন্টেন্টের শুরু ও শেষ নির্ধারণ করা হয়।</p>
+            
+            <div class="example-box">
+              <h3>ট্যাগের গঠন:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;tagname&gt;কন্টেন্ট&lt;/tagname&gt;</code></pre>
+              </div>
+              
+              <h4>উদাহরণ:</h4>
+              <div class="code-preview">
+                <pre><code>&lt;h1&gt;এটি একটি শিরোনাম&lt;/h1&gt;
+&lt;p&gt;এটি একটি প্যারাগ্রাফ&lt;/p&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML এলিমেন্ট</h2>
+            <p>HTML এলিমেন্ট হলো সম্পূর্ণ কিছু যা শুরু ট্যাগ, কন্টেন্ট ও শেষ ট্যাগ নিয়ে গঠিত।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;h1&gt;আমার প্রথম শিরোনাম&lt;/h1&gt;</code></pre>
+              </div>
+              <p>এখানে <code>&lt;h1&gt;</code> হলো শুরু ট্যাগ, <code>আমার প্রথম শিরোনাম</code> হলো কন্টেন্ট, <code>&lt;/h1&gt;</code> হলো শেষ ট্যাগ। পুরো ব্যাপারটি একটি HTML এলিমেন্ট।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কিছু সাধারণ HTML ট্যাগ</h2>
+            <table class="reference-table">
+              <tr>
+                <th>ট্যাগ</th>
+                <th>বর্ণনা</th>
+              </tr>
+              <tr>
+                <td>&lt;h1&gt; থেকে &lt;h6&gt;</td>
+                <td>শিরোনাম তৈরি করে</td>
+              </tr>
+              <tr>
+                <td>&lt;p&gt;</td>
+                <td>প্যারাগ্রাফ তৈরি করে</td>
+              </tr>
+              <tr>
+                <td>&lt;a&gt;</td>
+                <td>লিংক তৈরি করে</td>
+              </tr>
+              <tr>
+                <td>&lt;img&gt;</td>
+                <td>ছবি দেখায়</td>
+              </tr>
+              <tr>
+                <td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</td>
+                <td>তালিকা তৈরি করে</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>HTML-এর পূর্ণরূপ কী?</li>
+              <li>ট্যাগ ও এলিমেন্টের মধ্যে পার্থক্য কী?</li>
+              <li>নিচের কোডে কয়টি এলিমেন্ট আছে? <code>&lt;h1&gt;শিরোনাম&lt;/h1&gt;&lt;p&gt;প্যারাগ্রাফ&lt;/p&gt;</code></li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>HyperText Markup Language</li>
+                <li>ট্যাগ শুধু শুরু ও শেষ চিহ্নিত করে, এলিমেন্ট হলো ট্যাগ+কন্টেন্ট-এর সম্পূর্ণ অংশ</li>
+                <li>২টি এলিমেন্ট (h1 ও p)</li>
+              </ol>
+            </details>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="./" class="prev-topic">← পরিচিতি মূল পৃষ্ঠা</a>
+            <a href="history-of-html.html" class="next-topic">HTML-এর ইতিহাস →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML ট্যাগ রেফারেন্স | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+  <style>
+    .tag-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .tag-table th, .tag-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    .tag-table th {
+      background-color: #f2f2f2;
+    }
+    .tag-table tr:hover {
+      background-color: #f5f5f5;
+    }
+    .tag-code {
+      background: #f0f0f0;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>রেফারেন্স</h3>
+        <ul>
+          <li><a href="html-tags-reference.html" class="active">HTML ট্যাগ রেফারেন্স</a></li>
+          <li><a href="html-attributes-reference.html">HTML অ্যাট্রিবিউট রেফারেন্স</a></li>
+          <li><a href="global-attributes.html">গ্লোবাল অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <div class="container">
+        <h1>HTML ট্যাগ রেফারেন্স</h1>
+        
+        <p>নিচের টেবিলে গুরুত্বপূর্ণ HTML ট্যাগগুলোর তালিকা ও তাদের ব্যবহার দেওয়া হলো।</p>
+
+        <h2>মৌলিক ট্যাগ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;!DOCTYPE&gt;</span></td>
+            <td>ডকুমেন্ট টাইপ ঘোষণা করে (HTML5)</td>
+            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;html&gt;</span></td>
+            <td>HTML ডকুমেন্টের মূল এলিমেন্ট</td>
+            <td><code>&lt;html lang="bn"&gt;...&lt;/html&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;head&gt;</span></td>
+            <td>ডকুমেন্টের মেটাডাটা ধারণ করে</td>
+            <td><code>&lt;head&gt;&lt;title&gt;...&lt;/title&gt;&lt;/head&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;title&gt;</span></td>
+            <td>ব্রাউজার ট্যাবে দেখানো শিরোনাম</td>
+            <td><code>&lt;title&gt;আমার সাইট&lt;/title&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;body&gt;</span></td>
+            <td>ডকুমেন্টের মূল কন্টেন্ট ধারণ করে</td>
+            <td><code>&lt;body&gt;...&lt;/body&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;h1&gt; - &lt;h6&gt;</span></td>
+            <td>শিরোনাম (h1 সবচেয়ে গুরুত্বপূর্ণ)</td>
+            <td><code>&lt;h1&gt;শিরোনাম&lt;/h1&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;p&gt;</span></td>
+            <td>প্যারাগ্রাফ</td>
+            <td><code>&lt;p&gt;একটি প্যারাগ্রাফ&lt;/p&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;br&gt;</span></td>
+            <td>লাইন ব্রেক (নতুন লাইন)</td>
+            <td><code>লাইন ১&lt;br&gt;লাইন ২</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;hr&gt;</span></td>
+            <td>অনুভূমিক রেখা</td>
+            <td><code>&lt;hr&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>টেক্সট ফরম্যাটিং ট্যাগ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;strong&gt;</span></td>
+            <td>গুরুত্বপূর্ণ টেক্সট (বোল্ড)</td>
+            <td><code>&lt;strong&gt;গুরুত্বপূর্ণ&lt;/strong&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;em&gt;</span></td>
+            <td>জোরালো টেক্সট (ইটালিক)</td>
+            <td><code>&lt;em&gt;জোরালো&lt;/em&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;mark&gt;</span></td>
+            <td>হাইলাইট করা টেক্সট</td>
+            <td><code>&lt;mark&gt;হাইলাইট&lt;/mark&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;small&gt;</span></td>
+            <td>ছোট টেক্সট</td>
+            <td><code>&lt;small&gt;ছোট&lt;/small&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;del&gt;</span></td>
+            <td>মুছে ফেলা টেক্সট</td>
+            <td><code>&lt;del&gt;মুছে ফেলা&lt;/del&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;ins&gt;</span></td>
+            <td>যোগ করা টেক্সট</td>
+            <td><code>&lt;ins&gt;যোগ করা&lt;/ins&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;sub&gt;</span></td>
+            <td>সাবস্ক্রিপ্ট</td>
+            <td><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;sup&gt;</span></td>
+            <td>সুপারস্ক্রিপ্ট</td>
+            <td><code>X&lt;sup&gt;2&lt;/sup&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>লিংক ও ইমেজ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;a&gt;</span></td>
+            <td>হাইপারলিংক তৈরি করে</td>
+            <td><code>&lt;a href="url"&gt;লিংক&lt;/a&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;img&gt;</span></td>
+            <td>ছবি দেখায়</td>
+            <td><code>&lt;img src="image.jpg" alt="বর্ণনা"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;figure&gt;</span></td>
+            <td>ছবি, ডায়াগ্রাম ইত্যাদি কন্টেইনার</td>
+            <td><code>&lt;figure&gt;&lt;img&gt;...&lt;/figure&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;figcaption&gt;</span></td>
+            <td>figure-এর ক্যাপশন</td>
+            <td><code>&lt;figcaption&gt;চিত্র ১&lt;/figcaption&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>লিস্ট ট্যাগ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;ul&gt;</span></td>
+            <td>আনঅর্ডারড লিস্ট (বুলেট)</td>
+            <td><code>&lt;ul&gt;&lt;li&gt;আইটেম&lt;/li&gt;&lt;/ul&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;ol&gt;</span></td>
+            <td>অর্ডারড লিস্ট (সংখ্যা)</td>
+            <td><code>&lt;ol&gt;&lt;li&gt;আইটেম&lt;/li&gt;&lt;/ol&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;li&gt;</span></td>
+            <td>লিস্ট আইটেম</td>
+            <td><code>&lt;li&gt;আইটেম&lt;/li&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;dl&gt;</span></td>
+            <td>ডেসক্রিপশন লিস্ট</td>
+            <td><code>&lt;dl&gt;&lt;dt&gt;টার্ম&lt;/dt&gt;&lt;dd&gt;বর্ণনা&lt;/dd&gt;&lt;/dl&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;dt&gt;</span></td>
+            <td>ডেসক্রিপশন টার্ম</td>
+            <td><code>&lt;dt&gt;HTML&lt;/dt&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;dd&gt;</span></td>
+            <td>ডেসক্রিপশন ডিটেইলস</td>
+            <td><code>&lt;dd&gt;মার্কআপ ভাষা&lt;/dd&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>টেবল ট্যাগ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;table&gt;</span></td>
+            <td>টেবল কন্টেইনার</td>
+            <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;tr&gt;</span></td>
+            <td>টেবল রো (সারি)</td>
+            <td><code>&lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;td&gt;</span></td>
+            <td>টেবল ডাটা সেল</td>
+            <td><code>&lt;td&gt;ডাটা&lt;/td&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;th&gt;</span></td>
+            <td>টেবল হেডার সেল</td>
+            <td><code>&lt;th&gt;শিরোনাম&lt;/th&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;thead&gt;</span></td>
+            <td>টেবল হেডার অংশ</td>
+            <td><code>&lt;thead&gt;&lt;tr&gt;...&lt;/tr&gt;&lt;/thead&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;tbody&gt;</span></td>
+            <td>টেবল বডি অংশ</td>
+            <td><code>&lt;tbody&gt;...&lt;/tbody&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;tfoot&gt;</span></td>
+            <td>টেবল ফুটার অংশ</td>
+            <td><code>&lt;tfoot&gt;...&lt;/tfoot&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;caption&gt;</span></td>
+            <td>টেবলের শিরোনাম</td>
+            <td><code>&lt;caption&gt;মার্কশিট&lt;/caption&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>ফর্ম ট্যাগ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;form&gt;</span></td>
+            <td>ফর্ম কন্টেইনার</td>
+            <td><code>&lt;form action="/submit"&gt;...&lt;/form&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;input&gt;</span></td>
+            <td>ইনপুট ফিল্ড</td>
+            <td><code>&lt;input type="text" name="name"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;label&gt;</span></td>
+            <td>ইনপুটের লেবেল</td>
+            <td><code>&lt;label for="name"&gt;নাম:&lt;/label&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;button&gt;</span></td>
+            <td>বাটন</td>
+            <td><code>&lt;button type="submit"&gt;সাবমিট&lt;/button&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;select&gt;</span></td>
+            <td>ড্রপডাউন মেনু</td>
+            <td><code>&lt;select&gt;&lt;option&gt;...&lt;/option&gt;&lt;/select&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;option&gt;</span></td>
+            <td>ড্রপডাউন অপশন</td>
+            <td><code>&lt;option value="bd"&gt;বাংলাদেশ&lt;/option&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;textarea&gt;</span></td>
+            <td>মাল্টিলাইন টেক্সট ইনপুট</td>
+            <td><code>&lt;textarea rows="4"&gt;...&lt;/textarea&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;fieldset&gt;</span></td>
+            <td>ফর্ম গ্রুপিং</td>
+            <td><code>&lt;fieldset&gt;&lt;legend&gt;...&lt;/legend&gt;...&lt;/fieldset&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;legend&gt;</span></td>
+            <td>fieldset-এর শিরোনাম</td>
+            <td><code>&lt;legend&gt;ব্যক্তিগত তথ্য&lt;/legend&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>সিম্যান্টিক ট্যাগ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;header&gt;</span></td>
+            <td>পৃষ্ঠা বা সেকশনের হেডার</td>
+            <td><code>&lt;header&gt;&lt;h1&gt;...&lt;/h1&gt;&lt;/header&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;nav&gt;</span></td>
+            <td>নেভিগেশন লিংক</td>
+            <td><code>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a&gt;...&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;main&gt;</span></td>
+            <td>পৃষ্ঠার মূল কন্টেন্ট</td>
+            <td><code>&lt;main&gt;...&lt;/main&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;section&gt;</span></td>
+            <td>পৃষ্ঠার একটি অংশ</td>
+            <td><code>&lt;section&gt;&lt;h2&gt;...&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/section&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;article&gt;</span></td>
+            <td>স্বতন্ত্র কন্টেন্ট</td>
+            <td><code>&lt;article&gt;&lt;h2&gt;...&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/article&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;aside&gt;</span></td>
+            <td>পাশের কন্টেন্ট (সাইডবার)</td>
+            <td><code>&lt;aside&gt;...&lt;/aside&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;footer&gt;</span></td>
+            <td>পৃষ্ঠা বা সেকশনের ফুটার</td>
+            <td><code>&lt;footer&gt;&lt;p&gt;কপিরাইট&lt;/p&gt;&lt;/footer&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>মাল্টিমিডিয়া ট্যাগ</h2>
+        <table class="tag-table">
+          <tr>
+            <th>ট্যাগ</th>
+            <th>বর্ণনা</th>
+            <th>উদাহরণ</th>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;audio&gt;</span></td>
+            <td>অডিও প্লেয়ার</td>
+            <td><code>&lt;audio controls&gt;&lt;source src="song.mp3"&gt;&lt;/audio&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;video&gt;</span></td>
+            <td>ভিডিও প্লেয়ার</td>
+            <td><code>&lt;video controls width="320"&gt;&lt;source src="video.mp4"&gt;&lt;/video&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;source&gt;</span></td>
+            <td>মিডিয়া সোর্স নির্ধারণ</td>
+            <td><code>&lt;source src="video.mp4" type="video/mp4"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;track&gt;</span></td>
+            <td>সাবটাইটেল ট্র্যাক</td>
+            <td><code>&lt;track src="subtitles.vtt" kind="subtitles"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;iframe&gt;</span></td>
+            <td>অন্য পৃষ্ঠা এম্বেড</td>
+            <td><code>&lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;embed&gt;</span></td>
+            <td>বাহ্যিক কন্টেন্ট এম্বেড</td>
+            <td><code>&lt;embed src="file.pdf" type="application/pdf"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-code">&lt;object&gt;</span></td>
+            <td>অবজেক্ট এম্বেড</td>
+            <td><code>&lt;object data="file.pdf" type="application/pdf"&gt;&lt;/object&gt;</code></td>
+          </tr>
+        </table>
+
+      </div>
+    </main>
+  </div>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

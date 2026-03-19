@@ -1,243 +1,991 @@
-# Topics to cover
+# 📘 HTML শিখি - সম্পূর্ণ বাংলা HTML কোর্স
 
-HTML5 Fundamentals
+## 📋 কোর্স ওভারভিউ
 
-- What is HTML
-- HTML Versions (HTML4 vs HTML5)
-- Basic Structure (doctype, html, head, body)
-- Elements and Tags
-- Attributes
-- Nesting and Hierarchy
-- Comments
+স্বাগতম **HTML শিখি** কোর্সে! এই কোর্সটি সম্পূর্ণ বাংলায় তৈরি করা হয়েছে যেখানে আপনি একদম শুরু থেকে অ্যাডভান্সড লেভেল পর্যন্ত HTML শিখতে পারবেন। এই কোর্সে ২০০+ টপিক, ৫০০+ উদাহরণ, ১৫০+ অনুশীলনী এবং ১০+ প্রজেক্ট অন্তর্ভুক্ত আছে।
 
-Document Metadata
+---
 
-- head element
-- title
-- meta tags (charset, viewport, description, keywords, author)
-- base
-- link (favicon, stylesheets)
-- style tag
-- script tag basics
+## 📚 সম্পূর্ণ সিলেবাস
 
-Text Content Elements
+### মডিউল ১: 📘 HTML পরিচিতি (Introduction)
 
-- Headings (h1–h6)
-- Paragraph (p)
-- Line break (br)
-- Horizontal rule (hr)
-- Preformatted text (pre)
-- Blockquote
-- Inline quotation (q)
-- Abbreviations (abbr)
-- Address
-- Cite
-- Code
-- Mark
-- Small
-- Strong
-- Em
-- Subscript (sub)
-- Superscript (sup)
-- Time
-- Data
+- HTML কী? (What is HTML?)
+- HTML-এর ইতিহাস ও উন্নয়ন
+- HTML ভার্সন (HTML 1.0 থেকে HTML5 পর্যন্ত)
+- ব্রাউজার কীভাবে HTML রেন্ডার করে
+- HTML এডিটর সেটআপ (VS Code, Notepad++)
+- প্রথম HTML ডকুমেন্ট তৈরি
+- HTML ফাইল সেভ ও খোলার নিয়ম
+- HTML ডকুমেন্টের মৌলিক কাঠামো
+- DOCTYPE ডিক্লারেশন
+- HTML এলিমেন্ট, ট্যাগ ও অ্যাট্রিবিউটের ধারণা
+- ওয়েব স্ট্যান্ডার্ড ও W3C
 
-Grouping Content
+---
 
-- div
-- span
-- section
-- article
-- nav
-- aside
-- header
-- footer
-- main
+### মডিউল ২: 📝 HTML বেসিক (HTML Basics)
 
-Lists
+#### হেডিং ও প্যারাগ্রাফ
 
-- Ordered lists (ol)
-- Unordered lists (ul)
-- List items (li)
-- Description lists (dl, dt, dd)
+- হেডিং ট্যাগ (h1 - h6)
+- প্যারাগ্রাফ ট্যাগ (p)
+- লাইন ব্রেক (br)
+- অনুভূমিক রেখা (hr)
+- প্রিফরমেটেড টেক্সট (pre)
 
-Links and Navigation
+#### টেক্সট ফরম্যাটিং
 
-- Anchor tag (a)
-- Internal links
-- External links
-- Email links (mailto)
-- Telephone links (tel)
-- Target attribute
-- Download attribute
+- বোল্ড টেক্সট (b, strong)
+- ইটালিক টেক্সট (i, em)
+- ছোট টেক্সট (small)
+- মার্ক বা হাইলাইট (mark)
+- ডিলিট টেক্সট (del)
+- ইনসার্ট টেক্সট (ins)
+- সাবস্ক্রিপ্ট (sub)
+- সুপারস্ক্রিপ্ট (sup)
 
-Images and Media
+#### কোটেশন ও অ্যাব্রিভিয়েশন
 
-- img tag
-- Image attributes (src, alt, width, height)
-- Responsive images (srcset, sizes)
-- figure and figcaption
-- picture element
-- audio element
-- video element
-- source and track
-- iframe
+- ইনলাইন কোটেশন (q)
+- ব্লক কোটেশন (blockquote)
+- অ্যাব্রিভিয়েশন (abbr)
+- অ্যাড্রেস (address)
+- সাইটেশন (cite)
+- বাইডিরেকশনাল ওভাররাইড (bdo)
+- বাইডিরেকশনাল আইসোলেশন (bdi)
 
-Tables
+#### কমেন্ট ও স্পেশাল টেক্সট
 
-- table
-- tr, td, th
-- thead, tbody, tfoot
-- caption
-- colspan and rowspan
-- scope attribute
+- HTML কমেন্ট (`<!-- -->`)
+- কোড ট্যাগ (code)
+- কীবোর্ড ইনপুট (kbd)
+- ভেরিয়েবল (var)
+- প্রোগ্রাম আউটপুট (samp)
 
-Forms
+#### কালার
 
-- form element
-- input types (text, password, email, number, tel, url, search, date, time, datetime-local, month, week, color, range, file, checkbox, radio, submit, reset, button, hidden)
-- label
-- textarea
-- select, option, optgroup
-- fieldset, legend
-- datalist
-- output
-- progress
-- meter
-- form attributes (action, method, enctype, autocomplete, novalidate)
-- input attributes (required, placeholder, pattern, min, max, step, readonly, disabled)
+- কালারের নাম (Color Names)
+- হেক্সাডেসিমেল কালার (Hex Codes)
+- RGB কালার (RGB Values)
+- RGBA কালার (Alpha Channel)
+- HSL কালার (HSL Values)
+- HSLA কালার
 
-Semantic HTML5
+#### অ্যাট্রিবিউট
 
-- Importance of semantic elements
-- section vs article
-- header and footer usage
-- nav for navigation
-- aside for side content
-- main for main content
-- figure and figcaption
+- অ্যাট্রিবিউট কী?
+- কোর অ্যাট্রিবিউট (id, class, style, title)
+- ল্যাঙ্গুয়েজ অ্যাট্রিবিউট (lang)
+- ডাটা-* অ্যাট্রিবিউট
+- ইভেন্ট অ্যাট্রিবিউট (onclick, onload, onmouseover, etc.)
+- অ্যাক্সেসিবিলিটি অ্যাট্রিবিউট (aria-*)
 
-Multimedia and Embedding
+---
 
-- audio formats
-- video formats
-- controls, autoplay, loop, muted
-- iframe embedding (YouTube, maps)
-- embed and object
+### মডিউল ৩: 🔗 লিংক ও নেভিগেশন (Links & Navigation)
 
-Graphics
+#### বেসিক লিংক
 
-- canvas element
-- basic canvas drawing
-- SVG basics
-- inline SVG
+- অ্যাঙ্কর ট্যাগ (a) বেসিক
+- href অ্যাট্রিবিউট
+- টার্গেট অ্যাট্রিবিউট (_blank, _self, _parent, _top)
 
-APIs in HTML5
+#### লিংকের প্রকারভেদ
 
-- Geolocation API
-- Drag and Drop API
-- Web Storage API (localStorage, sessionStorage)
-- Web Workers
-- Server-Sent Events
-- WebSockets basics
+- ইন্টারনাল লিংক (একই সাইটের পৃষ্ঠায়)
+- এক্সটারনাল লিংক (অন্য ওয়েবসাইটে)
+- অ্যাঙ্কর লিংক (একই পৃষ্ঠার নির্দিষ্ট অংশে)
+- ইমেইল লিংক (mailto:)
+- টেলিফোন লিংক (tel:)
+- ডাউনলোড লিংক (download অ্যাট্রিবিউট)
+- স্ক্রিপ্ট লিংক (javascript:)
 
-Forms Validation
+#### অ্যাডভান্সড লিংক
 
-- Built-in validation
-- Constraint validation API
-- Custom validation
+- রিল অ্যাট্রিবিউট (nofollow, noopener, noreferrer)
+- ছবি লিংক
+- বাটন হিসেবে লিংক
+- নেভিগেশন মেনু তৈরি
+- ব্রেডক্রাম্ব নেভিগেশন
+- পেজিনেশন (পৃষ্ঠা সংখ্যা)
+- ব্যাক টু টপ লিংক
+- স্কিপ লিংক (অ্যাক্সেসিবিলিটি)
+- কীবোর্ড শর্টকাট (accesskey)
+- ট্যাব ইনডেক্স (tabindex)
 
-Accessibility (a11y)
+---
 
-- ARIA roles
-- aria attributes
-- alt text best practices
-- semantic structure for accessibility
-- keyboard navigation
+### মডিউল ৪: 🖼️ ইমেজ ও মিডিয়া (Images & Media)
 
-SEO Basics
+#### বেসিক ইমেজ
 
-- semantic HTML for SEO
-- meta tags for SEO
-- heading hierarchy
-- alt attributes
+- ইমেজ ট্যাগ (img)
+- src অ্যাট্রিবিউট (ছবির উৎস)
+- alt অ্যাট্রিবিউট (বিকল্প টেক্সট)
+- width ও height অ্যাট্রিবিউট
+- ইমেজ ফরম্যাট (JPEG, PNG, GIF, SVG, WebP, AVIF)
+- লেজি লোডিং (loading="lazy")
 
-Performance Optimization
+#### অ্যাডভান্সড ইমেজ
 
-- lazy loading images
-- minimizing DOM size
-- async and defer scripts
-- preloading and prefetching
+- ফিগার ও ফিগক্যাপশন (figure, figcaption)
+- রেসপনসিভ ইমেজ (max-width: 100%)
+- srcset অ্যাট্রিবিউট (বিভিন্ন রেজুলিউশনের জন্য)
+- sizes অ্যাট্রিবিউট
+- পিকচার এলিমেন্ট (picture, source)
+- ইমেজ ম্যাপ (map, area)
+- ক্লায়েন্ট-সাইড ইমেজ ম্যাপ
 
-HTML5 Best Practices
+#### আইকন ও ফ্যাভিকন
 
-- clean code structure
-- indentation and formatting
-- avoiding deprecated tags
-- separation of concerns (HTML, CSS, JS)
+- ফ্যাভিকন (favicon)
+- অ্যাপল টাচ আইকন
+- অ্যান্ড্রয়েড ক্রোম আইকন
+- ওজিআর ইমেজ (og:image)
 
-Deprecated/Obsolete Elements
+---
 
-- font
-- center
-- big
-- strike
-- frameset/frame
-- applet
+### মডিউল ৫: 📋 লিস্ট (Lists)
 
-Global Attributes
+#### আনঅর্ডারড লিস্ট
 
-- id
-- class
-- style
-- title
-- lang
-- dir
-- hidden
-- tabindex
-- contenteditable
-- draggable
-- spellcheck
+- আনঅর্ডারড লিস্ট (ul)
+- লিস্ট আইটেম (li)
+- লিস্ট স্টাইল টাইপ (disc, circle, square, none)
 
-Custom Data Attributes
+#### অর্ডারড লিস্ট
 
-- data-* attributes
-- dataset API
+- অর্ডারড লিস্ট (ol)
+- অর্ডারড লিস্টের টাইপ (1, A, a, I, i)
+- লিস্ট কাউন্টার (start, reversed)
 
-Microdata and Structured Data
+#### ডেসক্রিপশন লিস্ট
 
-- schema.org basics
-- itemprop, itemscope, itemtype
+- ডেসক্রিপশন লিস্ট (dl)
+- ডেসক্রিপশন টার্ম (dt)
+- ডেসক্রিপশন ডিটেইলস (dd)
 
-HTML Templates
+#### অ্যাডভান্সড লিস্ট
 
-- template tag
-- slot basics (web components intro)
+- নেস্টেড লিস্ট (একের ভিতর আরেকটি)
+- মেনু লিস্ট (menu)
+- কমান্ড লিস্ট (command)
+- লিস্ট হরাইজন্টাল (CSS দিয়ে)
+- মাল্টি-কলাম লিস্ট
+- লিস্ট মার্কার ইমেজ (list-style-image)
+- লিস্ট পজিশন (inside, outside)
 
-Web Components (Intro)
+---
 
-- custom elements
-- shadow DOM basics
-- HTML templates usage
+### মডিউল ৬: 📊 টেবল (Tables)
 
-Integration with CSS and JS
+#### বেসিক টেবল
 
-- linking CSS
-- inline vs external styles
-- script placement
-- DOM interaction basics
+- টেবল এলিমেন্ট (table)
+- টেবল রো (tr)
+- টেবল ডাটা (td)
+- টেবল হেডার (th)
+- টেবল ক্যাপশন (caption)
 
-Responsive Design Support
+#### টেবল স্ট্রাকচার
 
-- viewport meta tag
-- picture and srcset usage
+- টেবল হেড (thead)
+- টেবল বডি (tbody)
+- টেবল ফুট (tfoot)
+- টেবল কল গ্রুপ (colgroup, col)
 
-Internationalization
+#### সেল মার্জিং
 
-- lang attribute
-- dir attribute (ltr, rtl)
+- কলস্প্যান (colspan)
+- রোস্প্যান (rowspan)
 
-Security Basics
+#### টেবল স্টাইলিং
 
-- XSS awareness
-- safe attribute usage
+- টেবল বর্ডার
+- টেবল প্যাডিং ও স্পেসিং
+- টেবল অ্যালাইনমেন্ট
+- টেবল ব্যাকগ্রাউন্ড কালার
+- স্ট্রাইপড টেবল (জেব্রা স্ট্রাইপ)
+- রেসপনসিভ টেবল
+- টেবল সর্টিং
+- টেবল ফিল্টারিং
+- জটিল টেবল স্ট্রাকচার
+
+---
+
+### মডিউল ৭: 📝 ফর্ম (Forms)
+
+#### ফর্ম এলিমেন্ট
+
+- ফর্ম এলিমেন্ট (form)
+- ফর্ম অ্যাকশন (action)
+- ফর্ম মেথড (GET vs POST)
+- এনকোডিং টাইপ (enctype)
+- অটোকমপ্লিট (autocomplete)
+- নোভ্যালিডেট (novalidate)
+- টার্গেট (target)
+
+#### ইনপুট টাইপ
+
+- টেক্সট ইনপুট (text)
+- পাসওয়ার্ড ইনপুট (password)
+- ইমেইল ইনপুট (email)
+- সংখ্যা ইনপুট (number)
+- টেলিফোন ইনপুট (tel)
+- ইউআরএল ইনপুট (url)
+- সার্চ ইনপুট (search)
+- হিডেন ইনপুট (hidden)
+
+#### ডেট ও টাইম ইনপুট
+
+- তারিখ ইনপুট (date)
+- সময় ইনপুট (time)
+- তারিখ ও সময় ইনপুট (datetime-local)
+- মাস ইনপুট (month)
+- সপ্তাহ ইনপুট (week)
+
+#### সিলেকশন ইনপুট
+
+- চেকবক্স (checkbox)
+- রেডিও বাটন (radio)
+- কালার পিকার (color)
+- রেঞ্জ স্লাইডার (range)
+- ফাইল আপলোড (file)
+
+#### বাটন
+
+- সাবমিট বাটন (submit)
+- রিসেট বাটন (reset)
+- সাধারণ বাটন (button)
+- ইমেজ বাটন (image)
+
+#### ড্রপডাউন ও লিস্ট
+
+- সিলেক্ট ড্রপডাউন (select, option)
+- অপ্টগ্রুপ (optgroup)
+- ডাটালিস্ট (datalist) এবং অটোকমপ্লিট
+- টেক্সটএরিয়া (textarea)
+
+#### ফর্ম অ্যাট্রিবিউট
+
+- রিকোয়ার্ড (required)
+- প্লেসহোল্ডার (placeholder)
+- প্যাটার্ন (pattern) এবং রেগুলার এক্সপ্রেশন
+- মিনলেংথ ও ম্যাক্সলেংথ (minlength, maxlength)
+- মিন, ম্যাক্স, স্টেপ (min, max, step)
+- রিডঅনলি ও ডিসএবলড (readonly, disabled)
+- অটোফোকাস (autofocus)
+- মাল্টিপল (multiple)
+
+#### অ্যাডভান্সড ফর্ম এলিমেন্ট
+
+- ফিল্ডসেট ও লিজেন্ড (fieldset, legend)
+- লেবেল (label) এবং অ্যাক্সেসিবিলিটি
+- আউটপুট (output)
+- প্রগ্রেস বার (progress)
+- মিটার (meter)
+
+---
+
+### মডিউল ৮: ✅ ফর্ম ভ্যালিডেশন (Form Validation)
+
+#### বিল্ট-ইন ভ্যালিডেশন
+
+- বিল্ট-ইন ভ্যালিডেশন
+- রিকোয়ার্ড ফিল্ড (required)
+- টাইপ-বেসড ভ্যালিডেশন (email, url, number)
+- মিনলেংথ ও ম্যাক্সলেংথ (minlength, maxlength)
+- মিন ও ম্যাক্স (min, max)
+- প্যাটার্ন অ্যাট্রিবিউট
+
+#### কনস্ট্রেইন্ট ভ্যালিডেশন API
+
+- কনস্ট্রেইন্ট ভ্যালিডেশন API
+- checkValidity() মেথড
+- setCustomValidity() মেথড
+- validity প্রপার্টি (valueMissing, typeMismatch, patternMismatch, tooLong, tooShort, rangeUnderflow, rangeOverflow, stepMismatch, badInput, customError, valid)
+
+#### কাস্টম ভ্যালিডেশন
+
+- কাস্টম ভ্যালিডেশন মেসেজ
+- কাস্টম এরর এলিমেন্ট
+- ফর্ম নোভ্যালিডেট অ্যাট্রিবিউট
+- জাভাস্ক্রিপ্ট দিয়ে ভ্যালিডেশন
+- রিয়েল-টাইম ভ্যালিডেশন
+
+---
+
+### মডিউল ৯: 🏗️ সিম্যান্টিক HTML (Semantic HTML)
+
+#### বেসিক সিম্যান্টিক এলিমেন্ট
+
+- সিম্যান্টিক HTML কী এবং কেন?
+- হেডার এলিমেন্ট (header)
+- নেভিগেশন এলিমেন্ট (nav)
+- মেইন এলিমেন্ট (main)
+- সেকশন এলিমেন্ট (section)
+- আর্টিকেল এলিমেন্ট (article)
+- এসাইড এলিমেন্ট (aside)
+- ফুটার এলিমেন্ট (footer)
+
+#### অ্যাডভান্সড সিম্যান্টিক এলিমেন্ট
+
+- ফিগার ও ফিগক্যাপশন (figure, figcaption)
+- মার্ক এলিমেন্ট (mark)
+- টাইম এলিমেন্ট (time)
+- ডিটেইলস ও সামারি (details, summary)
+- ডায়ালগ এলিমেন্ট (dialog)
+- ডাটা এলিমেন্ট (data)
+- অ্যাড্রেস এলিমেন্ট (address)
+
+#### সিম্যান্টিক আর্কিটেকচার
+
+- আর্টিকেল বনাম সেকশন
+- সিম্যান্টিক লেআউট তৈরি
+- অ্যাক্সেসিবিলিটি ও সিম্যান্টিক HTML
+- ডকুমেন্ট আউটলাইন
+
+---
+
+### মডিউল ১০: 🎵 মাল্টিমিডিয়া (Multimedia)
+
+#### অডিও
+
+- অডিও এলিমেন্ট (audio)
+- অডিও অ্যাট্রিবিউট (controls, autoplay, loop, muted, preload)
+- অডিও ফরম্যাট (MP3, WAV, OGG, AAC)
+- একাধিক সোর্স (source)
+
+#### ভিডিও
+
+- ভিডিও এলিমেন্ট (video)
+- ভিডিও অ্যাট্রিবিউট (poster, width, height, controls, autoplay, loop, muted)
+- ভিডিও ফরম্যাট (MP4, WebM, OGG, AVI)
+- একাধিক সোর্স (source)
+
+#### সাবটাইটেল ও ক্যাপশন
+
+- ট্র্যাক এলিমেন্ট (track)
+- ট্র্যাক কাইন্ড (subtitles, captions, chapters, metadata, descriptions)
+- সাবটাইটেল ফাইল ফরম্যাট (VTT)
+
+#### এম্বেডেড কন্টেন্ট
+
+- এম্বেড এলিমেন্ট (embed)
+- অবজেক্ট এলিমেন্ট (object)
+- প্যারাম এলিমেন্ট (param)
+- আইফ্রেম (iframe) বেসিক
+- আইফ্রেম অ্যাট্রিবিউট (sandbox, allow, srcdoc, loading)
+
+#### থার্ড-পার্টি এম্বেড
+
+- ইউটিউব ভিডিও এম্বেড
+- গুগল ম্যাপ এম্বেড
+- ভিমিও ভিডিও এম্বেড
+- সাউন্ডক্লাউড এম্বেড
+- পিডিএফ এম্বেড
+- সোশ্যাল মিডিয়া পোস্ট এম্বেড (Facebook, Twitter, Instagram)
+
+---
+
+### মডিউল ১১: 🎨 গ্রাফিক্স (Graphics)
+
+#### Canvas
+
+- Canvas বেসিক
+- ক্যানভাস এলিমেন্ট (canvas)
+- ২ডি কনটেক্সট (getContext("2d"))
+
+#### Canvas ড্রয়িং
+
+- আয়তক্ষেত্র আঁকা (fillRect, strokeRect, clearRect)
+- পাথ ও লাইন (beginPath, moveTo, lineTo, closePath)
+- বৃত্ত ও আর্ক (arc, arcTo)
+- কার্ভ (quadraticCurveTo, bezierCurveTo)
+
+#### Canvas কালার ও স্টাইল
+
+- কালার ও গ্রেডিয়েন্ট (fillStyle, strokeStyle)
+- লিনিয়ার গ্রেডিয়েন্ট (createLinearGradient)
+- রেডিয়াল গ্রেডিয়েন্ট (createRadialGradient)
+- প্যাটার্ন (createPattern)
+- শ্যাডো (shadowColor, shadowBlur, shadowOffsetX, shadowOffsetY)
+
+#### Canvas টেক্সট
+
+- টেক্সট (fillText, strokeText, measureText)
+- ফন্ট প্রপার্টি (font, textAlign, textBaseline, direction)
+
+#### Canvas ইমেজ
+
+- ছবি আঁকা (drawImage)
+- পিক্সেল ম্যানিপুলেশন (getImageData, putImageData, createImageData)
+- ইমেজ ডাটা প্রসেসিং
+
+#### Canvas ট্রান্সফরমেশন
+
+- ট্রান্সফরমেশন (translate, rotate, scale)
+- ট্রান্সফর্ম ম্যাট্রিক্স (transform, setTransform)
+- ক্যানভাস সেভ ও রিস্টোর (save, restore)
+
+#### Canvas এনিমেশন
+
+- এনিমেশন (requestAnimationFrame)
+- ইন্টারভাল বেসড এনিমেশন
+- ক্লিয়ারিং ও রিড্রয়িং
+- ইন্টারঅ্যাকটিভ এনিমেশন
+
+#### SVG (Scalable Vector Graphics)
+
+- SVG বেসিক
+- SVG এলিমেন্ট (svg)
+- SVG ভিউপোর্ট ও ভিউবক্স (viewBox)
+
+#### SVG শেপ
+
+- আয়তক্ষেত্র (rect)
+- বৃত্ত (circle)
+- উপবৃত্ত (ellipse)
+- সরলরেখা (line)
+- পলিলাইন (polyline)
+- বহুভুজ (polygon)
+
+#### SVG অ্যাডভান্সড
+
+- পাথ (path) - M, L, H, V, C, S, Q, T, A, Z
+- টেক্সট (text, tspan, textPath)
+- গ্রেডিয়েন্ট (linearGradient, radialGradient)
+- ফিল্টার (filter)
+- এনিমেশন (animate, animateMotion, animateTransform)
+- গ্রুপিং (g)
+- ডিফস (defs)
+- সিম্বল ও ইউজ (symbol, use)
+
+#### Canvas vs SVG
+
+- Canvas বনাম SVG তুলনা
+- কখন Canvas ব্যবহার করবেন
+- কখন SVG ব্যবহার করবেন
+
+---
+
+### মডিউল ১২: ⚡ HTML5 APIs
+
+#### জিওলোকেশন API
+
+- জিওলোকেশন API
+- getCurrentPosition()
+- watchPosition() ও clearWatch()
+- অবস্থান অবজেক্ট (coords.latitude, coords.longitude, coords.accuracy)
+- এরর হ্যান্ডলিং
+
+#### ড্র্যাগ অ্যান্ড ড্রপ API
+
+- ড্র্যাগ অ্যান্ড ড্রপ API
+- ড্র্যাগেবল অ্যাট্রিবিউট (draggable)
+- ড্র্যাগ ইভেন্ট (dragstart, drag, dragend)
+- ড্রপ ইভেন্ট (dragenter, dragover, dragleave, drop)
+- ডাটা ট্রান্সফার (dataTransfer)
+
+#### ওয়েব স্টোরেজ API
+
+- ওয়েব স্টোরেজ (localStorage)
+- সেশন স্টোরেজ (sessionStorage)
+- setItem(), getItem(), removeItem(), clear()
+- স্টোরেজ ইভেন্ট
+- JSON স্টোরেজ
+
+#### ওয়েব ওয়ার্কার্স
+
+- ওয়েব ওয়ার্কার্স
+- ডেডিকেটেড ওয়ার্কার
+- শেয়ার্ড ওয়ার্কার
+- postMessage() ও onmessage
+- ওয়ার্কার টারমিনেশন
+- ওয়ার্কার এরর হ্যান্ডলিং
+
+#### সার্ভার-সেন্ট ইভেন্ট (SSE)
+
+- সার্ভার-সেন্ট ইভেন্ট (SSE)
+- EventSource API
+- onmessage, onopen, onerror
+- কাস্টম ইভেন্ট
+
+#### ওয়েবসকেট (WebSocket)
+
+- ওয়েবসকেট (WebSocket)
+- WebSocket অবজেক্ট
+- send() ও onmessage
+- onopen, onclose, onerror
+- বাইনারি ডাটা ট্রান্সমিশন
+
+#### ফাইল API
+
+- ফাইল API (FileReader)
+- readAsText(), readAsDataURL(), readAsArrayBuffer(), readAsBinaryString()
+- ফাইল অবজেক্ট প্রপার্টি (name, size, type, lastModified)
+- ফাইল লিস্ট
+- ব্লব (Blob)
+
+#### মিডিয়া API
+
+- ক্যামেরা ও মাইক (getUserMedia)
+- MediaStream API
+- কনস্ট্রেইন্ট (constraints)
+- স্ক্রিন ক্যাপচার (getDisplayMedia)
+- মিডিয়া রেকর্ডার (MediaRecorder)
+
+#### নোটিফিকেশন API
+
+- নোটিফিকেশন API
+- Notification.requestPermission()
+- নোটিফিকেশন অবজেক্ট
+- নোটিফিকেশন ইভেন্ট
+
+#### পেজ ভিজিবিলিটি API
+
+- পেজ ভিজিবিলিটি API
+- visibilityState
+- visibilitychange ইভেন্ট
+
+#### অন্যান্য API
+
+- ব্যাটারি API
+- ভাইব্রেশন API
+- নেটওয়ার্ক ইনফরমেশন API
+- ডিভাইস ওরিয়েন্টেশন API
+- ওয়েব কম্পোনেন্টস
+- ক্যানভাস API
+- হিস্ট্রি API
+- লোকাল ফাইল সিস্টেম API
+
+---
+
+### মডিউল ১৩: 🔧 অ্যাডভান্সড টপিক (Advanced Topics)
+
+#### মেটা ট্যাগস
+
+- মেটা ট্যাগস (meta)
+- চারসেট (charset)
+- ভিউপোর্ট (viewport)
+- ডেসক্রিপশন (description)
+- কীওয়ার্ড (keywords)
+- অথর (author)
+- জেনারেটর (generator)
+- রোবটস (robots)
+- রিফ্রেশ ও রিডাইরেক্ট (http-equiv)
+- থিম-কালার (theme-color)
+
+#### সোশ্যাল মিডিয়া মেটা
+
+- ওপেন গ্রাফ (Open Graph) মেটা (og:title, og:description, og:image, og:url, og:type, og:site_name, og:locale)
+- টুইটার কার্ড (Twitter Card) (twitter:card, twitter:site, twitter:creator, twitter:title, twitter:description, twitter:image)
+
+#### SEO ও লিংক
+
+- ক্যানোনিকাল URL (canonical)
+- অল্টারনেট ইউআরএল (alternate)
+- হরেফল্যাং (hreflang)
+- অ্যাম্পএইচটিএমএল (amphtml)
+- প্রিভিয়াস ও নেক্সট (prev, next)
+
+#### অ্যাক্সেসিবিলিটি (a11y)
+
+- অ্যাক্সেসিবিলিটি কী এবং কেন?
+- ARIA রোলস (role)
+- ARIA অ্যাট্রিবিউট (aria-label, aria-labelledby, aria-describedby, aria-hidden, aria-live, aria-atomic, aria-relevant, aria-busy, aria-current, aria-disabled, aria-expanded, aria-haspopup, aria-checked, aria-selected, aria-pressed, aria-required, aria-invalid, aria-errormessage)
+- ল্যান্ডমার্ক রোলস (banner, navigation, main, complementary, contentinfo, form, search)
+- কিবোর্ড নেভিগেশন (tabindex, accesskey)
+- স্ক্রিন রিডার অপটিমাইজেশন
+- কালার কনট্রাস্ট
+- ফোকাস ইন্ডিকেটর
+
+#### SEO (Search Engine Optimization)
+
+- SEO বেসিক
+- অন-পেজ SEO
+- অফ-পেজ SEO
+- টেকনিক্যাল SEO
+- হেডিং হায়ারারকি
+- ইমেজ অল্ট টেক্সট
+- ইন্টারনাল লিংক স্ট্রাকচার
+- ইউআরএল স্ট্রাকচার
+- সাইটম্যাপ (sitemap.xml)
+- রোবটস.টিএক্সটি (robots.txt)
+
+#### স্ট্রাকচার্ড ডাটা
+
+- মাইক্রোডাটা (itemscope, itemtype, itemprop)
+- আরএফএ (RDFa)
+- জেসন-এলডি (JSON-LD)
+- স্কিমা ডট অর্গ (Schema.org)
+- রিচ স্নিপেটস
+
+#### ক্যারেক্টার এনটিটি
+
+- ক্যারেক্টার এনটিটি
+- এইচটিএমএল এনটিটি
+- নেমড এনটিটি (&copy;, &amp;, &lt;, &gt;, &quot;, &apos;)
+- নিউমেরিক এনটিটি (&#169;, &#8360;)
+- স্পেশাল ক্যারেক্টার
+- ইমোজি
+- ম্যাথমেটিক্যাল সিম্বল
+
+#### ইউআরএল এনকোডিং
+
+- ইউআরএল এনকোডিং (Percent Encoding)
+- রিজার্ভড ক্যারেক্টার
+- ইউআরএল সেফ ক্যারেক্টার
+- এনকোডিং ফাংশন (encodeURI, encodeURIComponent)
+
+---
+
+### মডিউল ১৪: ⚡ পারফরম্যান্স ও অপটিমাইজেশন (Performance & Optimization)
+
+#### পেজ স্পিড
+
+- পেজ স্পিড অপটিমাইজেশন
+- কোর ওয়েব ভাইটালস (LCP, FID, CLS)
+- পেইন্ট টাইমিং (FCP, FMP, TTI)
+
+#### লোডিং অপটিমাইজেশন
+
+- লেজি লোডিং (lazy loading)
+- অ্যাসিঙ্ক ও ডিফার (async, defer)
+- প্রিলোড (preload)
+- প্রিফেচ (prefetch)
+- প্রিকানেক্ট (preconnect)
+- ডিএনএস-প্রিফেচ (dns-prefetch)
+- প্রিরেন্ডার (prerender)
+
+#### রিসোর্স অপটিমাইজেশন
+
+- ইমেজ অপটিমাইজেশন
+- ফন্ট অপটিমাইজেশন
+- সিএসএস অপটিমাইজেশন
+- জাভাস্ক্রিপ্ট অপটিমাইজেশন
+- কোড মিনিফিকেশন
+- কম্প্রেশন (gzip, brotli)
+- ক্যাশিং (cache-control, expires, etag)
+
+#### রেন্ডারিং অপটিমাইজেশন
+
+- রেন্ডারিং ব্লকিং রিসোর্স
+- ক্রিটিক্যাল রেন্ডারিং পাথ
+- সিফ্রেন্ডলি কোডিং
+- রি-ফ্লো ও রি-পেইন্ট কমানো
+
+---
+
+### মডিউল ১৫: 🔒 সিকিউরিটি (Security)
+
+#### ওয়েব সিকিউরিটি বেসিক
+
+- ক্রস-সাইট স্ক্রিপ্টিং (XSS) প্রতিরোধ
+- ক্রস-সাইট রিকোয়েস্ট ফরজারি (CSRF)
+- ক্লিকজ্যাকিং প্রতিরোধ
+
+#### কন্টেন্ট সিকিউরিটি
+
+- কন্টেন্ট সিকিউরিটি পলিসি (CSP)
+- স্যান্ডবক্স (sandbox)
+- সাবরিসোর্স ইন্টিগ্রিটি (SRI)
+- এক্স-ফ্রেম-অপশন (X-Frame-Options)
+- এক্স-কন্টেন্ট-টাইপ-অপশন (X-Content-Type-Options)
+- রেফারার-পলিসি (Referrer-Policy)
+
+#### লিংক সিকিউরিটি
+
+- নোওপেনার (noopener)
+- নোরেফারার (noreferrer)
+- নোফোলো (nofollow)
+
+#### এইচটিটিপিএস
+
+- এইচটিটিপিএস (HTTPS)
+- এসএসএল/টিএলএস
+- এইচএসটিএস (HSTS)
+
+#### কুকি সিকিউরিটি
+
+- সিকিউর কুকি (Secure)
+- এইচটিটিপি অনলি কুকি (HttpOnly)
+- সেমসাইট কুকি (SameSite)
+
+#### ইনপুট স্যানিটাইজেশন
+
+- ইনপুট স্যানিটাইজেশন
+- আউটপুট এনকোডিং
+- ভ্যালিডেশন
+
+---
+
+### মডিউল ১৬: 📱 রেসপনসিভ ডিজাইন (Responsive Design)
+
+#### বেসিক রেসপনসিভ
+
+- রেসপনসিভ ডিজাইন কী?
+- ভিউপোর্ট (viewport)
+- মিডিয়া কোয়েরি (media queries)
+- ব্রেকপয়েন্ট (breakpoints)
+
+#### রেসপনসিভ টেকনিক
+
+- ফ্লুইড গ্রিড (fluid grids)
+- ফ্লেক্সিবল ইমেজ (flexible images)
+- রেসপনসিভ টাইপোগ্রাফি (responsive typography)
+- রেসপনসিভ ইমেজ (srcset, sizes, picture)
+
+#### মোবাইল-ফার্স্ট
+
+- মোবাইল-ফার্স্ট অ্যাপ্রোচ
+- প্রগ্রেসিভ এনহ্যান্সমেন্ট
+- গ্রেসফুল ডিগ্রেডেশন
+- ফিচার ডিটেকশন
+- পলিফিল ব্যবহার
+
+---
+
+### মডিউল ১৭: ✅ বেস্ট প্র্যাকটিস (Best Practices)
+
+#### কোডিং স্ট্যান্ডার্ড
+
+- ক্লিন কোডিং প্র্যাকটিস
+- ইন্ডেন্টেশন ও ফরম্যাটিং
+- কমেন্ট লেখার নিয়ম
+- নেমিং কনভেনশন
+- ডকুমেন্ট আউটলাইন
+- সিম্যান্টিক মার্কআপ
+
+#### অ্যাক্সেসিবিলিটি বেস্ট প্র্যাকটিস
+
+- অ্যাক্সেসিবিলিটি বেস্ট প্র্যাকটিস
+- সিম্যান্টিক এলিমেন্ট ব্যবহার
+- অল্ট টেক্সট প্রদান
+- কিবোর্ড নেভিগেশন
+- কালার কনট্রাস্ট
+
+#### এসইও বেস্ট প্র্যাকটিস
+
+- এসইও বেস্ট প্র্যাকটিস
+- হেডিং হায়ারারকি
+- মেটা ডেসক্রিপশন
+- ইউআরএল স্ট্রাকচার
+- ইন্টারনাল লিংকিং
+
+#### পারফরম্যান্স বেস্ট প্র্যাকটিস
+
+- পারফরম্যান্স বেস্ট প্র্যাকটিস
+- ইমেজ অপটিমাইজেশন
+- লেজি লোডিং
+- মিনিফিকেশন
+
+#### ক্রস-ব্রাউজার কম্প্যাটিবিলিটি
+
+- ক্রস-ব্রাউজার কম্প্যাটিবিলিটি
+- ভেন্ডর প্রিফিক্স
+- ফিচার ডিটেকশন
+- পলিফিল
+- গ্রেসফুল ডিগ্রেডেশন
+
+---
+
+### মডিউল ১৮: 🚀 প্রজেক্ট (Projects)
+
+#### শিক্ষানবিশ প্রজেক্ট
+
+- **প্রজেক্ট ১:** ব্যক্তিগত তথ্য পৃষ্ঠা (Personal Information Page)
+- **প্রজেক্ট ২:** ব্লগ পোস্ট পৃষ্ঠা (Blog Post Page)
+- **প্রজেক্ট ৩:** যোগাযোগ ফর্ম (Contact Form)
+- **প্রজেক্ট ৪:** পণ্যের মূল্য তালিকা (Product Price Table)
+- **প্রজেক্ট ৫:** ইমেজ গ্যালারি (Image Gallery)
+
+#### মাঝারি প্রজেক্ট
+
+- **প্রজেক্ট ৬:** রেসিপি ওয়েবসাইট (Recipe Website)
+- **প্রজেক্ট ৭:** পোর্টফোলিও পৃষ্ঠা (Portfolio Page)
+- **প্রজেক্ট ৮:** ই-কমার্স পণ্য পৃষ্ঠা (E-commerce Product Page)
+- **প্রজেক্ট ৯:** নিউজ পোর্টাল হোমপেজ (News Portal Homepage)
+- **প্রজেক্ট ১০:** রেস্টুরেন্ট মেনু (Restaurant Menu)
+
+#### অ্যাডভান্সড প্রজেক্ট
+
+- **প্রজেক্ট ১১:** ইউটিউব ভিডিও এম্বেড পৃষ্ঠা (YouTube Video Embed Page)
+- **প্রজেক্ট ১২:** ইন্টারঅ্যাকটিভ কুইজ অ্যাপ (Interactive Quiz App)
+- **প্রজেক্ট ১৩:** টোডো অ্যাপ (Todo App)
+- **প্রজেক্ট ১৪:** ওয়েদার অ্যাপ উইজেট (Weather App Widget)
+- **প্রজেক্ট ১৫:** মিউজিক প্লেয়ার (Music Player)
+- **প্রজেক্ট ১৬:** সম্পূর্ণ কোম্পানি ওয়েবসাইট (Complete Company Website)
+- **প্রজেক্ট ১৭:** ব্লগ প্ল্যাটফর্ম (Blog Platform)
+- **প্রজেক্ট ১৮:** অনলাইন স্টোর (Online Store)
+
+---
+
+### মডিউল ১৯: 📚 রেফারেন্স (References)
+
+#### ট্যাগ রেফারেন্স
+
+- HTML ট্যাগ রেফারেন্স (সমস্ত ট্যাগের তালিকা)
+- এইচটিএমএল৫ ট্যাগ
+- অবসোলিট ট্যাগ
+
+#### অ্যাট্রিবিউট রেফারেন্স
+
+- HTML অ্যাট্রিবিউট রেফারেন্স
+- গ্লোবাল অ্যাট্রিবিউট
+- ইভেন্ট অ্যাট্রিবিউট
+- ইনপুট টাইপ অ্যাট্রিবিউট
+
+#### ইনপুট টাইপ রেফারেন্স
+
+- ইনপুট টাইপ রেফারেন্স
+- ফর্ম এলিমেন্ট রেফারেন্স
+
+#### স্পেশাল ক্যারেক্টার রেফারেন্স
+
+- ক্যারেক্টার এনটিটি রেফারেন্স
+- আইএসও ৮৮৫৯-১ ক্যারেক্টার
+- সিম্বল এনটিটি
+- ম্যাথ এনটিটি
+- গ্রীক এনটিটি
+
+#### কালার রেফারেন্স
+
+- কালার নাম ও কোড
+- ওয়েব সেফ কালার
+- এইচটিএমএল কালার পিকার
+
+#### মাইম টাইপ রেফারেন্স
+
+- মাইম টাইপ রেফারেন্স
+- কন্টেন্ট টাইপ
+- ফাইল এক্সটেনশন
+
+---
+
+### মডিউল ২০: 💡 টিপস ও ট্রিক্স (Tips & Tricks)
+
+#### এডিটর টিপস
+
+- VS Code শর্টকাট
+- Emmet snippets
+- প্লাগইন ও এক্সটেনশন
+- লাইভ সার্ভার
+
+#### ডিবাগিং টিপস
+
+- ডিবাগিং টিপস
+- ব্রাউজার ডেভেলপার টুলস
+- কনসোল লগিং
+- এলিমেন্ট ইন্সপেকশন
+- নেটওয়ার্ক ট্যাব
+- পারফরম্যান্স ট্যাব
+
+#### কমন মিস্টেকস
+
+- সাধারণ ভুল ও সমাধান
+- ভুল ট্যাগ ব্যবহার
+- ভুল অ্যাট্রিবিউট
+- সিম্যান্টিক ভুল
+- অ্যাক্সেসিবিলিটি ভুল
+
+#### ব্রাউজার টুলস
+
+- ক্রোম ডেভ টুলস
+- ফায়ারফক্স ডেভ টুলস
+- এজ ডেভ টুলস
+- সাফারি ওয়েব ইন্সপেক্টর
+
+---
+
+### মডিউল ২১: 📝 অনুশীলনী (Exercises)
+
+#### শিক্ষানবিশ অনুশীলনী
+
+- অনুশীলনী ১-১০: বেসিক HTML
+- অনুশীলনী ১১-২০: টেক্সট ফরম্যাটিং
+- অনুশীলনী ২১-৩০: লিংক ও ইমেজ
+- অনুশীলনী ৩১-৪০: লিস্ট
+
+#### মাঝারি অনুশীলনী
+
+- অনুশীলনী ৪১-৫০: টেবল
+- অনুশীলনী ৫১-৬০: ফর্ম
+- অনুশীলনী ৬১-৭০: সিম্যান্টিক HTML
+- অনুশীলনী ৭১-৮০: মাল্টিমিডিয়া
+
+#### অ্যাডভান্সড অনুশীলনী
+
+- অনুশীলনী ৮১-৯০: ক্যানভাস
+- অনুশীলনী ৯১-১০০: এসভিজি
+- অনুশীলনী ১০১-১১০: এইচটিএমএল৫ এপিআই
+- অনুশীলনী ১১১-১২০: অ্যাক্সেসিবিলিটি ও এসইও
+
+#### MCQ কুইজ
+
+- কুইজ ১: এইচটিএমএল বেসিক
+- কুইজ ২: ফর্ম ও ইনপুট
+- কুইজ ৩: সিম্যান্টিক এইচটিএমএল
+- কুইজ ৪: অ্যাডভান্সড এইচটিএমএল
+- কুইজ ৫: এইচটিএমএল৫ এপিআই
+
+#### কোডিং চ্যালেঞ্জ
+
+- চ্যালেঞ্জ ১: এইচটিএমএল পৃষ্ঠা রিক্রিয়েট
+- চ্যালেঞ্জ ২: ফর্ম ভ্যালিডেশন
+- চ্যালেঞ্জ ৩: টেবল লেআউট
+- চ্যালেঞ্জ ৪: ক্যানভাস ড্রয়িং
+- চ্যালেঞ্জ ৫: এপিআই ইন্টিগ্রেশন
+
+---
+
+## 📊 কোর্স পরিসংখ্যান
+
+| আইটেম            | সংখ্যা |
+| --------------------- | ------------ |
+| মডিউল            | ২১টি     |
+| টপিক              | ২০০+      |
+| উদাহরণ          | ৫০০+      |
+| অনুশীলনী      | ১৫০+      |
+| প্রজেক্ট      | ১৮টি     |
+| কুইজ প্রশ্ন | ১০০+      |
+| চ্যালেঞ্জ    | ২০+        |
+
+---
+
+## 🎯 কোর্সের উদ্দেশ্য
+
+এই কোর্স শেষে আপনি যা যা করতে পারবেন:
+
+✅ সম্পূর্ণ HTML ডকুমেন্ট স্ট্রাকচার তৈরি করতে পারবেন
+✅ সিম্যান্টিক HTML ব্যবহার করে অর্থপূর্ণ ওয়েবপৃষ্ঠা তৈরি করতে পারবেন
+✅ জটিল ফর্ম তৈরি ও ভ্যালিডেশন করতে পারবেন
+✅ টেবল, লিস্ট, ইমেজ সঠিকভাবে ব্যবহার করতে পারবেন
+✅ মাল্টিমিডিয়া কন্টেন্ট এম্বেড করতে পারবেন
+✅ ক্যানভাস ও এসভিজি দিয়ে গ্রাফিক্স তৈরি করতে পারবেন
+✅ এইচটিএমএল৫ এপিআই ব্যবহার করে ইন্টারঅ্যাকটিভ অ্যাপ তৈরি করতে পারবেন
+✅ অ্যাক্সেসিবল ও এসইও ফ্রেন্ডলি ওয়েবসাইট তৈরি করতে পারবেন
+✅ রেসপনসিভ ডিজাইন ইমপ্লিমেন্ট করতে পারবেন
+✅ পারফরম্যান্স ও সিকিউরিটি বেস্ট প্র্যাকটিস ফলো করতে পারবেন
+✅ বাস্তব প্রজেক্ট তৈরি করে পোর্টফোলিও তৈরি করতে পারবেন
+
+---
+
+## 🚀 শুরু করুন
+
+আপনার শেখার যাত্রা শুরু করতে নিচের লিংকে ক্লিক করুন:
+
+👉 **[শেখা শুরু করুন](https://html.offsecplatform.com/pages/introduction/)**
+
+---
+
+## 📞 যোগাযোগ
+
+- ইমেইল: saide@offsecplatform.com
+- ফেসবুক: /offsecplatform
+- ইউটিউব: @saidehossa
+
+---
+
+© ২০২৬ HTML শিখি। সকল অধিকার সংরক্ষিত।
