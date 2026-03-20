@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ব্রাউজার কীভাবে HTML রেন্ডার করে | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+  <style>
+    .render-flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px 0;
+    }
+    .render-step {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      width: 100%;
+    }
+    .step-number {
+      background-color: #007bff;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    .step-content {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 15px;
+      flex-grow: 1;
+    }
+    .arrow-down {
+      font-size: 24px;
+      color: #6c757d;
+      margin: 5px 0;
+    }
+    .dom-tree {
+      font-family: monospace;
+      background-color: #f1f8ff;
+      padding: 15px;
+      border-radius: 5px;
+      border-left: 4px solid #007bff;
+      overflow-x: auto;
+    }
+    .browser-component {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="./" class="active">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পরিচিতি টপিকস</h3>
+        <ul>
+          <li><a href="what-is-html.html">HTML কী?</a></li>
+          <li><a href="history-of-html.html">HTML-এর ইতিহাস</a></li>
+          <li><a href="html-versions.html">HTML-এর সংস্করণ</a></li>
+          <li><a href="html-editors.html">HTML এডিটর</a></li>
+          <li><a href="first-page.html">প্রথম HTML পৃষ্ঠা</a></li>
+          <li><a href="basic-structure.html">HTML মৌলিক কাঠামো</a></li>
+          <li><a href="how-browser-renders-html.html" class="active">ব্রাউজার কীভাবে HTML রেন্ডার করে</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="./">পরিচিতি</a></li>
+            <li>ব্রাউজার কীভাবে HTML রেন্ডার করে</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>ব্রাউজার কীভাবে HTML রেন্ডার করে (How Browser Renders HTML)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১৫ মিনিট</span>
+            <span>লেভেল: মাধ্যমিক</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>ব্রাউজার রেন্ডারিং কী?</h2>
+            <p>আপনি যখন কোনো ওয়েবসাইট ভিজিট করেন, তখন ব্রাউজার সেই ওয়েবসাইটের HTML, CSS, JavaScript কোড নিয়ে একটি দৃশ্যমান পৃষ্ঠা তৈরি করে। এই প্রক্রিয়াকে <strong>ব্রাউজার রেন্ডারিং</strong> বলে।</p>
+            
+            <div class="example-box">
+              <h3>সহজ ভাষায়:</h3>
+              <p>ব্রাউজার হলো একজন দোভাষীর মতো। আপনি HTML কোড লেখেন (যেমন একটা চিঠি), ব্রাউাজার সেটাকে পড়ে এবং আপনার স্ক্রিনে সুন্দর করে দেখায় (যেমন চিঠি পড়ে শোনানো)।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>রেন্ডারিং প্রক্রিয়ার মূল ধাপসমূহ</h2>
+            <p>একটি ব্রাউজার HTML রেন্ডার করার সময় নিচের ধাপগুলো অনুসরণ করে:</p>
+
+            <div class="render-flow">
+              <div class="render-step">
+                <div class="step-number">১</div>
+                <div class="step-content">
+                  <strong>HTML ডাউনলোড:</strong> ব্রাউজার সার্ভার থেকে HTML ফাইল ডাউনলোড করে
+                </div>
+              </div>
+              <div class="arrow-down">↓</div>
+              
+              <div class="render-step">
+                <div class="step-number">২</div>
+                <div class="step-content">
+                  <strong>পার্সিং (Parsing):</strong> HTML কোড বিশ্লেষণ করে DOM ট্রি তৈরি করা
+                </div>
+              </div>
+              <div class="arrow-down">↓</div>
+              
+              <div class="render-step">
+                <div class="step-number">৩</div>
+                <div class="step-content">
+                  <strong>CSS পার্সিং:</strong> CSS কোড বিশ্লেষণ করে CSSOM ট্রি তৈরি করা
+                </div>
+              </div>
+              <div class="arrow-down">↓</div>
+              
+              <div class="render-step">
+                <div class="step-number">৪</div>
+                <div class="step-content">
+                  <strong>রেন্ডার ট্রি তৈরি:</strong> DOM ও CSSOM একত্রিত করে রেন্ডার ট্রি তৈরি
+                </div>
+              </div>
+              <div class="arrow-down">↓</div>
+              
+              <div class="render-step">
+                <div class="step-number">৫</div>
+                <div class="step-content">
+                  <strong>লেআউট (Layout):</strong> প্রতিটি এলিমেন্টের অবস্থান ও সাইজ নির্ধারণ
+                </div>
+              </div>
+              <div class="arrow-down">↓</div>
+              
+              <div class="render-step">
+                <div class="step-number">৬</div>
+                <div class="step-content">
+                  <strong>পেইন্টিং (Painting):</strong> স্ক্রিনে পিক্সেলগুলো রঙ করা
+                </div>
+              </div>
+              <div class="arrow-down">↓</div>
+              
+              <div class="render-step">
+                <div class="step-number">৭</div>
+                <div class="step-content">
+                  <strong>কম্পোজিটিং (Compositing):</strong> বিভিন্ন লেয়ার একত্রিত করে দেখানো
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>১. HTML ডাউনলোড</h2>
+            <p>যখন আপনি ব্রাউজারের অ্যাড্রেস বারে একটি URL লিখে এন্টার চাপেন, তখন ব্রাউজার সেই ঠিকানা থেকে HTML ফাইল ডাউনলোড করে।</p>
+
+            <div class="browser-component">
+              <h4>যেমন:</h4>
+              <p><code>https://www.example.com</code> লিখলে ব্রাউজার example.com সার্ভার থেকে index.html ফাইল ডাউনলোড করে।</p>
+            </div>
+
+            <h3>ডাউনলোড প্রক্রিয়া:</h3>
+            <ol>
+              <li><strong>DNS লুকআপ:</strong> URL-কে আইপি ঠিকানায় রূপান্তর করা</li>
+              <li><strong>কানেকশন স্থাপন:</strong> TCP কানেকশন তৈরি</li>
+              <li><strong>HTTPS হ্যান্ডশেক:</strong> (যদি HTTPS হয়) নিরাপদ সংযোগ স্থাপন</li>
+              <li><strong>HTTP রিকোয়েস্ট:</strong> সার্ভারে HTML ফাইল চাওয়া</li>
+              <li><strong>HTTP রেসপন্স:</strong> সার্ভার HTML ফাইল পাঠায়</li>
+            </ol>
+          </section>
+
+          <section class="topic-section">
+            <h2>২. পার্সিং ও DOM ট্রি তৈরি</h2>
+            <p>পার্সিং মানে হলো ব্রাউজার HTML কোড পড়ে বোঝার প্রক্রিয়া। ব্রাউজার HTML কোডকে একটি ট্রি স্ট্রাকচারে রূপান্তর করে, যার নাম <strong>DOM (Document Object Model) ট্রি</strong>।</p>
+
+            <h3>উদাহরণ HTML কোড:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;আমার পৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;শিরোনাম&lt;/h1&gt;
+  &lt;p&gt;একটি &lt;strong&gt;গুরুত্বপূর্ণ&lt;/strong&gt; প্যারাগ্রাফ&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <h3>DOM ট্রি:</h3>
+            <div class="dom-tree">
+              <pre>
+document
+  └── html
+       ├── head
+       │    └── title
+       │         └── "আমার পৃষ্ঠা"
+       └── body
+            ├── h1
+            │    └── "শিরোনাম"
+            └── p
+                 ├── "একটি "
+                 ├── strong
+                 │    └── "গুরুত্বপূর্ণ"
+                 └── " প্যারাগ্রাফ"</pre>
+            </div>
+
+            <p>DOM ট্রি-তে প্রতিটি HTML এলিমেন্ট একটি <strong>নোড (Node)</strong> হিসেবে থাকে। এই নোডগুলো প্যারেন্ট-চাইল্ড সম্পর্কে আবদ্ধ থাকে।</p>
+
+            <div class="fun-fact">
+              <p>💡 <strong>মজার তথ্য:</strong> DOM শুধু ব্রাউজারের জন্য নয়, জাভাস্ক্রিপ্ট দিয়েও আপনি DOM ম্যানিপুলেট করতে পারেন। যেমন: <code>document.querySelector('h1')</code> দিয়ে h1 এলিমেন্ট খুঁজে বের করা।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>৩. CSS পার্সিং ও CSSOM ট্রি</h2>
+            <p>HTML পার্স করার সময় ব্রাউজার যখন <code>&lt;link&gt;</code> বা <code>&lt;style&gt;</code> ট্যাগ পায়, তখন CSS ডাউনলোড ও পার্স করে। CSS পার্স করে ব্রাউজার <strong>CSSOM (CSS Object Model) ট্রি</strong> তৈরি করে।</p>
+
+            <h3>উদাহরণ CSS:</h3>
+            <div class="code-preview">
+              <pre><code>h1 {
+  color: blue;
+  font-size: 24px;
+}
+
+p {
+  color: black;
+  line-height: 1.5;
+}
+
+strong {
+  color: red;
+}</code></pre>
+            </div>
+
+            <h3>CSSOM ট্রি:</h3>
+            <div class="dom-tree">
+              <pre>
+CSSOM
+  ├── h1 → {color: blue, font-size: 24px}
+  ├── p → {color: black, line-height: 1.5}
+  └── strong → {color: red}</pre>
+            </div>
+
+            <div class="example-box">
+              <h4>গুরুত্বপূর্ণ বিষয়:</h4>
+              <ul>
+                <li>CSSOM ট্রি ক্যাসকেডিং নিয়ম অনুসরণ করে (যেখানে পরে লেখা নিয়ম আগের নিয়মকে ওভাররাইড করে)</li>
+                <li>স্পেসিফিসিটি অনুযায়ী কোন নিয়ম প্রয়োগ হবে তা নির্ধারণ করা হয়</li>
+                <li>CSS পার্সিং রেন্ডারিং ব্লক করতে পারে (ব্রাউজার CSS না পার্স করা পর্যন্ত পৃষ্ঠা দেখায় না)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>৪. রেন্ডার ট্রি তৈরি</h2>
+            <p>DOM ট্রি ও CSSOM ট্রি একত্রিত করে <strong>রেন্ডার ট্রি (Render Tree)</strong> তৈরি করা হয়। রেন্ডার ট্রি-তে শুধু সেই এলিমেন্টগুলো থাকে যা স্ক্রিনে দেখা যাবে।</p>
+
+            <h3>যে এলিমেন্টগুলো রেন্ডার ট্রি-তে আসে না:</h3>
+            <ul>
+              <li><code>&lt;head&gt;</code> ও এর ভিতরের এলিমেন্ট</li>
+              <li><code>display: none</code> দেওয়া এলিমেন্ট</li>
+              <li><code>&lt;script&gt;</code> ট্যাগ (যদিও কিছু ব্রাউজার আলাদাভাবে হ্যান্ডেল করে)</li>
+              <li><code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> ইত্যাদি</li>
+            </ul>
+
+            <h3>রেন্ডার ট্রি গঠন:</h3>
+            <div class="dom-tree">
+              <pre>
+রেন্ডার ট্রি
+  └── body
+       ├── h1 (color: blue, font-size: 24px) → "শিরোনাম"
+       └── p (color: black, line-height: 1.5)
+            ├── "একটি "
+            ├── strong (color: red) → "গুরুত্বপূর্ণ"
+            └── " প্যারাগ্রাফ"</pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>৫. লেআউট (Layout) বা রিফ্লো (Reflow)</h2>
+            <p>লেআউট ধাপে ব্রাউজার প্রতিটি এলিমেন্টের সঠিক অবস্থান ও সাইজ নির্ধারণ করে। যেমন: একটি এলিমেন্ট কত পিক্সেল চওড়া হবে, স্ক্রিনের কোন অবস্থানে থাকবে ইত্যাদি।</p>
+
+            <h3>লেআউটের সময় যা নির্ধারণ করা হয়:</h3>
+            <ul>
+              <li>প্রতিটি এলিমেন্টের <strong>x ও y কো-অর্ডিনেট</strong> (কোথায় থাকবে)</li>
+              <li><strong>width ও height</strong> (কত বড় হবে)</li>
+              <li><strong>border, margin, padding</strong>-এর জন্য জায়গা</li>
+              <li>টেক্সটের জন্য লাইন ব্রেক কোথায় হবে</li>
+              <li>ইমেজের সাইজ</li>
+            </ul>
+
+            <div class="browser-component">
+              <h4>উদাহরণ:</h4>
+              <p>ধরুন আপনার CSS-এ লেখা আছে: <code>width: 50%; margin: 10px;</code>। ব্রাউজার হিসাব করবে প্যারেন্ট এলিমেন্টের সাইজ অনুযায়ী ৫০% কত হবে, এবং মার্জিন কোথায় বসবে।</p>
+            </div>
+
+            <h3>কখন রিফ্লো হয়:</h3>
+            <ul>
+              <li>উইন্ডোর সাইজ পরিবর্তন করলে</li>
+              <li>ফন্ট সাইজ পরিবর্তন করলে</li>
+              <li>CSS প্রপার্টি পরিবর্তন করলে যা জ্যামিতি প্রভাবিত করে</li>
+              <li>DOM-এ নতুন এলিমেন্ট যোগ করলে বা পুরনো এলিমেন্ট মুছে ফেললে</li>
+            </ul>
+
+            <div class="fun-fact">
+              <p>⚠️ <strong>পারফরম্যান্স টিপস:</strong> রিফ্লো একটিexpensive অপারেশন। বেশি রিফ্লো হলে ওয়েবসাইট ধীর হয়ে যায়। তাই একসাথে একাধিক DOM পরিবর্তন করা ভালো, বারবার না করে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>৬. পেইন্টিং (Painting) বা রাস্টারাইজেশন</h2>
+            <p>লেআউট ধাপ শেষে ব্রাউজার জানে প্রতিটি এলিমেন্ট কোথায় থাকবে এবং কত বড় হবে। এবার ব্রাউজার সেগুলো <strong>রঙ করা</strong> শুরু করে। একেই পেইন্টিং বা রাস্টারাইজেশন বলে।</p>
+
+            <h3>পেইন্টিং-এর সময় যা করা হয়:</h3>
+            <ul>
+              <li>টেক্সট রঙ করা</li>
+              <li>ছবি আঁকা</li>
+              <li>বর্ডার, ব্যাকগ্রাউন্ড রঙ করা</li>
+              <li>বক্স শ্যাডো, গ্রেডিয়েন্ট প্রয়োগ করা</li>
+            </ul>
+
+            <p>পেইন্টিং সাধারণত একাধিক <strong>লেয়ার (Layer)</strong>-এ করা হয়। জটিল পৃষ্ঠাগুলোতে একাধিক লেয়ার থাকে।</p>
+
+            <h3>কখন রিপেইন্ট হয়:</h3>
+            <ul>
+              <li>রঙ পরিবর্তন করলে (যেমন: <code>color: red</code> থেকে <code>blue</code>)</li>
+              <li>ভিজিবিলিটি পরিবর্তন করলে (<code>visibility: hidden</code>)</li>
+              <li>ছায়া বা আউটলাইন পরিবর্তন করলে</li>
+            </ul>
+
+            <p>রিপেইন্ট রিফ্লোর চেয়ে কম expensive, কিন্তু অনেক রিপেইন্ট হলেও ওয়েবসাইট ধীর হয়ে যায়।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>৭. কম্পোজিটিং (Compositing)</h2>
+            <p>আধুনিক ব্রাউজারগুলো পৃষ্ঠাকে একাধিক <strong>লেয়ার</strong>-এ ভাগ করে। যেমন: একটি লেয়ারে হেডার, আরেক লেয়ারে সাইডবার, আরেক লেয়ারে মূল কন্টেন্ট। কম্পোজিটিং ধাপে ব্রাউজার এই লেয়ারগুলো সঠিক ক্রমে সাজিয়ে স্ক্রিনে দেখায়।</p>
+
+            <h3>কম্পোজিটিং-এর সুবিধা:</h3>
+            <ul>
+              <li>একটি লেয়ার আপডেট করলে পুরো পৃষ্ঠা রিপেইন্ট করতে হয় না, শুধু ওই লেয়ারটি আপডেট হয়</li>
+              <li>অ্যানিমেশন মসৃণ হয় (বিশেষ করে <code>transform</code> ও <code>opacity</code> দিয়ে)</li>
+              <li>GPU ব্যবহার করে দ্রুত রেন্ডার করা যায়</li>
+            </ul>
+
+            <div class="example-box">
+              <h4>যেসব প্রপার্টি কম্পোজিটিং ট্রিগার করে:</h4>
+              <ul>
+                <li><code>transform</code> (যেমন: translate, rotate, scale)</li>
+                <li><code>opacity</code></li>
+                <li><code>filter</code></li>
+                <li><code>will-change</code> (ব্রাউজারকে জানিয়ে দেওয়া যে এলিমেন্টটি পরিবর্তন হবে)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ব্রাউজার রেন্ডারিং প্রক্রিয়ার চিত্র</h2>
+            
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+              <div style="display: flex; justify-content: space-around; margin-bottom: 20px; flex-wrap: wrap;">
+                <div style="background-color: #007bff; color: white; padding: 10px; border-radius: 5px; margin: 5px;">HTML</div>
+                <div style="font-size: 24px;">→</div>
+                <div style="background-color: #28a745; color: white; padding: 10px; border-radius: 5px; margin: 5px;">পার্সার</div>
+                <div style="font-size: 24px;">→</div>
+                <div style="background-color: #dc3545; color: white; padding: 10px; border-radius: 5px; margin: 5px;">DOM ট্রি</div>
+              </div>
+              
+              <div style="display: flex; justify-content: space-around; margin-bottom: 20px; flex-wrap: wrap;">
+                <div style="background-color: #ffc107; color: black; padding: 10px; border-radius: 5px; margin: 5px;">CSS</div>
+                <div style="font-size: 24px;">→</div>
+                <div style="background-color: #17a2b8; color: white; padding: 10px; border-radius: 5px; margin: 5px;">CSS পার্সার</div>
+                <div style="font-size: 24px;">→</div>
+                <div style="background-color: #6c757d; color: white; padding: 10px; border-radius: 5px; margin: 5px;">CSSOM ট্রি</div>
+              </div>
+              
+              <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <div style="background-color: #28a745; color: white; padding: 15px; border-radius: 5px;">DOM + CSSOM = রেন্ডার ট্রি</div>
+              </div>
+              
+              <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div style="background-color: #007bff; color: white; padding: 10px; border-radius: 5px; margin: 5px;">লেআউট</div>
+                <div style="font-size: 24px;">→</div>
+                <div style="background-color: #dc3545; color: white; padding: 10px; border-radius: 5px; margin: 5px;">পেইন্ট</div>
+                <div style="font-size: 24px;">→</div>
+                <div style="background-color: #ffc107; color: black; padding: 10px; border-radius: 5px; margin: 5px;">কম্পোজিট</div>
+                <div style="font-size: 24px;">→</div>
+                <div style="background-color: #17a2b8; color: white; padding: 10px; border-radius: 5px; margin: 5px;">স্ক্রিন</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>বিভিন্ন ব্রাউজারের রেন্ডারিং ইঞ্জিন</h2>
+            <p>বিভিন্ন ব্রাউজার বিভিন্ন রেন্ডারিং ইঞ্জিন ব্যবহার করে। তবে মূল প্রক্রিয়া প্রায় একই রকম।</p>
+
+            <table class="reference-table">
+              <tr>
+                <th>ব্রাউজার</th>
+                <th>রেন্ডারিং ইঞ্জিন</th>
+                <th>মন্তব্য</th>
+              </tr>
+              <tr>
+                <td>Chrome, Edge, Brave, Opera</td>
+                <td>Blink</td>
+                <td>বর্তমানে সবচেয়ে জনপ্রিয়, WebKit-এর ফর্ক</td>
+              </tr>
+              <tr>
+                <td>Safari</td>
+                <td>WebKit</td>
+                <td>Apple-এর তৈরি, macOS ও iOS-এ ব্যবহৃত</td>
+              </tr>
+              <tr>
+                <td>Firefox</td>
+                <td>Gecko</td>
+                <td>Mozilla-এর তৈরি, ওপেন সোর্স</td>
+              </tr>
+              <tr>
+                <td>Internet Explorer</td>
+                <td>Trident</td>
+                <td>পুরনো, এখন অপ্রচলিত</td>
+              </tr>
+              <tr>
+                <td>Edge (old)</td>
+                <td>EdgeHTML</td>
+                <td>পুরনো Edge, এখন Blink ব্যবহার করে</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>রেন্ডারিং ব্লকিং রিসোর্স</h2>
+            <p>কিছু রিসোর্স ব্রাউজারের রেন্ডারিং প্রক্রিয়াকে ব্লক করতে পারে। অর্থাৎ, এই রিসোর্সগুলো না ডাউনলোড ও পার্স না হওয়া পর্যন্ত ব্রাউজার পৃষ্ঠা দেখায় না।</p>
+
+            <h3>রেন্ডারিং ব্লকিং রিসোর্স:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>রিসোর্স</th>
+                <th>কেন ব্লক করে</th>
+                <th>সমাধান</th>
+              </tr>
+              <tr>
+                <td>CSS (বিশেষ করে external CSS)</td>
+                <td>CSS না জানলে সঠিকভাবে পৃষ্ঠা দেখানো যাবে না</td>
+                <td>মিডিয়া অ্যাট্রিবিউট ব্যবহার, ইনলাইন ক্রিটিক্যাল CSS</td>
+              </tr>
+              <tr>
+                <td>JavaScript (head-এ থাকলে)</td>
+                <td>JavaScript DOM পরিবর্তন করতে পারে, তাই HTML পার্সিং বন্ধ রাখে</td>
+                <td>defer বা async অ্যাট্রিবিউট ব্যবহার</td>
+              </tr>
+              <tr>
+                <td>ফন্ট ফাইল</td>
+                <td>FOUT (Flash of Unstyled Text) এড়াতে অপেক্ষা করে</td>
+                <td>font-display: swap ব্যবহার</td>
+              </tr>
+            </table>
+
+            <div class="code-preview">
+              <h4>ডিফার ও অ্যাসিঙ্ক উদাহরণ:</h4>
+              <pre><code>&lt;!-- সাধারণ স্ক্রিপ্ট: HTML পার্সিং বন্ধ করে --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;!-- অ্যাসিঙ্ক: HTML পার্সিং চলতে থাকে, স্ক্রিপ্ট ডাউনলোড হলে সাথে সাথে চলে --&gt;
+&lt;script src="script.js" async&gt;&lt;/script&gt;
+
+&lt;!-- ডিফার: HTML পার্সিং শেষ হওয়া পর্যন্ত অপেক্ষা করে, তারপর চলে --&gt;
+&lt;script src="script.js" defer&gt;&lt;/script&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>পারফরম্যান্স অপটিমাইজেশন টিপস</h2>
+            <p>ব্রাউজার রেন্ডারিং প্রক্রিয়া বুঝলে আপনি আপনার ওয়েবসাইট দ্রুত লোড করার জন্য নিচের টিপস ফলো করতে পারেন:</p>
+
+            <ul>
+              <li><strong>CSS ছোট রাখুন:</strong> অপ্রয়োজনীয় CSS বাদ দিন, মিনিফাই করুন</li>
+              <li><strong>JavaScript-এর জন্য defer/async ব্যবহার করুন:</strong> যাতে HTML পার্সিং ব্লক না হয়</li>
+              <li><strong>ক্রিটিক্যাল CSS ইনলাইন করুন:</strong> প্রথম দৃশ্যমান অংশের জন্য CSS head-এ ইনলাইন করুন</li>
+              <li><strong>ইমেজ অপটিমাইজ করুন:</strong> ইমেজের সাইজ ছোট করুন, WebP ফরম্যাট ব্যবহার করুন</li>
+              <li><strong>লেজি লোডিং ব্যবহার করুন:</strong> স্ক্রিনে না আসা পর্যন্ত ইমেজ লোড করবেন না</li>
+              <li><strong>কম রিফ্লো ও রিপেইন্ট করুন:</strong> DOM ম্যানিপুলেশন একসাথে করুন, transform ব্যবহার করুন</li>
+              <li><strong>will-change প্রপার্টি ব্যবহার করুন:</strong> কোন এলিমেন্ট পরিবর্তন হবে তা ব্রাউজারকে জানিয়ে দিন</li>
+            </ul>
+
+            <div class="example-box">
+              <h4>will-change উদাহরণ:</h4>
+              <div class="code-preview">
+                <pre><code>.animated-element {
+  will-change: transform, opacity;
+}</code></pre>
+              </div>
+              <p>এটা ব্রাউজারকে জানিয়ে দেয় যে এলিমেন্টটি transform ও opacity পরিবর্তন হবে। ব্রাউজার তখন এলিমেন্টটিকে আলাদা লেয়ারে রেখে অপটিমাইজ করতে পারে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ডেভেলপার টুলস দিয়ে রেন্ডারিং দেখা</h2>
+            <p>ব্রাউজারের ডেভেলপার টুলস ব্যবহার করে আপনি রেন্ডারিং প্রক্রিয়া পর্যবেক্ষণ করতে পারেন।</p>
+
+            <h3>Chrome DevTools:</h3>
+            <ol>
+              <li>F12 চাপুন বা রাইট-ক্লিক করে "Inspect" নির্বাচন করুন</li>
+              <li><strong>Performance ট্যাব:</strong> রেন্ডারিং পারফরম্যান্স দেখা যায়</li>
+              <li><strong>Layers ট্যাব:</strong> বিভিন্ন লেয়ার দেখা যায়</li>
+              <li><strong>Rendering ট্যাব:</strong> পেইন্ট ফ্ল্যাশ, লেআউট শিফট দেখা যায়</li>
+            </ol>
+
+            <div class="browser-component">
+              <h4>রেন্ডারিং টুলস চালু করার পদ্ধতি:</h4>
+              <p>Chrome DevTools-এ <code>ESC</code> চাপুন, তারপর তিন ডট মেনু থেকে "More tools" → "Rendering" নির্বাচন করুন। এখানে "Paint flashing" চালু করলে যেসব এলিমেন্ট রিপেইন্ট হচ্ছে, সেগুলো সবুজ রঙে ফ্ল্যাশ করবে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>বাংলা ওয়েবসাইটের রেন্ডারিং বিশেষত্ব</h2>
+            <p>বাংলা ভাষায় ওয়েবসাইট তৈরি করার সময় কিছু বিশেষ বিষয় মনে রাখতে হবে যা ব্রাউজার রেন্ডারিংকে প্রভাবিত করে:</p>
+
+            <ul>
+              <li><strong>বাংলা ফন্ট:</strong> ব্রাউজার যদি বাংলা ফন্ট না পায়, তাহলে ফন্ট ডাউনলোড করতে সময় নেয় (FOUT)</li>
+              <li><strong>বাংলা টেক্সট রেন্ডারিং:</strong> বাংলা জটিল অক্ষর (যেমন: ক+্+ষ = ক্ষ) সঠিকভাবে রেন্ডার করতে ফন্ট ইঞ্জিনের ভালো সাপোর্ট দরকার</li>
+              <li><strong>meta charset="UTF-8":</strong> না দিলে বাংলা অক্ষর ভুল দেখায়</li>
+            </ul>
+
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> বাংলা ওয়েবসাইটের জন্য <code>font-display: swap</code> ব্যবহার করুন। এতে ফন্ট লোড হওয়া পর্যন্ত ডিফল্ট ফন্ট দেখাবে, তারপর বাংলা ফন্ট বসবে। ব্যবহারকারী খালি পৃষ্ঠা দেখবে না।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>ব্রাউজার রেন্ডারিং প্রক্রিয়ার সাতটি ধাপের নাম লেখ।</li>
+              <li>DOM ট্রি ও CSSOM ট্রি কী এবং এগুলো কীভাবে তৈরি হয়?</li>
+              <li>রেন্ডার ট্রি ও DOM ট্রি-র মধ্যে তিনটি পার্থক্য লেখ।</li>
+              <li>লেআউট (রিফ্লো) ও পেইন্টিং (রিপেইন্ট)-এর মধ্যে পার্থক্য কী?</li>
+              <li>কোন কোন কারণে রিফ্লো হয়? পাঁচটি উদাহরণ দিন।</li>
+              <li>defer ও async অ্যাট্রিবিউটের মধ্যে পার্থক্য কী?</li>
+              <li>Chrome, Firefox ও Safari-র রেন্ডারিং ইঞ্জিনের নাম লেখ।</li>
+              <li>নিচের HTML কোডের জন্য DOM ট্রি আঁকার চেষ্টা করুন:
+                <div class="code-preview">
+                  <pre><code>&lt;div&gt;
+  &lt;h2&gt;শিরোনাম&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;আইটেম ১&lt;/li&gt;
+    &lt;li&gt;আইটেম ২&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>HTML ডাউনলোড, পার্সিং (DOM তৈরি), CSS পার্সিং (CSSOM তৈরি), রেন্ডার ট্রি তৈরি, লেআউট (রিফ্লো), পেইন্টিং (রাস্টারাইজেশন), কম্পোজিটিং</li>
+                <li>DOM ট্রি: HTML পার্স করে তৈরি, প্রতিটি এলিমেন্ট নোড হিসেবে থাকে। CSSOM ট্রি: CSS পার্স করে তৈরি, প্রতিটি সিলেক্টরের জন্য স্টাইল থাকে।</li>
+                <li>১. DOM ট্রি-তে সব HTML এলিমেন্ট থাকে, রেন্ডার ট্রি-তে শুধু দৃশ্যমান এলিমেন্ট। ২. DOM ট্রি-তে head-এর এলিমেন্ট থাকে, রেন্ডার ট্রি-তে থাকে না। ৩. DOM ট্রি-তে display: none এলিমেন্ট থাকে, রেন্ডার ট্রি-তে থাকে না।</li>
+                <li>লেআউট: এলিমেন্টের অবস্থান ও সাইজ নির্ধারণ করে। পেইন্টিং: এলিমেন্টে রঙ ও ভিজুয়াল ইফেক্ট প্রয়োগ করে।</li>
+                <li>উইন্ডো রিসাইজ, ফন্ট সাইজ পরিবর্তন, DOM এলিমেন্ট যোগ/বিয়োগ, CSS প্রপার্টি পরিবর্তন (width, height, margin ইত্যাদি), পৃষ্ঠা প্রথম লোড</li>
+                <li>async: HTML পার্সিং চলতে থাকে, স্ক্রিপ্ট ডাউনলোড হলে সাথে সাথে চলে। defer: HTML পার্সিং শেষ হওয়া পর্যন্ত অপেক্ষা করে, তারপর ক্রমানুযায়ী স্ক্রিপ্ট চলে।</li>
+                <li>Chrome: Blink, Firefox: Gecko, Safari: WebKit</li>
+                <li>DOM ট্রি:
+                  <pre>
+div
+  ├── h2 → "শিরোনাম"
+  └── ul
+       ├── li → "আইটেম ১"
+       └── li → "আইটেম ২"</pre>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সারাংশ</h2>
+            <p>ব্রাউজার রেন্ডারিং প্রক্রিয়া বোঝা একজন ওয়েব ডেভেলপারের জন্য অত্যন্ত গুরুত্বপূর্ণ। এটি আপনাকে:</p>
+            <ul>
+              <li>✅ পারফরম্যান্স সমস্যা চিহ্নিত করতে সাহায্য করে</li>
+              <li>✅ দ্রুত লোড হয় এমন ওয়েবসাইট তৈরি করতে সাহায্য করে</li>
+              <li>✅ ডিবাগিং সহজ করে</li>
+              <li>✅ ব্রাউজার-নির্দিষ্ট সমস্যা সমাধানে সাহায্য করে</li>
+              <li>✅ উন্নত ফিচার বুঝতে সাহায্য করে</li>
+            </ul>
+
+            <div class="example-box">
+              <h3>মনে রাখার মূল বিষয়:</h3>
+              <ul>
+                <li>✅ ব্রাউজার HTML পার্স করে DOM তৈরি করে</li>
+                <li>✅ CSS পার্স করে CSSOM তৈরি করে</li>
+                <li>✅ DOM + CSSOM = রেন্ডার ট্রি</li>
+                <li>✅ লেআউট = অবস্থান ও সাইজ নির্ধারণ</li>
+                <li>✅ পেইন্ট = পিক্সেলে রূপান্তর</li>
+                <li>✅ কম্পোজিট = লেয়ার একত্রিত করে দেখানো</li>
+                <li>✅ রিফ্লো expensive, রিপেইন্ট কম expensive</li>
+              </ul>
+            </div>
+
+            <div class="fun-fact">
+              <p>🎉 <strong>অভিনন্দন!</strong> আপনি এখন জানেন ব্রাউজারের ভিতরে কীভাবে আপনার লেখা HTML কোড একটি সুন্দর ওয়েবপৃষ্ঠায় রূপান্তরিত হয়। এই জ্ঞান আপনার ওয়েব ডেভেলপমেন্ট যাত্রায় অনেক কাজে লাগবে।</p>
+            </div>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="basic-structure.html" class="prev-topic">← HTML মৌলিক কাঠামো</a>
+            <a href="../basics/" class="next-topic">বেসিক টপিকস →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

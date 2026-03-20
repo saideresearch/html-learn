@@ -2,63 +2,103 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   
-  // Mobile menu toggle
+  // Mobile menu toggle - FIXED
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
   
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('show');
-      menuToggle.textContent = navMenu.classList.contains('show') ? '✕' : '☰';
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Toggle the 'active' class (using 'active' instead of 'show')
+      navMenu.classList.toggle('active');
+      
+      // Update button text/icon
+      if (navMenu.classList.contains('active')) {
+        menuToggle.textContent = '✕';
+        menuToggle.setAttribute('aria-label', 'মেনু বন্ধ করুন');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-label', 'মেনু খুলুন');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (navMenu.classList.contains('active') && 
+          !navMenu.contains(e.target) && 
+          !menuToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-label', 'মেনু খুলুন');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close menu when clicking a link (optional)
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-label', 'মেনু খুলুন');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
   
   // Tab functionality for examples
   const tabButtons = document.querySelectorAll('.tab-button');
   
-  tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active class from all tabs
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      
-      // Add active class to clicked tab
-      this.classList.add('active');
-      
-      // Here you would load different example content
-      // This is simplified - in real implementation you'd fetch content
-      const tabName = this.dataset.tab;
-      loadExampleContent(tabName);
+  if (tabButtons.length) {
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all tabs
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Here you would load different example content
+        const tabName = this.dataset.tab;
+        loadExampleContent(tabName);
+      });
     });
-  });
+  }
   
   // Code editor functionality
   const runButtons = document.querySelectorAll('.run-btn');
   
-  runButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const editor = this.previousElementSibling;
-      const resultDiv = this.nextElementSibling;
-      
-      if (editor && editor.classList.contains('code-editor') && resultDiv) {
-        const code = editor.value;
-        resultDiv.innerHTML = code;
+  if (runButtons.length) {
+    runButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const editor = this.previousElementSibling;
+        const resultDiv = this.nextElementSibling;
         
-        // Execute scripts if any
-        const scripts = resultDiv.querySelectorAll('script');
-        scripts.forEach(script => {
-          const newScript = document.createElement('script');
-          newScript.textContent = script.textContent;
-          document.body.appendChild(newScript);
-        });
-      }
+        if (editor && editor.classList && editor.classList.contains('code-editor') && resultDiv) {
+          const code = editor.value;
+          resultDiv.innerHTML = code;
+          
+          // Execute scripts if any
+          const scripts = resultDiv.querySelectorAll('script');
+          scripts.forEach(script => {
+            const newScript = document.createElement('script');
+            newScript.textContent = script.textContent;
+            document.body.appendChild(newScript);
+          });
+        }
+      });
     });
-  });
+  }
   
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
-      if (href !== '#') {
+      if (href !== '#' && href !== '#topics') {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
@@ -71,27 +111,29 @@ document.addEventListener('DOMContentLoaded', function() {
   // Active navigation highlighting based on scroll
   const sections = document.querySelectorAll('section[id]');
   
-  window.addEventListener('scroll', function() {
-    let current = '';
-    const scrollY = window.scrollY;
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.offsetHeight;
+  if (sections.length) {
+    window.addEventListener('scroll', function() {
+      let current = '';
+      const scrollY = window.scrollY;
       
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      const navLinks = document.querySelectorAll('.sidebar-nav a');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
     });
-    
-    const navLinks = document.querySelectorAll('.sidebar-nav a');
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-  });
+  }
   
   // Load saved theme preference
   const savedTheme = localStorage.getItem('theme');
@@ -141,11 +183,11 @@ function loadExampleContent(tabName) {
 </form>`
     },
     table: {
-      code: `<table border="1">\n  <tr>\n    <th>নাম</th>\n    <th>বয়স</th>\n  </tr>\n  <tr>\n    <td>রহিম</td>\n    <td>২৫</td>\n  </tr>\n  <tr>\n    <td>করিম</td>\n    <td>৩০</td>\n  </tr>\n</table>`,
+      code: `<table border="1">\n   <tr>\n    <th>নাম</th>\n    <th>বয়স</th>\n   </tr>\n   <tr>\n     <td>রহিম</td>\n     <td>২৫</td>\n   </tr>\n   <tr>\n     <td>করিম</td>\n     <td>৩০</td>\n   </tr>\n</table>`,
       preview: `<table border="1" style="border-collapse: collapse;">
-  <tr><th>নাম</th><th>বয়স</th></tr>
-  <tr><td>রহিম</td><td>২৫</td></tr>
-  <tr><td>করিম</td><td>৩০</td></tr>
+   <tr><th>নাম</th><th>বয়স</th></tr>
+   <tr><td>রহিম</td><td>২৫</td></tr>
+   <tr><td>করিম</td><td>৩০</td></tr>
 </table>`
     }
   };

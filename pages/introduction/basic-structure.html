@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML মৌলিক কাঠামো | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="./" class="active">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পরিচিতি টপিকস</h3>
+        <ul>
+          <li><a href="what-is-html.html">HTML কী?</a></li>
+          <li><a href="history-of-html.html">HTML-এর ইতিহাস</a></li>
+          <li><a href="html-versions.html">HTML-এর সংস্করণ</a></li>
+          <li><a href="html-editors.html">HTML এডিটর</a></li>
+          <li><a href="first-page.html">প্রথম HTML পৃষ্ঠা</a></li>
+          <li><a href="basic-structure.html" class="active">HTML মৌলিক কাঠামো</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="./">পরিচিতি</a></li>
+            <li>HTML মৌলিক কাঠামো</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML মৌলিক কাঠামো (Basic Structure of HTML)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১২ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML ডকুমেন্টের গঠন</h2>
+            <p>প্রতিটি HTML ডকুমেন্টের একটি নির্দিষ্ট কাঠামো থাকে। এই কাঠামো ব্রাউজারকে বুঝতে সাহায্য করে যে এটি একটি HTML ডকুমেন্ট এবং কীভাবে তা প্রদর্শন করতে হবে। নিচে একটি সাধারণ HTML ডকুমেন্টের কাঠামো দেওয়া হলো:</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;পৃষ্ঠার শিরোনাম&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;এটি একটি শিরোনাম&lt;/h1&gt;
+    &lt;p&gt;এটি একটি প্যারাগ্রাফ&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <div class="example-box">
+              <h3>কাঠামোর চিত্র:</h3>
+              <pre>
+  ├─ &lt;!DOCTYPE html&gt;
+  └─ &lt;html&gt;
+      ├─ &lt;head&gt;
+      │    ├─ &lt;title&gt;পৃষ্ঠার শিরোনাম&lt;/title&gt;
+      │    └─ অন্যান্য মেটাডাটা
+      └─ &lt;body&gt;
+           ├─ &lt;h1&gt;শিরোনাম&lt;/h1&gt;
+           └─ &lt;p&gt;প্যারাগ্রাফ&lt;/p&gt;
+              </pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>১. &lt;!DOCTYPE&gt; ডিক্লারেশন</h2>
+            <p><strong>&lt;!DOCTYPE&gt;</strong> ডিক্লারেশন HTML ডকুমেন্টের একদম শুরুতে থাকে। এটি ব্রাউজারকে জানায় যে এই ডকুমেন্টটি কোন HTML সংস্করণে লেখা হয়েছে।</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+            </div>
+
+            <h3>বৈশিষ্ট্য:</h3>
+            <ul>
+              <li>এটি একটি ট্যাগ নয়, এটি একটি ডিক্লারেশন মাত্র</li>
+              <li>এটি কেস-সংবেদনশীল নয় (ছোট বা বড় হাতের অক্ষর দুটোই চলে)</li>
+              <li>এটি HTML5-এর জন্য সবচেয়ে সহজ ও সংক্ষিপ্ত</li>
+              <li>এটি অবশ্যই ডকুমেন্টের প্রথম লাইনে থাকতে হবে</li>
+            </ul>
+
+            <h3>পুরনো HTML সংস্করণের জন্য DOCTYPE:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>HTML সংস্করণ</th>
+                <th>DOCTYPE ডিক্লারেশন</th>
+              </tr>
+              <tr>
+                <td>HTML 4.01 Strict</td>
+                <td><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>HTML 4.01 Transitional</td>
+                <td><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>XHTML 1.0 Strict</td>
+                <td><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code></td>
+              </tr>
+            </table>
+
+            <div class="fun-fact">
+              <p>💡 <strong>মজার তথ্য:</strong> HTML5-এর DOCTYPE সবচেয়ে ছোট এবং সহজ। এটি ডিজাইন করা হয়েছে যাতে ডেভেলপাররা সহজেই মনে রাখতে পারেন।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>২. &lt;html&gt; এলিমেন্ট</h2>
+            <p><strong>&lt;html&gt;</strong> এলিমেন্ট হলো HTML ডকুমেন্টের মূল বা রুট এলিমেন্ট। এই এলিমেন্টের ভিতরেই ডকুমেন্টের বাকি সব এলিমেন্ট থাকে।</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;html lang="bn"&gt;
+  ... পুরো ডকুমেন্ট ...
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <h3>গুরুত্বপূর্ণ অ্যাট্রিবিউট:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>অ্যাট্রিবিউট</th>
+                <th>বর্ণনা</th>
+                <th>উদাহরণ</th>
+              </tr>
+              <tr>
+                <td>lang</td>
+                <td>ডকুমেন্টের ভাষা নির্ধারণ করে</td>
+                <td><code>lang="bn"</code> (বাংলা), <code>lang="en"</code> (ইংরেজি)</td>
+              </tr>
+              <tr>
+                <td>dir</td>
+                <td>টেক্সটের দিক নির্ধারণ করে</td>
+                <td><code>dir="ltr"</code> (বাম থেকে ডান), <code>dir="rtl"</code> (ডান থেকে বাম)</td>
+              </tr>
+            </table>
+
+            <p><strong>lang="bn"</strong> অ্যাট্রিবিউট যোগ করলে ব্রাউজার বুঝতে পারে যে এই পৃষ্ঠাটি বাংলা ভাষায় লেখা, যা সার্চ ইঞ্জিন ও স্ক্রিন রিডারের জন্য উপকারী।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>৩. &lt;head&gt; এলিমেন্ট</h2>
+            <p><strong>&lt;head&gt;</strong> এলিমেন্টটি ডকুমেন্ট সম্পর্কে তথ্য (মেটাডাটা) ধারণ করে। এই এলিমেন্টের ভিতরে যা লেখা হয়, তা ব্রাউজারের মূল পৃষ্ঠায় দেখা যায় না।</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;আমার ওয়েবপৃষ্ঠা&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;meta name="description" content="এটি একটি শিক্ষামূলক ওয়েবসাইট"&gt;
+  &lt;meta name="keywords" content="HTML, শিক্ষা, ওয়েব ডেভেলপমেন্ট"&gt;
+  &lt;meta name="author" content="জন দো"&gt;
+&lt;/head&gt;</code></pre>
+            </div>
+
+            <h3>&lt;head&gt; এলিমেন্টের সাধারণ এলিমেন্টসমূহ:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>এলিমেন্ট</th>
+                <th>কাজ</th>
+                <th>উদাহরণ</th>
+              </tr>
+              <tr>
+                <td>&lt;title&gt;</td>
+                <td>ব্রাউজারের ট্যাবে শিরোনাম দেখায়</td>
+                <td><code>&lt;title&gt;হোম পৃষ্ঠা&lt;/title&gt;</code></td>
+              </tr>
+              <tr>
+                <td>&lt;meta&gt;</td>
+                <td>মেটাডাটা প্রদান করে (চারসেট, বর্ণনা, কীওয়ার্ড ইত্যাদি)</td>
+                <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>&lt;link&gt;</td>
+                <td>বাহ্যিক রিসোর্স লিংক করে (সিএসএস, আইকন)</td>
+                <td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>&lt;style&gt;</td>
+                <td>অভ্যন্তরীণ সিএসএস লেখার জন্য</td>
+                <td><code>&lt;style&gt;body {color: black;}&lt;/style&gt;</code></td>
+              </tr>
+              <tr>
+                <td>&lt;script&gt;</td>
+                <td>জাভাস্ক্রিপ্ট কোড যুক্ত করার জন্য</td>
+                <td><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>৪. &lt;body&gt; এলিমেন্ট</h2>
+            <p><strong>&lt;body&gt;</strong> এলিমেন্টের ভিতরে ডকুমেন্টের মূল কন্টেন্ট লেখা হয় যা ব্রাউজারে প্রদর্শিত হয়।</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;body&gt;
+  &lt;h1&gt;প্রধান শিরোনাম&lt;/h1&gt;
+  &lt;p&gt;এটি একটি প্যারাগ্রাফ যা ব্রাউজারে দেখা যাবে।&lt;/p&gt;
+  &lt;img src="ছবি.jpg" alt="ছবির বর্ণনা"&gt;
+  &lt;a href="https://example.com"&gt;একটি লিংক&lt;/a&gt;
+&lt;/body&gt;</code></pre>
+            </div>
+
+            <h3>&lt;body&gt; এলিমেন্টের সাধারণ এলিমেন্টসমূহ:</h3>
+            <ul>
+              <li><strong>শিরোনাম:</strong> &lt;h1&gt; থেকে &lt;h6&gt;</li>
+              <li><strong>প্যারাগ্রাফ:</strong> &lt;p&gt;</li>
+              <li><strong>লিংক:</strong> &lt;a&gt;</li>
+              <li><strong>ছবি:</strong> &lt;img&gt;</li>
+              <li><strong>তালিকা:</strong> &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
+              <li><strong>টেবিল:</strong> &lt;table&gt;</li>
+              <li><strong>ফর্ম:</strong> &lt;form&gt;, &lt;input&gt;</li>
+              <li><strong>ডিভিশন:</strong> &lt;div&gt;</li>
+              <li><strong>স্প্যান:</strong> &lt;span&gt;</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ মৌলিক কাঠামো (বাংলা সংস্করণ)</h2>
+            <p>বাংলা ভাষায় একটি সম্পূর্ণ HTML পৃষ্ঠার মৌলিক কাঠামো নিচে দেওয়া হলো:</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;বাংলায় HTML পৃষ্ঠা&lt;/title&gt;
+  &lt;meta name="description" content="এটি একটি বাংলা HTML পৃষ্ঠার উদাহরণ"&gt;
+  &lt;meta name="keywords" content="HTML, বাংলা, শিক্ষা"&gt;
+  &lt;meta name="author" content="HTML শিখি"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;বাংলায় স্বাগতম!&lt;/h1&gt;
+  &lt;p&gt;এটি একটি সম্পূর্ণ বাংলা HTML পৃষ্ঠা। এখানে আমরা HTML-এর মৌলিক কাঠামো শিখছি।&lt;/p&gt;
+  
+  &lt;h2&gt;HTML-এর মূল অংশগুলো:&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;DOCTYPE ডিক্লারেশন&lt;/li&gt;
+    &lt;li&gt;html এলিমেন্ট&lt;/li&gt;
+    &lt;li&gt;head এলিমেন্ট (মেটাডাটা)&lt;/li&gt;
+    &lt;li&gt;body এলিমেন্ট (দৃশ্যমান কন্টেন্ট)&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;p&gt;আশা করি আপনি HTML শেখা উপভোগ করছেন। &lt;a href="#"&gt;আরও পড়ুন&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML কাঠামোর ভিজুয়াল রিপ্রেজেন্টেশন</h2>
+            
+            <div class="browser-preview">
+              <div class="browser-header">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-url">বাংলায় HTML পৃষ্ঠা</span>
+              </div>
+              <div class="browser-content">
+                <div style="border: 2px dashed #007bff; padding: 10px; margin: 10px 0;">
+                  <span style="color: #007bff; font-weight: bold;">&lt;body&gt;</span>
+                  <div style="margin-left: 20px;">
+                    <div style="border: 2px dashed #28a745; padding: 10px; margin: 10px 0;">
+                      <span style="color: #28a745; font-weight: bold;">&lt;h1&gt;</span> বাংলায় স্বাগতম! <span style="color: #28a745; font-weight: bold;">&lt;/h1&gt;</span>
+                    </div>
+                    <div style="border: 2px dashed #dc3545; padding: 10px; margin: 10px 0;">
+                      <span style="color: #dc3545; font-weight: bold;">&lt;p&gt;</span> এটি একটি সম্পূর্ণ বাংলা HTML পৃষ্ঠা। <span style="color: #dc3545; font-weight: bold;">&lt;/p&gt;</span>
+                    </div>
+                    <div style="border: 2px dashed #ffc107; padding: 10px; margin: 10px 0;">
+                      <span style="color: #ffc107; font-weight: bold;">&lt;ul&gt;</span>
+                      <div style="margin-left: 20px;">
+                        <div>&lt;li&gt;DOCTYPE ডিক্লারেশন&lt;/li&gt;</div>
+                        <div>&lt;li&gt;html এলিমেন্ট&lt;/li&gt;</div>
+                        <div>&lt;li&gt;head এলিমেন্ট&lt;/li&gt;</div>
+                        <div>&lt;li&gt;body এলিমেন্ট&lt;/li&gt;</div>
+                      </div>
+                      <span style="color: #ffc107; font-weight: bold;">&lt;/ul&gt;</span>
+                    </div>
+                  </div>
+                  <span style="color: #007bff; font-weight: bold;">&lt;/body&gt;</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML এলিমেন্টের নেস্টিং (Nesting)</h2>
+            <p>HTML-এ এক এলিমেন্টের ভিতরে আরেক এলিমেন্ট রাখাকে নেস্টিং বলে। সঠিক নেস্টিং খুবই গুরুত্বপূর্ণ।</p>
+
+            <h3>✅ সঠিক নেস্টিং:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;div&gt;
+  &lt;p&gt;এটি একটি &lt;strong&gt;গুরুত্বপূর্ণ&lt;/strong&gt; প্যারাগ্রাফ&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <h3>❌ ভুল নেস্টিং:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;div&gt;
+  &lt;p&gt;এটি একটি &lt;strong&gt;গুরুত্বপূর্ণ&lt;/div&gt; প্যারাগ্রাফ&lt;/strong&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+
+            <p>ভুল নেস্টিং-এ ট্যাগের ক্রম ঠিক রাখা হয়নি। মনে রাখবেন: <strong>যে ট্যাগ আগে খুলবেন, সেটি পরে বন্ধ করতে হবে।</strong></p>
+
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> নেস্টিং ঠিক রাখার জন্য প্রতিটি নেস্টেড লেভেলে ইন্ডেন্টেশন (ট্যাব বা স্পেস) ব্যবহার করুন। এতে কোড পড়তে ও বুঝতে সুবিধা হয়।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML কাঠামোর গুরুত্বপূর্ণ নিয়ম</h2>
+
+            <table class="reference-table">
+              <tr>
+                <th>নিয়ম</th>
+                <th>বর্ণনা</th>
+                <th>উদাহরণ</th>
+              </tr>
+              <tr>
+                <td>DOCTYPE প্রথম লাইনে</td>
+                <td>&lt;!DOCTYPE&gt; ডিক্লারেশন সবসময় প্রথম লাইনে থাকতে হবে</td>
+                <td><code>&lt;!DOCTYPE html&gt;</code></td>
+              </tr>
+              <tr>
+                <td>html এলিমেন্ট মূল</td>
+                <td>&lt;html&gt; এলিমেন্টের ভিতরে বাকি সব এলিমেন্ট থাকবে</td>
+                <td><code>&lt;html&gt;...&lt;/html&gt;</code></td>
+              </tr>
+              <tr>
+                <td>head ও body আলাদা</td>
+                <td>&lt;head&gt; ও &lt;body&gt; এলিমেন্ট আলাদা এবং সঠিক ক্রমে থাকবে</td>
+                <td>head তারপর body</td>
+              </tr>
+              <tr>
+                <td>মেটা চারসেট</td>
+                <td>বাংলা সঠিকভাবে দেখাতে &lt;meta charset="UTF-8"&gt; যোগ করুন</td>
+                <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>ভাষা নির্ধারণ</td>
+                <td>&lt;html&gt; ট্যাগে lang অ্যাট্রিবিউট ব্যবহার করুন</td>
+                <td><code>&lt;html lang="bn"&gt;</code></td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML কাঠামোর সাধারণ ভুল</h2>
+
+            <table class="reference-table">
+              <tr>
+                <th>ভুল</th>
+                <th>কী হয়</th>
+                <th>সঠিক পদ্ধতি</th>
+              </tr>
+              <tr>
+                <td>&lt;!DOCTYPE&gt; না দেওয়া</td>
+                <td>ব্রাউজার কোয়র্কস মোডে চলে, ডিজাইন ভুল হতে পারে</td>
+                <td>সর্বদা &lt;!DOCTYPE html&gt; দিন</td>
+              </tr>
+              <tr>
+                <td>&lt;html&gt; ট্যাগ বাদ দেওয়া</td>
+                <td>ব্রাউজার ধরে নেয়, কিন্তু ভালো অভ্যাস নয়</td>
+                <td>&lt;html&gt; ট্যাগ ব্যবহার করুন</td>
+              </tr>
+              <tr>
+                <td>&lt;head&gt; এর ভিতরে &lt;body&gt; এর এলিমেন্ট লেখা</td>
+                <td>এলিমেন্ট ব্রাউজারে দেখা যাবে না</td>
+                <td>&lt;head&gt; শুধু মেটাডাটার জন্য ব্যবহার করুন</td>
+              </tr>
+              <tr>
+                <td>&lt;title&gt; ট্যাগ না দেওয়া</td>
+                <td>ব্রাউজার ট্যাবে ফাইলনেম দেখায়</td>
+                <td>সর্বদা &lt;title&gt; দিন</td>
+              </tr>
+              <tr>
+                <td>বাংলা এনকোডিং না দেওয়া</td>
+                <td>বাংলা ক্যারেক্টার ভুল দেখায়</td>
+                <td>&lt;meta charset="UTF-8"&gt; যোগ করুন</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML কাঠামো চেকলিস্ট</h2>
+            <p>একটি HTML পৃষ্ঠা তৈরি করার পর নিচের চেকলিস্ট ব্যবহার করে দেখতে পারেন:</p>
+
+            <ul class="checklist">
+              <li>✅ &lt;!DOCTYPE html&gt; প্রথম লাইনে আছে?</li>
+              <li>✅ &lt;html&gt; ট্যাগ আছে এবং lang অ্যাট্রিবিউট দেওয়া আছে?</li>
+              <li>✅ &lt;head&gt; ট্যাগের ভিতরে &lt;meta charset="UTF-8"&gt; আছে?</li>
+              <li>✅ &lt;title&gt; ট্যাগ আছে এবং অর্থপূর্ণ শিরোনাম দেওয়া আছে?</li>
+              <li>✅ &lt;body&gt; ট্যাগের ভিতরে দৃশ্যমান কন্টেন্ট লেখা আছে?</li>
+              <li>✅ সব ট্যাগ সঠিকভাবে বন্ধ করা হয়েছে?</li>
+              <li>✅ নেস্টিং সঠিকভাবে করা হয়েছে?</li>
+              <li>✅ ইন্ডেন্টেশন ব্যবহার করে কোড পড়তে সুবিধা হচ্ছে?</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>বিভিন্ন ধরণের HTML ডকুমেন্টের কাঠামো</h2>
+
+            <h3>একটি সাধারণ ব্লগ পোস্টের কাঠামো:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;আমার ব্লগ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;আমার ব্লগ&lt;/h1&gt;
+    &lt;nav&gt;মেনু আইটেম&lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;article&gt;
+    &lt;h2&gt;ব্লগ পোস্টের শিরোনাম&lt;/h2&gt;
+    &lt;p&gt;পোস্টের কন্টেন্ট...&lt;/p&gt;
+  &lt;/article&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;কপিরাইট ২০২৬&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <h3>একটি যোগাযোগ পৃষ্ঠার কাঠামো:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;যোগাযোগ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;আমাদের সাথে যোগাযোগ করুন&lt;/h1&gt;
+  
+  &lt;form&gt;
+    &lt;label for="name"&gt;নাম:&lt;/label&gt;
+    &lt;input type="text" id="name"&gt;
+    
+    &lt;label for="email"&gt;ইমেইল:&lt;/label&gt;
+    &lt;input type="email" id="email"&gt;
+    
+    &lt;button type="submit"&gt;পাঠান&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>HTML ডকুমেন্টের চারটি প্রধান অংশের নাম লেখ।</li>
+              <li>&lt;head&gt; এলিমেন্টের ভিতরে সাধারণত কী কী এলিমেন্ট থাকে? (পাঁচটি নাম লেখ)</li>
+              <li>&lt;body&gt; এলিমেন্টের ভিতরে কী ধরনের কন্টেন্ট রাখা হয়?</li>
+              <li>DOCTYPE ডিক্লারেশন না দিলে কী সমস্যা হতে পারে?</li>
+              <li>বাংলা ভাষায় HTML পৃষ্ঠা তৈরি করতে কী কী অ্যাট্রিবিউট ও ট্যাগ যোগ করা প্রয়োজন?</li>
+              <li>নিচের কোডে ভুল খুঁজে বের করে সঠিক কোড লেখ:
+                <div class="code-preview">
+                  <pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;ভুল কাঠামো
+  &lt;body&gt;
+    &lt;h1&gt;শিরোনাম&lt;/h1&gt;
+  &lt;/head&gt;
+    &lt;p&gt;প্যারাগ্রাফ&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+              </li>
+              <li>একটি HTML পৃষ্ঠা তৈরি করুন যেখানে আপনার নাম, ঠিকানা এবং প্রিয় রং থাকবে।</li>
+              <li>উপরের তৈরি পৃষ্ঠায় lang অ্যাট্রিবিউট এবং meta চারসেট যোগ করে বাংলা সাপোর্ট যুক্ত করুন।</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>DOCTYPE, &lt;html&gt;, &lt;head&gt;, &lt;body&gt;</li>
+                <li>&lt;title&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;style&gt;, &lt;script&gt;</li>
+                <li>দৃশ্যমান কন্টেন্ট যেমন: শিরোনাম, প্যারাগ্রাফ, ছবি, লিংক, তালিকা, টেবিল, ফর্ম ইত্যাদি</li>
+                <li>ব্রাউজার কোয়র্কস মোডে চলে, ডিজাইন ভুল হতে পারে, HTML5 ফিচার ঠিকমত কাজ নাও করতে পারে</li>
+                <li>&lt;html lang="bn"&gt; এবং &lt;meta charset="UTF-8"&gt;</li>
+                <li>সঠিক কোড:
+                  <div class="code-preview">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;ভুল কাঠামো&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;শিরোনাম&lt;/h1&gt;
+  &lt;p&gt;প্যারাগ্রাফ&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                  </div>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সারাংশ</h2>
+            <p>HTML ডকুমেন্টের মৌলিক কাঠামো বুঝতে পারা ওয়েব ডেভেলপমেন্টের প্রথম এবং সবচেয়ে গুরুত্বপূর্ণ ধাপ। এই কাঠামো ঠিকভাবে না বুঝলে পরবর্তী জিনিসগুলো শেখা কঠিন হবে।</p>
+
+            <div class="example-box">
+              <h3>মনে রাখার মূল বিষয়:</h3>
+              <ul>
+                <li>✅ DOCTYPE প্রথম লাইনে দিতে হবে</li>
+                <li>✅ &lt;html&gt; সবকিছুর মূল</li>
+                <li>✅ &lt;head&gt; এ মেটাডাটা</li>
+                <li>✅ &lt;body&gt; এ দৃশ্যমান কন্টেন্ট</li>
+                <li>✅ বাংলার জন্য lang="bn" ও meta charset="UTF-8"</li>
+                <li>✅ সঠিক নেস্টিং বজায় রাখতে হবে</li>
+                <li>✅ সব ট্যাগ বন্ধ করতে হবে</li>
+              </ul>
+            </div>
+
+            <div class="fun-fact">
+              <p>🎉 <strong>অভিনন্দন!</strong> আপনি এখন HTML-এর মৌলিক কাঠামো সম্পর্কে সম্পূর্ণ ধারণা পেয়েছেন। পরবর্তী অধ্যায়ে আপনি HTML ট্যাগ ও এলিমেন্ট সম্পর্কে বিস্তারিত জানবেন।</p>
+            </div>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="first-page.html" class="prev-topic">← প্রথম HTML পৃষ্ঠা</a>
+            <a href="../basics/" class="next-topic">বেসিক টপিকস →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

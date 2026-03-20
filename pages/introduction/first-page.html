@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>প্রথম HTML পৃষ্ঠা | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="./" class="active">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পরিচিতি টপিকস</h3>
+        <ul>
+          <li><a href="what-is-html.html">HTML কী?</a></li>
+          <li><a href="history-of-html.html">HTML-এর ইতিহাস</a></li>
+          <li><a href="html-versions.html">HTML-এর সংস্করণ</a></li>
+          <li><a href="html-editors.html">HTML এডিটর</a></li>
+          <li><a href="first-page.html" class="active">প্রথম HTML পৃষ্ঠা</a></li>
+          <li><a href="basic-structure.html">HTML মৌলিক কাঠামো</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="./">পরিচিতি</a></li>
+            <li>প্রথম HTML পৃষ্ঠা</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>প্রথম HTML পৃষ্ঠা (My First HTML Page)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১৫ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+            <span>হাতে-কলমে: ✅</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>আপনার প্রথম HTML পৃষ্ঠা তৈরি করুন</h2>
+            <p>এখন আপনি শিখবেন কীভাবে একটি সম্পূর্ণ HTML পৃষ্ঠা তৈরি করতে হয়। এই টিউটোরিয়ালটি হাতে-কলমে অনুসরণ করুন। আপনার যা দরকার তা হল একটি টেক্সট এডিটর (যেমন নোটপ্যাড বা VS Code) এবং একটি ওয়েব ব্রাউজার (যেমন Chrome বা Firefox)।</p>
+            
+            <div class="example-box">
+              <h3>শুরু করার আগে মনে রাখবেন:</h3>
+              <ul>
+                <li>HTML ফাইল সবসময় <code>.html</code> এক্সটেনশন দিয়ে সংরক্ষণ করতে হবে</li>
+                <li>ফাইলের নাম ছোট হাতের অক্ষরে এবং স্পেস ছাড়া দেওয়া ভালো (যেমন: first-page.html)</li>
+                <li>কোড লেখার সময় প্রতিটি ট্যাগ সঠিকভাবে বন্ধ করছেন কিনা দেখুন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ধাপ ১: একটি নতুন ফাইল তৈরি করুন</h2>
+            
+            <h3>VS Code-এ:</h3>
+            <ol>
+              <li>VS Code খুলুন</li>
+              <li>File → New File (Ctrl+N) ক্লিক করুন</li>
+              <li>File → Save As (Ctrl+Shift+S) ক্লিক করুন</li>
+              <li>ফাইলের নাম দিন: <code>first-page.html</code></li>
+              <li>Save ক্লিক করুন</li>
+            </ol>
+
+            <h3>নোটপ্যাডে:</h3>
+            <ol>
+              <li>নোটপ্যাড খুলুন</li>
+              <li>File → Save As ক্লিক করুন</li>
+              <li>Save as type: "All Files (*.*)" নির্বাচন করুন</li>
+              <li>ফাইলের নাম দিন: <code>first-page.html</code></li>
+              <li>Save ক্লিক করুন</li>
+            </ol>
+
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> আপনার ডেস্কটপে "HTML Projects" নামে একটি ফোল্ডার তৈরি করে সব HTML ফাইল সেখানে সংরক্ষণ করুন। এতে পরে খুঁজে পেতে সুবিধা হবে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ধাপ ২: মৌলিক HTML কাঠামো লেখা</h2>
+            <p>প্রত্যেকটি HTML পৃষ্ঠার একটি নির্দিষ্ট কাঠামো থাকে। নিচের কোডটি আপনার ফাইলে কপি করে পেস্ট করুন:</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;আমার প্রথম ওয়েবপৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <h3>কোডের ব্যাখ্যা:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>ট্যাগ</th>
+                <th>কাজ</th>
+              </tr>
+              <tr>
+                <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                <td>ব্রাউজারকে জানায় যে এটি HTML5 ডকুমেন্ট</td>
+              </tr>
+              <tr>
+                <td><code>&lt;html&gt;</code></td>
+                <td>পুরো HTML ডকুমেন্টের মূল এলিমেন্ট (রুট এলিমেন্ট)</td>
+              </tr>
+              <tr>
+                <td><code>&lt;head&gt;</code></td>
+                <td>পৃষ্ঠার মেটাডাটা (যেমন টাইটেল, স্টাইল, স্ক্রিপ্ট) রাখার জায়গা</td>
+              </tr>
+              <tr>
+                <td><code>&lt;title&gt;</code></td>
+                <td>ব্রাউজার ট্যাবে কী দেখাবে তা নির্ধারণ করে</td>
+              </tr>
+              <tr>
+                <td><code>&lt;body&gt;</code></td>
+                <td>পৃষ্ঠায় যা দেখা যাবে (কন্টেন্ট) তা এখানে লেখা হয়</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>ধাপ ৩: কন্টেন্ট যোগ করা</h2>
+            <p>এখন <code>&lt;body&gt;</code> ট্যাগের ভিতরে কিছু কন্টেন্ট যোগ করি। নিচের কোডটি আপনার <code>&lt;body&gt;</code> ট্যাগের ভিতরে বসান:</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;h1&gt;আমার প্রথম HTML পৃষ্ঠায় স্বাগতম!&lt;/h1&gt;
+&lt;p&gt;এই পৃষ্ঠাটি আমি HTML শিখি ওয়েবসাইটের টিউটোরিয়াল অনুসরণ করে তৈরি করেছি।&lt;/p&gt;
+&lt;p&gt;HTML শেখা খুবই মজার এবং সহজ। আপনি যদি নিয়মিত অনুশীলন করেন, তাহলে খুব দ্রুত ওয়েব ডেভেলপার হতে পারবেন।&lt;/p&gt;
+&lt;h2&gt;আজকে আমি যা শিখলাম:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML ফাইল তৈরি করা&lt;/li&gt;
+  &lt;li&gt;মৌলিক HTML কাঠামো&lt;/li&gt;
+  &lt;li&gt;শিরোনাম ও প্যারাগ্রাফ যোগ করা&lt;/li&gt;
+  &lt;li&gt;তালিকা তৈরি করা&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ধাপ ৪: সম্পূর্ণ কোড</h2>
+            <p>উপরের সবগুলো একসাথে করলে আপনার সম্পূর্ণ HTML ফাইলটি নিচের মত দেখাবে:</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;আমার প্রথম ওয়েবপৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;আমার প্রথম HTML পৃষ্ঠায় স্বাগতম!&lt;/h1&gt;
+  &lt;p&gt;এই পৃষ্ঠাটি আমি HTML শিখি ওয়েবসাইটের টিউটোরিয়াল অনুসরণ করে তৈরি করেছি।&lt;/p&gt;
+  &lt;p&gt;HTML শেখা খুবই মজার এবং সহজ। আপনি যদি নিয়মিত অনুশীলন করেন, তাহলে খুব দ্রুত ওয়েব ডেভেলপার হতে পারবেন।&lt;/p&gt;
+  &lt;h2&gt;আজকে আমি যা শিখলাম:&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;HTML ফাইল তৈরি করা&lt;/li&gt;
+    &lt;li&gt;মৌলিক HTML কাঠামো&lt;/li&gt;
+    &lt;li&gt;শিরোনাম ও প্যারাগ্রাফ যোগ করা&lt;/li&gt;
+    &lt;li&gt;তালিকা তৈরি করা&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <p>এখন আপনার ফাইলটি সেভ করুন (Ctrl+S)।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>ধাপ ৫: ব্রাউজারে দেখুন</h2>
+            <p>এখন আপনার তৈরি HTML পৃষ্ঠাটি ব্রাউজারে খুলে দেখুন।</p>
+
+            <h3>পদ্ধতি:</h3>
+            <ol>
+              <li>আপনি যেখানে <code>first-page.html</code> ফাইলটি সেভ করেছেন, সেই ফোল্ডারে যান</li>
+              <li><code>first-page.html</code> ফাইলটিতে ডাবল-ক্লিক করুন</li>
+              <li>ফাইলটি আপনার ডিফল্ট ব্রাউজারে খুলে যাবে</li>
+            </ol>
+
+            <div class="example-box">
+              <h3>VS Code-এ লাইভ প্রিভিউ (ঐচ্ছিক):</h3>
+              <p>আপনি যদি VS Code ব্যবহার করেন এবং Live Server এক্সটেনশন ইনস্টল করে থাকেন, তাহলে:</p>
+              <ol>
+                <li>HTML ফাইলটিতে রাইট-ক্লিক করুন</li>
+                <li>"Open with Live Server" নির্বাচন করুন</li>
+                <li>আপনার ডিফল্ট ব্রাউজারে পৃষ্ঠাটি খুলবে এবং আপনি কোড পরিবর্তন করলেই সাথে সাথে ব্রাউজার আপডেট হবে</li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ব্রাউজারে ফলাফল</h2>
+            <p>আপনার ব্রাউজারে নিচের মত একটি পৃষ্ঠা দেখা যাবে:</p>
+
+            <div class="browser-preview">
+              <div class="browser-header">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-url">first-page.html</span>
+              </div>
+              <div class="browser-content">
+                <h1 style="font-size: 24px; margin: 10px 0;">আমার প্রথম HTML পৃষ্ঠায় স্বাগতম!</h1>
+                <p style="margin: 10px 0;">এই পৃষ্ঠাটি আমি HTML শিখি ওয়েবসাইটের টিউটোরিয়াল অনুসরণ করে তৈরি করেছি।</p>
+                <p style="margin: 10px 0;">HTML শেখা খুবই মজার এবং সহজ। আপনি যদি নিয়মিত অনুশীলন করেন, তাহলে খুব দ্রুত ওয়েব ডেভেলপার হতে পারবেন।</p>
+                <h2 style="font-size: 20px; margin: 10px 0;">আজকে আমি যা শিখলাম:</h2>
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                  <li>HTML ফাইল তৈরি করা</li>
+                  <li>মৌলিক HTML কাঠামো</li>
+                  <li>শিরোনাম ও প্যারাগ্রাফ যোগ করা</li>
+                  <li>তালিকা তৈরি করা</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>আরও কিছু এলিমেন্ট যোগ করা</h2>
+            <p>আপনার পৃষ্ঠাটি আরও সমৃদ্ধ করতে নিচের এলিমেন্টগুলো যোগ করতে পারেন:</p>
+
+            <h3>লিংক যোগ করা:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;p&gt;আরও জানতে &lt;a href="https://www.google.com"&gt;গুগল&lt;/a&gt; এ সার্চ করুন।&lt;/p&gt;</code></pre>
+            </div>
+
+            <h3>ছবি যোগ করা:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML5 লোগো" width="100"&gt;</code></pre>
+            </div>
+
+            <h3>জোর দিয়ে লেখা:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;p&gt;এটি &lt;strong&gt;গুরুত্বপূর্ণ&lt;/strong&gt; এবং এটি &lt;em&gt;তির্যক&lt;/em&gt; লেখা।&lt;/p&gt;</code></pre>
+            </div>
+
+            <h3>সম্পূর্ণ আপডেটেড কোড:</h3>
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;আমার প্রথম ওয়েবপৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;আমার প্রথম HTML পৃষ্ঠায় স্বাগতম!&lt;/h1&gt;
+  &lt;p&gt;এই পৃষ্ঠাটি আমি HTML শিখি ওয়েবসাইটের টিউটোরিয়াল অনুসরণ করে তৈরি করেছি।&lt;/p&gt;
+  &lt;p&gt;HTML শেখা খুবই মজার এবং সহজ। আপনি যদি নিয়মিত অনুশীলন করেন, তাহলে খুব দ্রুত ওয়েব ডেভেলপার হতে পারবেন।&lt;/p&gt;
+  
+  &lt;h2&gt;আজকে আমি যা শিখলাম:&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;HTML ফাইল তৈরি করা&lt;/li&gt;
+    &lt;li&gt;মৌলিক HTML কাঠামো&lt;/li&gt;
+    &lt;li&gt;শিরোনাম ও প্যারাগ্রাফ যোগ করা&lt;/li&gt;
+    &lt;li&gt;তালিকা তৈরি করা&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2&gt;আমার প্রিয় ওয়েবসাইট:&lt;/h2&gt;
+  &lt;p&gt;আমি নিয়মিত &lt;a href="https://www.w3schools.com" target="_blank"&gt;W3Schools&lt;/a&gt; এ ভিজিট করি HTML শেখার জন্য।&lt;/p&gt;
+
+  &lt;h2&gt;HTML5 লোগো:&lt;/h2&gt;
+  &lt;img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML5 লোগো" width="150"&gt;
+
+  &lt;p&gt;&lt;strong&gt;মনে রাখবেন:&lt;/strong&gt; নিয়মিত &lt;em&gt;অনুশীলন&lt;/em&gt;ই সফলতার চাবিকাঠি।&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সাধারণ ভুল ও সমাধান</h2>
+            
+            <table class="reference-table">
+              <tr>
+                <th>সমস্যা</th>
+                <th>কারণ</th>
+                <th>সমাধান</th>
+              </tr>
+              <tr>
+                <td>ব্রাউজারে HTML কোড দেখা যাচ্ছে, পৃষ্ঠা না</td>
+                <td>ফাইল .html এক্সটেনশন দিয়ে সেভ করা হয়নি</td>
+                <td>.html এক্সটেনশন দিয়ে ফাইলটি সেভ করুন</td>
+              </tr>
+              <tr>
+                <td>ট্যাগ ব্রাউজারে দেখা যাচ্ছে</td>
+                <td>ট্যাগ ঠিকমত বন্ধ করা হয়নি বা &lt; ও &gt; এর পরিবর্তে &lt; এবং &gt; ব্যবহার করা হয়েছে</td>
+                <td>ট্যাগ সঠিকভাবে বন্ধ করুন এবং &lt; ও &gt; ব্যবহার করুন</td>
+              </tr>
+              <tr>
+                <td>ছবি দেখা যাচ্ছে না</td>
+                <td>ছবির লিংক ভুল বা ছবির ফাইল সঠিক জায়গায় নেই</td>
+                <td>সঠিক URL বা ফাইল পাথ ব্যবহার করুন</td>
+              </tr>
+              <tr>
+                <td>বাংলা টেক্সট ঠিকমত দেখাচ্ছে না</td>
+                <td>meta charset ট্যাগ নেই</td>
+                <td>&lt;head&gt; ট্যাগের ভিতরে &lt;meta charset="UTF-8"&gt; যোগ করুন</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>বাংলা ভাষায় HTML পৃষ্ঠা</h2>
+            <p>বাংলা ভাষায় HTML পৃষ্ঠা তৈরি করতে <code>&lt;meta charset="UTF-8"&gt;</code> ট্যাগটি <code>&lt;head&gt;</code> ট্যাগের ভিতরে যোগ করতে হবে। এছাড়া <code>&lt;html&gt;</code> ট্যাগে <code>lang="bn"</code> অ্যাট্রিবিউট যোগ করলে ভালো হয়।</p>
+
+            <div class="code-preview">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;বাংলায় HTML পৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;বাংলায় স্বাগতম!&lt;/h1&gt;
+  &lt;p&gt;এটি একটি বাংলা HTML পৃষ্ঠা। এখন বাংলা ভাষা সঠিকভাবে দেখাবে।&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>পরবর্তী ধাপ: আপনার পৃষ্ঠাকে অনলাইনে প্রকাশ করা</h2>
+            <p>আপনার তৈরি HTML পৃষ্ঠাটি যদি অনলাইনে সবাইকে দেখাতে চান, তাহলে নিচের পদ্ধতি অনুসরণ করতে পারেন:</p>
+
+            <h3>বিনামূল্যে হোস্টিং পরিষেবা:</h3>
+            <ul>
+              <li><strong>GitHub Pages:</strong> আপনার HTML ফাইল GitHub-এ আপলোড করে ফ্রিতে ওয়েবসাইট হোস্ট করতে পারেন</li>
+              <li><strong>Netlify:</strong> ড্র্যাগ অ্যান্ড ড্রপ করে HTML ফাইল আপলোড দিলেই লাইভ লিংক পেয়ে যাবেন</li>
+              <li><strong>Vercel:</strong> খুব সহজে HTML সাইট হোস্ট করা যায়</li>
+              <li><strong>InfinityFree:</strong> ১০০% ফ্রি হোস্টিং, কোনো বিজ্ঞাপন নেই</li>
+            </ul>
+
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> GitHub Pages ব্যবহার করা সবচেয়ে ভালো কারণ এটি ফ্রি এবং আপনার কোড সংরক্ষিত থাকে। শুধু একটি GitHub অ্যাকাউন্ট খুলুন, একটি রিপোজিটরি তৈরি করুন, সেখানে আপনার HTML ফাইল আপলোড করুন এবং সেটিংস থেকে GitHub Pages চালু করুন।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <p>নিচের অনুশীলনীগুলো নিজে করার চেষ্টা করুন। এগুলো আপনার শেখা জিনিসগুলো মনে রাখতে সাহায্য করবে।</p>
+
+            <ol class="exercise-list">
+              <li>আপনার নাম, ঠিকানা এবং প্রিয় খাবার নিয়ে একটি HTML পৃষ্ঠা তৈরি করুন।</li>
+              <li>একটি HTML পৃষ্ঠা তৈরি করুন যেখানে আপনার প্রিয় তিনটি ওয়েবসাইটের লিংক থাকবে। লিংকগুলো নতুন ট্যাবে খুলবে।</li>
+              <li>একটি HTML পৃষ্ঠা তৈরি করুন যেখানে আপনার প্রিয় একটি ছবি থাকবে এবং ছবির নিচে ছবিটি সম্পর্কে বর্ণনা থাকবে।</li>
+              <li>উপরের আপডেটেড কোডটি কপি করে আপনার এডিটরে পেস্ট করুন এবং ব্রাউজারে ফলাফল দেখুন। তারপর কোডের প্রতিটি অংশ পরিবর্তন করে দেখুন কী হয়।</li>
+              <li>আপনার তৈরি প্রথম HTML পৃষ্ঠায় একটি অনুচ্ছেদ যোগ করুন যেখানে আপনি HTML সম্পর্কে আপনার মতামত লিখবেন।</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধানের ইঙ্গিত দেখুন</summary>
+              <p>প্রশ্ন ২-এর সমাধান:</p>
+              <div class="code-preview">
+                <pre><code>&lt;h1&gt;আমার প্রিয় ওয়েবসাইট&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://www.google.com" target="_blank"&gt;গুগল&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com" target="_blank"&gt;ইউটিউব&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.github.com" target="_blank"&gt;গিটহাব&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <p>প্রশ্ন ৩-এর সমাধান:</p>
+              <div class="code-preview">
+                <pre><code>&lt;h1&gt;আমার প্রিয় ছবি&lt;/h1&gt;
+&lt;img src="ছবির-লিংক-বা-পাথ.jpg" alt="ছবির বর্ণনা" width="300"&gt;
+&lt;p&gt;এটি আমার প্রিয় ছবি। কারণ...&lt;/p&gt;</code></pre>
+              </div>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>আপনার অর্জন</h2>
+            <p>অভিনন্দন! আপনি সফলভাবে আপনার প্রথম HTML পৃষ্ঠা তৈরি করেছেন। এখন আপনি:</p>
+            <ul>
+              <li>✅ HTML ফাইল তৈরি করতে পারেন</li>
+              <li>✅ মৌলিক HTML কাঠামো বুঝতে পারেন</li>
+              <li>✅ শিরোনাম, প্যারাগ্রাফ, তালিকা ব্যবহার করতে পারেন</li>
+              <li>✅ লিংক ও ছবি যোগ করতে পারেন</li>
+              <li>✅ বাংলায় HTML পৃষ্ঠা তৈরি করতে পারেন</li>
+              <li>✅ সাধারণ ভুলগুলো চিহ্নিত করতে ও সমাধান করতে পারেন</li>
+            </ul>
+
+            <div class="fun-fact">
+              <p>🎉 <strong>পরবর্তী ধাপ:</strong> এখন আপনি পরবর্তী টপিক "HTML মৌলিক কাঠামো" শেখার জন্য প্রস্তুত। সেখানে আপনি HTML ডকুমেন্টের প্রতিটি অংশ বিস্তারিতভাবে জানতে পারবেন।</p>
+            </div>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="html-editors.html" class="prev-topic">← HTML এডিটর</a>
+            <a href="basic-structure.html" class="next-topic">HTML মৌলিক কাঠামো →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

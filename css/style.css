@@ -481,12 +481,63 @@ a:hover {
     justify-content: center;
   }
   
-  .nav-menu {
-    display: none;
+  /* Mobile Menu Styles */
+  .site-header .container {
+    position: relative;
   }
   
   .mobile-menu-toggle {
     display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--primary-color);
+    z-index: 1001;
+  }
+  
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    gap: 0;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .nav-menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-menu a {
+    display: block;
+    padding: 12px 0;
+    color: var(--primary-color);
+    border-bottom: none;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu a.active {
+    color: var(--secondary-color);
+    border-bottom: none;
+    padding-left: 10px;
   }
   
   .example-display {
@@ -494,6 +545,22 @@ a:hover {
   }
   
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
     grid-template-columns: 1fr;
   }
 }

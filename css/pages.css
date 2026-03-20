@@ -320,6 +320,12 @@ details[open] summary {
   color: var(--secondary-color);
 }
 
+/* ===== MOBILE MENU BUTTON FOR PAGE PAGES ===== */
+/* This ensures the mobile menu toggle is visible on all pages */
+.mobile-menu-toggle {
+  display: none;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .page-wrapper {
@@ -332,10 +338,140 @@ details[open] summary {
     height: auto;
     border-right: none;
     border-bottom: 1px solid var(--border-color);
+    top: auto;
+    margin-top: 0;
+  }
+  
+  /* Ensure sidebar doesn't overlap with mobile menu */
+  .sidebar.collapsible {
+    display: none;
+  }
+  
+  .sidebar.collapsible.active {
+    display: block;
   }
   
   .topic-navigation {
     flex-direction: column;
     gap: 10px;
+  }
+  
+  .topic-navigation a {
+    text-align: center;
+  }
+  
+  .topic-article {
+    padding: 20px;
+  }
+  
+  .topic-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .example-display {
+    grid-template-columns: 1fr;
+  }
+  
+  .code-preview {
+    font-size: 12px;
+  }
+  
+  .try-it-yourself {
+    padding: 15px;
+  }
+  
+  .comments-section {
+    padding: 20px;
+  }
+  
+  .toc {
+    padding: 15px;
+  }
+  
+  /* Adjust spacing for better mobile experience */
+  .page-content {
+    padding: 20px 0;
+  }
+  
+  .topic-section {
+    margin-bottom: 25px;
+  }
+  
+  .topic-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .topic-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Make sure pre/code blocks are scrollable on mobile */
+  .code-preview {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .code-preview pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+}
+
+/* ===== ADDITIONAL MOBILE ENHANCEMENTS ===== */
+@media (max-width: 480px) {
+  .topic-article {
+    padding: 15px;
+  }
+  
+  .example-box {
+    padding: 15px;
+  }
+  
+  .btn,
+  .run-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== UTILITY CLASSES FOR MOBILE ===== */
+.hide-on-mobile {
+  display: block;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .show-on-mobile {
+    display: block;
   }
 }

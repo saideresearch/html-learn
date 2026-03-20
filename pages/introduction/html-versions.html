@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML-এর সংস্করণ | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="./" class="active">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পরিচিতি টপিকস</h3>
+        <ul>
+          <li><a href="what-is-html.html">HTML কী?</a></li>
+          <li><a href="history-of-html.html">HTML-এর ইতিহাস</a></li>
+          <li><a href="html-versions.html" class="active">HTML-এর সংস্করণ</a></li>
+          <li><a href="html-editors.html">HTML এডিটর</a></li>
+          <li><a href="first-page.html">প্রথম HTML পৃষ্ঠা</a></li>
+          <li><a href="basic-structure.html">HTML মৌলিক কাঠামো</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="./">পরিচিতি</a></li>
+            <li>HTML-এর সংস্করণ</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML-এর সংস্করণ (HTML Versions)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১০ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML সংস্করণের ধারা</h2>
+            <p>HTML তার যাত্রা শুরু থেকে আজ পর্যন্ত বেশ কয়েকটি বড় সংস্করণ দেখেছে। প্রতিটি নতুন সংস্করণ আগের সংস্করণের সীমাবদ্ধতা দূর করে নতুন বৈশিষ্ট্য নিয়ে এসেছে। নিচে HTML-এর প্রধান সংস্করণগুলোর বিবরণ দেওয়া হলো।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML 1.0 (১৯৯১-১৯৯৫)</h2>
+            <p>এটি HTML-এর প্রথম সংস্করণ, যা টিম বার্নার্স-লি তৈরি করেন। যদিও এটি আনুষ্ঠানিকভাবে মানকায়িত ছিল না, এটি ওয়েবের ভিত্তি স্থাপন করে।</p>
+            
+            <h3>বৈশিষ্ট্য:</h3>
+            <ul>
+              <li>মাত্র ১৮টি ট্যাগ</li>
+              <li>শুধুমাত্র টেক্সট এবং ছবি দেখানোর ক্ষমতা</li>
+              <li>হাইপারলিংক যুক্ত করার সুবিধা</li>
+              <li>শিরোনাম ও প্যারাগ্রাফের জন্য ট্যাগ</li>
+            </ul>
+
+            <div class="example-box">
+              <h4>HTML 1.0-এর নমুনা কোড:</h4>
+              <div class="code-preview">
+                <pre><code>&lt;title&gt;আমার প্রথম পৃষ্ঠা&lt;/title&gt;
+&lt;h1&gt;স্বাগতম&lt;/h1&gt;
+&lt;p&gt;এটি একটি প্যারাগ্রাফ&lt;/p&gt;
+&lt;a href="page2.html"&gt;পরবর্তী পৃষ্ঠা&lt;/a&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML 2.0 (১৯৯৫)</h2>
+            <p>এটি ছিল HTML-এর প্রথম মানকায়িত সংস্করণ। IETF (Internet Engineering Task Force) এই সংস্করণকে আনুষ্ঠানিকভাবে অনুমোদন করে।</p>
+            
+            <h3>নতুন বৈশিষ্ট্য:</h3>
+            <ul>
+              <li>ফর্ম যুক্ত করা হয় (ফর্ম এলিমেন্ট)</li>
+              <li>টেবিল তৈরির ক্ষমতা</li>
+              <li>ক্লায়েন্ট-সাইড ইমেজ ম্যাপ</li>
+              <li>আন্তর্জাতিক অক্ষর সাপোর্ট</li>
+            </ul>
+
+            <table class="reference-table">
+              <tr>
+                <th>নতুন ট্যাগ</th>
+                <th>ব্যবহার</th>
+              </tr>
+              <tr>
+                <td>&lt;form&gt;</td>
+                <td>ফর্ম তৈরি</td>
+              </tr>
+              <tr>
+                <td>&lt;input&gt;</td>
+                <td>ইনপুট ফিল্ড</td>
+              </tr>
+              <tr>
+                <td>&lt;textarea&gt;</td>
+                <td>টেক্সট এরিয়া</td>
+              </tr>
+              <tr>
+                <td>&lt;select&gt;</td>
+                <td>ড্রপডাউন তালিকা</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML 3.2 (১৯৯৭)</h2>
+            <p>W3C (World Wide Web Consortium) এই সংস্করণটি প্রকাশ করে। এটি ব্রাউজার যুদ্ধের সময়ে তৈরি হয়েছিল এবং অনেক নতুন বৈশিষ্ট্য যুক্ত হয়।</p>
+            
+            <h3>নতুন বৈশিষ্ট্য:</h3>
+            <ul>
+              <li>টেবিলের উন্নত সংস্করণ</li>
+              <li>স্ক্রিপ্ট (JavaScript) যুক্ত করার ক্ষমতা</li>
+              <li>স্টাইল শিট (CSS) এর প্রাথমিক সমর্থন</li>
+              <li>অ্যাপলেট ও ফ্ল্যাশ কন্টেন্ট দেখানোর সুবিধা</li>
+              <li>সেন্টার, ফন্টের মতো নতুন ট্যাগ</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML 4.01 (১৯৯৯-২০১৪)</h2>
+            <p>এটি সবচেয়ে দীর্ঘস্থায়ী HTML সংস্করণ। ১৫ বছর ধরে এটি ওয়েব ডেভেলপমেন্টের মূল ভিত্তি ছিল। তিনটি ভেরিয়েন্টে পাওয়া যেত।</p>
+            
+            <h3>তিনটি ভেরিয়েন্ট:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>ভেরিয়েন্ট</th>
+                <th>বর্ণনা</th>
+              </tr>
+              <tr>
+                <td>Strict</td>
+                <td>কঠোর নিয়ম, প্রেজেন্টেশন ট্যাগ বাদ দেওয়া</td>
+              </tr>
+              <tr>
+                <td>Transitional</td>
+                <td>পুরনো ট্যাগ ব্যবহারের অনুমতি</td>
+              </tr>
+              <tr>
+                <td>Frameset</td>
+                <td>ফ্রেম ব্যবহারের জন্য</td>
+              </tr>
+            </table>
+
+            <h3>নতুন বৈশিষ্ট্য:</h3>
+            <ul>
+              <li>সিএসএস-এর পূর্ণ সমর্থন</li>
+              <li>অ্যাক্সেসিবিলিটি বৈশিষ্ট্য</li>
+              <li>আন্তর্জাতিক ভাষা সাপোর্ট</li>
+              <li>অবজেক্ট ট্যাগ</li>
+              <li>স্ক্রিপ্টিং ও ইভেন্ট হ্যান্ডলিং</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>XHTML 1.0 (২০০০)</h2>
+            <p>XHTML ছিল HTML-এর XML-ভিত্তিক সংস্করণ। এটি HTML 4.01-কে XML-এর কঠোর নিয়মে পুনর্লিখন করে।</p>
+            
+            <h3>XHTML-এর কঠোর নিয়ম:</h3>
+            <ul>
+              <li>সব ট্যাগ ছোট হাতের অক্ষরে লিখতে হবে</li>
+              <li>সব ট্যাগ বন্ধ করতে হবে (যেমন: &lt;br /&gt;)</li>
+              <li>অ্যাট্রিবিউটের মান কোটেশনের মধ্যে দিতে হবে</li>
+              <li>এলিমেন্ট সঠিকভাবে নেস্টেড হতে হবে</li>
+            </ul>
+
+            <div class="example-box">
+              <h4>XHTML-এর নমুনা কোড:</h4>
+              <div class="code-preview">
+                <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;title&gt;XHTML পৃষ্ঠা&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;এটি একটি প্যারাগ্রাফ&lt;br /&gt;নতুন লাইন&lt;/p&gt;
+    &lt;img src="ছবি.jpg" alt="ছবি" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML5 (২০১৪-বর্তমান)</h2>
+            <p>HTML5 বর্তমান সময়ের সবচেয়ে আধুনিক HTML সংস্করণ। এটি মোবাইল, ডেস্কটপ সব ধরনের ডিভাইসের জন্য তৈরি।</p>
+            
+            <h3>HTML5-এর প্রধান বৈশিষ্ট্য:</h3>
+            <ul>
+              <li><strong>নতুন সিমেন্টিক ট্যাগ:</strong> &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;</li>
+              <li><strong>মাল্টিমিডিয়া সাপোর্ট:</strong> &lt;audio&gt; ও &lt;video&gt; ট্যাগ</li>
+              <li><strong>ক্যানভাস:</strong> &lt;canvas&gt; দিয়ে গ্রাফিক্স ও এনিমেশন</li>
+              <li><strong>ফর্ম উন্নয়ন:</strong> নতুন ইনপুট টাইপ (email, date, color, range)</li>
+              <li><strong>অফলাইন স্টোরেজ:</strong> লোকাল স্টোরেজ ও সেশন স্টোরেজ</li>
+              <li><strong>জিওলোকেশন:</strong> ব্যবহারকারীর অবস্থান জানার সুবিধা</li>
+            </ul>
+
+            <div class="example-box">
+              <h4>HTML5-এর নমুনা কোড:</h4>
+              <div class="code-preview">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;HTML5 পৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;আমার ওয়েবসাইট&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;ব্লগ&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;article&gt;
+    &lt;h2&gt;পোস্ট শিরোনাম&lt;/h2&gt;
+    &lt;video src="video.mp4" controls&gt;&lt;/video&gt;
+  &lt;/article&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;কপিরাইট ২০২৬&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML 5.2 ও ভবিষ্যৎ</h2>
+            <p>HTML ক্রমাগত আপডেট হচ্ছে। ২০১৭ সালে HTML 5.2 প্রকাশিত হয় এবং এখন HTML 5.3-এর কাজ চলছে।</p>
+            
+            <h3>ভবিষ্যৎ সংস্করণের সম্ভাব্য বৈশিষ্ট্য:</h3>
+            <ul>
+              <li>কৃত্রিম বুদ্ধিমত্তার সাথে ইন্টিগ্রেশন</li>
+              <li>উন্নত অ্যাক্সেসিবিলিটি</li>
+              <li>ভার্চুয়াল রিয়েলিটি সাপোর্ট</li>
+              <li>দ্রুত লোডিং ও পারফরম্যান্স</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংস্করণ তুলনামূলক চার্ট</h2>
+            <table class="reference-table">
+              <tr>
+                <th>সংস্করণ</th>
+                <th>সাল</th>
+                <th>মূল বৈশিষ্ট্য</th>
+              </tr>
+              <tr>
+                <td>HTML 1.0</td>
+                <td>১৯৯১</td>
+                <td>মৌলিক ট্যাগ, হাইপারলিংক</td>
+              </tr>
+              <tr>
+                <td>HTML 2.0</td>
+                <td>১৯৯৫</td>
+                <td>ফর্ম, টেবিল</td>
+              </tr>
+              <tr>
+                <td>HTML 3.2</td>
+                <td>১৯৯৭</td>
+                <td>স্ক্রিপ্ট, স্টাইল শিট</td>
+              </tr>
+              <tr>
+                <td>HTML 4.01</td>
+                <td>১৯৯৯</td>
+                <td>সিএসএস, অ্যাক্সেসিবিলিটি</td>
+              </tr>
+              <tr>
+                <td>XHTML 1.0</td>
+                <td>২০০০</td>
+                <td>XML-ভিত্তিক কঠোর নিয়ম</td>
+              </tr>
+              <tr>
+                <td>HTML5</td>
+                <td>২০১৪</td>
+                <td>সিমেন্টিক ট্যাগ, মাল্টিমিডিয়া</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>HTML-এর প্রথম মানকায়িত সংস্করণ কোনটি এবং কবে প্রকাশিত হয়?</li>
+              <li>HTML 4.01-এর তিনটি ভেরিয়েন্টের নাম লেখ।</li>
+              <li>XHTML-এর তিনটি কঠোর নিয়ম উদাহরণসহ লেখ।</li>
+              <li>HTML5-এ যুক্ত পাঁচটি নতুন সিমেন্টিক ট্যাগের নাম লেখ।</li>
+              <li>HTML 3.2 ও HTML5-এর মধ্যে প্রধান পার্থক্য কী কী?</li>
+              <li>নিচের কোডটি কোন HTML সংস্করণের হতে পারে? <code>&lt;font color="red"&gt;টেক্সট&lt;/font&gt;</code></li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>HTML 2.0, ১৯৯৫ সালে</li>
+                <li>Strict, Transitional, Frameset</li>
+                <li>সব ট্যাগ ছোট হাতের অক্ষরে, সব ট্যাগ বন্ধ করতে হবে, অ্যাট্রিবিউটের মান কোটেশনে দিতে হবে</li>
+                <li>&lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;</li>
+                <li>HTML3.2-এ প্রেজেন্টেশন ট্যাগ ছিল, HTML5 সিমেন্টিক ও মাল্টিমিডিয়া সাপোর্ট করে</li>
+                <li>HTML 3.2 অথবা HTML 4.01 Transitional (কারণ &lt;font&gt; ট্যাগ এখন অবচিত)</li>
+              </ol>
+            </details>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="history-of-html.html" class="prev-topic">← HTML-এর ইতিহাস</a>
+            <a href="html-editors.html" class="next-topic">HTML এডিটর →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

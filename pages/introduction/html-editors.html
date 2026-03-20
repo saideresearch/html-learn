@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML এডিটর | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="./" class="active">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পরিচিতি টপিকস</h3>
+        <ul>
+          <li><a href="what-is-html.html">HTML কী?</a></li>
+          <li><a href="history-of-html.html">HTML-এর ইতিহাস</a></li>
+          <li><a href="html-versions.html">HTML-এর সংস্করণ</a></li>
+          <li><a href="html-editors.html" class="active">HTML এডিটর</a></li>
+          <li><a href="first-page.html">প্রথম HTML পৃষ্ঠা</a></li>
+          <li><a href="basic-structure.html">HTML মৌলিক কাঠামো</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="./">পরিচিতি</a></li>
+            <li>HTML এডিটর</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML এডিটর (HTML Editors)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১২ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML এডিটর কী?</h2>
+            <p>HTML এডিটর হলো এমন একটি সফটওয়্যার বা অ্যাপ্লিকেশন যা ব্যবহার করে আপনি HTML কোড লিখতে, সম্পাদনা করতে এবং সংরক্ষণ করতে পারেন। ভালো একটি এডিটর আপনার কোডিং অভিজ্ঞতা অনেক সহজ ও উপভোগ্য করে তোলে।</p>
+            
+            <div class="example-box">
+              <h3>মূলত দুই ধরনের HTML এডিটর আছে:</h3>
+              <ul>
+                <li><strong>টেক্সট-ভিত্তিক এডিটর:</strong> শুধুমাত্র টেক্সট এডিট করার সুবিধা (যেমন: নোটপ্যাড)</li>
+                <li><strong>WYSIWYG এডিটর:</strong> What You See Is What You Get - আপনি যা দেখবেন তাই পাবেন (যেমন: Dreamweaver)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সাধারণ টেক্সট এডিটর</h2>
+            <p>শিক্ষানবিশদের জন্য সাধারণ টেক্সট এডিটর দিয়ে শুরু করা সবচেয়ে ভালো। এতে HTML-এর মৌলিক কাঠামো ও নিয়মগুলো ভালোভাবে বোঝা যায়।</p>
+            
+            <h3>উইন্ডোজের জন্য:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>মূল্য</th>
+              </tr>
+              <tr>
+                <td>নোটপ্যাড (Notepad)</td>
+                <td>অপারেটিং সিস্টেমের সাথে বিনামূল্যে পাওয়া যায়, খুবই সহজ</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>নোটপ্যাড++ (Notepad++)</td>
+                <td>সিনট্যাক্স হাইলাইটিং, একাধিক ট্যাব, প্লাগইন সাপোর্ট</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>সাবলাইম টেক্সট (Sublime Text)</td>
+                <td>দ্রুত, শক্তিশালী, কাস্টমাইজযোগ্য</td>
+                <td>$৯৯ (আনলিমিটেড ট্রায়াল)</td>
+              </tr>
+            </table>
+
+            <h3>ম্যাকের জন্য:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>মূল্য</th>
+              </tr>
+              <tr>
+                <td>টেক্সটএডিট (TextEdit)</td>
+                <td>অপারেটিং সিস্টেমের সাথে বিনামূল্যে পাওয়া যায়</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>ব্র্যাকেটস (Brackets)</td>
+                <td>অ্যাডোবি তৈরি করেছে, লাইভ প্রিভিউ সুবিধা</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>কোড (Code) - ভিজুয়াল স্টুডিও</td>
+                <td>মাইক্রোসফটের বিনামূল্যের এডিটর</td>
+                <td>ফ্রি</td>
+              </tr>
+            </table>
+
+            <h3>লিনাক্সের জন্য:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>মূল্য</th>
+              </tr>
+              <tr>
+                <td>জিনিট (Gedit)</td>
+                <td>ডেস্কটপ পরিবেশের সাথে আসে, সহজ ও হালকা</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>ভিম (Vim)</td>
+                <td>টার্মিনাল-ভিত্তিক, কীবোর্ড শর্টকাটে চলে</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>এটম (Atom)</td>
+                <td>গিটহাব তৈরি করেছে, প্যাকেজ সমৃদ্ধ</td>
+                <td>ফ্রি</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>জনপ্রিয় পেশাদার এডিটর</h2>
+            <p>পেশাদার ওয়েব ডেভেলপাররা সাধারণত শক্তিশালী ফিচারসমৃদ্ধ এডিটর ব্যবহার করেন। নিচে কয়েকটি জনপ্রিয় পেশাদার এডিটরের বিবরণ দেওয়া হলো।</p>
+            
+            <div class="example-box">
+              <h3>ভিজুয়াল স্টুডিও কোড (VS Code)</h3>
+              <p>বর্তমানে সবচেয়ে জনপ্রিয় ও শক্তিশালী ফ্রি এডিটর। মাইক্রোসফট তৈরি করেছে।</p>
+              <h4>বৈশিষ্ট্য:</h4>
+              <ul>
+                <li>ইন্টেলিসেন্স - কোড অটো-কমপ্লিশন</li>
+                <li>ইন্টিগ্রেটেড টার্মিনাল</li>
+                <li>গিট কন্ট্রোল</li>
+                <li>হাজার হাজার এক্সটেনশন</li>
+                <li>ডিবাগিং সাপোর্ট</li>
+                <li>লাইভ শেয়ার (সহযোগিতামূলক সম্পাদনা)</li>
+              </ul>
+            </div>
+
+            <div class="example-box">
+              <h3>অ্যাডোব ড্রিমউইভার (Adobe Dreamweaver)</h3>
+              <p>পেশাদার WYSIWYG এডিটর। কোড ও ডিজাইন দুই ভিউতেই কাজ করা যায়।</p>
+              <h4>বৈশিষ্ট্য:</h4>
+              <ul>
+                <li>স্প্লিট ভিউ - একসাথে কোড ও ডিজাইন দেখা</li>
+                <li>ফটোশপের সাথে ইন্টিগ্রেশন</li>
+                <li>সার্ভার-সাইড অন্তর্ভুক্তি</li>
+                <li>সিএসএস ডিজাইন টুলস</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনলাইন HTML এডিটর</h2>
+            <p>অনলাইন এডিটর ব্যবহারের জন্য কোনো সফটওয়্যার ইনস্টল করার প্রয়োজন নেই। ব্রাউজার খুললেই কোড লেখা শুরু করা যায়। শিক্ষানবিশ ও দ্রুত পরীক্ষা-নিরীক্ষার জন্য এগুলো খুবই উপযোগী।</p>
+            
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>ওয়েবসাইট</th>
+              </tr>
+              <tr>
+                <td>CodePen</td>
+                <td>HTML, CSS, JavaScript একসাথে লেখা ও ফলাফল দেখা, কমিউনিটি শেয়ারিং</td>
+                <td>codepen.io</td>
+              </tr>
+              <tr>
+                <td>JSFiddle</td>
+                <td>ফ্রেমওয়ার্ক সাপোর্ট, সহযোগিতামূলক সম্পাদনা</td>
+                <td>jsfiddle.net</td>
+              </tr>
+              <tr>
+                <td>JS Bin</td>
+                <td>লাইভ প্রিভিউ, কনসোল লগ দেখা</td>
+                <td>jsbin.com</td>
+              </tr>
+              <tr>
+                <td>Replit</td>
+                <td>পূর্ণাঙ্গ উন্নয়ন পরিবেশ, হোস্টিং সুবিধা</td>
+                <td>replit.com</td>
+              </tr>
+              <tr>
+                <td>OneCompiler</td>
+                <td>বাংলা ভাষায় টিউটোরিয়াল সহ, সহজ ইন্টারফেস</td>
+                <td>onecompiler.com</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>মোবাইল HTML এডিটর</h2>
+            <p>বর্তমানে স্মার্টফোন দিয়েও HTML কোড লেখা সম্ভব। নিচে কয়েকটি জনপ্রিয় মোবাইল অ্যাপের তালিকা দেওয়া হলো।</p>
+
+            <h3>অ্যান্ড্রয়েডের জন্য:</h3>
+            <ul>
+              <li><strong>Spck Editor:</strong> গিট ইন্টিগ্রেশন, সিনট্যাক্স হাইলাইটিং</li>
+              <li><strong>Dcoder:</strong> ৫০+ ভাষা সাপোর্ট, কম্পাইলার</li>
+              <li><strong>QuickEdit:</strong> হালকা, দ্রুত, রুট সাপোর্ট</li>
+            </ul>
+
+            <h3>আইওএসের জন্য:</h3>
+            <ul>
+              <li><strong>Koder:</strong> ওয়েব ডেভেলপমেন্ট, FTP/SFTP সাপোর্ট</li>
+              <li><strong>Textastic:</strong> শক্তিশালী কোড এডিটর, সিনট্যাক্স হাইলাইটিং</li>
+              <li><strong>Pythonista:</strong> পাইথনের পাশাপাশি HTML সাপোর্ট</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>বাংলাদেশে জনপ্রিয় HTML এডিটর</h2>
+            <p>বাংলাদেশের ওয়েব ডেভেলপারদের মধ্যে কিছু এডিটর বিশেষভাবে জনপ্রিয়। নিচে তাদের তালিকা ও ব্যবহারের কারণ দেওয়া হলো।</p>
+            
+            <table class="reference-table">
+              <tr>
+                <th>এডিটর</th>
+                <th>জনপ্রিয়তার কারণ</th>
+                <th>ব্যবহারকারী স্তর</th>
+              </tr>
+              <tr>
+                <td>VS Code</td>
+                <td>ফ্রি, বাংলা টিউটোরিয়াল প্রচুর, এক্সটেনশন সমৃদ্ধ</td>
+                <td>শিক্ষানবিশ-পেশাদার</td>
+              </tr>
+              <tr>
+                <td>Sublime Text</td>
+                <td>দ্রুত, হালকা, পুরনো কম্পিউটারে চলে</td>
+                <td>মাধ্যমিক-পেশাদার</td>
+              </tr>
+              <tr>
+                <td>Notepad++</td>
+                <td>অনেক পুরনো, স্কুল-কলেজে শেখানো হয়</td>
+                <td>শিক্ষানবিশ</td>
+              </tr>
+              <tr>
+                <td>CodePen</td>
+                <td>অনলাইন, ফ্রিল্যান্সাররা পোর্টফোলিও দেখায়</td>
+                <td>সকল স্তর</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>কীভাবে সঠিক এডিটর নির্বাচন করবেন</h2>
+            <p>আপনার জন্য কোন এডিটর সঠিক, তা নির্ভর করে কয়েকটি বিষয়ের উপর। নিচের প্রশ্নগুলো নিজেকে করুন:</p>
+            
+            <ol>
+              <li><strong>আপনার কম্পিউটারের স্পেসিফিকেশন কেমন?</strong> - পুরনো কম্পিউটার হলে হালকা এডিটর নিন</li>
+              <li><strong>আপনি কি শিক্ষানবিশ?</strong> - তবে সাধারণ এডিটর দিয়ে শুরু করুন</li>
+              <li><strong>কী ধরনের প্রকল্প করবেন?</strong> - বড় প্রকল্পের জন্য শক্তিশালী এডিটর প্রয়োজন</li>
+              <li><strong>বাজেট কত?</strong> - ফ্রি এডিটর দিয়েও পেশাদার কাজ করা যায়</li>
+              <li><strong>অফলাইন না অনলাইনে কাজ করবেন?</strong> - অনলাইন এডিটর ইনস্টলেশনের ঝামেলা মুক্ত</li>
+            </ol>
+
+            <div class="example-box">
+              <h3>শিক্ষানবিশদের জন্য পরামর্শ:</h3>
+              <p>প্রথমে <strong>VS Code</strong> দিয়ে শুরু করুন। কারণ:</p>
+              <ul>
+                <li>বিনামূল্যে</li>
+                <li>বাংলায় অসংখ্য টিউটোরিয়াল আছে</li>
+                <li>ইনস্টল করা সহজ</li>
+                <li>এক্সটেনশনের মাধ্যমে ধীরে ধীরে শক্তি বাড়ানো যায়</li>
+                <li>ইন্ডাস্ট্রি স্ট্যান্ডার্ড</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>VS Code ইনস্টল ও সেটআপ গাইড</h2>
+            
+            <h3>ধাপ ১: ডাউনলোড</h3>
+            <p>code.visualstudio.com থেকে আপনার অপারেটিং সিস্টেমের জন্য VS Code ডাউনলোড করুন।</p>
+
+            <h3>ধাপ ২: ইনস্টল</h3>
+            <p>ডাউনলোড করা ফাইলটি খুলে Next, Next দিয়ে ইনস্টল করুন। ইনস্টলের সময় "Add to PATH" অপশনটি চেক রাখুন।</p>
+
+            <h3>ধাপ ৩: প্রয়োজনীয় এক্সটেনশন</h3>
+            <p>VS Code খুলে বাম পাশের এক্সটেনশন আইকন (বা Ctrl+Shift+X) চাপুন। নিচের এক্সটেনশনগুলো ইনস্টল করুন:</p>
+            <table class="reference-table">
+              <tr>
+                <th>এক্সটেনশনের নাম</th>
+                <th>কাজ</th>
+              </tr>
+              <tr>
+                <td>Live Server</td>
+                <td>HTML ফাইল ব্রাউজারে লাইভ দেখায় (সেভ দিলেই আপডেট)</td>
+              </tr>
+              <tr>
+                <td>Prettier</td>
+                <td>কোড ফরম্যাট করে সুন্দর করে</td>
+              </tr>
+              <tr>
+                <td>HTML CSS Support</td>
+                <td>HTML-এ CSS ক্লাস অটো-সাজেস্ট করে</td>
+              </tr>
+              <tr>
+                <td>Auto Rename Tag</td>
+                <td>শুরু ট্যাগ পরিবর্তন করলে শেষ ট্যাগ অটো পরিবর্তন হয়</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>নোটপ্যাড দিয়ে প্রথম HTML পৃষ্ঠা</h2>
+            <p>শিক্ষানবিশদের জন্য নোটপ্যাড দিয়ে শুরু করার পদ্ধতি:</p>
+
+            <ol>
+              <li><strong>নোটপ্যাড খুলুন:</strong> Start মেনুতে গিয়ে Notepad লিখে সার্চ করুন</li>
+              <li><strong>HTML কোড লিখুন:</strong>
+                <div class="code-preview">
+                  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;আমার প্রথম পৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;স্বাগতম!&lt;/h1&gt;
+  &lt;p&gt;এটি আমার প্রথম HTML পৃষ্ঠা।&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+              </li>
+              <li><strong>ফাইল সংরক্ষণ করুন:</strong> File → Save As → ফাইল টাইপ "All Files (*.*)" নির্বাচন করুন → ফাইলের নাম "index.html" দিন → Save</li>
+              <li><strong>ব্রাউজারে খুলুন:</strong> যেখানে সেভ করেছেন, সেই index.html ফাইলটি ডাবল ক্লিক করে খুলুন</li>
+            </ol>
+          </section>
+
+          <section class="topic-section">
+            <h2>এডিটরের প্রয়োজনীয় বৈশিষ্ট্য</h2>
+            <p>একটি ভালো HTML এডিটরে নিচের বৈশিষ্ট্যগুলো থাকা উচিত:</p>
+
+            <table class="reference-table">
+              <tr>
+                <th>বৈশিষ্ট্য</th>
+                <th>কেন প্রয়োজন</th>
+              </tr>
+              <tr>
+                <td>সিনট্যাক্স হাইলাইটিং</td>
+                <td>কোডের বিভিন্ন অংশ রঙিন দেখায়, পড়তে ও বুঝতে সুবিধা হয়</td>
+              </tr>
+              <tr>
+                <td>অটো-কমপ্লিশন</td>
+                <td>ট্যাগ লেখার সময় সাজেশন দেখায়, টাইপিং দ্রুত হয় ও ভুল কমে</td>
+              </tr>
+              <tr>
+                <td>লাইন নাম্বারিং</td>
+                <td>প্রতিটি লাইনের পাশে নাম্বার দেখায়, ডিবাগিং সহজ করে</td>
+              </tr>
+              <tr>
+                <td>মাল্টিপল কার্সর</td>
+                <td>একসাথে অনেক জায়গায় এডিট করা যায়</td>
+              </tr>
+              <tr>
+                <td>ফাইন্ড এন্ড রিপ্লেস</td>
+                <td>কোডের মধ্যে খোঁজা ও পরিবর্তন করা সহজ করে</td>
+              </tr>
+              <tr>
+                <td>প্লাগইন/এক্সটেনশন</td>
+                <td>প্রয়োজন অনুযায়ী নতুন ফিচার যুক্ত করা যায়</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>টেক্সট-ভিত্তিক এডিটর ও WYSIWYG এডিটরের মধ্যে তিনটি পার্থক্য লেখ।</li>
+              <li>VS Code-এর পাঁচটি বৈশিষ্ট্যের নাম লেখ।</li>
+              <li>তিনটি জনপ্রিয় অনলাইন HTML এডিটরের নাম ও তাদের বৈশিষ্ট্য লেখ।</li>
+              <li>শিক্ষানবিশদের জন্য কোন এডিটর সবচেয়ে ভালো এবং কেন?</li>
+              <li>নোটপ্যাড দিয়ে একটি HTML ফাইল কীভাবে তৈরি করবেন, ধাপগুলো লেখ।</li>
+              <li>নিচের এডিটরগুলোর মধ্যে কোনটি WYSIWYG? (Dreamweaver, VS Code, Notepad++, CodePen)</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>টেক্সট-ভিত্তিক: কোড দেখায়, হালকা, বেশি নিয়ন্ত্রণ; WYSIWYG: ডিজাইন দেখায়, সহজ, স্বয়ংক্রিয় কোড</li>
+                <li>ইন্টেলিসেন্স, ইন্টিগ্রেটেড টার্মিনাল, গিট কন্ট্রোল, এক্সটেনশন, ডিবাগিং</li>
+                <li>CodePen (লাইভ প্রিভিউ, কমিউনিটি), JSFiddle (ফ্রেমওয়ার্ক সাপোর্ট), Replit (পূর্ণাঙ্গ পরিবেশ, হোস্টিং)</li>
+                <li>VS Code - কারণ ফ্রি, বাংলা টিউটোরিয়াল আছে, ইন্ডাস্ট্রি স্ট্যান্ডার্ড, এক্সটেনশন সমৃদ্ধ</li>
+                <li>নোটপ্যাড খুলুন → কোড লিখুন → File → Save As → ফাইল টাইপ All Files → index.html নামে সেভ → ব্রাউজারে খুলুন</li>
+                <li>Dreamweaver (এটি WYSIWYG)</li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সতর্কতা ও টিপস</h2>
+            <div class="fun-fact">
+              <p>⚠️ <strong>সতর্কতা:</strong> ওয়ার্ড প্রসেসর (যেমন: Microsoft Word) দিয়ে কখনো HTML কোড লিখবেন না। এতে অদৃশ্য ফরম্যাটিং কোড যোগ হয়ে যায় যা আপনার HTML নষ্ট করতে পারে।</p>
+            </div>
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> VS Code-এ "! + Tab" চাপলেই HTML5-এর মৌলিক কাঠামো অটোমেটিক তৈরি হয়ে যায়। এটি আপনার সময় বাঁচাবে।</p>
+            </div>
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> কোড লেখার সময় নিয়মিত "Ctrl+S" চেপে ফাইল সেভ করার অভ্যাস করুন। অপ্রত্যাশিত বন্ধ হয়ে গেলে আপনার কাজ নষ্ট হবে না।</p>
+            </div>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="html-versions.html" class="prev-topic">← HTML-এর সংস্করণ</a>
+            <a href="first-page.html" class="next-topic">প্রথম HTML পৃষ্ঠা →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML এডিটর | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="./" class="active">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পরিচিতি টপিকস</h3>
+        <ul>
+          <li><a href="what-is-html.html">HTML কী?</a></li>
+          <li><a href="history-of-html.html">HTML-এর ইতিহাস</a></li>
+          <li><a href="html-versions.html">HTML-এর সংস্করণ</a></li>
+          <li><a href="html-editors.html" class="active">HTML এডিটর</a></li>
+          <li><a href="first-page.html">প্রথম HTML পৃষ্ঠা</a></li>
+          <li><a href="basic-structure.html">HTML মৌলিক কাঠামো</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="./">পরিচিতি</a></li>
+            <li>HTML এডিটর</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML এডিটর (HTML Editors)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১২ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML এডিটর কী?</h2>
+            <p>HTML এডিটর হলো এমন একটি সফটওয়্যার বা অ্যাপ্লিকেশন যা ব্যবহার করে আপনি HTML কোড লিখতে, সম্পাদনা করতে এবং সংরক্ষণ করতে পারেন। ভালো একটি এডিটর আপনার কোডিং অভিজ্ঞতা অনেক সহজ ও উপভোগ্য করে তোলে।</p>
+            
+            <div class="example-box">
+              <h3>মূলত দুই ধরনের HTML এডিটর আছে:</h3>
+              <ul>
+                <li><strong>টেক্সট-ভিত্তিক এডিটর:</strong> শুধুমাত্র টেক্সট এডিট করার সুবিধা (যেমন: নোটপ্যাড)</li>
+                <li><strong>WYSIWYG এডিটর:</strong> What You See Is What You Get - আপনি যা দেখবেন তাই পাবেন (যেমন: Dreamweaver)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সাধারণ টেক্সট এডিটর</h2>
+            <p>শিক্ষানবিশদের জন্য সাধারণ টেক্সট এডিটর দিয়ে শুরু করা সবচেয়ে ভালো। এতে HTML-এর মৌলিক কাঠামো ও নিয়মগুলো ভালোভাবে বোঝা যায়।</p>
+            
+            <h3>উইন্ডোজের জন্য:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>মূল্য</th>
+              </tr>
+              <tr>
+                <td>নোটপ্যাড (Notepad)</td>
+                <td>অপারেটিং সিস্টেমের সাথে বিনামূল্যে পাওয়া যায়, খুবই সহজ</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>নোটপ্যাড++ (Notepad++)</td>
+                <td>সিনট্যাক্স হাইলাইটিং, একাধিক ট্যাব, প্লাগইন সাপোর্ট</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>সাবলাইম টেক্সট (Sublime Text)</td>
+                <td>দ্রুত, শক্তিশালী, কাস্টমাইজযোগ্য</td>
+                <td>$৯৯ (আনলিমিটেড ট্রায়াল)</td>
+              </tr>
+            </table>
+
+            <h3>ম্যাকের জন্য:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>মূল্য</th>
+              </tr>
+              <tr>
+                <td>টেক্সটএডিট (TextEdit)</td>
+                <td>অপারেটিং সিস্টেমের সাথে বিনামূল্যে পাওয়া যায়</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>ব্র্যাকেটস (Brackets)</td>
+                <td>অ্যাডোবি তৈরি করেছে, লাইভ প্রিভিউ সুবিধা</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>কোড (Code) - ভিজুয়াল স্টুডিও</td>
+                <td>মাইক্রোসফটের বিনামূল্যের এডিটর</td>
+                <td>ফ্রি</td>
+              </tr>
+            </table>
+
+            <h3>লিনাক্সের জন্য:</h3>
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>মূল্য</th>
+              </tr>
+              <tr>
+                <td>জিনিট (Gedit)</td>
+                <td>ডেস্কটপ পরিবেশের সাথে আসে, সহজ ও হালকা</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>ভিম (Vim)</td>
+                <td>টার্মিনাল-ভিত্তিক, কীবোর্ড শর্টকাটে চলে</td>
+                <td>ফ্রি</td>
+              </tr>
+              <tr>
+                <td>এটম (Atom)</td>
+                <td>গিটহাব তৈরি করেছে, প্যাকেজ সমৃদ্ধ</td>
+                <td>ফ্রি</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>জনপ্রিয় পেশাদার এডিটর</h2>
+            <p>পেশাদার ওয়েব ডেভেলপাররা সাধারণত শক্তিশালী ফিচারসমৃদ্ধ এডিটর ব্যবহার করেন। নিচে কয়েকটি জনপ্রিয় পেশাদার এডিটরের বিবরণ দেওয়া হলো।</p>
+            
+            <div class="example-box">
+              <h3>ভিজুয়াল স্টুডিও কোড (VS Code)</h3>
+              <p>বর্তমানে সবচেয়ে জনপ্রিয় ও শক্তিশালী ফ্রি এডিটর। মাইক্রোসফট তৈরি করেছে।</p>
+              <h4>বৈশিষ্ট্য:</h4>
+              <ul>
+                <li>ইন্টেলিসেন্স - কোড অটো-কমপ্লিশন</li>
+                <li>ইন্টিগ্রেটেড টার্মিনাল</li>
+                <li>গিট কন্ট্রোল</li>
+                <li>হাজার হাজার এক্সটেনশন</li>
+                <li>ডিবাগিং সাপোর্ট</li>
+                <li>লাইভ শেয়ার (সহযোগিতামূলক সম্পাদনা)</li>
+              </ul>
+            </div>
+
+            <div class="example-box">
+              <h3>অ্যাডোব ড্রিমউইভার (Adobe Dreamweaver)</h3>
+              <p>পেশাদার WYSIWYG এডিটর। কোড ও ডিজাইন দুই ভিউতেই কাজ করা যায়।</p>
+              <h4>বৈশিষ্ট্য:</h4>
+              <ul>
+                <li>স্প্লিট ভিউ - একসাথে কোড ও ডিজাইন দেখা</li>
+                <li>ফটোশপের সাথে ইন্টিগ্রেশন</li>
+                <li>সার্ভার-সাইড অন্তর্ভুক্তি</li>
+                <li>সিএসএস ডিজাইন টুলস</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনলাইন HTML এডিটর</h2>
+            <p>অনলাইন এডিটর ব্যবহারের জন্য কোনো সফটওয়্যার ইনস্টল করার প্রয়োজন নেই। ব্রাউজার খুললেই কোড লেখা শুরু করা যায়। শিক্ষানবিশ ও দ্রুত পরীক্ষা-নিরীক্ষার জন্য এগুলো খুবই উপযোগী।</p>
+            
+            <table class="reference-table">
+              <tr>
+                <th>এডিটরের নাম</th>
+                <th>বৈশিষ্ট্য</th>
+                <th>ওয়েবসাইট</th>
+              </tr>
+              <tr>
+                <td>CodePen</td>
+                <td>HTML, CSS, JavaScript একসাথে লেখা ও ফলাফল দেখা, কমিউনিটি শেয়ারিং</td>
+                <td>codepen.io</td>
+              </tr>
+              <tr>
+                <td>JSFiddle</td>
+                <td>ফ্রেমওয়ার্ক সাপোর্ট, সহযোগিতামূলক সম্পাদনা</td>
+                <td>jsfiddle.net</td>
+              </tr>
+              <tr>
+                <td>JS Bin</td>
+                <td>লাইভ প্রিভিউ, কনসোল লগ দেখা</td>
+                <td>jsbin.com</td>
+              </tr>
+              <tr>
+                <td>Replit</td>
+                <td>পূর্ণাঙ্গ উন্নয়ন পরিবেশ, হোস্টিং সুবিধা</td>
+                <td>replit.com</td>
+              </tr>
+              <tr>
+                <td>OneCompiler</td>
+                <td>বাংলা ভাষায় টিউটোরিয়াল সহ, সহজ ইন্টারফেস</td>
+                <td>onecompiler.com</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>মোবাইল HTML এডিটর</h2>
+            <p>বর্তমানে স্মার্টফোন দিয়েও HTML কোড লেখা সম্ভব। নিচে কয়েকটি জনপ্রিয় মোবাইল অ্যাপের তালিকা দেওয়া হলো।</p>
+
+            <h3>অ্যান্ড্রয়েডের জন্য:</h3>
+            <ul>
+              <li><strong>Spck Editor:</strong> গিট ইন্টিগ্রেশন, সিনট্যাক্স হাইলাইটিং</li>
+              <li><strong>Dcoder:</strong> ৫০+ ভাষা সাপোর্ট, কম্পাইলার</li>
+              <li><strong>QuickEdit:</strong> হালকা, দ্রুত, রুট সাপোর্ট</li>
+            </ul>
+
+            <h3>আইওএসের জন্য:</h3>
+            <ul>
+              <li><strong>Koder:</strong> ওয়েব ডেভেলপমেন্ট, FTP/SFTP সাপোর্ট</li>
+              <li><strong>Textastic:</strong> শক্তিশালী কোড এডিটর, সিনট্যাক্স হাইলাইটিং</li>
+              <li><strong>Pythonista:</strong> পাইথনের পাশাপাশি HTML সাপোর্ট</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>বাংলাদেশে জনপ্রিয় HTML এডিটর</h2>
+            <p>বাংলাদেশের ওয়েব ডেভেলপারদের মধ্যে কিছু এডিটর বিশেষভাবে জনপ্রিয়। নিচে তাদের তালিকা ও ব্যবহারের কারণ দেওয়া হলো।</p>
+            
+            <table class="reference-table">
+              <tr>
+                <th>এডিটর</th>
+                <th>জনপ্রিয়তার কারণ</th>
+                <th>ব্যবহারকারী স্তর</th>
+              </tr>
+              <tr>
+                <td>VS Code</td>
+                <td>ফ্রি, বাংলা টিউটোরিয়াল প্রচুর, এক্সটেনশন সমৃদ্ধ</td>
+                <td>শিক্ষানবিশ-পেশাদার</td>
+              </tr>
+              <tr>
+                <td>Sublime Text</td>
+                <td>দ্রুত, হালকা, পুরনো কম্পিউটারে চলে</td>
+                <td>মাধ্যমিক-পেশাদার</td>
+              </tr>
+              <tr>
+                <td>Notepad++</td>
+                <td>অনেক পুরনো, স্কুল-কলেজে শেখানো হয়</td>
+                <td>শিক্ষানবিশ</td>
+              </tr>
+              <tr>
+                <td>CodePen</td>
+                <td>অনলাইন, ফ্রিল্যান্সাররা পোর্টফোলিও দেখায়</td>
+                <td>সকল স্তর</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>কীভাবে সঠিক এডিটর নির্বাচন করবেন</h2>
+            <p>আপনার জন্য কোন এডিটর সঠিক, তা নির্ভর করে কয়েকটি বিষয়ের উপর। নিচের প্রশ্নগুলো নিজেকে করুন:</p>
+            
+            <ol>
+              <li><strong>আপনার কম্পিউটারের স্পেসিফিকেশন কেমন?</strong> - পুরনো কম্পিউটার হলে হালকা এডিটর নিন</li>
+              <li><strong>আপনি কি শিক্ষানবিশ?</strong> - তবে সাধারণ এডিটর দিয়ে শুরু করুন</li>
+              <li><strong>কী ধরনের প্রকল্প করবেন?</strong> - বড় প্রকল্পের জন্য শক্তিশালী এডিটর প্রয়োজন</li>
+              <li><strong>বাজেট কত?</strong> - ফ্রি এডিটর দিয়েও পেশাদার কাজ করা যায়</li>
+              <li><strong>অফলাইন না অনলাইনে কাজ করবেন?</strong> - অনলাইন এডিটর ইনস্টলেশনের ঝামেলা মুক্ত</li>
+            </ol>
+
+            <div class="example-box">
+              <h3>শিক্ষানবিশদের জন্য পরামর্শ:</h3>
+              <p>প্রথমে <strong>VS Code</strong> দিয়ে শুরু করুন। কারণ:</p>
+              <ul>
+                <li>বিনামূল্যে</li>
+                <li>বাংলায় অসংখ্য টিউটোরিয়াল আছে</li>
+                <li>ইনস্টল করা সহজ</li>
+                <li>এক্সটেনশনের মাধ্যমে ধীরে ধীরে শক্তি বাড়ানো যায়</li>
+                <li>ইন্ডাস্ট্রি স্ট্যান্ডার্ড</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>VS Code ইনস্টল ও সেটআপ গাইড</h2>
+            
+            <h3>ধাপ ১: ডাউনলোড</h3>
+            <p>code.visualstudio.com থেকে আপনার অপারেটিং সিস্টেমের জন্য VS Code ডাউনলোড করুন।</p>
+
+            <h3>ধাপ ২: ইনস্টল</h3>
+            <p>ডাউনলোড করা ফাইলটি খুলে Next, Next দিয়ে ইনস্টল করুন। ইনস্টলের সময় "Add to PATH" অপশনটি চেক রাখুন।</p>
+
+            <h3>ধাপ ৩: প্রয়োজনীয় এক্সটেনশন</h3>
+            <p>VS Code খুলে বাম পাশের এক্সটেনশন আইকন (বা Ctrl+Shift+X) চাপুন। নিচের এক্সটেনশনগুলো ইনস্টল করুন:</p>
+            <table class="reference-table">
+              <tr>
+                <th>এক্সটেনশনের নাম</th>
+                <th>কাজ</th>
+              </tr>
+              <tr>
+                <td>Live Server</td>
+                <td>HTML ফাইল ব্রাউজারে লাইভ দেখায় (সেভ দিলেই আপডেট)</td>
+              </tr>
+              <tr>
+                <td>Prettier</td>
+                <td>কোড ফরম্যাট করে সুন্দর করে</td>
+              </tr>
+              <tr>
+                <td>HTML CSS Support</td>
+                <td>HTML-এ CSS ক্লাস অটো-সাজেস্ট করে</td>
+              </tr>
+              <tr>
+                <td>Auto Rename Tag</td>
+                <td>শুরু ট্যাগ পরিবর্তন করলে শেষ ট্যাগ অটো পরিবর্তন হয়</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>নোটপ্যাড দিয়ে প্রথম HTML পৃষ্ঠা</h2>
+            <p>শিক্ষানবিশদের জন্য নোটপ্যাড দিয়ে শুরু করার পদ্ধতি:</p>
+
+            <ol>
+              <li><strong>নোটপ্যাড খুলুন:</strong> Start মেনুতে গিয়ে Notepad লিখে সার্চ করুন</li>
+              <li><strong>HTML কোড লিখুন:</strong>
+                <div class="code-preview">
+                  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;আমার প্রথম পৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;স্বাগতম!&lt;/h1&gt;
+  &lt;p&gt;এটি আমার প্রথম HTML পৃষ্ঠা।&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+              </li>
+              <li><strong>ফাইল সংরক্ষণ করুন:</strong> File → Save As → ফাইল টাইপ "All Files (*.*)" নির্বাচন করুন → ফাইলের নাম "index.html" দিন → Save</li>
+              <li><strong>ব্রাউজারে খুলুন:</strong> যেখানে সেভ করেছেন, সেই index.html ফাইলটি ডাবল ক্লিক করে খুলুন</li>
+            </ol>
+          </section>
+
+          <section class="topic-section">
+            <h2>এডিটরের প্রয়োজনীয় বৈশিষ্ট্য</h2>
+            <p>একটি ভালো HTML এডিটরে নিচের বৈশিষ্ট্যগুলো থাকা উচিত:</p>
+
+            <table class="reference-table">
+              <tr>
+                <th>বৈশিষ্ট্য</th>
+                <th>কেন প্রয়োজন</th>
+              </tr>
+              <tr>
+                <td>সিনট্যাক্স হাইলাইটিং</td>
+                <td>কোডের বিভিন্ন অংশ রঙিন দেখায়, পড়তে ও বুঝতে সুবিধা হয়</td>
+              </tr>
+              <tr>
+                <td>অটো-কমপ্লিশন</td>
+                <td>ট্যাগ লেখার সময় সাজেশন দেখায়, টাইপিং দ্রুত হয় ও ভুল কমে</td>
+              </tr>
+              <tr>
+                <td>লাইন নাম্বারিং</td>
+                <td>প্রতিটি লাইনের পাশে নাম্বার দেখায়, ডিবাগিং সহজ করে</td>
+              </tr>
+              <tr>
+                <td>মাল্টিপল কার্সর</td>
+                <td>একসাথে অনেক জায়গায় এডিট করা যায়</td>
+              </tr>
+              <tr>
+                <td>ফাইন্ড এন্ড রিপ্লেস</td>
+                <td>কোডের মধ্যে খোঁজা ও পরিবর্তন করা সহজ করে</td>
+              </tr>
+              <tr>
+                <td>প্লাগইন/এক্সটেনশন</td>
+                <td>প্রয়োজন অনুযায়ী নতুন ফিচার যুক্ত করা যায়</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>টেক্সট-ভিত্তিক এডিটর ও WYSIWYG এডিটরের মধ্যে তিনটি পার্থক্য লেখ।</li>
+              <li>VS Code-এর পাঁচটি বৈশিষ্ট্যের নাম লেখ।</li>
+              <li>তিনটি জনপ্রিয় অনলাইন HTML এডিটরের নাম ও তাদের বৈশিষ্ট্য লেখ।</li>
+              <li>শিক্ষানবিশদের জন্য কোন এডিটর সবচেয়ে ভালো এবং কেন?</li>
+              <li>নোটপ্যাড দিয়ে একটি HTML ফাইল কীভাবে তৈরি করবেন, ধাপগুলো লেখ।</li>
+              <li>নিচের এডিটরগুলোর মধ্যে কোনটি WYSIWYG? (Dreamweaver, VS Code, Notepad++, CodePen)</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>টেক্সট-ভিত্তিক: কোড দেখায়, হালকা, বেশি নিয়ন্ত্রণ; WYSIWYG: ডিজাইন দেখায়, সহজ, স্বয়ংক্রিয় কোড</li>
+                <li>ইন্টেলিসেন্স, ইন্টিগ্রেটেড টার্মিনাল, গিট কন্ট্রোল, এক্সটেনশন, ডিবাগিং</li>
+                <li>CodePen (লাইভ প্রিভিউ, কমিউনিটি), JSFiddle (ফ্রেমওয়ার্ক সাপোর্ট), Replit (পূর্ণাঙ্গ পরিবেশ, হোস্টিং)</li>
+                <li>VS Code - কারণ ফ্রি, বাংলা টিউটোরিয়াল আছে, ইন্ডাস্ট্রি স্ট্যান্ডার্ড, এক্সটেনশন সমৃদ্ধ</li>
+                <li>নোটপ্যাড খুলুন → কোড লিখুন → File → Save As → ফাইল টাইপ All Files → index.html নামে সেভ → ব্রাউজারে খুলুন</li>
+                <li>Dreamweaver (এটি WYSIWYG)</li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সতর্কতা ও টিপস</h2>
+            <div class="fun-fact">
+              <p>⚠️ <strong>সতর্কতা:</strong> ওয়ার্ড প্রসেসর (যেমন: Microsoft Word) দিয়ে কখনো HTML কোড লিখবেন না। এতে অদৃশ্য ফরম্যাটিং কোড যোগ হয়ে যায় যা আপনার HTML নষ্ট করতে পারে।</p>
+            </div>
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> VS Code-এ "! + Tab" চাপলেই HTML5-এর মৌলিক কাঠামো অটোমেটিক তৈরি হয়ে যায়। এটি আপনার সময় বাঁচাবে।</p>
+            </div>
+            <div class="fun-fact">
+              <p>💡 <strong>টিপস:</strong> কোড লেখার সময় নিয়মিত "Ctrl+S" চেপে ফাইল সেভ করার অভ্যাস করুন। অপ্রত্যাশিত বন্ধ হয়ে গেলে আপনার কাজ নষ্ট হবে না।</p>
+            </div>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="html-versions.html" class="prev-topic">← HTML-এর সংস্করণ</a>
+            <a href="first-page.html" class="next-topic">প্রথম HTML পৃষ্ঠা →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>
