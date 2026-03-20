@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>কুকি নীতি | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+  <style>
+    .cookie-date {
+      background-color: #e9ecef;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .cookie-section {
+      margin-bottom: 30px;
+    }
+    .cookie-section h2 {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .cookie-section h3 {
+      margin-top: 20px;
+      color: #495057;
+    }
+    .highlight-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    .info-box {
+      background-color: #e7f3ff;
+      border-left: 4px solid #007bff;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .cookie-table th, .cookie-table td {
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      text-align: left;
+    }
+    .cookie-table th {
+      background-color: #f8f9fa;
+    }
+    .consent-box {
+      background-color: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .browser-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .browser-item {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../intro/">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>আইনি তথ্য</h3>
+        <ul>
+          <li><a href="privacy-policy.html">গোপনীয়তা নীতি</a></li>
+          <li><a href="terms-of-use.html">ব্যবহারের শর্তাবলী</a></li>
+          <li><a href="cookie-policy.html" class="active">কুকি নীতি</a></li>
+          <li><a href="disclaimer.html">দাবিত্যাগ</a></li>
+          <li><a href="contact.html">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li>কুকি নীতি</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>কুকি নীতি (Cookie Policy)</h1>
+          
+          <div class="topic-meta">
+            <span>শেষ হালনাগাদ: ২০ মার্চ, ২০২৬</span>
+            <span>সংস্করণ: ১.০</span>
+            <span>কার্যকর তারিখ: ১ এপ্রিল, ২০২৬</span>
+          </div>
+
+          <div class="cookie-date">
+            <strong>🍪 গুরুত্বপূর্ণ:</strong> এই কুকি নীতি ব্যাখ্যা করে যে HTML শিখি ওয়েবসাইট কীভাবে কুকি ব্যবহার করে, কেন ব্যবহার করে এবং আপনি কীভাবে কুকি পরিচালনা করতে পারেন।
+          </div>
+
+          <section class="cookie-section">
+            <h2>কুকি কী? (What are Cookies?)</h2>
+            <p><strong>কুকি</strong> হলো ছোট টেক্সট ফাইল যা আপনার ব্রাউজার আপনার ডিভাইসে সংরক্ষণ করে যখন আপনি কোনো ওয়েবসাইট ভিজিট করেন। কুকি ওয়েবসাইটকে আপনার সম্পর্কে তথ্য মনে রাখতে সাহায্য করে, যেমন আপনার পছন্দ, লগইন অবস্থা, এবং অন্যান্য সেটিংস।</p>
+            
+            <div class="info-box">
+              <h4>📌 কুকির মূল বৈশিষ্ট্য:</h4>
+              <ul>
+                <li><strong>ছোট আকার:</strong> সাধারণত 4KB পর্যন্ত ডেটা সংরক্ষণ করতে পারে</li>
+                <li><strong>ডোমেইন-নির্দিষ্ট:</strong> যেসব ওয়েবসাইট তৈরি করেছে, শুধু সেগুলোই কুকি পড়তে পারে</li>
+                <li><strong>সময়সীমা:</strong> নির্দিষ্ট সময় পর মেয়াদ শেষ হয় বা সেশন শেষে মুছে যায়</li>
+                <li><strong>নিরাপদ:</strong> কুকিতে ম্যালওয়্যার বা ভাইরাস থাকতে পারে না</li>
+              </ul>
+            </div>
+
+            <div class="highlight-box">
+              <p><strong>💡 সহজ ভাষায়:</strong> কুকি হলো ওয়েবসাইটের "মেমোরি"র মতো। আপনি যখন কোনো সাইট ভিজিট করেন, সাইট আপনার পছন্দ ও কার্যকলাপ মনে রাখতে কুকি ব্যবহার করে। যেমন: আপনি সাইটের ভাষা বাংলা সেট করলে, পরের বার ভিজিটে আবার বাংলা দেখাবে।</p>
+            </div>
+          </section>
+
+          <section class="cookie-section">
+            <h2>আমরা কেন কুকি ব্যবহার করি?</h2>
+            <p>HTML শিখি ওয়েবসাইট নিম্নলিখিত উদ্দেশ্যে কুকি ব্যবহার করে:</p>
+
+            <ul>
+              <li>✅ <strong>অপরিহার্য কার্যকারিতা:</strong> ওয়েবসাইটের মৌলিক ফিচার সঠিকভাবে কাজ করার জন্য</li>
+              <li>✅ <strong>ব্যবহারকারীর পছন্দ:</strong> আপনার ভাষা সেটিংস, থিম পছন্দ ইত্যাদি মনে রাখতে</li>
+              <li>✅ <strong>পারফরম্যান্স বিশ্লেষণ:</strong> ওয়েবসাইটের ব্যবহার পরিসংখ্যান জানতে ও উন্নত করতে</li>
+              <li>✅ <strong>ব্যবহারকারীর অভিজ্ঞতা:</strong> আপনার জন্য কন্টেন্ট ব্যক্তিগতকৃত করতে</li>
+              <li>✅ <strong>সুরক্ষা:</strong> জালিয়াতি ও অননুমোদিত অ্যাক্সেস প্রতিরোধে</li>
+            </ul>
+          </section>
+
+          <section class="cookie-section">
+            <h2>আমরা কী ধরনের কুকি ব্যবহার করি?</h2>
+            <p>HTML শিখি চার ধরনের কুকি ব্যবহার করে। নিচে প্রতিটি ধরনের বিস্তারিত বর্ণনা দেওয়া হলো:</p>
+
+            <h3>১. অপরিহার্য কুকি (Essential Cookies)</h3>
+            <p>এই কুকিগুলো ওয়েবসাইটের মৌলিক কার্যকারিতার জন্য প্রয়োজনীয়। এগুলো ছাড়া ওয়েবসাইট সঠিকভাবে কাজ করে না।</p>
+            
+            <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>কুকির নাম</th>
+                  <th>উদ্দেশ্য</th>
+                  <th>মেয়াদ</th>
+                 </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>session_id</code></td>
+                  <td>আপনার সেশন শনাক্ত করে, লগইন অবস্থা বজায় রাখে</td>
+                  <td>সেশন শেষে মুছে যায়</td>
+                </tr>
+                <tr>
+                  <td><code>csrf_token</code></td>
+                  <td>সুরক্ষার জন্য, CSRF আক্রমণ প্রতিরোধ করে</td>
+                  <td>সেশন শেষে মুছে যায়</td>
+                </tr>
+                <tr>
+                  <td><code>consent_status</code></td>
+                  <td>আপনি কুকিতে সম্মতি দিয়েছেন কিনা তা মনে রাখে</td>
+                  <td>১ বছর</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>২. কার্যকারিতা কুকি (Functionality Cookies)</h3>
+            <p>এই কুকিগুলো আপনার পছন্দ ও সেটিংস মনে রাখতে সাহায্য করে।</p>
+            
+            <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>কুকির নাম</th>
+                  <th>উদ্দেশ্য</th>
+                  <th>মেয়াদ</th>
+                 </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>language_preference</code></td>
+                  <td>আপনার পছন্দের ভাষা মনে রাখে (বাংলা/ইংরেজি)</td>
+                  <td>১ বছর</td>
+                </tr>
+                <tr>
+                  <td><code>theme_preference</code></td>
+                  <td>আপনার থিম পছন্দ মনে রাখে (লাইট/ডার্ক)</td>
+                  <td>১ বছর</td>
+                </tr>
+                <tr>
+                  <td><code>font_size</code></td>
+                  <td>আপনার পছন্দের ফন্ট সাইজ মনে রাখে</td>
+                  <td>১ বছর</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>৩. বিশ্লেষণ কুকি (Analytics Cookies)</h3>
+            <p>এই কুকিগুলো আমাদের ওয়েবসাইটের ব্যবহার পরিসংখ্যান বুঝতে সাহায্য করে। আমরা Google Analytics ব্যবহার করি।</p>
+            
+            <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>কুকির নাম</th>
+                  <th>উদ্দেশ্য</th>
+                  <th>মেয়াদ</th>
+                 </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>_ga</code></td>
+                  <td>Google Analytics - ব্যবহারকারী শনাক্ত করে</td>
+                  <td>২ বছর</td>
+                </tr>
+                <tr>
+                  <td><code>_gid</code></td>
+                  <td>Google Analytics - ব্যবহারকারীর সেশন শনাক্ত করে</td>
+                  <td>২৪ ঘণ্টা</td>
+                </tr>
+                <tr>
+                  <td><code>_gat</code></td>
+                  <td>Google Analytics - অনুরোধের হার সীমিত করতে</td>
+                  <td>১ মিনিট</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>৪. তৃতীয় পক্ষের কুকি (Third-Party Cookies)</h3>
+            <p>আমাদের ওয়েবসাইটে তৃতীয় পক্ষের পরিষেবা (যেমন YouTube ভিডিও, GitHub গিট) ব্যবহারের কারণে তৃতীয় পক্ষের কুকি থাকতে পারে।</p>
+            
+            <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>প্রোভাইডার</th>
+                  <th>উদ্দেশ্য</th>
+                  <th>আরও তথ্য</th>
+                 </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>YouTube</td>
+                  <td>ভিডিও প্লেব্যাক ও পছন্দ মনে রাখতে</td>
+                  <td><a href="https://policies.google.com/privacy" target="_blank">Google-এর গোপনীয়তা নীতি</a></td>
+                </tr>
+                <tr>
+                  <td>GitHub</td>
+                  <td>কোড উদাহরণ এম্বেড করতে</td>
+                  <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub-এর গোপনীয়তা নীতি</a></td>
+                </tr>
+                <tr>
+                  <td>Google AdSense</td>
+                  <td>বিজ্ঞাপন প্রদর্শন ও কাস্টমাইজ করতে</td>
+                  <td><a href="https://policies.google.com/technologies/ads" target="_blank">Google-এর বিজ্ঞাপন নীতি</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="cookie-section">
+            <h2>কুকি পরিচালনা ও নিয়ন্ত্রণ</h2>
+            <p>আপনার ব্রাউজারের সেটিংস থেকে আপনি কুকি গ্রহণ বা প্রত্যাখ্যান করতে পারেন। নিচে জনপ্রিয় ব্রাউজারে কুকি পরিচালনার পদ্ধতি দেওয়া হলো:</p>
+
+            <div class="browser-list">
+              <div class="browser-item">
+                <strong>Google Chrome</strong><br>
+                সেটিংস → গোপনীয়তা ও নিরাপত্তা → কুকি ও অন্যান্য সাইট ডেটা
+              </div>
+              <div class="browser-item">
+                <strong>Mozilla Firefox</strong><br>
+                বিকল্প → গোপনীয়তা ও নিরাপত্তা → কুকি ও সাইট ডেটা
+              </div>
+              <div class="browser-item">
+                <strong>Safari</strong><br>
+                পছন্দ → গোপনীয়তা → কুকি ও ওয়েবসাইট ডেটা
+              </div>
+              <div class="browser-item">
+                <strong>Microsoft Edge</strong><br>
+                সেটিংস → কুকি ও সাইট অনুমতি → কুকি ও সংরক্ষিত ডেটা
+              </div>
+              <div class="browser-item">
+                <strong>Opera</strong><br>
+                সেটিংস → গোপনীয়তা ও নিরাপত্তা → কুকি
+              </div>
+            </div>
+
+            <div class="highlight-box">
+              <p><strong>⚠️ সতর্কতা:</strong> আপনি যদি অপরিহার্য কুকি ব্লক করেন, তাহলে ওয়েবসাইটের কিছু ফিচার সঠিকভাবে কাজ নাও করতে পারে। যেমন: লগইন করতে সমস্যা হতে পারে, পছন্দ সংরক্ষণ নাও হতে পারে।</p>
+            </div>
+          </section>
+
+          <section class="cookie-section">
+            <h2>কুকি সম্মতি (Cookie Consent)</h2>
+            <p>আইনি প্রয়োজনীয়তা মেনে চলতে আমরা আপনাকে প্রথমবার ওয়েবসাইট ভিজিট করার সময় কুকি সম্মতি নিয়ে থাকি। আপনি:</p>
+            <ul>
+              <li>✅ "সম্মতি দিচ্ছি" ক্লিক করে সব কুকি গ্রহণ করতে পারেন</li>
+              <li>✅ "প্রয়োজনীয় কুকি শুধু" নির্বাচন করে অপরিহার্য কুকি শুধু গ্রহণ করতে পারেন</li>
+              <li>✅ "সেটিংস কাস্টমাইজ করুন" এ ক্লিক করে নির্দিষ্ট ধরনের কুকি নির্বাচন করতে পারেন</li>
+              <li>✅ যেকোনো সময় "কুকি সেটিংস" লিংকে ক্লিক করে আপনার পছন্দ পরিবর্তন করতে পারেন</li>
+            </ul>
+
+            <div class="consent-box">
+              <p><strong>🍪 আপনার কুকি পছন্দ:</strong> আপনি যেকোনো সময় পৃষ্ঠার নিচের "কুকি সেটিংস" লিংকে ক্লিক করে আপনার সম্মতি পরিবর্তন করতে পারেন। আপনার পছন্দ ১ বছর পর্যন্ত সংরক্ষিত থাকবে।</p>
+            </div>
+          </section>
+
+          <section class="cookie-section">
+            <h2>কুকি ও গোপনীয়তা</h2>
+            <p>কুকি আপনার ব্যক্তিগত তথ্য যেমন নাম, ঠিকানা, বা ক্রেডিট কার্ড নম্বর সংরক্ষণ করে না। কুকি শুধু ব্রাউজার সেশন শনাক্ত করে এবং আপনার পছন্দ মনে রাখে। আপনার ব্যক্তিগত তথ্য কীভাবে সংগ্রহ ও ব্যবহার করা হয় তা জানতে <a href="privacy-policy.html">গোপনীয়তা নীতি</a> দেখুন।</p>
+          </section>
+
+          <section class="cookie-section">
+            <h2>কুকি নীতি পরিবর্তন</h2>
+            <p>HTML শিখি সময় সময় এই কুকি নীতি আপডেট করতে পারে। পরিবর্তন হলে:</p>
+            <ul>
+              <li>ওয়েবসাইটে নোটিশ প্রদান করা হবে</li>
+              <li>এই পৃষ্ঠার শীর্ষে তারিখ আপডেট করা হবে</li>
+              <li>গুরুত্বপূর্ণ পরিবর্তন ইমেইলের মাধ্যমে জানানো হবে (যদি ইমেইল প্রদান করা থাকে)</li>
+              <li>পরিবর্তনের পর ওয়েবসাইট ব্যবহার করলে বোঝা যাবে আপনি নতুন নীতিতে সম্মত হয়েছেন</li>
+            </ul>
+          </section>
+
+          <section class="cookie-section">
+            <h2>HTML কুকি বনাম সার্ভার-সাইড কুকি</h2>
+            <p>ওয়েব ডেভেলপমেন্ট শেখার সময় কুকি সম্পর্কে জানা গুরুত্বপূর্ণ। HTML শিখি টিউটোরিয়ালে আপনি জাভাস্ক্রিপ্ট ব্যবহার করে কীভাবে কুকি তৈরি, পড়া ও মুছে ফেলা যায় তাও শিখতে পারবেন।</p>
+            
+            <div class="info-box">
+              <h4>📝 জাভাস্ক্রিপ্টে কুকি উদাহরণ:</h4>
+              <div class="code-preview">
+                <pre><code>// কুকি তৈরি
+document.cookie = "username=John; expires=Thu, 18 Dec 2026 12:00:00 UTC; path=/";
+
+// কুকি পড়া
+let cookies = document.cookie;
+
+// কুকি মুছে ফেলা
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";</code></pre>
+              </div>
+              <p>আমাদের <a href="../basics/javascript-cookies.html">জাভাস্ক্রিপ্ট কুকি টিউটোরিয়ালে</a> বিস্তারিত শিখতে পারেন।</p>
+            </div>
+          </section>
+
+          <section class="cookie-section">
+            <h2>সাধারণ প্রশ্ন (FAQ)</h2>
+            
+            <details>
+              <summary><strong>কুকি কি আমার কম্পিউটারের জন্য ক্ষতিকর?</strong></summary>
+              <p>না, কুকি নিরাপদ। কুকিতে ভাইরাস বা ম্যালওয়্যার থাকতে পারে না। কুকি শুধু টেক্সট তথ্য সংরক্ষণ করে এবং সেটি শুধু ওয়েবসাইট পড়তে পারে।</p>
+            </details>
+
+            <details>
+              <summary><strong>আমি কীভাবে কুকি ডিলিট করব?</strong></summary>
+              <p>আপনার ব্রাউজারের সেটিংস থেকে কুকি ডিলিট করতে পারেন। উপরে "কুকি পরিচালনা ও নিয়ন্ত্রণ" অংশে ব্রাউজার অনুযায়ী নির্দেশনা দেওয়া আছে।</p>
+            </details>
+
+            <details>
+              <summary><strong>কুকি ব্লক করলে কী হবে?</strong></summary>
+              <p>অপরিহার্য কুকি ব্লক করলে ওয়েবসাইটের কিছু ফিচার কাজ নাও করতে পারে (যেমন লগইন, পছন্দ সংরক্ষণ)। বিশ্লেষণ ও কার্যকারিতা কুকি ব্লক করলে ওয়েবসাইটের কার্যকারিতায় প্রভাব পড়বে না।</p>
+            </details>
+
+            <details>
+              <summary><strong>HTML শিখি কি থার্ড-পার্টি কুকি ব্যবহার করে?</strong></summary>
+              <p>হ্যাঁ, আমরা YouTube, GitHub, Google Analytics-এর মতো তৃতীয় পক্ষের পরিষেবা ব্যবহার করি। এই পরিষেবাগুলোর নিজস্ব কুকি নীতি রয়েছে।</p>
+            </details>
+
+            <details>
+              <summary><strong>কুকি সেটিংস কোথায় পরিবর্তন করব?</strong></summary>
+              <p>পৃষ্ঠার নিচের "কুকি সেটিংস" লিংকে ক্লিক করে আপনার পছন্দ পরিবর্তন করতে পারেন। অথবা ব্রাউজারের সেটিংস থেকে সব কুকি পরিচালনা করতে পারেন।</p>
+            </details>
+
+            <details>
+              <summary><strong>কুকি কতদিন সংরক্ষিত থাকে?</strong></summary>
+              <p>কুকির ধরন অনুযায়ী মেয়াদ ভিন্ন হয়। সেশন কুকি ব্রাউজার বন্ধ করলে মুছে যায়। স্থায়ী কুকি নির্দিষ্ট সময় (যেমন ১ বছর) পর্যন্ত থাকে।</p>
+            </details>
+          </section>
+
+          <section class="cookie-section">
+            <h2>আমাদের সাথে যোগাযোগ</h2>
+            <p>এই কুকি নীতি সম্পর্কে কোনো প্রশ্ন বা মতামত থাকলে, অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন:</p>
+
+            <div class="consent-box">
+              <p><strong>ইমেইল:</strong> privacy@htmlshikhi.com<br>
+              <strong>ফোন:</strong> +৮৮০ ২ ৯৮৭৬৫৪৩ (শুধুমাত্র অফিস সময়)<br>
+              <strong>ঠিকানা:</strong> HTML শিখি, ১২৩/এ, গুলশান এভিনিউ, ঢাকা-১২১২, বাংলাদেশ</p>
+            </div>
+          </section>
+
+          <section class="cookie-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>কুকি কী এবং এটি কী কাজ করে?</li>
+              <li>HTML শিখি ওয়েবসাইট চারটি ধরনের কুকি ব্যবহার করে। এগুলো কী কী?</li>
+              <li>অপরিহার্য কুকি ও কার্যকারিতা কুকির মধ্যে পার্থক্য কী?</li>
+              <li>আপনি কীভাবে আপনার ব্রাউজার থেকে কুকি ডিলিট করবেন? (যেকোনো একটি ব্রাউজারের পদ্ধতি লিখুন)</li>
+              <li>কুকি ব্লক করলে ওয়েবসাইটের ব্যবহারে কী প্রভাব পড়তে পারে?</li>
+              <li>Google Analytics-এর কুকি কী উদ্দেশ্যে ব্যবহার করা হয়?</li>
+              <li>কুকির মেয়াদ বলতে কী বোঝায়? উদাহরণসহ ব্যাখ্যা করুন।</li>
+              <li>আপনি যদি একজন ওয়েব ডেভেলপার হন, তাহলে জাভাস্ক্রিপ্ট দিয়ে কীভাবে একটি কুকি তৈরি করবেন? (কোড লিখুন)</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>কুকি হলো ছোট টেক্সট ফাইল যা ব্রাউজার ডিভাইসে সংরক্ষণ করে। এটি ওয়েবসাইটের পছন্দ, লগইন অবস্থা, সেটিংস মনে রাখতে সাহায্য করে।</li>
+                <li>অপরিহার্য কুকি (Essential), কার্যকারিতা কুকি (Functionality), বিশ্লেষণ কুকি (Analytics), তৃতীয় পক্ষের কুকি (Third-Party)</li>
+                <li>অপরিহার্য কুকি ওয়েবসাইটের মৌলিক কার্যকারিতার জন্য প্রয়োজনীয়, এগুলো ছাড়া সাইট কাজ করে না। কার্যকারিতা কুকি ব্যবহারকারীর পছন্দ ও সেটিংস মনে রাখে, এগুলো ব্লক করলে সাইট কাজ করবে কিন্তু পছন্দ সংরক্ষণ করবে না।</li>
+                <li>Chrome: সেটিংস → গোপনীয়তা ও নিরাপত্তা → কুকি ও অন্যান্য সাইট ডেটা → সব কুকি ও সাইট ডেটা দেখুন → ডিলিট করুন</li>
+                <li>অপরিহার্য কুকি ব্লক করলে লগইন, পছন্দ সংরক্ষণ等工作 নাও করতে পারে। অন্যান্য কুকি ব্লক করলে ব্যক্তিগতকৃত অভিজ্ঞতা ও বিশ্লেষণ কাজ করবে না, কিন্তু মৌলিক কার্যকারিতা ঠিক থাকবে।</li>
+                <li>Google Analytics-এর কুকি ওয়েবসাইটের ব্যবহারকারীর সংখ্যা, পৃষ্ঠা ভিজিট, ব্যবহারকারীর আচরণ বিশ্লেষণ করতে ব্যবহৃত হয়। এটি ওয়েবসাইট উন্নত করতে সাহায্য করে।</li>
+                <li>কুকির মেয়াদ হলো কতদিন পর্যন্ত কুকি ডিভাইসে সংরক্ষিত থাকবে। সেশন কুকি ব্রাউজার বন্ধ করলে মুছে যায় (কয়েক মিনিট থেকে ঘণ্টা)। স্থায়ী কুকি নির্দিষ্ট সময় পর্যন্ত থাকে (যেমন ১ বছর, ২ বছর)।</li>
+                <li>
+                  <div class="code-preview">
+                    <pre><code>// ১ দিন মেয়াদী কুকি তৈরি
+let date = new Date();
+date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
+document.cookie = "username=John; expires=" + date.toUTCString() + "; path=/";</code></pre>
+                  </div>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="terms-of-use.html" class="prev-topic">← ব্যবহারের শর্তাবলী</a>
+            <a href="disclaimer.html" class="next-topic">দাবিত্যাগ →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ HTML শিখি। সর্বস্বত্ব সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>
