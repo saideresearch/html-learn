@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML-এ কালার | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html" class="active">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basics/">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>বেসিক টপিকস</h3>
+        <ul>
+          <li><a href="headings.html">হেডিং (h1-h6)</a></li>
+          <li><a href="paragraphs.html">প্যারাগ্রাফ (p)</a></li>
+          <li><a href="text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
+          <li><a href="comments.html">কমেন্ট</a></li>
+          <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html">অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
+            <li>কালার</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML-এ কালার (Colors)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১২ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>কালার পরিচিতি</h2>
+            <p>HTML-এ কালার ব্যবহার করে ওয়েবপৃষ্ঠাকে আকর্ষণীয় ও জীবন্ত করা যায়। কালার নির্ধারণের জন্য আমরা CSS-এর সাহায্য নিই। HTML-এ কালার নির্ধারণের তিনটি প্রধান পদ্ধতি রয়েছে:</p>
+            <ul>
+              <li><strong>কালার নাম (Color Names):</strong> যেমন red, blue, green</li>
+              <li><strong>আরজিবি মান (RGB Values):</strong> যেমন rgb(255, 0, 0)</li>
+              <li><strong>হেক্সাডেসিমেল কোড (Hexadecimal Codes):</strong> যেমন #FF0000</li>
+              <li><strong>এইচএসএল মান (HSL Values):</strong> যেমন hsl(0, 100%, 50%)</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>কালার নাম (Color Names)</h2>
+            <p>HTML ১৪০টি প্রি-ডিফাইন্ড কালার নাম সাপোর্ট করে। সবচেয়ে সাধারণ কালার নামগুলো হলো:</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;h1 style="color:Tomato;"&gt;এটি টমেটো রঙের শিরোনাম&lt;/h1&gt;
+&lt;p style="color:DodgerBlue;"&gt;ডজার ব্লু রঙের প্যারাগ্রাফ&lt;/p&gt;
+&lt;p style="color:MediumSeaGreen;"&gt;মাঝারি সাগর সবুজ রঙের টেক্সট&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="color:Tomato;">এটি টমেটো রঙের শিরোনাম</h1>
+                <p style="color:DodgerBlue;">ডজার ব্লু রঙের প্যারাগ্রাফ</p>
+                <p style="color:MediumSeaGreen;">মাঝারি সাগর সবুজ রঙের টেক্সট</p>
+              </div>
+            </div>
+            
+            <div class="info-box">
+              <p><strong>💡 টিপস:</strong> কালার নাম কেস-সেন্সিটিভ নয়। 'RED', 'Red', 'red' সব একই কাজ করবে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>আরজিবি কালার (RGB Colors)</h2>
+            <p>RGB মান তিনটি সংখ্যার সমন্বয়ে গঠিত: লাল (Red), সবুজ (Green), নীল (Blue)। প্রতিটি সংখ্যার মান ০ থেকে ২৫৫ পর্যন্ত হতে পারে।</p>
+            
+            <div class="example-box">
+              <h3>গঠন:</h3>
+              <div class="code-preview">
+                <pre><code>rgb(লাল, সবুজ, নীল)</code></pre>
+              </div>
+              
+              <h4>উদাহরণ:</h4>
+              <div class="code-preview">
+                <pre><code>&lt;h1 style="color:rgb(255, 0, 0);"&gt;পূর্ণ লাল&lt;/h1&gt;
+&lt;h1 style="color:rgb(0, 255, 0);"&gt;পূর্ণ সবুজ&lt;/h1&gt;
+&lt;h1 style="color:rgb(0, 0, 255);"&gt;পূর্ণ নীল&lt;/h1&gt;
+&lt;h1 style="color:rgb(128, 128, 128);"&gt;ধূসর&lt;/h1&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="color:rgb(255, 0, 0);">পূর্ণ লাল</h1>
+                <h1 style="color:rgb(0, 255, 0);">পূর্ণ সবুজ</h1>
+                <h1 style="color:rgb(0, 0, 255);">পূর্ণ নীল</h1>
+                <h1 style="color:rgb(128, 128, 128);">ধূসর</h1>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>হেক্সাডেসিমেল কালার (HEX Colors)</h2>
+            <p>হেক্সাডেসিমেল কোড # চিহ্ন দিয়ে শুরু হয় এবং ৬টি অক্ষর/সংখ্যার সমন্বয়ে গঠিত। প্রতিটি জোড়া (RR, GG, BB) RGB-এর মান নির্দেশ করে।</p>
+            
+            <div class="example-box">
+              <h3>গঠন:</h3>
+              <div class="code-preview">
+                <pre><code>#RRGGBB</code></pre>
+              </div>
+              <ul>
+                <li><strong>RR:</strong> লালের মান (00-FF)</li>
+                <li><strong>GG:</strong> সবুজের মান (00-FF)</li>
+                <li><strong>BB:</strong> নীলের মান (00-FF)</li>
+              </ul>
+              
+              <h4>উদাহরণ:</h4>
+              <div class="code-preview">
+                <pre><code>&lt;h1 style="color:#FF0000;"&gt;লাল&lt;/h1&gt;
+&lt;h1 style="color:#00FF00;"&gt;সবুজ&lt;/h1&gt;
+&lt;h1 style="color:#0000FF;"&gt;নীল&lt;/h1&gt;
+&lt;h1 style="color:#FFA500;"&gt;কমলা&lt;/h1&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="color:#FF0000;">লাল</h1>
+                <h1 style="color:#00FF00;">সবুজ</h1>
+                <h1 style="color:#0000FF;">নীল</h1>
+                <h1 style="color:#FFA500;">কমলা</h1>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>এইচএসএল কালার (HSL Colors)</h2>
+            <p>HSL মান তিনটি অংশ নিয়ে গঠিত: হিউ (Hue), স্যাচুরেশন (Saturation), লাইটনেস (Lightness)।</p>
+            <ul>
+              <li><strong>হিউ (Hue):</strong> ০ থেকে ৩৬০ ডিগ্রি (০=লাল, ১২০=সবুজ, ২৪০=নীল)</li>
+              <li><strong>স্যাচুরেশন (Saturation):</strong> ০% থেকে ১০০% (শতকরা মান)</li>
+              <li><strong>লাইটনেস (Lightness):</strong> ০% থেকে ১০০% (শতকরা মান)</li>
+            </ul>
+            
+            <div class="example-box">
+              <h3>উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;h1 style="color:hsl(0, 100%, 50%);"&gt;লাল&lt;/h1&gt;
+&lt;h1 style="color:hsl(120, 100%, 50%);"&gt;সবুজ&lt;/h1&gt;
+&lt;h1 style="color:hsl(240, 100%, 50%);"&gt;নীল&lt;/h1&gt;
+&lt;h1 style="color:hsl(39, 100%, 50%);"&gt;কমলা&lt;/h1&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="color:hsl(0, 100%, 50%);">লাল</h1>
+                <h1 style="color:hsl(120, 100%, 50%);">সবুজ</h1>
+                <h1 style="color:hsl(240, 100%, 50%);">নীল</h1>
+                <h1 style="color:hsl(39, 100%, 50%);">কমলা</h1>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>বিভিন্ন কালার পদ্ধতির তুলনা</h2>
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>কালার</th>
+                  <th>কালার নাম</th>
+                  <th>RGB মান</th>
+                  <th>HEX কোড</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="background-color:red; color:white;">লাল</td>
+                  <td>red</td>
+                  <td>rgb(255, 0, 0)</td>
+                  <td>#FF0000</td>
+                </tr>
+                <tr>
+                  <td style="background-color:green; color:white;">সবুজ</td>
+                  <td>green</td>
+                  <td>rgb(0, 128, 0)</td>
+                  <td>#008000</td>
+                </tr>
+                <tr>
+                  <td style="background-color:blue; color:white;">নীল</td>
+                  <td>blue</td>
+                  <td>rgb(0, 0, 255)</td>
+                  <td>#0000FF</td>
+                </tr>
+                <tr>
+                  <td style="background-color:gold;">সোনালী</td>
+                  <td>gold</td>
+                  <td>rgb(255, 215, 0)</td>
+                  <td>#FFD700</td>
+                </tr>
+                <tr>
+                  <td style="background-color:purple; color:white;">বেগুনি</td>
+                  <td>purple</td>
+                  <td>rgb(128, 0, 128)</td>
+                  <td>#800080</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>ব্যাকগ্রাউন্ড কালার সেট করা</h2>
+            <p>শুধু টেক্সট নয়, এলিমেন্টের ব্যাকগ্রাউন্ডেও কালার দেওয়া যায়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;body style="background-color:lightblue;"&gt;
+  &lt;h1 style="background-color:yellow;"&gt;হলুদ ব্যাকগ্রাউন্ডের শিরোনাম&lt;/h1&gt;
+  &lt;p style="background-color:tomato;"&gt;টমেটো রঙের ব্যাকগ্রাউন্ডের প্যারাগ্রাফ&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:lightblue; padding:15px; border-radius:8px;">
+                <h1 style="background-color:yellow; padding:10px;">হলুদ ব্যাকগ্রাউন্ডের শিরোনাম</h1>
+                <p style="background-color:tomato; padding:10px;">টমেটো রঙের ব্যাকগ্রাউন্ডের প্যারাগ্রাফ</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>বর্ডার কালার সেট করা</h2>
+            <p>এলিমেন্টের বর্ডারেও কালার প্রয়োগ করা যায়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;h1 style="border:2px solid Tomato;"&gt;টমেটো রঙের বর্ডার&lt;/h1&gt;
+&lt;h1 style="border:2px solid DodgerBlue;"&gt;ডজার ব্লু রঙের বর্ডার&lt;/h1&gt;
+&lt;h1 style="border:2px solid Violet;"&gt;ভায়োলেট রঙের বর্ডার&lt;/h1&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="border:2px solid Tomato; padding:10px;">টমেটো রঙের বর্ডার</h1>
+                <h1 style="border:2px solid DodgerBlue; padding:10px;">ডজার ব্লু রঙের বর্ডার</h1>
+                <h1 style="border:2px solid Violet; padding:10px;">ভায়োলেট রঙের বর্ডার</h1>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>লাল রঙ নির্ধারণের তিনটি ভিন্ন পদ্ধতি উদাহরণসহ লেখো।</li>
+              <li>নিচের HEX কোডের RGB মান কী হবে? <code>#4CAF50</code></li>
+              <li>একটি <code>&lt;div&gt;</code> এলিমেন্ট তৈরি করো যার ব্যাকগ্রাউন্ড কালার হালকা নীল (lightblue) এবং বর্ডার কালার গাঢ় নীল (darkblue)।</li>
+              <li>HSL পদ্ধতিতে ৫০% স্যাচুরেশন এবং ৬০% লাইটনেস বিশিষ্ট লাল রঙের কোড কী হবে?</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>
+                  <strong>কালার নাম:</strong> <code>red</code><br>
+                  <strong>RGB:</strong> <code>rgb(255, 0, 0)</code><br>
+                  <strong>HEX:</strong> <code>#FF0000</code>
+                </li>
+                <li><code>#4CAF50</code> = rgb(76, 175, 80) [76=4C, 175=AF, 80=50]</li>
+                <li>
+                  <code>&lt;div style="background-color:lightblue; border:2px solid darkblue; padding:20px;"&gt;কন্টেন্ট&lt;/div&gt;</code>
+                </li>
+                <li><code>hsl(0, 50%, 60%)</code></li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li>ওয়েব ডিজাইনে কালার ব্যবহারের সময় কন্ট্রাস্টের দিকে খেয়াল রাখুন। পড়তে সুবিধা হয় এমন কালার নির্বাচন করুন।</li>
+              <li>HEX কোড ছোট করে লেখা যায় যদি প্রতিটি জোড়া একই হয়। যেমন <code>#FF0000</code> কে <code>#F00</code> লেখা যায়।</li>
+              <li>RGBA এবং HSLA ব্যবহার করলে আলফা (alpha) চ্যানেলের মাধ্যমে স্বচ্ছতা (opacity) নিয়ন্ত্রণ করা যায়।</li>
+              <li>আধুনিক ওয়েব ডিজাইনে কালার প্যালেট ব্যবহার করা ভালো অভ্যাস।</li>
+            </ul>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="text-formatting.html" class="prev-topic">← টেক্সট ফরম্যাটিং</a>
+            <a href="links.html" class="next-topic">লিংক →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

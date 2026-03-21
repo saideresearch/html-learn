@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>কমেন্ট (Comments) | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basics/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>বেসিক টপিকস</h3>
+        <ul>
+          <li><a href="headings.html">হেডিং (h1-h6)</a></li>
+          <li><a href="paragraphs.html">প্যারাগ্রাফ (p)</a></li>
+          <li><a href="text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
+          <li><a href="comments.html" class="active">কমেন্ট</a></li>
+          <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html">অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
+            <li>কমেন্ট</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML কমেন্ট (Comments)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৮ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>কমেন্ট কী?</h2>
+            <p>HTML কমেন্ট হল কোডের এমন অংশ যা ব্রাউজার প্রদর্শন করে না। এটি শুধুমাত্র ডেভেলপারদের জন্য কোডের ভিতরে নোট, ব্যাখ্যা বা স্মারক হিসেবে রাখা হয়। কমেন্ট কোড পড়তে এবং বুঝতে সহজ করে তোলে, বিশেষ করে যখন প্রজেক্ট বড় হয় বা একাধিক ডেভেলপার একসাথে কাজ করেন।</p>
+            <p>কমেন্ট HTML ডকুমেন্টের যেকোনো জায়গায় ব্যবহার করা যায়। ব্রাউজার কমেন্ট সম্পূর্ণভাবে ইগনোর করে এবং ব্যবহারকারীদের কাছে তা দেখায় না।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>কমেন্টের সিনট্যাক্স</h2>
+            <p>HTML-এ কমেন্ট লেখার জন্য নির্দিষ্ট একটি সিনট্যাক্স রয়েছে:</p>
+            
+            <div class="example-box">
+              <h3>মৌলিক কমেন্ট স্ট্রাকচার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- এটি একটি HTML কমেন্ট --&gt;</code></pre>
+              </div>
+              
+              <h4>গঠন:</h4>
+              <ul>
+                <li><code>&lt;!--</code> দিয়ে কমেন্ট শুরু হয়</li>
+                <li><code>--&gt;</code> দিয়ে কমেন্ট শেষ হয়</li>
+                <li>মাঝের অংশে কমেন্টের বিষয়বস্তু লেখা হয়</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>💡 গুরুত্বপূর্ণ:</strong> কমেন্টের ভিতরে আরেকটি কমেন্ট ব্যবহার করা যায় না। কমেন্টের ভিতরে <code>--</code> ব্যবহার করলে সমস্যা হতে পারে।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কমেন্টের ব্যবহার</h2>
+            <p>HTML কমেন্ট বিভিন্ন উদ্দেশ্যে ব্যবহার করা হয়। নিচে কিছু সাধারণ ব্যবহার দেখানো হলো:</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: বিভিন্ন ধরনের কমেন্ট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- এটি একটি একক লাইনের কমেন্ট --&gt;
+
+&lt;!-- 
+  এটি একটি মাল্টি-লাইন কমেন্ট।
+  একাধিক লাইন জুড়ে লেখা যায়।
+  কোড ব্যাখ্যা করার জন্য দারুণ।
+--&gt;
+
+&lt;!-- 
+  সেকশন: নেভিগেশন মেনু 
+  শেষ আপডেট: ১৫ জানুয়ারি ২০২৬
+  ডেভেলপার: সাঈদ হোসেন
+--&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;আমাদের সম্পর্কে&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- TODO: পরে ফুটার সেকশন যোগ করতে হবে --&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ (কমেন্ট ব্রাউজারে দেখা যায় না):</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <nav>
+                  <ul>
+                    <li><a href="#">হোম</a></li>
+                    <li><a href="#">আমাদের সম্পর্কে</a></li>
+                  </ul>
+                </nav>
+                <p style="color: #666; font-style: italic; margin-top: 10px;">↑ উপরের মেনুটি দেখুন, কমেন্টগুলি দৃশ্যমান নয়</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কমেন্ট কেন ব্যবহার করবেন?</h2>
+            <p>HTML কমেন্ট ব্যবহারের বেশ কিছু গুরুত্বপূর্ণ কারণ রয়েছে:</p>
+            
+            <ul>
+              <li><strong>কোড ডকুমেন্টেশন:</strong> জটিল কোডের ব্যাখ্যা দেওয়ার জন্য</li>
+              <li><strong>ডিবাগিং:</strong> সমস্যা খুঁজতে নির্দিষ্ট কোড ব্লক কমেন্ট আউট করা</li>
+              <li><strong>টিম ওয়ার্ক:</strong> একাধিক ডেভেলপারের জন্য কোডের উদ্দেশ্য ব্যাখ্যা করা</li>
+              <li><strong>টাস্ক ম্যানেজমেন্ট:</strong> TODO, FIXME ইত্যাদি ট্যাগ দিয়ে কাজ চিহ্নিত করা</li>
+              <li><strong>ভবিষ্যৎ রেফারেন্স:</strong> কেন একটি নির্দিষ্ট পদ্ধতি ব্যবহার করা হয়েছে তা নোট রাখা</li>
+              <li><strong>সেকশন চিহ্নিতকরণ:</strong> বড় HTML ডকুমেন্টের বিভিন্ন অংশ চিহ্নিত করা</li>
+            </ul>
+            
+            <div class="info-box">
+              <p><strong>💡 প্র্যাকটিক্যাল টিপস:</strong> ভালো ডেভেলপাররা কমেন্ট ব্যবহার করে কোডকে আরও পঠনযোগ্য ও রক্ষণাবেক্ষণযোগ্য করে তোলেন। তবে অতিরিক্ত কমেন্টও সমস্যা সৃষ্টি করতে পারে - শুধু প্রয়োজনীয় জায়গায় কমেন্ট ব্যবহার করুন।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কমেন্ট আউট করা (কোড টemporarily সরানো)</h2>
+            <p>ডিবাগিং বা পরীক্ষার সময় কোন এলিমেন্ট অস্থায়ীভাবে সরিয়ে রাখতে কমেন্ট ব্যবহার করা যায়। এটি কোড ডিলিট না করেই সরিয়ে রাখার একটি কার্যকরী উপায়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: কমেন্ট আউট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;h1&gt;আমার ওয়েবসাইট&lt;/h1&gt;
+
+&lt;!-- 
+&lt;p&gt;এই প্যারাগ্রাফটি বর্তমানে দেখানো হচ্ছে না।&lt;/p&gt;
+&lt;p&gt;কমেন্ট আউট করার কারণে এটি ব্রাউজারে দেখা যাবে না।&lt;/p&gt;
+--&gt;
+
+&lt;p&gt;এই প্যারাগ্রাফটি দৃশ্যমান।&lt;/p&gt;
+
+&lt;!-- &lt;img src="image.jpg" alt="ছবি"&gt; --&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1>আমার ওয়েবসাইট</h1>
+                <p>এই প্যারাগ্রাফটি দৃশ্যমান।</p>
+                <p style="color: #666; font-style: italic;">(কমেন্ট আউট করা প্যারাগ্রাফ ও ছবি এখানে দেখা যাচ্ছে না)</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কন্ডিশনাল কমেন্ট (Internet Explorer)</h2>
+            <p>পুরনো Internet Explorer ব্রাউজারের জন্য বিশেষ নির্দেশনা দিতে কন্ডিশনাল কমেন্ট ব্যবহার করা হতো। যদিও আধুনিক ব্রাউজারে এটি আর ব্যবহার করা হয় না, তবে পুরনো প্রজেক্টে দেখতে পাওয়া যায়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: কন্ডিশনাল কমেন্ট (শুধু IE)</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!--[if IE]&gt;
+  &lt;p&gt;আপনি Internet Explorer ব্যবহার করছেন।&lt;/p&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 8]&gt;
+  &lt;link rel="stylesheet" href="ie8-fix.css"&gt;
+&lt;![endif]--&gt;</code></pre>
+              </div>
+              <p class="info-box">ℹ️ কন্ডিশনাল কমেন্ট শুধুমাত্র Internet Explorer-এ কাজ করত। এখন IE-এর ব্যবহার কমে যাওয়ায় এটি আর প্রাসঙ্গিক নয়।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কমেন্টের ব্যবহারের টিপস</h2>
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>টিপস</th>
+                  <th>ভালো উদাহরণ</th>
+                  <th>খারাপ উদাহরণ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>স্পষ্ট ও সংক্ষিপ্ত হোন</td>
+                  <td><code>&lt;!-- হেডার সেকশন শুরু --&gt;</code></td>
+                  <td><code>&lt;!-- এখানে হেডার শুরু হচ্ছে --&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>TODO ব্যবহার করুন</td>
+                  <td><code>&lt;!-- TODO: মোবাইল রেসপন্সিভ করুন --&gt;</code></td>
+                  <td><code>&lt;!-- পরে করতে হবে --&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>সংস্করণ তথ্য দিন</td>
+                  <td><code>&lt;!-- সংস্করণ: ২.০, আপডেট: ২০ মার্চ ২০২৬ --&gt;</code></td>
+                  <td><code>&lt;!-- নতুন --&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>ডেভেলপারের নাম দিন</td>
+                  <td><code>&lt;!-- @সাঈদ: নেভিগেশন ফিক্স --&gt;</code></td>
+                  <td><code>&lt;!-- আমি করেছি --&gt;</code></td>
+                </tr>
+                <tr>
+                  <td>জটিল কোড ব্যাখ্যা করুন</td>
+                  <td><code>&lt;!-- ফ্লেক্সবক্স দিয়ে ৩ কলাম লেআউট তৈরি --&gt;</code></td>
+                  <td><code>&lt;!-- এটা কাজ করে --&gt;</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>কমেন্টের সীমাবদ্ধতা</h2>
+            <ul>
+              <li><strong>নেস্টেড কমেন্ট কাজ করে না:</strong> একটি কমেন্টের ভিতরে আরেকটি কমেন্ট ব্যবহার করা যায় না।</li>
+              <li><strong>সিকিউরিটি নয়:</strong> কমেন্ট ব্রাউজারে দেখা যায় না, কিন্তু সোর্স কোড দেখলে যে কেউ কমেন্ট পড়তে পারে। সংবেদনশীল তথ্য কমেন্টে রাখবেন না।</li>
+              <li><strong>পারফরম্যান্স:</strong> অতিরিক্ত কমেন্ট পেজ সাইজ বাড়ায়, তবে আধুনিক ওয়েবে এটি তেমন প্রভাব ফেলে না।</li>
+              <li><strong>ডাবল ড্যাশ এড়িয়ে চলুন:</strong> কমেন্টের ভিতরে <code>--</code> ব্যবহার করলে সমস্যা হতে পারে।</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>একটি HTML ডকুমেন্ট তৈরি করুন যাতে নিচের সেকশনগুলোর জন্য কমেন্ট ব্যবহার করা হয়েছে: হেডার, নেভিগেশন, মেইন কন্টেন্ট, ফুটার।</li>
+              <li>একটি প্যারাগ্রাফ লিখুন এবং তার উপরে একটি কমেন্ট যোগ করুন যেখানে প্যারাগ্রাফের উদ্দেশ্য ব্যাখ্যা করা আছে।</li>
+              <li>একটি ইমেজ এলিমেন্ট কমেন্ট আউট করুন যাতে এটি ব্রাউজারে দেখা না যায়, কিন্তু কোডে থেকে যায়।</li>
+              <li>একটি TODO কমেন্ট লিখুন যা বলে যে পরে একটি ভিডিও এম্বেড করতে হবে।</li>
+              <li>নিচের কোডে কমেন্টের ভুলগুলো চিহ্নিত করুন এবং সংশোধন করুন:
+                <pre><code>&lt;!-- এটি একটি কমেন্ট --&gt;
+&lt;!-- এটি আরেকটি কমেন্ট -- &gt;
+&lt;!-- এটি তৃতীয় কমেন্ট --&gt;
+&lt;!-- এতে -- ভুল আছে --&gt;</code></pre>
+              </li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>
+                  <strong>সেকশন কমেন্ট সহ ডকুমেন্ট:</strong>
+                  <pre><code>&lt;!-- ========== হেডার সেকশন শুরু ========== --&gt;
+&lt;header&gt;
+  &lt;h1&gt;আমার ওয়েবসাইট&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;!-- ========== নেভিগেশন মেনু ========== --&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- ========== মেইন কন্টেন্ট ========== --&gt;
+&lt;main&gt;
+  &lt;p&gt;স্বাগতম&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;!-- ========== ফুটার সেকশন ========== --&gt;
+&lt;footer&gt;
+  &lt;p&gt;&copy; ২০২৬&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>প্যারাগ্রাফের উপরে কমেন্ট:</strong>
+                  <pre><code>&lt;!-- এই প্যারাগ্রাফে ওয়েব ডেভেলপমেন্টের গুরুত্ব ব্যাখ্যা করা হয়েছে --&gt;
+&lt;p&gt;ওয়েব ডেভেলপমেন্ট আধুনিক বিশ্বের একটি গুরুত্বপূর্ণ দক্ষতা।&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ইমেজ কমেন্ট আউট:</strong>
+                  <pre><code>&lt;!-- &lt;img src="photo.jpg" alt="আমার ছবি"&gt; --&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>TODO কমেন্ট:</strong>
+                  <pre><code>&lt;!-- TODO: ইউটিউব ভিডিও এম্বেড করতে হবে --&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ভুল সংশোধন:</strong>
+                  <pre><code>&lt;!-- এটি একটি কমেন্ট --&gt;
+&lt;!-- এটি আরেকটি কমেন্ট --&gt;
+&lt;!-- এটি তৃতীয় কমেন্ট --&gt;
+&lt;!-- এতে ডাবল ড্যাশের ভুল আছে --&gt;</code></pre>
+                  <p><strong>ব্যাখ্যা:</strong> দ্বিতীয় কমেন্টে <code>-- &gt;</code> এ স্পেস ছিল, চতুর্থ কমেন্টের ভিতরে <code>--</code> ব্যবহার করা ভুল। কমেন্টের ভিতরে <code>--</code> ব্যবহার করা যাবে না।</p>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li><strong>কমেন্ট সংক্ষিপ্ত রাখুন:</strong> খুব লম্বা কমেন্ট এড়িয়ে চলুন। প্রয়োজনীয় তথ্য সংক্ষেপে লিখুন।</li>
+              <li><strong>কমেন্ট আপডেট করুন:</strong> কোড পরিবর্তন করলে প্রাসঙ্গিক কমেন্টও আপডেট করুন। পুরনো কমেন্ট বিভ্রান্তি সৃষ্টি করতে পারে।</li>
+              <li><strong>প্রোডাকশনে কমেন্ট:</strong> লাইভ সাইটে যাওয়ার আগে সংবেদনশীল বা অপ্রয়োজনীয় কমেন্ট সরিয়ে ফেলুন।</li>
+              <li><strong>কমেন্ট টেমপ্লেট ব্যবহার করুন:</strong> বড় প্রজেক্টে একই ধরনের কমেন্ট প্যাটার্ন অনুসরণ করুন।</li>
+              <li><strong>কমেন্ট নিয়ে ওভারবোর্ড যাবেন না:</strong> স্ব-ব্যাখ্যামূলক কোডের জন্য কমেন্ট প্রয়োজন হয় না। শুধু জটিল বা গুরুত্বপূর্ণ অংশে কমেন্ট ব্যবহার করুন।</li>
+              <li><strong>ভিজুয়াল সেপারেটর:</strong> বড় সেকশন আলাদা করতে ভিজুয়াল কমেন্ট ব্যবহার করুন যেমন <code>&lt;!-- ========== --&gt;</code></li>
+            </ul>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="text-formatting.html" class="prev-topic">← টেক্সট ফরম্যাটিং</a>
+            <a href="colors.html" class="next-topic">কালার →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

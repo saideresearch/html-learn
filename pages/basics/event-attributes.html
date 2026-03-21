@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ইভেন্ট অ্যাট্রিবিউট | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basics/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>বেসিক টপিকস</h3>
+        <ul>
+          <li><a href="headings.html">হেডিং (h1-h6)</a></li>
+          <li><a href="paragraphs.html">প্যারাগ্রাফ (p)</a></li>
+          <li><a href="text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
+          <li><a href="comments.html">কমেন্ট</a></li>
+          <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html">অ্যাট্রিবিউট</a></li>
+          <li><a href="global-attributes.html">গ্লোবাল অ্যাট্রিবিউট</a></li>
+          <li><a href="event-attributes.html" class="active">ইভেন্ট অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
+            <li>ইভেন্ট অ্যাট্রিবিউট</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>ইভেন্ট অ্যাট্রিবিউট (Event Attributes)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ২০ মিনিট</span>
+            <span>লেভেল: মাঝারি</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>ইভেন্ট অ্যাট্রিবিউট কী?</h2>
+            <p>ইভেন্ট অ্যাট্রিবিউট হল HTML-এর বিশেষ অ্যাট্রিবিউট যা ব্রাউজারের বিভিন্ন ইভেন্টের (যেমন ক্লিক, মাউস মুভ, কী প্রেস) সাথে জাভাস্ক্রিপ্ট কোড সংযুক্ত করে। এগুলি ব্যবহার করে ওয়েবপৃষ্ঠাকে ইন্টারঅ্যাকটিভ এবং ডায়নামিক করা যায়। যখন কোনো ব্যবহারকারী একটি এলিমেন্টের সাথে ইন্টারঅ্যাক্ট করে, তখন সংশ্লিষ্ট ইভেন্ট অ্যাট্রিবিউটের জাভাস্ক্রিপ্ট কোড এক্সিকিউট হয়।</p>
+            <p>ইভেন্ট অ্যাট্রিবিউট সব HTML এলিমেন্টের সাথে ব্যবহার করা যায় এবং এগুলি ওয়েব অ্যাপ্লিকেশন ডেভেলপমেন্টের ভিত্তি।</p>
+            
+            <div class="info-box">
+              <p><strong>💡 গুরুত্বপূর্ণ:</strong> ইভেন্ট অ্যাট্রিবিউটের মান হল জাভাস্ক্রিপ্ট কোড। আধুনিক ওয়েব ডেভেলপমেন্টে ইভেন্ট হ্যান্ডলিংয়ের জন্য addEventListener() পদ্ধতি বেশি ব্যবহৃত হলেও, ইভেন্ট অ্যাট্রিবিউট দ্রুত পরীক্ষা-নিরীক্ষার জন্য খুবই কার্যকরী।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মাউস ইভেন্ট অ্যাট্রিবিউট</h2>
+            <p>মাউস ইভেন্ট অ্যাট্রিবিউট ব্যবহারকারীর মাউসের বিভিন্ন動作ের সাথে সম্পর্কিত। নিচে গুরুত্বপূর্ণ মাউস ইভেন্টগুলোর তালিকা দেওয়া হলো:</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>কখন ট্রিগার হয়</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>onclick</code></td>
+                  <td>এলিমেন্টে ক্লিক করলে</td>
+                  <td>মাউস ক্লিকের সময়</td>
+                </tr>
+                <tr>
+                  <td><code>ondblclick</code></td>
+                  <td>এলিমেন্টে ডাবল ক্লিক করলে</td>
+                  <td>দুবার দ্রুত ক্লিক করলে</td>
+                </tr>
+                <tr>
+                  <td><code>onmouseenter</code></td>
+                  <td>মাউস এলিমেন্টে প্রবেশ করলে</td>
+                  <td>মাউস এলিমেন্টের ভিতরে আসলে</td>
+                </tr>
+                <tr>
+                  <td><code>onmouseleave</code></td>
+                  <td>মাউস এলিমেন্ট ছেড়ে গেলে</td>
+                  <td>মাউস এলিমেন্টের বাইরে গেলে</td>
+                </tr>
+                <tr>
+                  <td><code>onmouseover</code></td>
+                  <td>মাউস এলিমেন্টের উপর গেলে</td>
+                  <td>মাউস এলিমেন্টের উপর এলে (বাবল হয়)</td>
+                </tr>
+                <tr>
+                  <td><code>onmouseout</code></td>
+                  <td>মাউস এলিমেন্ট থেকে বেরিয়ে গেলে</td>
+                  <td>মাউস বেরিয়ে গেলে (বাবল হয়)</td>
+                </tr>
+                <tr>
+                  <td><code>onmousemove</code></td>
+                  <td>মাউস এলিমেন্টের উপর মুভ করলে</td>
+                  <td>মাউস নাড়ানোর সময়</td>
+                </tr>
+                <tr>
+                  <td><code>oncontextmenu</code></td>
+                  <td>রাইট ক্লিক করলে</td>
+                  <td>কনটেক্সট মেনু খোলার সময়</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: মাউস ইভেন্ট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;button onclick="alert('ক্লিক করা হয়েছে!')"&gt;
+  ক্লিক করুন
+&lt;/button&gt;
+
+&lt;div onmouseenter="this.style.backgroundColor='lightblue'" 
+     onmouseleave="this.style.backgroundColor='lightgray'"
+     style="width:200px; height:100px; background:lightgray; text-align:center; line-height:100px;"&gt;
+  মাউস আনুন
+&lt;/div&gt;
+
+&lt;p ondblclick="alert('ডাবল ক্লিক!')"&gt;
+  এই টেক্সটে ডাবল ক্লিক করুন
+&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <button onclick="alert('ক্লিক করা হয়েছে!')" style="padding:8px 15px; margin-bottom:10px;">ক্লিক করুন</button>
+                <div onmouseenter="this.style.backgroundColor='lightblue'" 
+                     onmouseleave="this.style.backgroundColor='lightgray'"
+                     style="width:200px; height:80px; background:lightgray; text-align:center; line-height:80px; margin-bottom:10px; transition:0.3s; border-radius:5px;">
+                  মাউস আনুন
+                </div>
+                <p ondblclick="alert('ডাবল ক্লিক!')" style="cursor:pointer; padding:5px; background:#e8e8e8; border-radius:3px;">
+                  এই টেক্সটে ডাবল ক্লিক করুন
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কীবোর্ড ইভেন্ট অ্যাট্রিবিউট</h2>
+            <p>কীবোর্ড ইভেন্ট অ্যাট্রিবিউট ব্যবহারকারীর কীবোর্ডের বিভিন্ন动作ের সাথে সম্পর্কিত।</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>কখন ট্রিগার হয়</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>onkeydown</code></td>
+                  <td>কী চাপা হলে</td>
+                  <td>কী চাপার মুহূর্তে</td>
+                </tr>
+                <tr>
+                  <td><code>onkeypress</code></td>
+                  <td>কী চেপে ধরা হলে</td>
+                  <td>কী চাপা অবস্থায় (ডিপ্রিকেটেড)</td>
+                </tr>
+                <tr>
+                  <td><code>onkeyup</code></td>
+                  <td>কী ছেড়ে দিলে</td>
+                  <td>কী ছেড়ে দেওয়ার সময়</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: কীবোর্ড ইভেন্ট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;input type="text" 
+       onkeydown="console.log('Key down: ' + event.key)"
+       onkeyup="this.style.backgroundColor='lightgreen'; setTimeout(()=>this.style.backgroundColor='',500)"
+       placeholder="কোনো কী চাপুন"&gt;
+
+&lt;p&gt;আপনি চাপছেন: &lt;span id="keyDisplay"&gt;-&lt;/span&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.querySelector('input').onkeypress = function(e) {
+  document.getElementById('keyDisplay').innerText = e.key;
+}
+&lt;/script&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <input type="text" 
+                       onkeyup="this.style.backgroundColor='lightgreen'; setTimeout(()=>this.style.backgroundColor='',500)"
+                       placeholder="কোনো কী চাপুন" 
+                       style="padding:8px; width:200px; margin-bottom:10px; transition:0.3s;">
+                <p>আপনি চাপছেন: <span id="keyDemoSpan">-</span></p>
+                <script>
+                  (function() {
+                    const input = document.querySelector('#keyDemoSpan')?.parentElement?.previousElementSibling;
+                    if(input) {
+                      input.onkeypress = function(e) {
+                        document.getElementById('keyDemoSpan').innerText = e.key;
+                      }
+                    }
+                  })();
+                </script>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফর্ম ইভেন্ট অ্যাট্রিবিউট</h2>
+            <p>ফর্ম ইভেন্ট অ্যাট্রিবিউট ফর্ম এলিমেন্টের বিভিন্ন অবস্থার সাথে সম্পর্কিত।</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>কখন ট্রিগার হয়</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>onfocus</code></td>
+                  <td>এলিমেন্ট ফোকাস পেলে</td>
+                  <td>ইনপুট ফিল্ডে ক্লিক করলে</td>
+                </tr>
+                <tr>
+                  <td><code>onblur</code></td>
+                  <td>এলিমেন্ট ফোকাস হারালে</td>
+                  <td>ইনপুট ফিল্ডের বাইরে ক্লিক করলে</td>
+                </tr>
+                <tr>
+                  <td><code>onchange</code></td>
+                  <td>মান পরিবর্তন হলে</td>
+                  <td>ইনপুটের মান বদলে ফোকাস হারালে</td>
+                </tr>
+                <tr>
+                  <td><code>oninput</code></td>
+                  <td>ইনপুটের মান পরিবর্তন হলে</td>
+                  <td>প্রতি অক্ষর টাইপ করার সময়</td>
+                </tr>
+                <tr>
+                  <td><code>onsubmit</code></td>
+                  <td>ফর্ম সাবমিট করলে</td>
+                  <td>সাবমিট বাটন ক্লিক করলে</td>
+                </tr>
+                <tr>
+                  <td><code>onreset</code></td>
+                  <td>ফর্ম রিসেট করলে</td>
+                  <td>রিসেট বাটন ক্লিক করলে</td>
+                </tr>
+                <tr>
+                  <td><code>onselect</code></td>
+                  <td>টেক্সট সিলেক্ট করলে</td>
+                  <td>টেক্সট হাইলাইট করলে</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: ফর্ম ইভেন্ট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;input type="text" 
+       onfocus="this.style.border='2px solid blue'"
+       onblur="this.style.border='1px solid gray'"
+       placeholder="ফোকাস করুন"&gt;
+
+&lt;input type="text" 
+       oninput="document.getElementById('livePreview').innerText = this.value"
+       placeholder="টাইপ করুন"&gt;
+&lt;p&gt;লাইভ প্রিভিউ: &lt;span id="livePreview"&gt;-&lt;/span&gt;&lt;/p&gt;
+
+&lt;form onsubmit="alert('ফর্ম সাবমিট হয়েছে!'); return false;"&gt;
+  &lt;input type="text" placeholder="নাম"&gt;
+  &lt;button type="submit"&gt;সাবমিট&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <input type="text" 
+                       onfocus="this.style.border='2px solid blue'"
+                       onblur="this.style.border='1px solid gray'"
+                       placeholder="ফোকাস করুন" 
+                       style="padding:8px; width:200px; margin-bottom:10px;">
+                <br>
+                <input type="text" 
+                       oninput="document.getElementById('livePreviewSpan').innerText = this.value || '-'"
+                       placeholder="টাইপ করুন" 
+                       style="padding:8px; width:200px; margin-bottom:10px;">
+                <p>লাইভ প্রিভিউ: <span id="livePreviewSpan">-</span></p>
+                <form onsubmit="alert('ফর্ম সাবমিট হয়েছে!'); return false;" style="margin-top:10px;">
+                  <input type="text" placeholder="নাম" style="padding:8px;">
+                  <button type="submit" style="padding:8px 15px; margin-left:5px;">সাবমিট</button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>উইন্ডো/ডকুমেন্ট ইভেন্ট অ্যাট্রিবিউট</h2>
+            <p>উইন্ডো এবং ডকুমেন্ট ইভেন্ট অ্যাট্রিবিউট ব্রাউজার উইন্ডো বা ডকুমেন্টের সাথে সম্পর্কিত।</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>কখন ট্রিগার হয়</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>onload</code></td>
+                  <td>পৃষ্ঠা লোড সম্পন্ন হলে</td>
+                  <td>সব কন্টেন্ট লোড হওয়ার পর</td>
+                </tr>
+                <tr>
+                  <td><code>onresize</code></td>
+                  <td>উইন্ডোর সাইজ পরিবর্তন হলে</td>
+                  <td>ব্রাউজার রিসাইজ করলে</td>
+                </tr>
+                <tr>
+                  <td><code>onscroll</code></td>
+                  <td>পৃষ্ঠা স্ক্রোল করলে</td>
+                  <td>স্ক্রোল করার সময়</td>
+                </tr>
+                <tr>
+                  <td><code>onbeforeunload</code></td>
+                  <td>পৃষ্ঠা ছাড়ার আগে</td>
+                  <td>পৃষ্ঠা বন্ধ বা রিফ্রেশ করলে</td>
+                </tr>
+                <tr>
+                  <td><code>onerror</code></td>
+                  <td>এরর发生时</td>
+                  <td>ইমেজ লোড না হলে, স্ক্রিপ্ট এরর হলে</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: উইন্ডো ইভেন্ট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;body onload="alert('পৃষ্ঠা লোড সম্পন্ন হয়েছে!')"&gt;
+  &lt;div onscroll="console.log('স্ক্রোল হচ্ছে')"&gt;
+    &lt;!-- কন্টেন্ট --&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;img src="invalid-image.jpg" onerror="this.src='default-image.jpg'"&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <div style="height:100px; overflow:auto; border:1px solid #ccc; padding:10px;" 
+                     onscroll="document.getElementById('scrollMsg').innerText = 'স্ক্রোল হচ্ছে!'">
+                  <p>এখানে স্ক্রোল করুন...</p>
+                  <p style="height:200px;">স্ক্রোল কন্টেন্ট</p>
+                </div>
+                <p id="scrollMsg" style="color:green; font-size:12px;">-</p>
+                <img src="invalid-image.jpg" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'50\'%3E%3Crect width=\'100\' height=\'50\' fill=\'%23ffcccc\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%23cc0000\'%3Eডিফল্ট%3C/text%3E%3C/svg%3E'" style="margin-top:10px;">
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ড্র্যাগ অ্যান্ড ড্রপ ইভেন্ট অ্যাট্রিবিউট</h2>
+            <p>ড্র্যাগ অ্যান্ড ড্রপ ইভেন্ট অ্যাট্রিবিউট এলিমেন্ট ড্র্যাগ করার সাথে সম্পর্কিত।</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>কখন ট্রিগার হয়</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>ondrag</code></td>
+                  <td>এলিমেন্ট ড্র্যাগ করলে</td>
+                  <td>ড্র্যাগ করার সময়</td>
+                </tr>
+                <tr>
+                  <td><code>ondragstart</code></td>
+                  <td>ড্র্যাগ শুরু করলে</td>
+                  <td>ড্র্যাগ শুরু করার মুহূর্তে</td>
+                </tr>
+                <tr>
+                  <td><code>ondragend</code></td>
+                  <td>ড্র্যাগ শেষ করলে</td>
+                  <td>ড্র্যাগ শেষ করার সময়</td>
+                </tr>
+                <tr>
+                  <td><code>ondragover</code></td>
+                  <td>এলিমেন্টের উপর ড্র্যাগ করলে</td>
+                  <td>ড্রপ টার্গেটের উপর ড্র্যাগ করলে</td>
+                </tr>
+                <tr>
+                  <td><code>ondrop</code></td>
+                  <td>এলিমেন্টে ড্রপ করলে</td>
+                  <td>ড্রপ করার সময়</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: ড্র্যাগ অ্যান্ড ড্রপ</h3>
+              <div class="code-preview">
+                <pre><code>&lt;div draggable="true" 
+     ondragstart="event.dataTransfer.setData('text/plain', 'Hello')"
+     style="width:100px; height:100px; background:lightblue; display:inline-block; text-align:center; line-height:100px;"&gt;
+  ড্র্যাগ করুন
+&lt;/div&gt;
+
+&lt;div ondrop="event.preventDefault(); this.innerText = event.dataTransfer.getData('text/plain')"
+     ondragover="event.preventDefault()"
+     style="width:150px; height:100px; background:lightgreen; display:inline-block; margin-left:20px; text-align:center; line-height:100px;"&gt;
+  এখানে ড্রপ করুন
+&lt;/div&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <div draggable="true" 
+                     ondragstart="event.dataTransfer.setData('text/plain', 'ড্র্যাগ করা আইটেম')"
+                     style="width:100px; height:100px; background:#90caf9; display:inline-block; text-align:center; line-height:100px; border-radius:5px; cursor:grab;">
+                  ড্র্যাগ করুন
+                </div>
+                <div ondrop="event.preventDefault(); this.innerText = event.dataTransfer.getData('text/plain')"
+                     ondragover="event.preventDefault()"
+                     style="width:150px; height:100px; background:#a5d6a5; display:inline-block; margin-left:20px; text-align:center; line-height:100px; border-radius:5px;">
+                  এখানে ড্রপ করুন
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্লিপবোর্ড ইভেন্ট অ্যাট্রিবিউট</h2>
+            <p>ক্লিপবোর্ড ইভেন্ট অ্যাট্রিবিউট কপি, কাট, পেস্ট ইত্যাদি动作ের সাথে সম্পর্কিত।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: ক্লিপবোর্ড ইভেন্ট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;input type="text" 
+       oncopy="alert('কপি করা হয়েছে!')"
+       oncut="alert('কাট করা হয়েছে!')"
+       onpaste="alert('পেস্ট করা হয়েছে!')"
+       value="এই টেক্সট কপি/কাট/পেস্ট করুন"&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <input type="text" 
+                       oncopy="alert('কপি করা হয়েছে!')"
+                       oncut="alert('কাট করা হয়েছে!')"
+                       onpaste="alert('পেস্ট করা হয়েছে!')"
+                       value="এই টেক্সট কপি/কাট/পেস্ট করুন"
+                       style="width:100%; padding:8px;">
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মিডিয়া ইভেন্ট অ্যাট্রিবিউট</h2>
+            <p>মিডিয়া ইভেন্ট অ্যাট্রিবিউট অডিও, ভিডিও ইত্যাদি মিডিয়া এলিমেন্টের সাথে সম্পর্কিত।</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>কখন ট্রিগার হয়</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>onplay</code></td>
+                  <td>মিডিয়া প্লে শুরু করলে</td>
+                  <td>প্লে বাটন চাপলে</td>
+                </tr>
+                <tr>
+                  <td><code>onpause</code></td>
+                  <td>মিডিয়া পজ করলে</td>
+                  <td>পজ বাটন চাপলে</td>
+                </tr>
+                <tr>
+                  <td><code>onended</code></td>
+                  <td>মিডিয়া শেষ হলে</td>
+                  <td>ভিডিও/অডিও শেষ হলে</td>
+                </tr>
+                <tr>
+                  <td><code>onvolumechange</code></td>
+                  <td>ভলিউম পরিবর্তন হলে</td>
+                  <td>ভলিউম বাড়ালে/কমানো হলে</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: মিডিয়া ইভেন্ট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;audio controls 
+       onplay="console.log('প্লে শুরু')"
+       onpause="console.log('পজ')"
+       onended="alert('অডিও শেষ!')"&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <audio controls 
+                       onplay="console.log('প্লে শুরু')"
+                       onpause="console.log('পজ')"
+                       onended="alert('অডিও শেষ!')">
+                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                  আপনার ব্রাউজার অডিও সাপোর্ট করে না।
+                </audio>
+                <p style="font-size:12px; color:#666; margin-top:10px;">💡 অডিও প্লে/পজ করলে কনসোল দেখুন</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইভেন্ট অ্যাট্রিবিউটের তুলনা</h2>
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>ক্যাটাগরি</th>
+                  <th>সবচেয়ে ব্যবহৃত ইভেন্ট</th>
+                  <th>ব্যবহারের ক্ষেত্র</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>মাউস</td>
+                  <td><code>onclick</code>, <code>onmouseenter</code></td>
+                  <td>বাটন ক্লিক, হোভার ইফেক্ট</td>
+                </tr>
+                <tr>
+                  <td>কীবোর্ড</td>
+                  <td><code>onkeyup</code>, <code>onkeydown</code></td>
+                  <td>সার্চ ফিল্ড, শর্টকাট কী</td>
+                </tr>
+                <tr>
+                  <td>ফর্ম</td>
+                  <td><code>oninput</code>, <code>onchange</code></td>
+                  <td>লাইভ ভ্যালিডেশন, রিয়েল-টাইম প্রিভিউ</td>
+                </tr>
+                <tr>
+                  <td>উইন্ডো</td>
+                  <td><code>onload</code>, <code>onscroll</code></td>
+                  <td>পেজ লোড, ইনফিনিটি স্ক্রোল</td>
+                </tr>
+                <tr>
+                  <td>ড্র্যাগ</td>
+                  <td><code>ondragstart</code>, <code>ondrop</code></td>
+                  <td>ড্র্যাগ অ্যান্ড ড্রপ ফিচার</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>একটি বাটন তৈরি করুন যা ক্লিক করলে "Hello World!" অ্যালার্ট দেখাবে।</li>
+              <li>একটি div এলিমেন্ট তৈরি করুন যার উপর মাউস নিয়ে গেলে ব্যাকগ্রাউন্ড কালার নীল হবে এবং মাউস সরিয়ে গেলে আগের রঙে ফিরে যাবে।</li>
+              <li>একটি ইনপুট ফিল্ড তৈরি করুন যেখানে টাইপ করার সাথে সাথে নিচের একটি প্যারাগ্রাফে টেক্সট লাইভ দেখাবে।</li>
+              <li>একটি ফর্ম তৈরি করুন যার onSubmit ইভেন্টে অ্যালার্ট দেখাবে এবং ফর্ম সাবমিট বন্ধ করবে।</li>
+              <li>একটি ইমেজ তৈরি করুন যা লোড না হলে একটি ডিফল্ট ইমেজ দেখাবে (onerror ব্যবহার করে)।</li>
+              <li>একটি div তৈরি করুন যাতে ড্র্যাগেবল টেক্সট আছে এবং অপর একটি div-এ ড্রপ করলে টেক্সটটি দেখাবে।</li>
+              <li>নিচের কোডের ভুলগুলো চিহ্নিত করুন এবং সংশোধন করুন:
+                <pre><code>&lt;button onclick=alert('ক্লিক')&gt;ক্লিক&lt;/button&gt;
+&lt;div onmouseover="this.style.backgroundColor='red'"&gt;
+&lt;input oninput="console.log('টাইপ')&gt;
+&lt;form onsubmit="return false"&gt;</code></pre>
+              </li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>
+                  <strong>ক্লিক ইভেন্ট:</strong>
+                  <pre><code>&lt;button onclick="alert('Hello World!')"&gt;ক্লিক করুন&lt;/button&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>মাউস হোভার:</strong>
+                  <pre><code>&lt;div onmouseenter="this.style.backgroundColor='blue'" 
+     onmouseleave="this.style.backgroundColor='lightgray'"
+     style="width:200px; height:100px; background:lightgray;"&gt;
+  হোভার করুন
+&lt;/div&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>লাইভ প্রিভিউ:</strong>
+                  <pre><code>&lt;input type="text" oninput="document.getElementById('preview').innerText = this.value"&gt;
+&lt;p&gt;প্রিভিউ: &lt;span id="preview"&gt;-&lt;/span&gt;&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ফর্ম সাবমিট:</strong>
+                  <pre><code>&lt;form onsubmit="alert('ফর্ম সাবমিট হয়েছে'); return false;"&gt;
+  &lt;input type="text"&gt;
+  &lt;button type="submit"&gt;সাবমিট&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>onerror ইভেন্ট:</strong>
+                  <pre><code>&lt;img src="invalid.jpg" onerror="this.src='default.jpg'"&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ড্র্যাগ অ্যান্ড ড্রপ:</strong>
+                  <pre><code>&lt;div draggable="true" 
+     ondragstart="event.dataTransfer.setData('text/plain', 'ড্র্যাগ করা টেক্সট')"
+     style="width:100px; height:100px; background:lightblue;"&gt;
+  ড্র্যাগ করুন
+&lt;/div&gt;
+&lt;div ondrop="event.preventDefault(); this.innerText = event.dataTransfer.getData('text/plain')"
+     ondragover="event.preventDefault()"
+     style="width:150px; height:100px; background:lightgreen;"&gt;
+  ড্রপ করুন
+&lt;/div&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ভুল সংশোধন:</strong>
+                  <pre><code>&lt;button onclick="alert('ক্লিক')"&gt;ক্লিক&lt;/button&gt;
+&lt;div onmouseover="this.style.backgroundColor='red'"&gt;
+&lt;input oninput="console.log('টাইপ')"&gt;
+&lt;form onsubmit="return false"&gt;</code></pre>
+                  <p><strong>ব্যাখ্যা:</strong> 
+                    <br>1. onclick-এর মান কোটেশনের মধ্যে নেই
+                    <br>2. oninput-এর মানের শেষে কোটেশন নেই
+                    <br>3. onmouseover সঠিক, onsubmit সঠিক
+                  </p>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li><strong>কোটেশন ব্যবহার করুন:</strong> ইভেন্ট অ্যাট্রিবিউটের মান সবসময় ডাবল বা সিঙ্গেল কোটেশনের মধ্যে দিন।</li>
+              <li><strong>return false ব্যবহার:</strong> ফর্ম সাবমিট বা লিংক নেভিগেশন বন্ধ করতে <code>return false</code> ব্যবহার করুন।</li>
+              <li><strong>event অবজেক্ট:</strong> ইভেন্ট হ্যান্ডলারে <code>event</code> বা <code>e</code> অবজেক্ট ব্যবহার করে ইভেন্টের বিস্তারিত তথ্য পাওয়া যায়।</li>
+              <li><strong>আধুনিক পদ্ধতি:</strong> বড় প্রজেক্টে <code>addEventListener()</code> ব্যবহার করা ভালো, কারণ এটি কোডকে আলাদা রাখে এবং বেশি নিয়ন্ত্রণ দেয়।</li>
+              <li><strong>ডিবাগিং:</strong> ইভেন্ট ট্রিগার হচ্ছে কিনা জানতে <code>console.log()</code> ব্যবহার করুন।</li>
+              <li><strong>পারফরম্যান্স:</strong> অনেক ইভেন্ট হ্যান্ডলার (যেমন onmousemove, onscroll) পারফরম্যান্সে প্রভাব ফেলতে পারে, সাবধানতার সাথে ব্যবহার করুন।</li>
+              <li><strong>অ্যাক্সেসিবিলিটি:</strong> কীবোর্ড ইভেন্টের পাশাপাশি মাউস ইভেন্টও ব্যবহার করুন যাতে সব ব্যবহারকারী সাইট ব্যবহার করতে পারে।</li>
+            </ul>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="global-attributes.html" class="prev-topic">← গ্লোবাল অ্যাট্রিবিউট</a>
+            <a href="../forms/basic-forms.html" class="next-topic">বেসিক ফর্ম →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

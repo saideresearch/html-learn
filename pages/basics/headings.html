@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>হেডিং ট্যাগ (h1-h6) | HTML শিখি</title>
-  <meta name="description" content="HTML-এ হেডিং ট্যাগ (h1 থেকে h6) কী, কিভাবে ব্যবহার করতে হয়, হেডিং হায়ারারকি এবং উদাহরণ সহ বাংলায় সম্পূর্ণ গাইড।">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
@@ -12,7 +11,6 @@
   <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
 
   <header class="site-header">
-    <!-- Same header as index.html -->
     <div class="container">
       <div class="logo">
         <a href="../../index.html">
@@ -23,17 +21,17 @@
         <ul class="nav-menu">
           <li><a href="../../index.html">হোম</a></li>
           <li><a href="../introduction/">শুরু করুন</a></li>
-          <li><a href="./" class="active">বেসিক</a></li>
-          <li><a href="../forms/">ফর্ম</a></li>
+          <li><a href="../basics/" class="active">বেসিক</a></li>
           <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
           <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <div class="page-wrapper">
-    <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <nav class="sidebar-nav">
         <h3>বেসিক টপিকস</h3>
@@ -43,43 +41,41 @@
           <li><a href="text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
           <li><a href="comments.html">কমেন্ট</a></li>
           <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html">অ্যাট্রিবিউট</a></li>
         </ul>
       </nav>
     </aside>
 
-    <!-- Main Content -->
     <main id="main-content" class="page-content">
       <div class="container">
-        
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="আপনি এখানে">
+        <nav class="breadcrumb">
           <ol>
             <li><a href="../../index.html">হোম</a></li>
-            <li><a href="./">বেসিক</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
             <li>হেডিং ট্যাগ</li>
           </ol>
         </nav>
 
         <article class="topic-article">
-          
           <h1>হেডিং ট্যাগ (h1 - h6)</h1>
           
           <div class="topic-meta">
-            <span>⏱️ পড়তে সময়: ১০ মিনিট</span>
-            <span>📊 লেভেল: সহজ</span>
+            <span>পড়তে সময়: ১০ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
           </div>
 
           <section class="topic-section">
             <h2>হেডিং ট্যাগ কী?</h2>
             <p>হেডিং ট্যাগ বা শিরোনাম ট্যাগ HTML-এর সবচেয়ে গুরুত্বপূর্ণ এলিমেন্টগুলোর একটি। এগুলো ওয়েবপৃষ্ঠার শিরোনাম ও সাব-শিরোনাম নির্ধারণ করে। হেডিং ট্যাগ ৬টি: h1, h2, h3, h4, h5, h6। h1 সবচেয়ে গুরুত্বপূর্ণ ও বড়, h6 সবচেয়ে কম গুরুত্বপূর্ণ ও ছোট।</p>
+            <p>ব্রাউজার সাধারণত h1-কে সবচেয়ে বড় আকারে এবং h6-কে সবচেয়ে ছোট আকারে দেখায়। তবে CSS ব্যবহার করে এদের সাইজ পরিবর্তন করা যায়।</p>
           </section>
 
           <section class="topic-section">
             <h2>হেডিং ট্যাগের ব্যবহার</h2>
+            <p>HTML-এ হেডিং ট্যাগ ব্যবহার করা খুবই সহজ। নিচের উদাহরণে বিভিন্ন লেভেলের হেডিং দেখানো হয়েছে:</p>
             
             <div class="example-box">
               <h3>উদাহরণ: বিভিন্ন লেভেলের হেডিং</h3>
-              
               <div class="code-preview">
                 <pre><code>&lt;h1&gt;এটি প্রধান শিরোনাম (h1)&lt;/h1&gt;
 &lt;h2&gt;এটি সাব-শিরোনাম (h2)&lt;/h2&gt;
@@ -89,67 +85,155 @@
 &lt;h6&gt;এটি সবচেয়ে ছোট শিরোনাম (h6)&lt;/h6&gt;</code></pre>
               </div>
               
-              <div class="live-preview">
-                <h1>এটি প্রধান শিরোনাম (h1)</h1>
-                <h2>এটি সাব-শিরোনাম (h2)</h2>
-                <h3>এটি ছোট শিরোনাম (h3)</h3>
-                <h4>এটি আরও ছোট শিরোনাম (h4)</h4>
-                <h5>এটি খুব ছোট শিরোনাম (h5)</h5>
-                <h6>এটি সবচেয়ে ছোট শিরোনাম (h6)</h6>
-              </div>
-              
-              <div class="try-it-yourself">
-                <h4>নিজে করুন:</h4>
-                <p>নিচের বক্সে কোড পরিবর্তন করে ফলাফল দেখুন:</p>
-                <textarea class="code-editor" rows="6">&lt;h1&gt;আমার ওয়েবসাইট&lt;/h1&gt;
-&lt;h2&gt;আমার সম্পর্কে&lt;/h2&gt;
-&lt;h3&gt;আমার শখ&lt;/h3&gt;</textarea>
-                <button class="run-btn">চালান</button>
-                <div class="live-result"></div>
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="margin:10px 0;">এটি প্রধান শিরোনাম (h1)</h1>
+                <h2 style="margin:10px 0;">এটি সাব-শিরোনাম (h2)</h2>
+                <h3 style="margin:10px 0;">এটি ছোট শিরোনাম (h3)</h3>
+                <h4 style="margin:10px 0;">এটি আরও ছোট শিরোনাম (h4)</h4>
+                <h5 style="margin:10px 0;">এটি খুব ছোট শিরোনাম (h5)</h5>
+                <h6 style="margin:10px 0;">এটি সবচেয়ে ছোট শিরোনাম (h6)</h6>
               </div>
             </div>
           </section>
 
           <section class="topic-section">
             <h2>হেডিং হায়ারারকি (শ্রেণিবিন্যাস)</h2>
-            <p>হেডিং হায়ারারকি বজায় রাখা SEO এবং অ্যাক্সেসিবিলিটির জন্য খুবই গুরুত্বপূর্ণ। নিয়মগুলি হল:</p>
+            <p>হেডিং হায়ারারকি বজায় রাখা SEO এবং অ্যাক্সেসিবিলিটির জন্য খুবই গুরুত্বপূর্ণ। সঠিকভাবে স্ট্রাকচার্ড হেডিং সার্চ ইঞ্জিনকে আপনার কন্টেন্ট বুঝতে সাহায্য করে এবং স্ক্রিন রিডার ব্যবহারকারীদের জন্য নেভিগেশন সহজ করে।</p>
+            
+            <div class="info-box">
+              <p><strong>💡 গুরুত্বপূর্ণ নিয়ম:</strong> প্রতিটি পৃষ্ঠায় শুধুমাত্র একটি <code>&lt;h1&gt;</code> থাকা উচিত। h1 পৃষ্ঠার মূল বিষয় নির্দেশ করে।</p>
+            </div>
             
             <ul>
-              <li>প্রতিটি পৃষ্ঠায় শুধুমাত্র একটি <code>&lt;h1&gt;</code> থাকা উচিত।</li>
-              <li>হেডিং ক্রমান্বয়ে ব্যবহার করতে হবে: h1 → h2 → h3 → h4 → h5 → h6।</li>
-              <li>কোনো লেভেল স্কিপ করা উচিত নয় (যেমন h1-এর পর সরাসরি h3 ব্যবহার না করা)।</li>
-              <li>h1 পৃষ্ঠার মূল বিষয় নির্দেশ করে।</li>
+              <li><strong>ক্রম অনুসরণ করুন:</strong> h1 → h2 → h3 → h4 → h5 → h6 ক্রমান্বয়ে ব্যবহার করতে হবে।</li>
+              <li><strong>লেভেল স্কিপ করবেন না:</strong> h1-এর পর সরাসরি h3 ব্যবহার করা উচিত নয়।</li>
+              <li><strong>একাধিক h1 এড়িয়ে চলুন:</strong> একটি পৃষ্ঠায় একাধিক h1 ব্যবহার করলে SEO-তে নেতিবাচক প্রভাব পড়তে পারে।</li>
             </ul>
             
             <div class="example-box">
               <h3>সঠিক হেডিং স্ট্রাকচারের উদাহরণ</h3>
-              <pre><code>&lt;h1&gt;ওয়েব ডেভেলপমেন্ট কোর্স&lt;/h1&gt;
+              <div class="code-preview">
+                <pre><code>&lt;h1&gt;ওয়েব ডেভেলপমেন্ট কোর্স&lt;/h1&gt;
   &lt;h2&gt;HTML ফান্ডামেন্টালস&lt;/h2&gt;
     &lt;h3&gt;হেডিং ট্যাগ&lt;/h3&gt;
     &lt;h3&gt;প্যারাগ্রাফ ট্যাগ&lt;/h3&gt;
+    &lt;h3&gt;লিংক ট্যাগ&lt;/h3&gt;
   &lt;h2&gt;সিএসএস বেসিকস&lt;/h2&gt;
     &lt;h3&gt;কালার ও ব্যাকগ্রাউন্ড&lt;/h3&gt;
-    &lt;h3&gt;বর্ডার ও মার্জিন&lt;/h3&gt;</code></pre>
+    &lt;h3&gt;বর্ডার ও মার্জিন&lt;/h3&gt;
+    &lt;h3&gt;ফ্লেক্সবক্স&lt;/h3&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="margin:10px 0;">ওয়েব ডেভেলপমেন্ট কোর্স</h1>
+                <h2 style="margin:8px 0;">HTML ফান্ডামেন্টালস</h2>
+                <h3 style="margin:6px 0 6px 20px;">হেডিং ট্যাগ</h3>
+                <h3 style="margin:6px 0 6px 20px;">প্যারাগ্রাফ ট্যাগ</h3>
+                <h3 style="margin:6px 0 6px 20px;">লিংক ট্যাগ</h3>
+                <h2 style="margin:8px 0;">সিএসএস বেসিকস</h2>
+                <h3 style="margin:6px 0 6px 20px;">কালার ও ব্যাকগ্রাউন্ড</h3>
+                <h3 style="margin:6px 0 6px 20px;">বর্ডার ও মার্জিন</h3>
+                <h3 style="margin:6px 0 6px 20px;">ফ্লেক্সবক্স</h3>
+              </div>
             </div>
           </section>
 
           <section class="topic-section">
             <h2>SEO-তে হেডিং-এর গুরুত্ব</h2>
-            <p>সার্চ ইঞ্জিন (যেমন গুগল) হেডিং ট্যাগ ব্যবহার করে আপনার কন্টেন্টের গঠন বুঝতে চেষ্টা করে। সঠিক কীওয়ার্ড হেডিং-এ ব্যবহার করলে SEO-তে ভালো ফল পাওয়া যায়।</p>
+            <p>সার্চ ইঞ্জিন (যেমন গুগল) হেডিং ট্যাগ ব্যবহার করে আপনার কন্টেন্টের গঠন বুঝতে চেষ্টা করে। সঠিকভাবে হেডিং ব্যবহার করলে আপনার ওয়েবপৃষ্ঠা সার্চ রেজাল্টে ভালো অবস্থান করতে পারে।</p>
             
-            <div class="tip-box">
-              <h4>💡 টিপস:</h4>
+            <div class="info-box">
+              <p><strong>💡 SEO টিপস:</strong></p>
               <ul>
-                <li>h1-এ মূল কীওয়ার্ড ব্যবহার করুন।</li>
-                <li>হেডিং-এ কীওয়ার্ড স্টাফিং করবেন না (অস্বাভাবিকভাবে বারবার কীওয়ার্ড ব্যবহার)।</li>
-                <li>হেডিং বাক্যের মতো অর্থপূর্ণ ও বর্ণনামূলক হওয়া উচিত।</li>
+                <li><strong>h1-এ মূল কীওয়ার্ড ব্যবহার করুন:</strong> h1-এ আপনার পৃষ্ঠার প্রধান বিষয়বস্তুর সাথে সম্পর্কিত কীওয়ার্ড রাখুন।</li>
+                <li><strong>হেডিং অর্থপূর্ণ হোক:</strong> হেডিং বাক্যের মতো বর্ণনামূলক হওয়া উচিত। যেমন "আমার ব্লগ" না লিখে "২০২৬ সালের সেরা ওয়েব ডেভেলপমেন্ট টিপস" লেখা ভালো।</li>
+                <li><strong>কীওয়ার্ড স্টাফিং এড়িয়ে চলুন:</strong> অস্বাভাবিকভাবে বারবার একই কীওয়ার্ড ব্যবহার করবেন না।</li>
+                <li><strong>প্রতিটি h2 আলাদা বিষয় কভার করুক:</strong> প্রতিটি সাব-সেকশন একটি নির্দিষ্ট বিষয় নিয়ে আলোচনা করবে।</li>
               </ul>
             </div>
           </section>
 
           <section class="topic-section">
-            <h2>অ্যাক্সেসিবিলিটি</h2>
-            <p>স্ক্রিন রিডার ব্যবহারকারীরা হেডিং ট্যাগ ব্যবহার করে পৃষ্ঠায় নেভিগেট করে। সঠিক হেডিং স্ট্রাকচার তাদের জন্য খুবই গুরুত্বপূর্ণ।</p>
+            <h2>অ্যাক্সেসিবিলিটি এবং স্ক্রিন রিডার</h2>
+            <p>স্ক্রিন রিডার ব্যবহারকারীরা (যারা দৃষ্টি প্রতিবন্ধী) হেডিং ট্যাগ ব্যবহার করে পৃষ্ঠায় দ্রুত নেভিগেট করে। তারা সাধারণত হেডিংগুলোর তালিকা তৈরি করে এবং সেখান থেকে নির্দিষ্ট সেকশনে যেতে পারে।</p>
+            <p>সঠিক হেডিং স্ট্রাকচার থাকলে স্ক্রিন রিডার ব্যবহারকারীরা পৃষ্ঠার বিষয়বস্তু সহজেই বুঝতে পারে এবং প্রয়োজনীয় তথ্যে দ্রুত পৌঁছাতে পারে।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>হেডিং-এ স্টাইলিং (CSS)</h2>
+            <p>হেডিং ট্যাগের ডিফল্ট সাইজ CSS ব্যবহার করে পরিবর্তন করা যায়। নিচের উদাহরণ দেখুন:</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: কাস্টম হেডিং স্টাইল</h3>
+              <div class="code-preview">
+                <pre><code>&lt;h1 style="color: #2c3e50; font-size: 36px; border-bottom: 3px solid #3498db;"&gt;
+  কাস্টম স্টাইলের শিরোনাম
+&lt;/h1&gt;
+&lt;h2 style="color: #16a085; background-color: #f0f0f0; padding: 10px;"&gt;
+  ব্যাকগ্রাউন্ড সহ হেডিং
+&lt;/h2&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <h1 style="color: #2c3e50; font-size: 36px; border-bottom: 3px solid #3498db; margin:10px 0;">কাস্টম স্টাইলের শিরোনাম</h1>
+                <h2 style="color: #16a085; background-color: #e8f0fe; padding: 10px; border-radius: 5px; margin:10px 0;">ব্যাকগ্রাউন্ড সহ হেডিং</h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>হেডিং ট্যাগের তুলনা</h2>
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>ট্যাগ</th>
+                  <th>গুরুত্ব</th>
+                  <th>ডিফল্ট সাইজ</th>
+                  <th>ব্যবহার</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;h1&gt;</code></td>
+                  <td>সর্বোচ্চ</td>
+                  <td>2em (32px)</td>
+                  <td>পৃষ্ঠার প্রধান শিরোনাম</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h2&gt;</code></td>
+                  <td>উচ্চ</td>
+                  <td>1.5em (24px)</td>
+                  <td>প্রধান সেকশনের শিরোনাম</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h3&gt;</code></td>
+                  <td>মাঝারি</td>
+                  <td>1.17em (18.72px)</td>
+                  <td>সাব-সেকশনের শিরোনাম</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h4&gt;</code></td>
+                  <td>নিম্ন-মাঝারি</td>
+                  <td>1em (16px)</td>
+                  <td>ছোট সাব-সেকশন</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h5&gt;</code></td>
+                  <td>নিম্ন</td>
+                  <td>0.83em (13.28px)</td>
+                  <td>বিরল ব্যবহার</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h6&gt;</code></td>
+                  <td>সর্বনিম্ন</td>
+                  <td>0.67em (10.72px)</td>
+                  <td>সবচেয়ে কম গুরুত্বপূর্ণ</td>
+                </tr>
+              </tbody>
+            </table>
           </section>
 
           <section class="topic-section">
@@ -157,72 +241,97 @@
             <ol class="exercise-list">
               <li>একটি HTML ডকুমেন্ট তৈরি করুন যেখানে আপনার নাম ও ঠিকানা h1, h2, h3 ট্যাগ ব্যবহার করে দেখানো হয়েছে।</li>
               <li>একটি ব্লগ পোস্টের স্ট্রাকচার তৈরি করুন (শিরোনাম, সাব-শিরোনাম, অনুচ্ছেদ) সঠিক হেডিং হায়ারারকি ব্যবহার করে।</li>
-              <li>নিচের ভুল স্ট্রাকচারটি সংশোধন করুন: h1 → h3 → h2 → h4</li>
+              <li>নিচের ভুল স্ট্রাকচারটি সংশোধন করুন: <code>h1 → h3 → h2 → h4</code></li>
+              <li>একটি পৃষ্ঠায় একাধিক h1 ব্যবহার করলে কী সমস্যা হতে পারে? উদাহরণসহ ব্যাখ্যা করুন।</li>
+              <li>CSS ব্যবহার করে একটি h1 এলিমেন্টের জন্য নিচের স্টাইল প্রয়োগ করুন: নীল রঙ, 40px ফন্ট সাইজ, নিচে লাল রঙের বর্ডার।</li>
             </ol>
             
             <details class="solution">
               <summary>সমাধান দেখুন</summary>
-              <pre><code>&lt;h1&gt;আমার ব্লগ&lt;/h1&gt;
-&lt;h2&gt;প্রথম পোস্ট&lt;/h2&gt;
-&lt;h3&gt;ভূমিকা&lt;/h3&gt;
-&lt;p&gt;পোস্টের কন্টেন্ট...&lt;/p&gt;
-&lt;h2&gt;দ্বিতীয় পোস্ট&lt;/h2&gt;
-&lt;h3&gt;বিস্তারিত&lt;/h3&gt;</code></pre>
+              <ol>
+                <li>
+                  <strong>উদাহরণ:</strong>
+                  <pre><code>&lt;h1&gt;জন Doe&lt;/h1&gt;
+&lt;h2&gt;ঠিকানা&lt;/h2&gt;
+&lt;h3&gt;ঢাকা, বাংলাদেশ&lt;/h3&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ব্লগ পোস্ট স্ট্রাকচার:</strong>
+                  <pre><code>&lt;h1&gt;HTML শেখার ১০টি সহজ টিপস&lt;/h1&gt;
+  &lt;h2&gt;১. বেসিক দিয়ে শুরু করুন&lt;/h2&gt;
+    &lt;h3&gt;HTML স্ট্রাকচার বোঝা&lt;/h3&gt;
+  &lt;h2&gt;২. নিয়মিত প্র্যাকটিস করুন&lt;/h2&gt;
+    &lt;h3&gt;ছোট ছোট প্রজেক্ট তৈরি করুন&lt;/h3&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>সংশোধিত স্ট্রাকচার:</strong>
+                  <pre><code>h1 → h2 → h3 → h4</code></pre>
+                </li>
+                <li>
+                  <strong>একাধিক h1 ব্যবহারের সমস্যা:</strong> সার্চ ইঞ্জিন বুঝতে পারে না কোনটি মূল শিরোনাম, ফলে SEO-তে নেতিবাচক প্রভাব পড়ে। স্ক্রিন রিডার ব্যবহারকারীরাও বিভ্রান্ত হয়।
+                </li>
+                <li>
+                  <strong>CSS স্টাইল:</strong>
+                  <pre><code>&lt;h1 style="color: blue; font-size: 40px; border-bottom: 3px solid red;"&gt;শিরোনাম&lt;/h1&gt;</code></pre>
+                </li>
+              </ol>
             </details>
           </section>
 
-          <!-- Next/Prev Navigation -->
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li><strong>প্রতি পৃষ্ঠায় একটি h1 ব্যবহার করুন:</strong> এটি পৃষ্ঠার মূল বিষয় নির্দেশ করে।</li>
+              <li><strong>হেডিং স্ট্রাকচার আউটলাইন তৈরি করুন:</strong> কন্টেন্ট লেখার আগে হেডিংগুলোর একটি আউটলাইন তৈরি করে নিন।</li>
+              <li><strong>সংক্ষিপ্ত ও স্পষ্ট হেডিং ব্যবহার করুন:</strong> হেডিং যেন খুব লম্বা না হয় এবং বিষয়বস্তু পরিষ্কারভাবে বুঝায়।</li>
+              <li><strong>মোবাইল ডিভাইসে পরীক্ষা করুন:</strong> হেডিং মোবাইল স্ক্রিনেও ঠিকমতো দেখায় কিনা চেক করুন।</li>
+              <li><strong>CSS দিয়ে ডিজাইন উন্নত করুন:</strong> ডিফল্ট হেডিং স্টাইলের চেয়ে CSS ব্যবহার করে আরও আকর্ষণীয় ডিজাইন তৈরি করুন।</li>
+            </ul>
+          </section>
+
           <div class="topic-navigation">
             <a href="document-structure.html" class="prev-topic">← ডকুমেন্ট স্ট্রাকচার</a>
             <a href="paragraphs.html" class="next-topic">প্যারাগ্রাফ →</a>
           </div>
-
         </article>
-
-        <!-- Comments Section -->
-        <section class="comments-section">
-          <h3>মতামত দিন</h3>
-          <form class="comment-form">
-            <div class="form-group">
-              <label for="name">আপনার নাম:</label>
-              <input type="text" id="name" required>
-            </div>
-            <div class="form-group">
-              <label for="comment">মন্তব্য:</label>
-              <textarea id="comment" rows="4" required></textarea>
-            </div>
-            <button type="submit">পোস্ট করুন</button>
-          </form>
-        </section>
-
       </div>
     </main>
   </div>
 
   <footer class="site-footer">
-    <!-- Same footer as index.html -->
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <img src="../../images/logo-white.png" alt="HTML শিখি" width="150" height="40">
-          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট।</p>
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
         </div>
+        
         <div class="footer-links">
-          <h3>টপিকস</h3>
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
           <ul>
-            <li><a href="../introduction/">পরিচিতি</a></li>
-            <li><a href="./">বেসিক</a></li>
-            <li><a href="../forms/">ফর্ম</a></li>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
           </ul>
         </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
       </div>
+      
       <div class="footer-bottom">
-        <p>&copy; ২০২৬ HTML শিখি</p>
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
       </div>
     </div>
   </footer>
-
+  
   <script src="../../js/main.js"></script>
-  <script src="../../js/examples.js"></script>
 </body>
 </html>

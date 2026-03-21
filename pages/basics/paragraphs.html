@@ -3,70 +3,339 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>প্যারাগ্রাফ ট্যাগ | HTML শিখি</title>
+  <title>প্যারাগ্রাফ ট্যাগ (p) | HTML শিখি</title>
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basics/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrapper">
     <aside class="sidebar">
       <nav class="sidebar-nav">
         <h3>বেসিক টপিকস</h3>
         <ul>
-          <li><a href="document-structure.html">ডকুমেন্ট স্ট্রাকচার</a></li>
           <li><a href="headings.html">হেডিং (h1-h6)</a></li>
           <li><a href="paragraphs.html" class="active">প্যারাগ্রাফ (p)</a></li>
           <li><a href="text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
+          <li><a href="comments.html">কমেন্ট</a></li>
+          <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html">অ্যাট্রিবিউট</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
       <div class="container">
-        <h1>প্যারাগ্রাফ ট্যাগ (p Tag)</h1>
-        
-        <section>
-          <h2>প্যারাগ্রাফ কী?</h2>
-          <p>p ট্যাগ দিয়ে প্যারাগ্রাফ বা অনুচ্ছেদ তৈরি করা হয়। এটি টেক্সট দেখানোর সবচেয়ে সাধারণ উপায়।</p>
-        </section>
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
+            <li>প্যারাগ্রাফ ট্যাগ</li>
+          </ol>
+        </nav>
 
-        <section>
-          <h2>উদাহরণ</h2>
-          <div class="example-box">
-            <div class="code-preview">
-              <pre><code>&lt;p&gt;এটি একটি প্যারাগ্রাফ।&lt;/p&gt;
-&lt;p&gt;এটি আরেকটি প্যারাগ্রাফ। 
-এই প্যারাগ্রাফটি একাধিক লাইন নিয়ে গঠিত।&lt;/p&gt;</code></pre>
-            </div>
-            <div class="live-preview">
-              <p>এটি একটি প্যারাগ্রাফ।</p>
-              <p>এটি আরেকটি প্যারাগ্রাফ। এই প্যারাগ্রাফটি একাধিক লাইন নিয়ে গঠিত।</p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>লাইন ব্রেক (br ট্যাগ)</h2>
-          <p>br ট্যাগ দিয়ে একই প্যারাগ্রাফের মধ্যে নতুন লাইন শুরু করা যায়।</p>
+        <article class="topic-article">
+          <h1>প্যারাগ্রাফ ট্যাগ (p Tag)</h1>
           
-          <div class="example-box">
-            <div class="code-preview">
-              <pre><code>&lt;p&gt;এটি প্রথম লাইন।&lt;br&gt;
-এটি দ্বিতীয় লাইন।&lt;/p&gt;</code></pre>
-            </div>
-            <div class="live-preview">
-              <p>এটি প্রথম লাইন।<br>এটি দ্বিতীয় লাইন।</p>
-            </div>
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৮ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
           </div>
-        </section>
 
-        <div class="topic-navigation">
-          <a href="headings.html">← হেডিং ট্যাগ</a>
-          <a href="text-formatting.html">টেক্সট ফরম্যাটিং →</a>
-        </div>
+          <section class="topic-section">
+            <h2>প্যারাগ্রাফ ট্যাগ কী?</h2>
+            <p><code>&lt;p&gt;</code> ট্যাগ বা প্যারাগ্রাফ ট্যাগ HTML-এর সবচেয়ে বেশি ব্যবহৃত এলিমেন্টগুলোর একটি। এটি দিয়ে ওয়েবপৃষ্ঠায় অনুচ্ছেদ বা প্যারাগ্রাফ তৈরি করা হয়। টেক্সট কন্টেন্ট প্রদর্শনের জন্য এটি মৌলিক ও গুরুত্বপূর্ণ এলিমেন্ট।</p>
+            <p>ব্রাউজার স্বয়ংক্রিয়ভাবে প্রতিটি <code>&lt;p&gt;</code> এলিমেন্টের আগে এবং পরে মার্জিন (ফাঁকা স্থান) যোগ করে, যা প্যারাগ্রাফগুলোর মধ্যে দৃশ্যমান দূরত্ব তৈরি করে।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্যারাগ্রাফ ট্যাগের ব্যবহার</h2>
+            <p>প্যারাগ্রাফ ট্যাগ ব্যবহার করা খুবই সহজ। টেক্সটের শুরুতে <code>&lt;p&gt;</code> এবং শেষে <code>&lt;/p&gt;</code> ট্যাগ বসালেই প্যারাগ্রাফ তৈরি হয়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: প্যারাগ্রাফ তৈরি</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;এটি একটি সাধারণ প্যারাগ্রাফ। HTML-এ প্যারাগ্রাফ তৈরি করতে p ট্যাগ ব্যবহার করা হয়।&lt;/p&gt;
+
+&lt;p&gt;এটি আরেকটি প্যারাগ্রাফ। 
+এই প্যারাগ্রাফটি একাধিক লাইন নিয়ে গঠিত হলেও 
+ব্রাউজার এটিকে একটি একক প্যারাগ্রাফ হিসেবে দেখাবে।&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>এটি একটি সাধারণ প্যারাগ্রাফ। HTML-এ প্যারাগ্রাফ তৈরি করতে p ট্যাগ ব্যবহার করা হয়।</p>
+                <p>এটি আরেকটি প্যারাগ্রাফ। এই প্যারাগ্রাফটি একাধিক লাইন নিয়ে গঠিত হলেও ব্রাউজার এটিকে একটি একক প্যারাগ্রাফ হিসেবে দেখাবে।</p>
+              </div>
+            </div>
+            
+            <div class="info-box">
+              <p><strong>💡 গুরুত্বপূর্ণ:</strong> HTML-এ একাধিক স্পেস বা নতুন লাইনকে ব্রাউজার একটি সিঙ্গেল স্পেস হিসেবে দেখায়। নতুন লাইন শুরু করতে <code>&lt;br&gt;</code> ট্যাগ ব্যবহার করতে হবে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>লাইন ব্রেক (br ট্যাগ)</h2>
+            <p><code>&lt;br&gt;</code> ট্যাগ ব্যবহার করে একই প্যারাগ্রাফের মধ্যে নতুন লাইন শুরু করা যায়। এটি একটি সেল্ফ-ক্লোজিং ট্যাগ, অর্থাৎ এটির আলাদা ক্লোজিং ট্যাগ নেই।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: লাইন ব্রেক ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;
+আমার সোনার বাংলা,&lt;br&gt;
+আমি তোমায় ভালোবাসি।&lt;br&gt;
+চিরদিন তোমার আকাশ,&lt;br&gt;
+তোমার বাতাস আমার প্রাণে বাজায় বাঁশি।
+&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>
+                আমার সোনার বাংলা,<br>
+                আমি তোমায় ভালোবাসি।<br>
+                চিরদিন তোমার আকাশ,<br>
+                তোমার বাতাস আমার প্রাণে বাজায় বাঁশি।
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>হরাইজন্টাল রুল (hr ট্যাগ)</h2>
+            <p><code>&lt;hr&gt;</code> ট্যাগ (হরাইজন্টাল রুল) ব্যবহার করে প্যারাগ্রাফের মধ্যে অনুভূমিক রেখা তৈরি করা যায়। এটি বিষয়বস্তু আলাদা করতে বা সেকশন ভাগ করতে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: hr ট্যাগ ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;প্রথম প্যারাগ্রাফের কন্টেন্ট।&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;দ্বিতীয় প্যারাগ্রাফের কন্টেন্ট।&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>প্রথম প্যারাগ্রাফের কন্টেন্ট।</p>
+                <hr style="margin:10px 0;">
+                <p>দ্বিতীয় প্যারাগ্রাফের কন্টেন্ট।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্যারাগ্রাফে স্পেসিং ও ফরম্যাটিং</h2>
+            <p>প্যারাগ্রাফের মধ্যে বিভিন্ন ফরম্যাটিং উপাদান ব্যবহার করে টেক্সটকে আরও সুন্দর ও অর্থপূর্ণ করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: বিভিন্ন ফরম্যাটিং সহ প্যারাগ্রাফ</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;
+&lt;strong&gt;গুরুত্বপূর্ণ:&lt;/strong&gt; HTML শেখার জন্য নিয়মিত অনুশীলন করা জরুরি। 
+&lt;em&gt;প্রতিদিন কমপক্ষে ৩০ মিনিট&lt;/em&gt; প্র্যাকটিস করুন। 
+&lt;mark&gt;মনে রাখবেন&lt;/mark&gt; - ধৈর্য ধরতে হবে এবং ভুল থেকে শিখতে হবে।
+&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>
+                <strong>গুরুত্বপূর্ণ:</strong> HTML শেখার জন্য নিয়মিত অনুশীলন করা জরুরি। 
+                <em>প্রতিদিন কমপক্ষে ৩০ মিনিট</em> প্র্যাকটিস করুন। 
+                <mark>মনে রাখবেন</mark> - ধৈর্য ধরতে হবে এবং ভুল থেকে শিখতে হবে।
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্যারাগ্রাফ এবং হোয়াইটস্পেস</h2>
+            <p>HTML সাধারণত একাধিক স্পেস বা নতুন লাইনকে উপেক্ষা করে। নিচের উদাহরণ দেখুন:</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: হোয়াইটস্পেস আচরণ</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;
+এটি           অনেকগুলো           স্পেস            সহ একটি প্যারাগ্রাফ।
+HTML এগুলি সব      একক    স্পেসে    রূপান্তরিত   করে।
+&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>
+                এটি           অনেকগুলো           স্পেস            সহ একটি প্যারাগ্রাফ।
+                HTML এগুলি সব      একক    স্পেসে    রূপান্তরিত   করে।
+                </p>
+              </div>
+              <p>উপরের উদাহরণে দেখা যাচ্ছে, একাধিক স্পেস ব্রাউজার একটি স্পেস হিসেবে দেখায়। একাধিক স্পেস রাখতে <code>&amp;nbsp;</code> (নন-ব্রেকিং স্পেস) ব্যবহার করতে হয়।</p>
+            </div>
+            
+            <div class="info-box">
+              <p><strong>💡 টিপস:</strong> প্রি-ফরম্যাটেড টেক্সট রাখতে <code>&lt;pre&gt;</code> ট্যাগ ব্যবহার করা যেতে পারে। এটি লেখা যেভাবে লেখা হয় সেভাবেই দেখায়।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্যারাগ্রাফের তুলনা</h2>
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>এলিমেন্ট</th>
+                  <th>ব্যবহার</th>
+                  <th>বৈশিষ্ট্য</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;p&gt;</code></td>
+                  <td>প্যারাগ্রাফ তৈরি</td>
+                  <td>আগে ও পরে মার্জিন থাকে, ব্লক-লেভেল এলিমেন্ট</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;br&gt;</code></td>
+                  <td>লাইন ব্রেক</td>
+                  <td>সেল্ফ-ক্লোজিং, নতুন লাইন শুরু করে</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;hr&gt;</code></td>
+                  <td>অনুভূমিক রেখা</td>
+                  <td>সেল্ফ-ক্লোজিং, বিষয়বস্তু আলাদা করে</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;pre&gt;</code></td>
+                  <td>প্রি-ফরম্যাটেড টেক্সট</td>
+                  <td>স্পেস ও লাইন ব্রেক সংরক্ষণ করে</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>তিনটি প্যারাগ্রাফ তৈরি করুন। প্রতিটি প্যারাগ্রাফে ভিন্ন ভিন্ন তথ্য দিন।</li>
+              <li>একটি প্যারাগ্রাফ তৈরি করুন যাতে ৫টি লাইন আছে এবং প্রতিটি লাইনের শেষে <code>&lt;br&gt;</code> ট্যাগ ব্যবহার করা হয়েছে।</li>
+              <li>দুটি প্যারাগ্রাফের মাঝখানে <code>&lt;hr&gt;</code> ট্যাগ ব্যবহার করে একটি অনুভূমিক রেখা যোগ করুন।</li>
+              <li>একটি প্যারাগ্রাফ তৈরি করুন যাতে <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, এবং <code>&lt;mark&gt;</code> ট্যাগ ব্যবহার করা হয়েছে।</li>
+              <li>HTML-এ একাধিক স্পেস কেন কাজ করে না? ব্যাখ্যা করুন এবং সমাধান কী তা লেখুন।</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>
+                  <strong>তিনটি প্যারাগ্রাফ:</strong>
+                  <pre><code>&lt;p&gt;HTML শেখা খুবই সহজ। এটি ওয়েব ডেভেলপমেন্টের ভিত্তি।&lt;/p&gt;
+&lt;p&gt;প্রতিদিন প্র্যাকটিস করুন। ছোট ছোট প্রজেক্ট তৈরি করুন।&lt;/p&gt;
+&lt;p&gt;ধৈর্য ধরুন। ধীরে ধীরে আপনি দক্ষ হয়ে উঠবেন।&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>৫টি লাইনের প্যারাগ্রাফ:</strong>
+                  <pre><code>&lt;p&gt;
+লাইন ১: HTML শিখি&lt;br&gt;
+লাইন ২: CSS শিখি&lt;br&gt;
+লাইন ৩: JavaScript শিখি&lt;br&gt;
+লাইন ৪: React শিখি&lt;br&gt;
+লাইন ৫: ফুল স্ট্যাক ডেভেলপার হই
+&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>hr ট্যাগ ব্যবহার:</strong>
+                  <pre><code>&lt;p&gt;প্রথম অনুচ্ছেদ&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;দ্বিতীয় অনুচ্ছেদ&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ফরম্যাটিং সহ প্যারাগ্রাফ:</strong>
+                  <pre><code>&lt;p&gt;
+&lt;strong&gt>সতর্কতা:&lt;/strong&gt; 
+&lt;em&gt;নিয়মিত ব্যায়াম&lt;/em&gt; করা খুবই জরুরি। 
+&lt;mark&gt>স্বাস্থ্যই সকল সুখের মূল&lt;/mark&gt;
+&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>একাধিক স্পেসের সমস্যা ও সমাধান:</strong>
+                  <p>HTML-এ একাধিক স্পেস ব্রাউজার একটি স্পেস হিসেবে দেখায়। এটি HTML-এর ডিফল্ট আচরণ। একাধিক স্পেস রাখতে চাইলে <code>&amp;nbsp;</code> (নন-ব্রেকিং স্পেস) ব্যবহার করতে হবে অথবা <code>&lt;pre&gt;</code> ট্যাগ ব্যবহার করতে হবে।</p>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li><strong>প্যারাগ্রাফ সঠিকভাবে ক্লোজ করুন:</strong> সবসময় <code>&lt;/p&gt;</code> ক্লোজিং ট্যাগ ব্যবহার করুন।</li>
+              <li><strong>প্যারাগ্রাফের ভিতরে ব্লক এলিমেন্ট ব্যবহার করবেন না:</strong> যেমন <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code> ইত্যাদি। শুধুমাত্র ইনলাইন এলিমেন্ট ব্যবহার করুন।</li>
+              <li><strong>প্যারাগ্রাফ খুব লম্বা করবেন না:</strong> পড়তে সুবিধার জন্য ছোট ছোট প্যারাগ্রাফে ভাগ করুন।</li>
+              <li><strong>প্রয়োজনে CSS ব্যবহার করুন:</strong> প্যারাগ্রাফের মার্জিন, লাইন-হাইট, ফন্ট সাইজ CSS দিয়ে কাস্টমাইজ করুন।</li>
+              <li><strong>অর্থপূর্ণ কন্টেন্ট লিখুন:</strong> প্যারাগ্রাফের কন্টেন্ট যেন পরিষ্কার ও বোধগম্য হয়।</li>
+            </ul>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="headings.html" class="prev-topic">← হেডিং ট্যাগ</a>
+            <a href="text-formatting.html" class="next-topic">টেক্সট ফরম্যাটিং →</a>
+          </div>
+        </article>
       </div>
     </main>
   </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
   
   <script src="../../js/main.js"></script>
 </body>

@@ -8,135 +8,355 @@
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basics/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrapper">
     <aside class="sidebar">
       <nav class="sidebar-nav">
         <h3>বেসিক টপিকস</h3>
         <ul>
-          <li><a href="document-structure.html">ডকুমেন্ট স্ট্রাকচার</a></li>
           <li><a href="headings.html">হেডিং (h1-h6)</a></li>
           <li><a href="paragraphs.html">প্যারাগ্রাফ (p)</a></li>
           <li><a href="text-formatting.html" class="active">টেক্সট ফরম্যাটিং</a></li>
+          <li><a href="comments.html">কমেন্ট</a></li>
+          <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html">অ্যাট্রিবিউট</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
       <div class="container">
-        <h1>টেক্সট ফরম্যাটিং</h1>
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
+            <li>টেক্সট ফরম্যাটিং</li>
+          </ol>
+        </nav>
 
-        <section>
-          <h2>গুরুত্বপূর্ণ ট্যাগসমূহ</h2>
+        <article class="topic-article">
+          <h1>টেক্সট ফরম্যাটিং</h1>
           
-          <table class="reference-table">
-            <tr>
-              <th>ট্যাগ</th>
-              <th>বর্ণনা</th>
-              <th>উদাহরণ</th>
-            </tr>
-            <tr>
-              <td>&lt;strong&gt;</td>
-              <td>গুরুত্বপূর্ণ টেক্সট (বোল্ড)</td>
-              <td><strong>বোল্ড টেক্সট</strong></td>
-            </tr>
-            <tr>
-              <td>&lt;em&gt;</td>
-              <td>জোরালো টেক্সট (ইটালিক)</td>
-              <td><em>ইটালিক টেক্সট</em></td>
-            </tr>
-            <tr>
-              <td>&lt;mark&gt;</td>
-              <td>হাইলাইট করা টেক্সট</td>
-              <td><mark>হাইলাইটেড টেক্সট</mark></td>
-            </tr>
-            <tr>
-              <td>&lt;small&gt;</td>
-              <td>ছোট টেক্সট</td>
-              <td><small>ছোট টেক্সট</small></td>
-            </tr>
-            <tr>
-              <td>&lt;ins&gt;</td>
-              <td>যোগ করা টেক্সট (আন্ডারলাইন)</td>
-              <td><ins>যোগ করা টেক্সট</ins></td>
-            </tr>
-            <tr>
-              <td>&lt;del&gt;</td>
-              <td>মুছে ফেলা টেক্সট</td>
-              <td><del>মুছে ফেলা টেক্সট</del></td>
-            </tr>
-            <tr>
-              <td>&lt;sub&gt;</td>
-              <td>সাবস্ক্রিপ্ট</td>
-              <td>H<sub>2</sub>O</td>
-            </tr>
-            <tr>
-              <td>&lt;sup&gt;</td>
-              <td>সুপারস্ক্রিপ্ট</td>
-              <td>X<sup>2</sup></td>
-            </tr>
-          </table>
-        </section>
-
-        <section>
-          <h2>উদাহরণ</h2>
-          
-          <div class="example-box">
-            <div class="code-preview">
-              <pre><code>&lt;p&gt;
-  &lt;strong&gt;গুরুত্বপূর্ণ&lt;/strong&gt; এবং 
-  &lt;em&gt;জোরালো&lt;/em&gt; টেক্সট। 
-  &lt;mark&gt;হাইলাইট&lt;/mark&gt; করা অংশ।
-  &lt;small&gt;ছোট টেক্সট&lt;/small&gt;।
-  &lt;ins&gt;যোগ করা&lt;/ins&gt; এবং 
-  &lt;del&gt;মুছে ফেলা&lt;/del&gt; টেক্সট।
-  জল: H&lt;sub&gt;2&lt;/sub&gt;O, 
-  গণিত: X&lt;sup&gt;2&lt;/sup&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="live-preview">
-              <p>
-                <strong>গুরুত্বপূর্ণ</strong> এবং 
-                <em>জোরালো</em> টেক্সট। 
-                <mark>হাইলাইট</mark> করা অংশ।
-                <small>ছোট টেক্সট</small>।
-                <ins>যোগ করা</ins> এবং 
-                <del>মুছে ফেলা</del> টেক্সট।
-                জল: H<sub>2</sub>O, 
-                গণিত: X<sup>2</sup>
-              </p>
-            </div>
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১২ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
           </div>
-        </section>
 
-        <section>
-          <h2>অনুশীলনী</h2>
-          <div class="try-it-yourself">
-            <h4>একটি প্যারাগ্রাফ তৈরি করুন যেখানে:</h4>
-            <ul>
-              <li>একটি শব্দ <strong>বোল্ড</strong> হবে</li>
-              <li>একটি শব্দ <em>ইটালিক</em> হবে</li>
-              <li>একটি শব্দ <mark>হাইলাইটেড</mark> হবে</li>
-              <li>একটি গাণিতিক সূত্র X<sup>2</sup> + Y<sup>2</sup> দেখাতে হবে</li>
-            </ul>
+          <section class="topic-section">
+            <h2>টেক্সট ফরম্যাটিং কী?</h2>
+            <p>HTML-এ টেক্সট ফরম্যাটিং ট্যাগ ব্যবহার করে টেক্সটকে ভিজুয়ালি আলাদা করা যায়। এই ট্যাগগুলো টেক্সটের নির্দিষ্ট অংশকে গুরুত্ব দেয়, অর্থপূর্ণ করে তোলে এবং ডিজাইনে বৈচিত্র্য আনে। ফরম্যাটিং ট্যাগ দুটি ধরনের হতে পারে: ইনলাইন এলিমেন্ট যা টেক্সটের ছোট অংশে প্রভাব ফেলে এবং ব্লক এলিমেন্ট যা সম্পূর্ণ প্যারাগ্রাফ বা সেকশনে প্রভাব ফেলে।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>মৌলিক ফরম্যাটিং ট্যাগসমূহ</h2>
+            <p>HTML-এ টেক্সট ফরম্যাটিংয়ের জন্য বিভিন্ন ট্যাগ রয়েছে। নিচে গুরুত্বপূর্ণ ট্যাগগুলোর তালিকা ও ব্যবহার দেখানো হলো:</p>
             
-            <textarea class="code-editor" rows="6">&lt;p&gt;
-  &lt;strong&gt;HTML&lt;/strong&gt; শেখা 
-  &lt;em&gt;খুব&lt;/em&gt; সহজ। 
-  &lt;mark&gt;অনুশীলন&lt;/mark&gt; করা জরুরি।
-  X&lt;sup&gt;2&lt;/sup&gt; + Y&lt;sup&gt;2&lt;/sup&gt;
-&lt;/p&gt;</textarea>
-            <button class="run-btn">চালান</button>
-            <div class="live-result"></div>
-          </div>
-        </section>
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>ট্যাগ</th>
+                  <th>বর্ণনা</th>
+                  <th>উদাহরণ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;strong&gt;</code></td>
+                  <td>গুরুত্বপূর্ণ টেক্সট (সিমান্টিক বোল্ড)</td>
+                  <td><strong>বোল্ড টেক্সট</strong></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;b&gt;</code></td>
+                  <td>বোল্ড টেক্সট (ভিজুয়াল)</td>
+                  <td><b>বোল্ড টেক্সট</b></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;em&gt;</code></td>
+                  <td>জোরালো টেক্সট (সিমান্টিক ইটালিক)</td>
+                  <td><em>ইটালিক টেক্সট</em></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;i&gt;</code></td>
+                  <td>ইটালিক টেক্সট (ভিজুয়াল)</td>
+                  <td><i>ইটালিক টেক্সট</i></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;mark&gt;</code></td>
+                  <td>হাইলাইট করা টেক্সট</td>
+                  <td><mark>হাইলাইটেড টেক্সট</mark></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;small&gt;</code></td>
+                  <td>ছোট টেক্সট</td>
+                  <td><small>ছোট টেক্সট</small></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;ins&gt;</code></td>
+                  <td>যোগ করা টেক্সট (আন্ডারলাইন)</td>
+                  <td><ins>যোগ করা টেক্সট</ins></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;del&gt;</code></td>
+                  <td>মুছে ফেলা টেক্সট</td>
+                  <td><del>মুছে ফেলা টেক্সট</del></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;sub&gt;</code></td>
+                  <td>সাবস্ক্রিপ্ট (নিচের সূচক)</td>
+                  <td>H<sub>2</sub>O</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;sup&gt;</code></td>
+                  <td>সুপারস্ক্রিপ্ট (উপরের সূচক)</td>
+                  <td>X<sup>2</sup></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;u&gt;</code></td>
+                  <td>আন্ডারলাইন টেক্সট</td>
+                  <td><u>আন্ডারলাইন টেক্সট</u></td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="info-box">
+              <p><strong>💡 টিপস:</strong> <code>&lt;strong&gt;</code> এবং <code>&lt;em&gt;</code> ট্যাগ সিমান্টিক, অর্থাৎ এরা শুধু ভিজুয়াল ইফেক্ট নয়, বরং টেক্সটের গুরুত্ব নির্দেশ করে। সার্চ ইঞ্জিন এদের গুরুত্ব দেয়। <code>&lt;b&gt;</code> এবং <code>&lt;i&gt;</code> শুধুমাত্র ভিজুয়াল ফরম্যাটিংয়ের জন্য ব্যবহার করা হয়।</p>
+            </div>
+          </section>
 
-        <div class="topic-navigation">
-          <a href="paragraphs.html">← প্যারাগ্রাফ</a>
-          <a href="comments.html">কমেন্ট →</a>
-        </div>
+          <section class="topic-section">
+            <h2>টেক্সট ফরম্যাটিং উদাহরণ</h2>
+            <p>নিচের উদাহরণে বিভিন্ন ফরম্যাটিং ট্যাগ একসাথে ব্যবহার করা হয়েছে:</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: বিভিন্ন ফরম্যাটিং ট্যাগ</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;
+  &lt;strong&gt;গুরুত্বপূর্ণ:&lt;/strong&gt; HTML শেখার জন্য 
+  &lt;em&gt;নিয়মিত অনুশীলন&lt;/em&gt; করা জরুরি। 
+  &lt;mark&gt;প্রতিদিন ৩০ মিনিট&lt;/mark&gt; প্র্যাকটিস করুন।
+  &lt;small&gt;(শিক্ষানবিশদের জন্য টিপস)&lt;/small&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;ins&gt;নতুন সংযোজন:&lt;/ins&gt; এখন ভিডিও টিউটোরিয়ালও যোগ করা হয়েছে।
+  &lt;del&gt;পুরনো পিডিএফ গাইড&lt;/del&gt; আপডেট করা হয়েছে।
+  &lt;br&gt;&lt;br&gt;
+  রাসায়নিক সূত্র: H&lt;sub&gt;2&lt;/sub&gt;SO&lt;sub&gt;4&lt;/sub&gt;
+  &lt;br&gt;
+  গাণিতিক সূত্র: (a + b)&lt;sup&gt;2&lt;/sup&gt; = a&lt;sup&gt;2&lt;/sup&gt; + 2ab + b&lt;sup&gt;2&lt;/sup&gt;
+&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>
+                  <strong>গুরুত্বপূর্ণ:</strong> HTML শেখার জন্য 
+                  <em>নিয়মিত অনুশীলন</em> করা জরুরি। 
+                  <mark>প্রতিদিন ৩০ মিনিট</mark> প্র্যাকটিস করুন।
+                  <small>(শিক্ষানবিশদের জন্য টিপস)</small>
+                  <br><br>
+                  <ins>নতুন সংযোজন:</ins> এখন ভিডিও টিউটোরিয়ালও যোগ করা হয়েছে।
+                  <del>পুরনো পিডিএফ গাইড</del> আপডেট করা হয়েছে।
+                  <br><br>
+                  রাসায়নিক সূত্র: H<sub>2</sub>SO<sub>4</sub>
+                  <br>
+                  গাণিতিক সূত্র: (a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সিমান্টিক বনাম ভিজুয়াল ফরম্যাটিং</h2>
+            <p>HTML-এ ফরম্যাটিং ট্যাগ দুই ধরনের: সিমান্টিক (অর্থপূর্ণ) এবং ভিজুয়াল (চাক্ষুষ)। সিমান্টিক ট্যাগ টেক্সটের অর্থ ও গুরুত্ব নির্দেশ করে, আর ভিজুয়াল ট্যাগ শুধুমাত্র দেখতে কেমন হবে তা নির্ধারণ করে।</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>সিমান্টিক ট্যাগ</th>
+                  <th>ভিজুয়াল ট্যাগ</th>
+                  <th>ব্যাখ্যা</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;strong&gt;</code></td>
+                  <td><code>&lt;b&gt;</code></td>
+                  <td><code>&lt;strong&gt;</code> গুরুত্ব নির্দেশ করে, <code>&lt;b&gt;</code> শুধু বোল্ড করে</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;em&gt;</code></td>
+                  <td><code>&lt;i&gt;</code></td>
+                  <td><code>&lt;em&gt;</code> জোর বা স্ট্রেস নির্দেশ করে, <code>&lt;i&gt;</code> শুধু ইটালিক করে</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;ins&gt;</code></td>
+                  <td><code>&lt;u&gt;</code></td>
+                  <td><code>&lt;ins&gt;</code> যোগ করা টেক্সট নির্দেশ করে, <code>&lt;u&gt;</code> শুধু আন্ডারলাইন করে</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="info-box">
+              <p><strong>💡 SEO টিপস:</strong> সিমান্টিক ট্যাগ ব্যবহার করলে সার্চ ইঞ্জিন আপনার কন্টেন্টের গুরুত্ব বুঝতে পারে। তাই গুরুত্বপূর্ণ টেক্সটের জন্য <code>&lt;strong&gt;</code> ও <code>&lt;em&gt;</code> ব্যবহার করা ভালো অভ্যাস।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>বিশেষ ফরম্যাটিং ট্যাগ</h2>
+            <p>কিছু বিশেষ ফরম্যাটিং ট্যাগ রয়েছে যা নির্দিষ্ট ধরনের কন্টেন্ট প্রদর্শনে ব্যবহৃত হয়:</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: বিশেষ ফরম্যাটিং</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;
+  &lt;code&gt;console.log("Hello World");&lt;/code&gt; - কোড প্রদর্শনের জন্য
+  &lt;br&gt;
+  &lt;kbd&gt;Ctrl + C&lt;/kbd&gt; - কিবোর্ড ইনপুটের জন্য
+  &lt;br&gt;
+  &lt;samp&gt;Error: 404 Not Found&lt;/samp&gt; - প্রোগ্রাম আউটপুটের জন্য
+  &lt;br&gt;
+  &lt;var&gt;x&lt;/var&gt; = 10; - ভেরিয়েবলের জন্য
+  &lt;br&gt;
+  &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; - সংক্ষিপ্ত রূপের জন্য
+&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>
+                  <code>console.log("Hello World");</code> - কোড প্রদর্শনের জন্য
+                  <br>
+                  <kbd>Ctrl + C</kbd> - কিবোর্ড ইনপুটের জন্য
+                  <br>
+                  <samp>Error: 404 Not Found</samp> - প্রোগ্রাম আউটপুটের জন্য
+                  <br>
+                  <var>x</var> = 10; - ভেরিয়েবলের জন্য
+                  <br>
+                  <abbr title="HyperText Markup Language">HTML</abbr> - সংক্ষিপ্ত রূপের জন্য
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>একটি প্যারাগ্রাফ তৈরি করুন যেখানে নিচের সব ফরম্যাটিং ট্যাগ ব্যবহার করা হয়েছে: <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;small&gt;</code></li>
+              <li>একটি রাসায়নিক সূত্র তৈরি করুন: কার্বন ডাই অক্সাইড (CO₂) সঠিকভাবে দেখানোর জন্য সঠিক ট্যাগ ব্যবহার করুন।</li>
+              <li>একটি গাণিতিক সূত্র তৈরি করুন: (a + b)³ = a³ + 3a²b + 3ab² + b³ সঠিকভাবে দেখানোর জন্য <code>&lt;sup&gt;</code> ট্যাগ ব্যবহার করুন।</li>
+              <li>একটি বাক্যে <code>&lt;ins&gt;</code> এবং <code>&lt;del&gt;</code> ট্যাগ ব্যবহার করে সম্পাদনা দেখান।</li>
+              <li><code>&lt;strong&gt;</code> এবং <code>&lt;b&gt;</code> ট্যাগের মধ্যে পার্থক্য কী? উদাহরণসহ ব্যাখ্যা করুন।</li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>
+                  <strong>সব ফরম্যাটিং ট্যাগ সহ প্যারাগ্রাফ:</strong>
+                  <pre><code>&lt;p&gt;
+&lt;strong&gt>HTML শিখি&lt;/strong&gt; - এটি একটি &lt;em&gt;চমৎকার&lt;/em&gt; প্ল্যাটফর্ম। 
+&lt;mark&gt>বাংলায়&lt;/mark&gt; HTML শেখার সেরা জায়গা। 
+&lt;small&gt>(১০০% ফ্রি)&lt;/small&gt;
+&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>কার্বন ডাই অক্সাইড সূত্র:</strong>
+                  <pre><code>CO&lt;sub&gt;2&lt;/sub&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>গাণিতিক সূত্র:</strong>
+                  <pre><code>(a + b)&lt;sup&gt;3&lt;/sup&gt; = a&lt;sup&gt;3&lt;/sup&gt; + 3a&lt;sup&gt;2&lt;/sup&gt;b + 3ab&lt;sup&gt;2&lt;/sup&gt; + b&lt;sup&gt;3&lt;/sup&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ins এবং del ট্যাগ:</strong>
+                  <pre><code>&lt;p&gt;
+আমার প্রিয় রং &lt;del&gt;নীল&lt;/del&gt; &lt;ins&gt;সবুজ&lt;/ins&gt;।
+&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>&lt;strong&gt; এবং &lt;b&gt; এর পার্থক্য:</strong>
+                  <p><code>&lt;strong&gt;</code> একটি সিমান্টিক ট্যাগ যা টেক্সটের গুরুত্ব নির্দেশ করে। এটি সার্চ ইঞ্জিন এবং স্ক্রিন রিডারের জন্য অর্থপূর্ণ। <code>&lt;b&gt;</code> শুধুমাত্র ভিজুয়াল ফরম্যাটিংয়ের জন্য টেক্সটকে বোল্ড করে। উদাহরণ:</p>
+                  <pre><code>&lt;strong&gt;সতর্কতা:&lt;/strong&gt; এটি গুরুত্বপূর্ণ তথ্য।
+&lt;b&gt;বোল্ড টেক্সট&lt;/b&gt; শুধু দেখতে বড়।</code></pre>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li><strong>সিমান্টিক ট্যাগ ব্যবহার করুন:</strong> গুরুত্বপূর্ণ টেক্সটের জন্য <code>&lt;strong&gt;</code> এবং <code>&lt;em&gt;</code> ব্যবহার করা ভালো অভ্যাস।</li>
+              <li><strong>নেস্টিং করতে পারেন:</strong> একাধিক ফরম্যাটিং ট্যাগ একসাথে ব্যবহার করা যায়। যেমন: <code>&lt;strong&gt;&lt;em&gt;বোল্ড ও ইটালিক&lt;/em&gt;&lt;/strong&gt;</code></li>
+              <li><strong>অ্যাক্সেসিবিলিটি:</strong> স্ক্রিন রিডার ব্যবহারকারীরা সিমান্টিক ট্যাগের মাধ্যমে টেক্সটের গুরুত্ব বুঝতে পারে।</li>
+              <li><strong>সঠিক জায়গায় ব্যবহার করুন:</strong> ফরম্যাটিং ট্যাগ শুধুমাত্র প্রয়োজনীয় স্থানে ব্যবহার করুন। অতিরিক্ত ব্যবহার কন্টেন্টকে বিরক্তিকর করে তুলতে পারে।</li>
+              <li><strong>CSS দিয়ে স্টাইল করুন:</strong> ফরম্যাটিংয়ের জন্য CSS ব্যবহার করলে বেশি কন্ট্রোল পাওয়া যায়। HTML ট্যাগ শুধু স্ট্রাকচার ও অর্থের জন্য ব্যবহার করুন।</li>
+            </ul>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="paragraphs.html" class="prev-topic">← প্যারাগ্রাফ</a>
+            <a href="comments.html" class="next-topic">কমেন্ট →</a>
+          </div>
+        </article>
       </div>
     </main>
   </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
   
   <script src="../../js/main.js"></script>
 </body>

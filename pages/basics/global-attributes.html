@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>গ্লোবাল অ্যাট্রিবিউট | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basics/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>বেসিক টপিকস</h3>
+        <ul>
+          <li><a href="headings.html">হেডিং (h1-h6)</a></li>
+          <li><a href="paragraphs.html">প্যারাগ্রাফ (p)</a></li>
+          <li><a href="text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
+          <li><a href="comments.html">কমেন্ট</a></li>
+          <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html">অ্যাট্রিবিউট</a></li>
+          <li><a href="global-attributes.html" class="active">গ্লোবাল অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
+            <li>গ্লোবাল অ্যাট্রিবিউট</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>গ্লোবাল অ্যাট্রিবিউট (Global Attributes)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১৮ মিনিট</span>
+            <span>লেভেল: মাঝারি</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>গ্লোবাল অ্যাট্রিবিউট কী?</h2>
+            <p>গ্লোবাল অ্যাট্রিবিউট হল সেই সকল অ্যাট্রিবিউট যা HTML-এর যেকোনো এলিমেন্টের সাথে ব্যবহার করা যায়। এগুলি সব এলিমেন্টের জন্য সাধারণ বৈশিষ্ট্য নির্ধারণ করে। HTML5-এ প্রচুর গ্লোবাল অ্যাট্রিবিউট সংযোজন করা হয়েছে যা ডেভেলপারদের আরও বেশি কন্ট্রোল দেয়।</p>
+            <p>গ্লোবাল অ্যাট্রিবিউট ব্যবহার করে এলিমেন্টের আইডি, ক্লাস, স্টাইল, ভাষা, ড্র্যাগেবিলিটি, স্পেলচেক, কাস্টম ডেটা ইত্যাদি নিয়ন্ত্রণ করা যায়।</p>
+            
+            <div class="info-box">
+              <p><strong>💡 গুরুত্বপূর্ণ:</strong> গ্লোবাল অ্যাট্রিবিউট সব HTML এলিমেন্টের সাথে ব্যবহার করা যায়, তবে কিছু এলিমেন্টে কিছু অ্যাট্রিবিউটের কোনো প্রভাব নাও থাকতে পারে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মৌলিক গ্লোবাল অ্যাট্রিবিউট</h2>
+            <p>নিচে সবচেয়ে বেশি ব্যবহৃত গ্লোবাল অ্যাট্রিবিউটগুলোর তালিকা ও ব্যবহার দেখানো হলো:</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>উদাহরণ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>id</code></td>
+                  <td>এলিমেন্টের ইউনিক আইডেন্টিফায়ার</td>
+                  <td><code>&lt;div id="header"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>class</code></td>
+                  <td>এলিমেন্টের ক্লাস নাম (একাধিক হতে পারে)</td>
+                  <td><code>&lt;p class="highlight bold"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>style</code></td>
+                  <td>ইনলাইন CSS স্টাইল</td>
+                  <td><code>&lt;h1 style="color:red"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>title</code></td>
+                  <td>টুলটিপ হিসেবে অতিরিক্ত তথ্য</td>
+                  <td><code>&lt;abbr title="World Wide Web"&gt;WWW&lt;/abbr&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>lang</code></td>
+                  <td>এলিমেন্টের ভাষা নির্ধারণ</td>
+                  <td><code>&lt;p lang="bn"&gt;বাংলা টেক্সট&lt;/p&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>dir</code></td>
+                  <td>টেক্সটের দিকনির্দেশ (ltr/rtl)</td>
+                  <td><code>&lt;p dir="rtl"&gt;আরবি টেক্সট&lt;/p&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>hidden</code></td>
+                  <td>এলিমেন্ট লুকিয়ে রাখে</td>
+                  <td><code>&lt;div hidden&gt;লুকানো&lt;/div&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>tabindex</code></td>
+                  <td>কীবোর্ড নেভিগেশনের ক্রম</td>
+                  <td><code>&lt;input tabindex="1"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>accesskey</code></td>
+                  <td>শর্টকাট কী নির্ধারণ</td>
+                  <td><code>&lt;a accesskey="h"&gt;হোম&lt;/a&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>contenteditable</code></td>
+                  <td>এলিমেন্ট এডিট করা যাবে কিনা</td>
+                  <td><code>&lt;div contenteditable="true"&gt;এডিট করুন&lt;/div&gt;</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>id এবং class অ্যাট্রিবিউট</h2>
+            <p><code>id</code> এবং <code>class</code> হল সবচেয়ে বেশি ব্যবহৃত গ্লোবাল অ্যাট্রিবিউট। এগুলি CSS এবং JavaScript-এর সাথে এলিমেন্ট সিলেক্ট করতে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: id এবং class ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- id ইউনিক হতে হবে --&gt;
+&lt;div id="main-content"&gt;
+  &lt;h1 id="page-title"&gt;স্বাগতম&lt;/h1&gt;
+  &lt;p class="intro"&gt;এটি একটি পরিচিতি প্যারাগ্রাফ।&lt;/p&gt;
+  &lt;p class="intro highlight"&gt;এটি আরেকটি প্যারাগ্রাফ।&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  #page-title { color: navy; }
+  .intro { font-size: 18px; }
+  .highlight { background-color: yellow; }
+&lt;/style&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <div>
+                  <h1 style="color: navy;">স্বাগতম</h1>
+                  <p style="font-size: 18px;">এটি একটি পরিচিতি প্যারাগ্রাফ।</p>
+                  <p style="font-size: 18px; background-color: yellow;">এটি আরেকটি প্যারাগ্রাফ।</p>
+                </div>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>💡 টিপস:</strong> id শুধুমাত্র একবার ব্যবহার করা যায়, কিন্তু class একাধিক এলিমেন্টে এবং একটি এলিমেন্টে একাধিক class ব্যবহার করা যায় (স্পেস দিয়ে আলাদা)।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>title অ্যাট্রিবিউট</h2>
+            <p><code>title</code> অ্যাট্রিবিউট এলিমেন্টের উপর মাউস নিয়ে গেলে টুলটিপ হিসেবে অতিরিক্ত তথ্য দেখায়। এটি অ্যাক্সেসিবিলিটি এবং ব্যবহারকারীর অভিজ্ঞতা উন্নত করে।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: title অ্যাট্রিবিউট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;
+  &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; 
+  শেখা খুবই সহজ।
+&lt;/p&gt;
+
+&lt;a href="#" title="হোমপেজে যান"&gt;হোম&lt;/a&gt;
+
+&lt;img src="icon.png" alt="সেটিংস" title="সেটিংস পরিবর্তন করুন"&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>
+                  <abbr title="HyperText Markup Language" style="text-decoration: underline dotted; cursor: help;">HTML</abbr> 
+                  শেখা খুবই সহজ।
+                </p>
+                <a href="#" title="হোমপেজে যান">হোম</a>
+                <br><br>
+                <span title="সেটিংস পরিবর্তন করুন" style="cursor: help;">⚙️ সেটিংস</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>lang এবং dir অ্যাট্রিবিউট</h2>
+            <p><code>lang</code> অ্যাট্রিবিউট এলিমেন্টের ভাষা নির্ধারণ করে, যা স্ক্রিন রিডার এবং সার্চ ইঞ্জিনের জন্য গুরুত্বপূর্ণ। <code>dir</code> অ্যাট্রিবিউট টেক্সটের দিকনির্দেশ নির্ধারণ করে (বাম থেকে ডান বা ডান থেকে বাম)।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: lang এবং dir ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;html lang="bn"&gt;
+  &lt;body&gt;
+    &lt;p&gt;এটি বাংলা ভাষায় লেখা।&lt;/p&gt;
+    &lt;p lang="en"&gt;This is English text.&lt;/p&gt;
+    &lt;p dir="rtl"&gt;هذا نص عربي&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>এটি বাংলা ভাষায় লেখা।</p>
+                <p lang="en">This is English text.</p>
+                <p dir="rtl" style="text-align: right;">هذا نص عربي</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>hidden অ্যাট্রিবিউট</h2>
+            <p><code>hidden</code> অ্যাট্রিবিউট এলিমেন্টটিকে ব্রাউজারে লুকিয়ে রাখে। এটি বুলিয়ান অ্যাট্রিবিউট, অর্থাৎ উপস্থিত থাকলেই এলিমেন্ট লুকানো হয়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: hidden অ্যাট্রিবিউট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;এই প্যারাগ্রাফটি দৃশ্যমান।&lt;/p&gt;
+&lt;p hidden&gt;এই প্যারাগ্রাফটি লুকানো আছে।&lt;/p&gt;
+&lt;p&gt;এটিও দৃশ্যমান।&lt;/p&gt;
+
+&lt;button onclick="document.getElementById('secret').hidden = false"&gt;
+  গোপন বার্তা দেখান
+&lt;/button&gt;
+&lt;p id="secret" hidden&gt;এটি একটি গোপন বার্তা!&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p>এই প্যারাগ্রাফটি দৃশ্যমান।</p>
+                <p style="display: none;">এই প্যারাগ্রাফটি লুকানো আছে।</p>
+                <p>এটিও দৃশ্যমান।</p>
+                <button onclick="this.nextElementSibling.hidden = !this.nextElementSibling.hidden" style="padding:5px 10px;">
+                  গোপন বার্তা দেখান/লুকান
+                </button>
+                <p hidden style="margin-top:10px; color:green;">এটি একটি গোপন বার্তা!</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>tabindex অ্যাট্রিবিউট</h2>
+            <p><code>tabindex</code> অ্যাট্রিবিউট কীবোর্ড ট্যাব নেভিগেশনের ক্রম নির্ধারণ করে। এটি অ্যাক্সেসিবিলিটির জন্য গুরুত্বপূর্ণ।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: tabindex ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ট্যাব ক্রম: 1, 2, 3 --&gt;
+&lt;input type="text" tabindex="1" placeholder="প্রথমে এখানে ফোকাস"&gt;
+&lt;input type="text" tabindex="3" placeholder="তৃতীয়"&gt;
+&lt;button tabindex="2"&gt;দ্বিতীয়&lt;/button&gt;
+
+&lt;!-- tabindex="-1" ট্যাব দিয়ে ফোকাস করা যায় না --&gt;
+&lt;div tabindex="-1"&gt;ট্যাব দিয়ে ফোকাস করা যাবে না&lt;/div&gt;
+
+&lt;!-- tabindex="0" স্বাভাবিক ক্রমে থাকে --&gt;
+&lt;a href="#" tabindex="0"&gt;স্বাভাবিক লিংক&lt;/a&gt;</code></pre>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>💡 টিপস:</strong> tabindex="0" এলিমেন্টকে স্বাভাবিক ট্যাব অর্ডারে রাখে। tabindex="-1" এলিমেন্টকে ট্যাব অর্ডার থেকে বাদ দেয় কিন্তু JavaScript দিয়ে ফোকাস করা যায়।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>contenteditable অ্যাট্রিবিউট</h2>
+            <p><code>contenteditable</code> অ্যাট্রিবিউট ব্যবহার করে এলিমেন্টের কন্টেন্টকে এডিটেবল করা যায়। এটি রিচ টেক্সট এডিটর বা ইনলাইন এডিটিং ফিচার তৈরি করতে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: contenteditable ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;div contenteditable="true" 
+     style="border:2px solid #ccc; padding:10px; min-height:100px;"&gt;
+  এই টেক্সটটি আপনি এডিট করতে পারেন। ক্লিক করে লিখুন!
+&lt;/div&gt;
+
+&lt;p contenteditable="true"&gt;এই প্যারাগ্রাফটিও এডিট করা যায়।&lt;/p&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <div contenteditable="true" style="border:2px solid #ccc; padding:10px; min-height:80px; background-color:white; border-radius:5px;">
+                  এই টেক্সটটি আপনি এডিট করতে পারেন। ক্লিক করে লিখুন!
+                </div>
+                <p contenteditable="true" style="margin-top:10px; padding:5px; background-color:white; border-radius:5px;">এই প্যারাগ্রাফটিও এডিট করা যায়।</p>
+                <p style="font-size:12px; color:#666; margin-top:5px;">↑ উপরের টেক্সটে ক্লিক করে এডিট করুন</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>accesskey অ্যাট্রিবিউট</h2>
+            <p><code>accesskey</code> অ্যাট্রিবিউট ব্যবহার করে এলিমেন্টের জন্য শর্টকাট কী নির্ধারণ করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: accesskey ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;a href="index.html" accesskey="h"&gt;হোম (Alt+H)&lt;/a&gt;
+&lt;a href="about.html" accesskey="a"&gt;আমাদের সম্পর্কে (Alt+A)&lt;/a&gt;
+&lt;a href="contact.html" accesskey="c"&gt;যোগাযোগ (Alt+C)&lt;/a&gt;
+
+&lt;!-- ব্রাউজার ভেদে শর্টকাট ভিন্ন হতে পারে:
+     Windows: Alt + accesskey
+     Mac: Ctrl + Option + accesskey --&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <a href="#" accesskey="h" style="margin-right:15px;">হোম (Alt+H)</a>
+                <a href="#" accesskey="a" style="margin-right:15px;">আমাদের সম্পর্কে (Alt+A)</a>
+                <a href="#" accesskey="c">যোগাযোগ (Alt+C)</a>
+                <p style="font-size:12px; color:#666; margin-top:10px;">💡 Windows: Alt + কী, Mac: Ctrl + Option + কী</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>spellcheck অ্যাট্রিবিউট</h2>
+            <p><code>spellcheck</code> অ্যাট্রিবিউট ব্রাউজারের স্পেল চেকিং ফিচার চালু বা বন্ধ করে।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: spellcheck ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- স্পেল চেক অন --&gt;
+&lt;textarea spellcheck="true" rows="3" cols="40"&gt;
+This is a sample text with speling error.
+&lt;/textarea&gt;
+
+&lt;!-- স্পেল চেক অফ --&gt;
+&lt;input type="text" spellcheck="false" value="This is speling error"&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <textarea spellcheck="true" rows="3" cols="40" style="width:100%; padding:5px; margin-bottom:10px;">
+This is a sample text with speling error.
+</textarea>
+                <input type="text" spellcheck="false" value="This is speling error" style="width:100%; padding:5px;">
+                <p style="font-size:12px; color:#666; margin-top:5px;">↑ প্রথমটিতে স্পেল চেক অন, দ্বিতীয়টিতে অফ</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>data-* কাস্টম অ্যাট্রিবিউট</h2>
+            <p><code>data-*</code> অ্যাট্রিবিউট ব্যবহার করে কাস্টম ডেটা সংরক্ষণ করা যায়। এটি জাভাস্ক্রিপ্টে ডেটা পাস করার জন্য খুবই কার্যকরী।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: data-* অ্যাট্রিবিউট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;div data-user-id="12345" data-role="admin" data-theme="dark"&gt;
+  ব্যবহারকারীর তথ্য
+&lt;/div&gt;
+
+&lt;button data-product-id="100" data-price="500" onclick="showInfo(this)"&gt;
+  পণ্যের তথ্য
+&lt;/button&gt;
+
+&lt;script&gt;
+function showInfo(element) {
+  let productId = element.dataset.productId;
+  let price = element.dataset.price;
+  alert(`পণ্য ID: ${productId}, দাম: ${price} টাকা`);
+}
+&lt;/script&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <div data-user-id="12345" data-role="admin" data-theme="dark" style="background-color:#e8f0fe; padding:10px; border-radius:5px; margin-bottom:10px;">
+                  ব্যবহারকারীর তথ্য (ডেটা স্টোর করা আছে)
+                </div>
+                <button data-product-id="100" data-price="500" onclick="alert('পণ্য ID: 100, দাম: 500 টাকা')" style="padding:5px 10px;">
+                  পণ্যের তথ্য
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>গ্লোবাল অ্যাট্রিবিউটের তুলনা</h2>
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>ব্যবহারের ক্ষেত্র</th>
+                  <th>গুরুত্বপূর্ণ বৈশিষ্ট্য</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>id</code></td>
+                  <td>CSS/JS সিলেক্টর, URL fragment</td>
+                  <td>পৃষ্ঠায় ইউনিক হতে হবে</td>
+                </tr>
+                <tr>
+                  <td><code>class</code></td>
+                  <td>CSS স্টাইলিং, JS সিলেক্টর</td>
+                  <td>একাধিক মান স্পেস দিয়ে আলাদা</td>
+                </tr>
+                <tr>
+                  <td><code>title</code></td>
+                  <td>টুলটিপ, অতিরিক্ত তথ্য</td>
+                  <td>অ্যাক্সেসিবিলিটি উন্নত করে</td>
+                </tr>
+                <tr>
+                  <td><code>hidden</code></td>
+                  <td>এলিমেন্ট লুকানো</td>
+                  <td>বুলিয়ান অ্যাট্রিবিউট</td>
+                </tr>
+                <tr>
+                  <td><code>contenteditable</code></td>
+                  <td>ইনলাইন এডিটিং</td>
+                  <td>true/false মান নেয়</td>
+                </tr>
+                <tr>
+                  <td><code>tabindex</code></td>
+                  <td>কীবোর্ড নেভিগেশন</td>
+                  <td>অ্যাক্সেসিবিলিটির জন্য গুরুত্বপূর্ণ</td>
+                </tr>
+                <tr>
+                  <td><code>data-*</code></td>
+                  <td>কাস্টম ডেটা স্টোরেজ</td>
+                  <td>জাভাস্ক্রিপ্টে সহজে অ্যাক্সেস</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>একটি div এলিমেন্ট তৈরি করুন যার id="container", class="main-box highlight", এবং title="এটি মূল কন্টেইনার" আছে।</li>
+              <li>একটি প্যারাগ্রাফ তৈরি করুন যা বাংলা ভাষায় লেখা এবং ডান থেকে বাম দিকে সাজানো (rtl)।</li>
+              <li>একটি বাটন তৈরি করুন যা ক্লিক করলে একটি hidden প্যারাগ্রাফ দৃশ্যমান হবে।</li>
+              <li>একটি div এলিমেন্ট তৈরি করুন যা contenteditable এবং এতে একটি নোট লেখার জায়গা আছে।</li>
+              <li>তিনটি লিংক তৈরি করুন যাদের accesskey যথাক্রমে "h", "a", "c" আছে।</li>
+              <li>একটি এলিমেন্ট তৈরি করুন যাতে data-user="rahim" এবং data-role="editor" কাস্টম অ্যাট্রিবিউট আছে।</li>
+              <li>নিচের কোডের ভুলগুলো চিহ্নিত করুন এবং সংশোধন করুন:
+                <pre><code>&lt;div id="box" id="main"&gt;
+&lt;p class="text text-bold text-blue"&gt;
+&lt;div hidden="true"&gt;
+&lt;input tabindex="-1"&gt;
+&lt;div contenteditable&gt;এডিট করুন&lt;/div&gt;</code></pre>
+              </li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>
+                  <strong>div with id, class, title:</strong>
+                  <pre><code>&lt;div id="container" class="main-box highlight" title="এটি মূল কন্টেইনার"&gt;
+  কন্টেন্ট
+&lt;/div&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>বাংলা ও RTL প্যারাগ্রাফ:</strong>
+                  <pre><code>&lt;p lang="bn" dir="rtl"&gt;
+এটি একটি বাংলা প্যারাগ্রাফ যা ডান থেকে বাম দিকে সাজানো।
+&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>hidden দেখানোর বাটন:</strong>
+                  <pre><code>&lt;button onclick="document.getElementById('secret').hidden = false"&gt;
+  বার্তা দেখান
+&lt;/button&gt;
+&lt;p id="secret" hidden&gt;এটি একটি গোপন বার্তা!&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>contenteditable div:</strong>
+                  <pre><code>&lt;div contenteditable="true" style="border:1px solid #ccc; padding:10px; min-height:100px;"&gt;
+আপনার নোট এখানে লিখুন...
+&lt;/div&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>accesskey সহ লিংক:</strong>
+                  <pre><code>&lt;a href="#" accesskey="h"&gt;হোম (Alt+H)&lt;/a&gt;
+&lt;a href="#" accesskey="a"&gt;আমাদের সম্পর্কে (Alt+A)&lt;/a&gt;
+&lt;a href="#" accesskey="c"&gt;যোগাযোগ (Alt+C)&lt;/a&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>data-* অ্যাট্রিবিউট:</strong>
+                  <pre><code>&lt;div data-user="rahim" data-role="editor"&gt;
+  রহিমের তথ্য
+&lt;/div&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ভুল সংশোধন:</strong>
+                  <pre><code>&lt;div id="box"&gt;
+&lt;p class="text text-bold text-blue"&gt;
+&lt;div hidden&gt;
+&lt;input tabindex="-1"&gt;
+&lt;div contenteditable="true"&gt;এডিট করুন&lt;/div&gt;</code></pre>
+                  <p><strong>ব্যাখ্যা:</strong> 
+                    <br>1. একই এলিমেন্টে একাধিক id ব্যবহার করা যাবে না
+                    <br>2. hidden বুলিয়ান অ্যাট্রিবিউটের মান লাগে না
+                    <br>3. contenteditable-এর মান স্পষ্টভাবে true/false দেওয়া ভালো
+                  </p>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li><strong>id ইউনিক রাখুন:</strong> একটি পৃষ্ঠায় একই id একাধিকবার ব্যবহার করবেন না।</li>
+              <li><strong>class পুনরায় ব্যবহার করুন:</strong> একাধিক এলিমেন্টে একই class ব্যবহার করতে পারেন।</li>
+              <li><strong>title অ্যাক্সেসিবিলিটি:</strong> স্ক্রিন রিডার title অ্যাট্রিবিউট পড়ে, তাই অর্থপূর্ণ তথ্য দিন।</li>
+              <li><strong>lang অ্যাট্রিবিউট ব্যবহার করুন:</strong> এটি SEO এবং অ্যাক্সেসিবিলিটির জন্য গুরুত্বপূর্ণ।</li>
+              <li><strong>hidden বনাম CSS display:none:</strong> hidden সিমান্টিকভাবে লুকানোর জন্য, CSS বেশি কন্ট্রোল দেয়।</li>
+              <li><strong>tabindex ব্যবহার সাবধানে করুন:</strong> অতিরিক্ত tabindex ব্যবহার ব্যবহারকারীর অভিজ্ঞতা খারাপ করতে পারে।</li>
+              <li><strong>data-* নেমিং:</strong> data- অ্যাট্রিবিউটের নাম ছোট হাতের অক্ষরে এবং হাইফেন দিয়ে লেখা উচিত।</li>
+              <li><strong>contenteditable সিকিউরিটি:</strong> ব্যবহারকারীর ইনপুট স্যানিটাইজ করতে ভুলবেন না।</li>
+            </ul>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="attributes.html" class="prev-topic">← অ্যাট্রিবিউট</a>
+            <a href="../forms/basic-forms.html" class="next-topic">বেসিক ফর্ম →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -23,9 +23,10 @@
           <li><a href="../../index.html">হোম</a></li>
           <li><a href="../introduction/">শুরু করুন</a></li>
           <li><a href="./" class="active">বেসিক</a></li>
-          <li><a href="../forms/">ফর্ম</a></li>
-          <li><a href="../tables/">টেবল</a></li>
           <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
         </ul>
       </nav>
     </div>
@@ -51,7 +52,8 @@
         <nav class="breadcrumb">
           <ol>
             <li><a href="../../index.html">হোম</a></li>
-            <li>বেসিক</li>
+            <li><a href="./">বেসিক</a></li>
+            <li>HTML বেসিক</li>
           </ol>
         </nav>
 
@@ -79,13 +81,16 @@
           </section>
 
           <section class="topic-section">
-            <h2>একটি সাধারণ HTML ডকুমেন্ট</h2>
+            <h2>HTML ডকুমেন্টের মৌলিক কাঠামো</h2>
+            <p>প্রতিটি HTML ডকুমেন্টের একটি নির্দিষ্ট কাঠামো থাকে যা ব্রাউজার বুঝতে পারে। নিচে একটি সাধারণ HTML ডকুমেন্টের উদাহরণ দেওয়া হলো:</p>
             
             <div class="example-box">
+              <h3>সরল উদাহরণ:</h3>
               <div class="code-preview">
                 <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+&lt;html lang="bn"&gt;
 &lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;আমার প্রথম পৃষ্ঠা&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -94,16 +99,45 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
               </div>
-              
               <div class="live-preview">
                 <h1>স্বাগতম</h1>
                 <p>এটি আমার প্রথম HTML পৃষ্ঠা।</p>
               </div>
             </div>
+
+            <div class="tip-box">
+              <h4>মনে রাখবেন:</h4>
+              <p>সব HTML ডকুমেন্ট <code>&lt;!DOCTYPE html&gt;</code> দিয়ে শুরু হয়। এটি ব্রাউজারকে বলে যে এটি HTML5 ডকুমেন্ট।</p>
+            </div>
           </section>
 
           <section class="topic-section">
-            <h2>টপিক অনুসারে শিখুন</h2>
+            <h2>টেক্সট ফরম্যাটিং উদাহরণ</h2>
+            <p>HTML-এ টেক্সট ফরম্যাটিং করার জন্য বিভিন্ন ট্যাগ ব্যবহার করা হয়:</p>
+            
+            <div class="example-box">
+              <h3>টেক্সট ফরম্যাটিং:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;strong&gt;বোল্ড টেক্সট&lt;/strong&gt;
+&lt;em&gt;ইটালিক টেক্সট&lt;/em&gt;
+&lt;mark&gt;হাইলাইটেড টেক্সট&lt;/mark&gt;
+&lt;small&gt;ছোট টেক্সট&lt;/small&gt;
+&lt;del&gt;ডিলিটেড টেক্সট&lt;/del&gt;
+&lt;ins&gt;ইনসার্টেড টেক্সট&lt;/ins&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <p><strong>বোল্ড টেক্সট</strong></p>
+                <p><em>ইটালিক টেক্সট</em></p>
+                <p><mark>হাইলাইটেড টেক্সট</mark></p>
+                <p><small>ছোট টেক্সট</small></p>
+                <p><del>ডিলিটেড টেক্সট</del></p>
+                <p><ins>ইনসার্টেড টেক্সট</ins></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>পরবর্তী ধাপসমূহ</h2>
             <div class="topics-grid-mini">
               <a href="document-structure.html" class="topic-card">
                 <h3>ডকুমেন্ট স্ট্রাকচার</h3>
@@ -122,16 +156,49 @@
                 <p>বোল্ড, ইটালিক, হাইলাইট করা শিখুন</p>
               </a>
             </div>
+            <div class="topic-navigation">
+              <a href="../introduction/what-is-html.html" class="prev-topic">← পূর্ববর্তী: HTML পরিচিতি</a>
+              <a href="document-structure.html" class="next-topic">পরবর্তী: ডকুমেন্ট স্ট্রাকচার →</a>
+            </div>
           </section>
         </article>
       </div>
     </main>
   </div>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
       <div class="footer-bottom">
-        <p>&copy; ২০২৬ HTML শিখি</p>
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
       </div>
     </div>
   </footer>

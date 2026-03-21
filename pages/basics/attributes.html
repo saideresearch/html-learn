@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অ্যাট্রিবিউট (Attributes) | HTML শিখি</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basics/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>বেসিক টপিকস</h3>
+        <ul>
+          <li><a href="headings.html">হেডিং (h1-h6)</a></li>
+          <li><a href="paragraphs.html">প্যারাগ্রাফ (p)</a></li>
+          <li><a href="text-formatting.html">টেক্সট ফরম্যাটিং</a></li>
+          <li><a href="comments.html">কমেন্ট</a></li>
+          <li><a href="colors.html">কালার</a></li>
+          <li><a href="attributes.html" class="active">অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basics/">বেসিক</a></li>
+            <li>অ্যাট্রিবিউট</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML অ্যাট্রিবিউট (Attributes)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ১৫ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>অ্যাট্রিবিউট কী?</h2>
+            <p>HTML অ্যাট্রিবিউট হল এলিমেন্টের অতিরিক্ত তথ্য যা এলিমেন্টের আচরণ, উপস্থাপনা বা বৈশিষ্ট্য নির্ধারণ করে। অ্যাট্রিবিউট সবসময় শুরু ট্যাগের ভিতরে লেখা হয় এবং এগুলি নাম ও মানের জোড়া আকারে থাকে। অ্যাট্রিবিউট ব্যবহার করে একটি এলিমেন্টকে আরও কাস্টমাইজ করা যায় এবং নির্দিষ্ট কাজ করার নির্দেশ দেওয়া যায়।</p>
+            <p>অ্যাট্রিবিউট HTML-এর একটি শক্তিশালী বৈশিষ্ট্য যা ওয়েবপৃষ্ঠাকে ডায়নামিক ও ইন্টারঅ্যাকটিভ করতে সাহায্য করে।</p>
+          </section>
+
+          <section class="topic-section">
+            <h2>অ্যাট্রিবিউটের সিনট্যাক্স</h2>
+            <p>HTML অ্যাট্রিবিউট লেখার একটি নির্দিষ্ট নিয়ম রয়েছে:</p>
+            
+            <div class="example-box">
+              <h3>মৌলিক সিনট্যাক্স</h3>
+              <div class="code-preview">
+                <pre><code>&lt;এলিমেন্ট নাম অ্যাট্রিবিউট="মান"&gt;কন্টেন্ট&lt;/এলিমেন্ট&gt;</code></pre>
+              </div>
+              
+              <h4>গঠন:</h4>
+              <ul>
+                <li><strong>অ্যাট্রিবিউট নাম:</strong> কী বৈশিষ্ট্য নির্ধারণ করতে চান (যেমন: href, src, alt)</li>
+                <li><strong>সমান চিহ্ন (=):</strong> নাম ও মানের মধ্যে সংযোগ স্থাপন করে</li>
+                <li><strong>মান:</strong> অ্যাট্রিবিউটের নির্দিষ্ট মান, সাধারণত উদ্ধৃতি চিহ্নের মধ্যে লেখা হয়</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>💡 গুরুত্বপূর্ণ:</strong> অ্যাট্রিবিউটের মান ডাবল কোটেশন (" ") বা সিঙ্গেল কোটেশন (' ') এর মধ্যে লেখা যায়। ডাবল কোটেশন ব্যবহার করাই স্ট্যান্ডার্ড পদ্ধতি।</p>
+              </div>
+            </div>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: অ্যাট্রিবিউট ব্যবহার</h3>
+              <div class="code-preview">
+                <pre><code>&lt;a href="https://www.example.com"&gt;ভিজিট করুন&lt;/a&gt;
+&lt;img src="image.jpg" alt="আমার ছবি" width="300" height="200"&gt;
+&lt;p style="color: blue; font-size: 18px;"&gt;নীল রঙের প্যারাগ্রাফ&lt;/p&gt;
+&lt;input type="text" placeholder="আপনার নাম লিখুন"&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <a href="#">ভিজিট করুন</a><br><br>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23cccccc'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23666666'%3Eছবি%3C/text%3E%3C/svg%3E" alt="আমার ছবি" width="300" height="200" style="max-width:100%; height:auto;"><br>
+                <p style="color: blue; font-size: 18px;">নীল রঙের প্যারাগ্রাফ</p>
+                <input type="text" placeholder="আপনার নাম লিখুন" style="padding: 5px; width: 200px;">
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সাধারণ HTML অ্যাট্রিবিউট</h2>
+            <p>HTML-এ শতাধিক অ্যাট্রিবিউট রয়েছে। নিচে সবচেয়ে গুরুত্বপূর্ণ এবং বেশি ব্যবহৃত অ্যাট্রিবিউটগুলোর তালিকা দেওয়া হলো:</p>
+            
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>অ্যাট্রিবিউট</th>
+                  <th>বিবরণ</th>
+                  <th>উদাহরণ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>id</code></td>
+                  <td>এলিমেন্টের ইউনিক আইডি নির্ধারণ করে</td>
+                  <td><code>&lt;div id="header"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>class</code></td>
+                  <td>এলিমেন্টের ক্লাস নির্ধারণ করে (CSS বা JS-এর জন্য)</td>
+                  <td><code>&lt;p class="highlight"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>style</code></td>
+                  <td>ইনলাইন CSS স্টাইল প্রয়োগ করে</td>
+                  <td><code>&lt;h1 style="color:red"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>src</code></td>
+                  <td>ইমেজ, ভিডিও ইত্যাদির সোর্স ফাইল নির্ধারণ করে</td>
+                  <td><code>&lt;img src="photo.jpg"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>href</code></td>
+                  <td>লিংকের ইউআরএল নির্ধারণ করে</td>
+                  <td><code>&lt;a href="page.html"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>alt</code></td>
+                  <td>ইমেজের বিকল্প টেক্সট (অ্যাক্সেসিবিলিটির জন্য)</td>
+                  <td><code>&lt;img alt="বর্ণনা"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>title</code></td>
+                  <td>টুলটিপ হিসেবে দেখানো অতিরিক্ত তথ্য</td>
+                  <td><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>width</code> / <code>height</code></td>
+                  <td>এলিমেন্টের প্রস্থ ও উচ্চতা নির্ধারণ করে</td>
+                  <td><code>&lt;img width="100" height="100"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>type</code></td>
+                  <td>ইনপুট ফিল্ডের ধরন নির্ধারণ করে</td>
+                  <td><code>&lt;input type="email"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>placeholder</code></td>
+                  <td>ইনপুট ফিল্ডে প্লেসহোল্ডার টেক্সট দেখায়</td>
+                  <td><code>&lt;input placeholder="নাম লিখুন"&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>required</code></td>
+                  <td>ইনপুট ফিল্ড পূরণ করা আবশ্যক নির্দেশ করে</td>
+                  <td><code>&lt;input required&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>disabled</code></td>
+                  <td>এলিমেন্ট নিষ্ক্রিয় করে দেয়</td>
+                  <td><code>&lt;button disabled&gt;ক্লিক করুন&lt;/button&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>target</code></td>
+                  <td>লিংক কোথায় খুলবে তা নির্ধারণ করে</td>
+                  <td><code>&lt;a target="_blank"&gt;</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="topic-section">
+            <h2>বিভিন্ন ধরনের অ্যাট্রিবিউট</h2>
+            <p>অ্যাট্রিবিউট তিনটি প্রধান ক্যাটাগরিতে বিভক্ত:</p>
+            
+            <h3>১. বাধ্যতামূলক অ্যাট্রিবিউট</h3>
+            <p>কিছু অ্যাট্রিবিউট নির্দিষ্ট এলিমেন্টের জন্য বাধ্যতামূলক। যেমন <code>&lt;img&gt;</code> ট্যাগে <code>src</code> এবং <code>alt</code> অ্যাট্রিবিউট থাকা আবশ্যক।</p>
+            
+            <div class="code-preview">
+              <pre><code>&lt;!-- সঠিক --&gt;
+&lt;img src="logo.png" alt="কোম্পানির লোগো"&gt;
+
+&lt;!-- ভুল (alt নেই) --&gt;
+&lt;img src="logo.png"&gt;</code></pre>
+            </div>
+            
+            <h3>২. বৈশ্বিক অ্যাট্রিবিউট (Global Attributes)</h3>
+            <p>বৈশ্বিক অ্যাট্রিবিউট সব HTML এলিমেন্টের সাথে ব্যবহার করা যায়। যেমন: <code>id</code>, <code>class</code>, <code>style</code>, <code>title</code>, <code>lang</code>, <code>hidden</code> ইত্যাদি।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;p id="intro" class="text" style="color:green" title="এটি একটি প্যারাগ্রাফ"&gt;
+  বৈশ্বিক অ্যাট্রিবিউট ব্যবহার করা হয়েছে।
+&lt;/p&gt;
+&lt;p hidden&gt;এই প্যারাগ্রাফটি লুকানো আছে।&lt;/p&gt;</code></pre>
+              </div>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <p id="intro" class="text" style="color:green" title="এটি একটি প্যারাগ্রাফ">
+                  বৈশ্বিক অ্যাট্রিবিউট ব্যবহার করা হয়েছে।
+                </p>
+                <p hidden>এই প্যারাগ্রাফটি লুকানো আছে।</p>
+              </div>
+            </div>
+            
+            <h3>৩. ইভেন্ট হ্যান্ডলার অ্যাট্রিবিউট</h3>
+            <p>জাভাস্ক্রিপ্ট ব্যবহার করে বিভিন্ন ইভেন্ট হ্যান্ডল করার জন্য এই অ্যাট্রিবিউটগুলো ব্যবহার করা হয়।</p>
+            
+            <div class="code-preview">
+              <pre><code>&lt;button onclick="alert('হ্যালো!')"&gt;ক্লিক করুন&lt;/button&gt;
+&lt;input onfocus="this.style.backgroundColor='yellow'"&gt;</code></pre>
+            </div>
+            
+            <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+              <button onclick="alert('হ্যালো!')" style="padding:5px 10px; margin-right:10px;">ক্লিক করুন</button>
+              <input onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor=''" placeholder="ফোকাস করুন" style="padding:5px;">
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>বুলিয়ান অ্যাট্রিবিউট</h2>
+            <p>কিছু অ্যাট্রিবিউটের মান থাকে না। এদের বুলিয়ান অ্যাট্রিবিউট বলা হয়। এগুলি উপস্থিত থাকলেই সেটি সত্য (true) হিসেবে বিবেচিত হয়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: বুলিয়ান অ্যাট্রিবিউট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- চেকবক্স প্রি-সিলেক্টেড --&gt;
+&lt;input type="checkbox" checked&gt; আমি সম্মতি দিচ্ছি
+
+&lt;!-- ইনপুট ফিল্ড রিডঅনলি --&gt;
+&lt;input type="text" value="পড়া যায় শুধু" readonly&gt;
+
+&lt;!-- বাটন ডিসএবলড --&gt;
+&lt;button disabled&gt;সাবমিট করুন&lt;/button&gt;</code></pre>
+              </div>
+              
+              <h4>প্রিভিউ:</h4>
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <input type="checkbox" checked> আমি সম্মতি দিচ্ছি<br><br>
+                <input type="text" value="পড়া যায় শুধু" readonly style="padding:5px;"><br><br>
+                <button disabled style="padding:5px 10px;">সাবমিট করুন</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কাস্টম অ্যাট্রিবিউট (data-*)</h2>
+            <p>HTML5-এ কাস্টম অ্যাট্রিবিউট তৈরি করার সুবিধা রয়েছে। এগুলি <code>data-</code> দিয়ে শুরু হয় এবং জাভাস্ক্রিপ্টে ডেটা সংরক্ষণের জন্য ব্যবহার করা হয়।</p>
+            
+            <div class="example-box">
+              <h3>উদাহরণ: data-* অ্যাট্রিবিউট</h3>
+              <div class="code-preview">
+                <pre><code>&lt;div data-user-id="12345" data-role="admin" data-theme="dark"&gt;
+  ব্যবহারকারীর তথ্য
+&lt;/div&gt;
+
+&lt;button data-product-id="100" data-price="500" onclick="showProduct(this)"&gt;
+  পণ্য দেখুন
+&lt;/button&gt;
+
+&lt;script&gt;
+function showProduct(button) {
+  let productId = button.dataset.productId;
+  let price = button.dataset.price;
+  alert('পণ্য আইডি: ' + productId + ', দাম: ' + price + ' টাকা');
+}
+&lt;/script&gt;</code></pre>
+              </div>
+              
+              <div class="demo-box" style="background-color:#f0f0f0; padding:15px; border-radius:8px;">
+                <div data-user-id="12345" data-role="admin" data-theme="dark" style="background-color:#e8f0fe; padding:10px; border-radius:5px;">
+                  ব্যবহারকারীর তথ্য
+                </div>
+                <br>
+                <button data-product-id="100" data-price="500" onclick="alert('পণ্য আইডি: 100, দাম: 500 টাকা')" style="padding:5px 10px;">
+                  পণ্য দেখুন
+                </button>
+              </div>
+              <p class="info-box">💡 কাস্টম অ্যাট্রিবিউট জাভাস্ক্রিপ্টে ডেটা সংরক্ষণ ও ব্যবহারের জন্য খুবই কার্যকরী।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অ্যাট্রিবিউটের গুরুত্বপূর্ণ টিপস</h2>
+            <ul>
+              <li><strong>অ্যাট্রিবিউট মান সবসময় উদ্ধৃতি চিহ্নে দিন:</strong> HTML5-এ উদ্ধৃতি ছাড়া লেখা যায়, তবে ভালো অভ্যাস হল ডাবল কোটেশন ব্যবহার করা।</li>
+              <li><strong>অ্যাট্রিবিউট নাম ছোট হাতের অক্ষরে লিখুন:</strong> HTML5-এ কেস সেন্সিটিভ নয়, কিন্তু ছোট হাতের অক্ষর ব্যবহার করা স্ট্যান্ডার্ড।</li>
+              <li><strong>একাধিক অ্যাট্রিবিউট স্পেস দিয়ে আলাদা করুন:</strong> ক্রম যেকোনো হতে পারে, তবে পঠনযোগ্যতার জন্য যুক্তিসঙ্গত ক্রম অনুসরণ করুন।</li>
+              <li><strong>বুলিয়ান অ্যাট্রিবিউটে মান না দিয়ে শুধু নাম দিন:</strong> যেমন <code>checked</code>, <code>disabled</code>।</li>
+              <li><strong>কাস্টম অ্যাট্রিবিউটের জন্য data-* ব্যবহার করুন:</strong> এটি HTML ভ্যালিডেটর দ্বারা স্বীকৃত এবং ভবিষ্যতে কোন সমস্যা তৈরি করবে না।</li>
+            </ul>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী</h2>
+            <ol class="exercise-list">
+              <li>একটি লিংক তৈরি করুন যা নতুন ট্যাবে খুলবে। সঠিক অ্যাট্রিবিউট ব্যবহার করুন।</li>
+              <li>একটি ইমেজ যোগ করুন যার প্রস্থ 200px, উচ্চতা 150px, এবং alt টেক্সট আছে।</li>
+              <li>একটি ফর্ম তৈরি করুন যাতে একটি নামের ইনপুট ফিল্ড আছে যা পূরণ করা আবশ্যক (required)।</li>
+              <li>একটি প্যারাগ্রাফ তৈরি করুন যার id="about", class="content", এবং style="background-color:lightgray" আছে।</li>
+              <li>একটি বাটন তৈরি করুন যা ক্লিক করলে alert দেখাবে (onclick অ্যাট্রিবিউট ব্যবহার করে)।</li>
+              <li>একটি div এলিমেন্ট তৈরি করুন যাতে data-role="admin" এবং data-status="active" কাস্টম অ্যাট্রিবিউট আছে।</li>
+              <li>নিচের কোডে অ্যাট্রিবিউটের ভুলগুলো চিহ্নিত করুন এবং সংশোধন করুন:
+                <pre><code>&lt;img src=photo.jpg alt="ছবি width="300"&gt;
+&lt;a href='page.html target=_blank&gt;লিংক&lt;/a&gt;
+&lt;input type=text placeholder="নাম লিখুন required&gt;</code></pre>
+              </li>
+            </ol>
+            
+            <details class="solution">
+              <summary>সমাধান দেখুন</summary>
+              <ol>
+                <li>
+                  <strong>নতুন ট্যাবে খোলার লিংক:</strong>
+                  <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;ভিজিট করুন&lt;/a&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ইমেজ অ্যাট্রিবিউট:</strong>
+                  <pre><code>&lt;img src="image.jpg" alt="ছবির বিবরণ" width="200" height="150"&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>required সহ ফর্ম:</strong>
+                  <pre><code>&lt;form&gt;
+  &lt;input type="text" placeholder="আপনার নাম" required&gt;
+  &lt;button type="submit"&gt;সাবমিট&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>প্যারাগ্রাফ অ্যাট্রিবিউট:</strong>
+                  <pre><code>&lt;p id="about" class="content" style="background-color:lightgray"&gt;
+  এটি একটি প্যারাগ্রাফ।
+&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>onclick সহ বাটন:</strong>
+                  <pre><code>&lt;button onclick="alert('হ্যালো!')"&gt;ক্লিক করুন&lt;/button&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>data-* অ্যাট্রিবিউট:</strong>
+                  <pre><code>&lt;div data-role="admin" data-status="active"&gt;
+  অ্যাডমিন প্যানেল
+&lt;/div&gt;</code></pre>
+                </li>
+                <li>
+                  <strong>ভুল সংশোধন:</strong>
+                  <pre><code>&lt;img src="photo.jpg" alt="ছবি" width="300"&gt;
+&lt;a href="page.html" target="_blank"&gt;লিংক&lt;/a&gt;
+&lt;input type="text" placeholder="নাম লিখুন" required&gt;</code></pre>
+                  <p><strong>ব্যাখ্যা:</strong> প্রথমটিতে alt-এর কোটেশন সঠিকভাবে বন্ধ হয়নি, দ্বিতীয়টিতে href-এর কোটেশন ও target-এর মান সঠিক নয়, তৃতীয়টিতে type-এর মান কোটেশনে নেই এবং required-এর মান দেওয়া ভুল (বুলিয়ান অ্যাট্রিবিউটের মান লাগে না)।</p>
+                </li>
+              </ol>
+            </details>
+          </section>
+
+          <section class="topic-section">
+            <h2>সংক্ষিপ্ত টিপস</h2>
+            <ul>
+              <li><strong>অ্যাক্সেসিবিলিটি নিশ্চিত করুন:</strong> সব ইমেজে <code>alt</code> অ্যাট্রিবিউট ব্যবহার করুন। এটি স্ক্রিন রিডার ব্যবহারকারীদের জন্য গুরুত্বপূর্ণ।</li>
+              <li><strong>লিংকের জন্য title ব্যবহার করুন:</strong> লিংকের গন্তব্য সম্পর্কে অতিরিক্ত তথ্য দিতে <code>title</code> অ্যাট্রিবিউট ব্যবহার করুন।</li>
+              <li><strong>id ইউনিক রাখুন:</strong> একটি পৃষ্ঠায় একই id একাধিকবার ব্যবহার করবেন না।</li>
+              <li><strong>class পুনরায় ব্যবহার করুন:</strong> একই স্টাইল একাধিক এলিমেন্টে দিতে class ব্যবহার করুন।</li>
+              <li><strong>ইনলাইন স্টাইল এড়িয়ে চলুন:</strong> CSS আলাদা ফাইলে রাখা ভালো, তবে দ্রুত পরীক্ষার জন্য style অ্যাট্রিবিউট ব্যবহার করা যায়।</li>
+              <li><strong>সঠিক ডকটাইপ ব্যবহার করুন:</strong> HTML5-এ অ্যাট্রিবিউট লেখার নিয়ম কিছুটা নমনীয়, তবে সঠিক ডকটাইপ থাকা জরুরি।</li>
+            </ul>
+          </section>
+
+          <div class="topic-navigation">
+            <a href="colors.html" class="prev-topic">← কালার</a>
+            <a href="../forms/basic-forms.html" class="next-topic">বেসিক ফর্ম →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="#">/offsecplatform</a></p>
+          <p>এক্স: <a href="#">/saide87765</a></p>
+          <p>লিংকডইন: <a href="#">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>
