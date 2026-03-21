@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 APIs | HTML শিখি</title>
+  <meta name="description" content="HTML5 APIs-এর সম্পূর্ণ গাইড: জিওলোকেশন, ড্র্যাগ অ্যান্ড ড্রপ, ওয়েব স্টোরেজ, Web Workers, getUserMedia, নোটিফিকেশন, WebRTC, Intersection Observer, ক্লিপবোর্ড API ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>HTML5 APIs টপিকস</h3>
+        <ul>
+          <li><a href="geolocation.html">জিওলোকেশন API</a></li>
+          <li><a href="drag-drop.html">ড্র্যাগ অ্যান্ড ড্রপ API</a></li>
+          <li><a href="web-storage.html">ওয়েব স্টোরেজ API</a></li>
+          <li><a href="localstorage.html">localStorage</a></li>
+          <li><a href="sessionstorage.html">sessionStorage</a></li>
+          <li><a href="web-workers.html">ওয়েব ওয়ার্কার্স</a></li>
+          <li><a href="server-sent-events.html">সার্ভার-সেন্ট ইভেন্ট</a></li>
+          <li><a href="file-api.html">ফাইল API</a></li>
+          <li><a href="getusermedia.html">getUserMedia (ক্যামেরা)</a></li>
+          <li><a href="notification.html">নোটিফিকেশন API</a></li>
+          <li><a href="page-visibility.html">পেজ ভিজিবিলিটি API</a></li>
+          <li><a href="history-api.html">হিস্ট্রি API</a></li>
+          <li><a href="fullscreen-api.html">ফুলস্ক্রিন API</a></li>
+          <li><a href="webrtc.html">WebRTC</a></li>
+          <li><a href="payment-api.html">পেমেন্ট রিকোয়েস্ট API</a></li>
+          <li><a href="clipboard-api.html">ক্লিপবোর্ড API</a></li>
+          <li><a href="resize-observer.html">রিসাইজ অবজারভার API</a></li>
+          <li><a href="intersection-observer.html">ইন্টারসেকশন অবজারভার API</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>HTML5 APIs</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML5 APIs (Application Programming Interfaces)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৭০ মিনিট</span>
+            <span>লেভেল: উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML5 APIs কী?</h2>
+            <p>HTML5 APIs হলো জাভাস্ক্রিপ্ট-ভিত্তিক ইন্টারফেস যা ব্রাউজারের হার্ডওয়্যার, ফাইল সিস্টেম, নেটওয়ার্ক, স্টোরেজ এবং অন্যান্য ক্ষমতায় অ্যাক্সেস প্রদান করে। এই APIs ব্যবহার করে আপনি ওয়েব অ্যাপ্লিকেশনকে ডেস্কটপ অ্যাপের মতো শক্তিশালী এবং ইন্টারঅ্যাকটিভ করতে পারেন। জিওলোকেশন, ড্র্যাগ অ্যান্ড ড্রপ, অফলাইন স্টোরেজ, পুশ নোটিফিকেশন, ক্যামেরা অ্যাক্সেস, WebRTC ভিডিও কল—এই সবই HTML5 APIs-এর মাধ্যমে সম্ভব।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>ক্লায়েন্ট-সাইড স্টোরেজ:</strong> localStorage, sessionStorage, IndexedDB</li>
+                <li><strong>হার্ডওয়্যার অ্যাক্সেস:</strong> জিওলোকেশন, ক্যামেরা/মাইক্রোফোন (getUserMedia)</li>
+                <li><strong>পারফরম্যান্স ও অবজারভার API:</strong> Intersection Observer, Resize Observer</li>
+                <li><strong>ব্যাকগ্রাউন্ড প্রসেসিং:</strong> Web Workers, Service Workers</li>
+                <li><strong>রিয়েল-টাইম যোগাযোগ:</strong> WebSockets, WebRTC, Server-Sent Events</li>
+                <li><strong>ইউজার ইন্টারঅ্যাকশন:</strong> Drag & Drop, Clipboard API, Fullscreen API</li>
+                <li><strong>নোটিফিকেশন ও পেজ কন্ট্রোল:</strong> Notification API, Page Visibility API, History API</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>জিওলোকেশন API (Geolocation API)</h2>
+            <p>জিওলোকেশন API ব্যবহারকারীর বর্তমান অবস্থান (অক্ষাংশ, দ্রাঘিমাংশ) অ্যাক্সেস করতে দেয়। ইউজারের অনুমতি সাপেক্ষে এটি কাজ করে।</p>
+            
+            <div class="example-box">
+              <h3>জিওলোকেশন উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+      console.log(`অবস্থান: ${lat}, ${lng}`);
+    },
+    (error) => {
+      console.error("লোকেশন অ্যাক্সেস অস্বীকৃত:", error.message);
+    }
+  );
+}
+
+// অবস্থান ট্র্যাকিং
+const watchId = navigator.geolocation.watchPosition(
+  (position) => updateLocation(position),
+  (error) => handleError(error)
+);
+// ট্র্যাকিং বন্ধ করতে: navigator.geolocation.clearWatch(watchId);</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>ব্যবহার:</strong> ম্যাপ সেবা, লোকেশন-ভিত্তিক সার্চ, ডেলিভারি ট্র্যাকিং, আবহাওয়া অ্যাপ ইত্যাদিতে জিওলোকেশন ব্যবহার করা হয়।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ড্র্যাগ অ্যান্ড ড্রপ API (Drag and Drop API)</h2>
+            <p>ড্র্যাগ অ্যান্ড ড্রপ API ব্যবহারকারীকে HTML এলিমেন্ট ড্র্যাগ করে অন্য স্থানে ড্রপ করার সুযোগ দেয়। এটি ফাইল আপলোড, ক্যানভাস ডিজাইন, টাস্ক ম্যানেজমেন্ট অ্যাপে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <h3>ড্র্যাগ অ্যান্ড ড্রপ উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;div draggable="true" ondragstart="dragStart(event)"&gt;ড্র্যাগ করুন&lt;/div&gt;
+&lt;div ondrop="drop(event)" ondragover="allowDrop(event)"&gt;এখানে ড্রপ করুন&lt;/div&gt;
+
+&lt;script&gt;
+function dragStart(event) {
+  event.dataTransfer.setData("text/plain", event.target.id);
+}
+function allowDrop(event) {
+  event.preventDefault();
+}
+function drop(event) {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("text/plain");
+  const draggedElement = document.getElementById(data);
+  event.target.appendChild(draggedElement);
+}
+&lt;/script&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; padding: 10px; border-radius: 8px; text-align: center;">
+                  <div style="background: #4CAF50; color: white; padding: 8px; border-radius: 4px; display: inline-block; cursor: grab;">📦 ড্র্যাগ করুন</div>
+                  <div style="margin-top: 10px; border: 2px dashed #ccc; padding: 20px; border-radius: 8px;">📂 এখানে ড্রপ করুন</div>
+                  <small>(ডেমো - সম্পূর্ণ ফাংশনালিটির জন্য JavaScript প্রয়োজন)</small>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ওয়েব স্টোরেজ API (Web Storage API)</h2>
+            <p>ওয়েব স্টোরেজ API ক্লায়েন্ট-সাইডে কী-ভ্যালু জোড়া সংরক্ষণের সুযোগ দেয়। এটি localStorage এবং sessionStorage নিয়ে গঠিত।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// localStorage - ডেটা স্থায়ী (ব্রাউজার বন্ধ হলেও থাকে)
+localStorage.setItem('username', 'রহিম');
+const user = localStorage.getItem('username');
+localStorage.removeItem('username');
+localStorage.clear();
+
+// sessionStorage - ডেটা সেশন চলাকালীন (ট্যাব বন্ধ হলে মুছে যায়)
+sessionStorage.setItem('tempData', 'সেশন ডাটা');
+const temp = sessionStorage.getItem('tempData');</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>localStorage vs sessionStorage:</h4>
+                <ul>
+                  <li><strong>localStorage:</strong> ৫-১০MB সীমা, ডেটা স্থায়ী, সব ট্যাবে শেয়ার হয়</li>
+                  <li><strong>sessionStorage:</strong> ~৫MB সীমা, ট্যাব বন্ধে মুছে যায়, শুধু ওই ট্যাবে অ্যাক্সেসযোগ্য</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ওয়েব ওয়ার্কার্স (Web Workers)</h2>
+            <p>Web Workers ব্যাকগ্রাউন্ড থ্রেডে জাভাস্ক্রিপ্ট চালানোর সুযোগ দেয়। এটি UI থ্রেডকে ব্লক না করে ভারী গণনা, ডাটা প্রসেসিং, ফাইল পার্সিং করতে পারে।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// main.js
+const worker = new Worker('worker.js');
+worker.postMessage({ data: heavyData });
+worker.onmessage = (event) => {
+  console.log('রেজাল্ট:', event.data);
+};
+
+// worker.js
+self.onmessage = (event) => {
+  const result = heavyComputation(event.data);
+  self.postMessage(result);
+};</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>ব্যবহার:</strong> ইমেজ প্রসেসিং, বড় ডাটাসেট ফিল্টারিং, এনক্রিপশন, প্যারালাল প্রসেসিং—যেখানে UI ফ্রিজ এড়ানো প্রয়োজন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>getUserMedia (ক্যামেরা ও মাইক্রোফোন)</h2>
+            <p>getUserMedia API ব্যবহারকারীর ক্যামেরা, মাইক্রোফোন এবং স্ক্রিন অ্যাক্সেস করতে দেয়। এটি ভিডিও কল, ফটো ক্যাপচার, ভয়েস রেকর্ডিং অ্যাপে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+  .then((stream) => {
+    const videoElement = document.querySelector('video');
+    videoElement.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error('ক্যামেরা অ্যাক্সেস অস্বীকৃত:', error);
+  });
+
+// স্ক্রিন শেয়ারিং
+navigator.mediaDevices.getDisplayMedia({ video: true })
+  .then((stream) => { /* স্ক্রিন ক্যাপচার */ });</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; text-align: center;">
+                  🎥 ক্যামেরা প্রিভিউ (অনুমতি প্রয়োজন)
+                  <button style="display: block; margin: 10px auto; padding: 8px 16px; background: #4CAF50; color: white; border: none; border-radius: 4px;">ক্যামেরা চালু করুন</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>নোটিফিকেশন API (Notification API)</h2>
+            <p>নোটিফিকেশন API ডেস্কটপ পুশ নোটিফিকেশন দেখানোর সুযোগ দেয়। ইউজারের অনুমতি সাপেক্ষে এটি কাজ করে।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// অনুমতি চাওয়া
+Notification.requestPermission().then(permission => {
+  if (permission === 'granted') {
+    new Notification('নতুন বার্তা!', {
+      body: 'আপনার একটি নতুন মেসেজ পেয়েছেন',
+      icon: 'icon.png',
+      badge: 'badge.png'
+    });
+  }
+});
+
+// টাইমার বা ইভেন্টের সাথে সংযুক্ত
+setTimeout(() => {
+  new Notification('রিমাইন্ডার', { body: 'আপনার মিটিং শুরু হতে ৫ মিনিট বাকি' });
+}, 60000);</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্লিপবোর্ড API (Clipboard API)</h2>
+            <p>ক্লিপবোর্ড API ব্যবহারকারীর ক্লিপবোর্ডে টেক্সট, ইমেজ, বা HTML কপি/পেস্ট করার সুযোগ দেয়। এটি নিরাপদ এবং আধুনিক ব্রাউজারে সাপোর্টেড।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// টেক্সট কপি
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('কপি হয়েছে!');
+  } catch (err) {
+    console.error('কপি ব্যর্থ:', err);
+  }
+}
+
+// ক্লিপবোর্ড থেকে পড়া
+async function pasteText() {
+  try {
+    const text = await navigator.clipboard.readText();
+    console.log('পেস্ট করা টেক্সট:', text);
+  } catch (err) {
+    console.error('পেস্ট ব্যর্থ:', err);
+  }
+}
+
+// ইমেজ কপি
+const imageBlob = await fetch('image.png').then(r => r.blob());
+await navigator.clipboard.write([
+  new ClipboardItem({ 'image/png': imageBlob })
+]);</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইন্টারসেকশন অবজারভার API (Intersection Observer API)</h2>
+            <p>Intersection Observer API কোনো এলিমেন্ট ভিউপোর্টে প্রবেশ করছে কি না তা পর্যবেক্ষণ করে। এটি লেজি লোডিং, ইনফিনিট স্ক্রল, অ্যানিমেশন ট্রিগার করার জন্য ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // এলিমেন্ট দৃশ্যমান হয়েছে
+      entry.target.classList.add('visible');
+      // লেজি লোড ইমেজ
+      const img = entry.target.querySelector('img');
+      if (img && img.dataset.src) {
+        img.src = img.dataset.src;
+      }
+    }
+  });
+}, { threshold: 0.5 }); // 50% দৃশ্যমান হলে ট্রিগার
+
+// পর্যবেক্ষণ শুরু
+const elements = document.querySelectorAll('.lazy-load');
+elements.forEach(el => observer.observe(el));</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>ব্যবহার:</strong> ইমেজ লেজি লোডিং, ইনফিনিট স্ক্রল পেজিনেশন, অ্যানিমেশন ট্রিগার, অ্যাড ইম্প্রেশন ট্র্যাকিং।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফুলস্ক্রিন API (Fullscreen API)</h2>
+            <p>ফুলস্ক্রিন API যেকোনো HTML এলিমেন্টকে পুরো স্ক্রিনে দেখানোর সুযোগ দেয়। ভিডিও প্লেয়ার, গেম, প্রেজেন্টেশন অ্যাপে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// ফুলস্ক্রিনে যান
+function enterFullscreen(element) {
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen(); // Safari
+  }
+}
+
+// ফুলস্ক্রিন থেকে বেরুন
+function exitFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+}
+
+// ফুলস্ক্রিন পরিবর্তন মনিটর
+document.addEventListener('fullscreenchange', () => {
+  if (document.fullscreenElement) {
+    console.log('ফুলস্ক্রিন মোডে');
+  } else {
+    console.log('স্বাভাবিক মোডে');
+  }
+});</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>পেজ ভিজিবিলিটি API (Page Visibility API)</h2>
+            <p>পেজ ভিজিবিলিটি API ট্যাব সক্রিয় আছে কি না তা নির্ণয় করে। এটি ব্যাকগ্রাউন্ড ট্যাবে অ্যানিমেশন বন্ধ করা, ভিডিও পজ করা, বা রিসোর্স সেভ করার জন্য ব্যবহার করা হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    console.log('ট্যাব লুকানো/ব্যাকগ্রাউন্ডে');
+    // অ্যানিমেশন বন্ধ, ভিডিও পজ
+    videoElement.pause();
+  } else {
+    console.log('ট্যাব দৃশ্যমান');
+    // অ্যানিমেশন শুরু
+    videoElement.play();
+  }
+});
+
+// চেক করা
+if (!document.hidden) {
+  // ট্যাব দৃশ্যমান
+}</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>হিস্ট্রি API (History API)</h2>
+            <p>হিস্ট্রি API ব্রাউজারের ইতিহাস নিয়ন্ত্রণ করে। এটি SPA (Single Page Application)-তে URL পরিবর্তন করে পেজ রিলোড ছাড়াই নেভিগেশন সম্ভব করে।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// নতুন স্টেট পুশ করা (URL পরিবর্তন করে)
+history.pushState({ page: 1 }, 'পেজ ১', '/page-1');
+
+// স্টেট প্রতিস্থাপন (বর্তমান এন্ট্রি পরিবর্তন)
+history.replaceState({ page: 2 }, 'পেজ ২', '/page-2');
+
+// ব্যাক/ফরোয়ার্ড ইভেন্ট শোনা
+window.addEventListener('popstate', (event) => {
+  console.log('লোকেশন:', location.pathname);
+  console.log('স্টেট:', event.state);
+  // পেজ কন্টেন্ট আপডেট
+  loadContent(location.pathname);
+});</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>রিসাইজ অবজারভার API (Resize Observer API)</h2>
+            <p>Resize Observer API এলিমেন্টের সাইজ পরিবর্তন পর্যবেক্ষণ করে। এটি responsive ডিজাইন, অ্যাডাপটিভ লেআউট, canvas রিসাইজে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>const resizeObserver = new ResizeObserver(entries => {
+  for (let entry of entries) {
+    const { width, height } = entry.contentRect;
+    console.log(`এলিমেন্ট: ${entry.target} - সাইজ: ${width} x ${height}`);
+    // কন্টেন্ট অ্যাডাপ্ট করুন
+    if (width < 500) {
+      entry.target.classList.add('mobile-view');
+    } else {
+      entry.target.classList.remove('mobile-view');
+    }
+  }
+});
+
+const element = document.querySelector('.resizable-container');
+resizeObserver.observe(element);</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সার্ভার-সেন্ট ইভেন্ট (Server-Sent Events - SSE)</h2>
+            <p>SSE সার্ভার থেকে ক্লায়েন্টে একমুখী রিয়েল-টাইম ডাটা পাঠানোর পদ্ধতি। এটি WebSocket-এর চেয়ে সহজ এবং স্বয়ংক্রিয় রিকানেক্ট সাপোর্ট করে।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// ক্লায়েন্ট-সাইড
+const eventSource = new EventSource('/events');
+
+eventSource.onmessage = (event) => {
+  console.log('নতুন ডাটা:', event.data);
+  updateUI(JSON.parse(event.data));
+};
+
+eventSource.addEventListener('custom-event', (event) => {
+  console.log('কাস্টম ইভেন্ট:', event.data);
+});
+
+// সংযোগ বন্ধ করতে
+eventSource.close();
+
+// সার্ভার-সাইড (Node.js উদাহরণ)
+res.writeHead(200, {
+  'Content-Type': 'text/event-stream',
+  'Cache-Control': 'no-cache',
+  'Connection': 'keep-alive'
+});
+res.write(`data: ${JSON.stringify({ message: 'হ্যালো' })}\n\n`);</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফাইল API (File API)</h2>
+            <p>File API ব্যবহারকারীর লোকাল ফাইল পড়তে এবং প্রসেস করতে দেয়। ইমেজ প্রিভিউ, CSV পার্সিং, ড্র্যাগ-অ্যান্ড-ড্রপ আপলোডে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;input type="file" id="fileInput" multiple&gt;
+
+document.getElementById('fileInput').addEventListener('change', (event) => {
+  const files = event.target.files;
+  for (let file of files) {
+    console.log(`নাম: ${file.name}, সাইজ: ${file.size} bytes, টাইপ: ${file.type}`);
+    
+    // ইমেজ প্রিভিউ
+    if (file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        document.body.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    }
+    
+    // টেক্সট ফাইল পড়া
+    if (file.type === 'text/plain') {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        console.log('ফাইল কন্টেন্ট:', e.target.result);
+      };
+      reader.readAsText(file);
+    }
+  }
+});</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>WebRTC (Web Real-Time Communication)</h2>
+            <p>WebRTC ব্রাউজারের মধ্যে পিয়ার-টু-পিয়ার অডিও, ভিডিও, ডাটা শেয়ারিং সুবিধা দেয়। ভিডিও কল, ফাইল শেয়ারিং, স্ক্রিন শেয়ারিং অ্যাপে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// লোকাল স্ট্রিম
+const localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+
+// RTCPeerConnection তৈরি
+const peerConnection = new RTCPeerConnection(configuration);
+
+// ট্র্যাক যোগ করা
+localStream.getTracks().forEach(track => {
+  peerConnection.addTrack(track, localStream);
+});
+
+// ICE ক্যান্ডিডেট হ্যান্ডলিং
+peerConnection.onicecandidate = (event) => {
+  if (event.candidate) {
+    // অন্য পিয়ারে পাঠান
+    sendToPeer(event.candidate);
+  }
+};
+
+// অফার তৈরি
+const offer = await peerConnection.createOffer();
+await peerConnection.setLocalDescription(offer);
+// অফার অন্য পিয়ারে পাঠান</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="geolocation.html" class="topic-card">
+                <h3>📍 জিওলোকেশন API</h3>
+                <p>ইউজারের অবস্থান অ্যাক্সেস ও ট্র্যাকিং</p>
+              </a>
+              <a href="drag-drop.html" class="topic-card">
+                <h3>🖱️ ড্র্যাগ অ্যান্ড ড্রপ API</h3>
+                <p>ড্র্যাগেবল এলিমেন্ট ও ড্রপ টার্গেট</p>
+              </a>
+              <a href="web-storage.html" class="topic-card">
+                <h3>💾 ওয়েব স্টোরেজ API</h3>
+                <p>localStorage ও sessionStorage পরিচিতি</p>
+              </a>
+              <a href="localstorage.html" class="topic-card">
+                <h3>📦 localStorage</h3>
+                <p>স্থায়ী ক্লায়েন্ট-সাইড স্টোরেজ</p>
+              </a>
+              <a href="sessionstorage.html" class="topic-card">
+                <h3>⏱️ sessionStorage</h3>
+                <p>সেশন-ভিত্তিক টেম্পোরারি স্টোরেজ</p>
+              </a>
+              <a href="web-workers.html" class="topic-card">
+                <h3>⚙️ ওয়েব ওয়ার্কার্স</h3>
+                <p>ব্যাকগ্রাউন্ড থ্রেডে প্রসেসিং</p>
+              </a>
+              <a href="server-sent-events.html" class="topic-card">
+                <h3>📡 সার্ভার-সেন্ট ইভেন্ট</h3>
+                <p>সার্ভার থেকে রিয়েল-টাইম ডাটা স্ট্রিম</p>
+              </a>
+              <a href="file-api.html" class="topic-card">
+                <h3>📁 ফাইল API</h3>
+                <p>লোকাল ফাইল পড়া ও প্রসেসিং</p>
+              </a>
+              <a href="getusermedia.html" class="topic-card">
+                <h3>🎥 getUserMedia</h3>
+                <p>ক্যামেরা, মাইক্রোফোন, স্ক্রিন শেয়ারিং</p>
+              </a>
+              <a href="notification.html" class="topic-card">
+                <h3>🔔 নোটিফিকেশন API</h3>
+                <p>ডেস্কটপ পুশ নোটিফিকেশন</p>
+              </a>
+              <a href="page-visibility.html" class="topic-card">
+                <h3>👁️ পেজ ভিজিবিলিটি API</h3>
+                <p>ট্যাব অ্যাক্টিভ স্ট্যাটাস মনিটর</p>
+              </a>
+              <a href="history-api.html" class="topic-card">
+                <h3>📜 হিস্ট্রি API</h3>
+                <p>SPA নেভিগেশন ও ব্রাউজার ইতিহাস নিয়ন্ত্রণ</p>
+              </a>
+              <a href="fullscreen-api.html" class="topic-card">
+                <h3>🖥️ ফুলস্ক্রিন API</h3>
+                <p>এলিমেন্ট পুরো স্ক্রিনে দেখানো</p>
+              </a>
+              <a href="webrtc.html" class="topic-card">
+                <h3>📹 WebRTC</h3>
+                <p>পিয়ার-টু-পিয়ার ভিডিও কল ও ডাটা শেয়ারিং</p>
+              </a>
+              <a href="payment-api.html" class="topic-card">
+                <h3>💳 পেমেন্ট রিকোয়েস্ট API</h3>
+                <p>ব্রাউজারে ইন্টিগ্রেটেড পেমেন্ট সিস্টেম</p>
+              </a>
+              <a href="clipboard-api.html" class="topic-card">
+                <h3>📋 ক্লিপবোর্ড API</h3>
+                <p>কপি/পেস্ট ফাংশনালিটি</p>
+              </a>
+              <a href="resize-observer.html" class="topic-card">
+                <h3>📏 রিসাইজ অবজারভার API</h3>
+                <p>এলিমেন্ট সাইজ পরিবর্তন পর্যবেক্ষণ</p>
+              </a>
+              <a href="intersection-observer.html" class="topic-card">
+                <h3>👁️ ইন্টারসেকশন অবজারভার API</h3>
+                <p>লেজি লোডিং, ইনফিনিট স্ক্রল, ভিউ ট্র্যাকিং</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/advanced.html" class="prev-topic">← পূর্ববর্তী: অ্যাডভান্সড</a>
+              <a href="../references/html-tags.html" class="next-topic">পরবর্তী: HTML ট্যাগ রেফারেন্স →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

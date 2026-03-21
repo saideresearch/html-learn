@@ -3,48 +3,368 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML রেফারেন্স | HTML শিখি</title>
+  <title>রেফারেন্স | HTML শিখি</title>
+  <meta name="description" content="HTML রেফারেন্সের সম্পূর্ণ গাইড: HTML ট্যাগ, অ্যাট্রিবিউট, গ্লোবাল অ্যাট্রিবিউট, ইভেন্ট অ্যাট্রিবিউট, ইনপুট টাইপ, ক্যারেক্টার এনটিটি, কালার কোড, মাইম টাইপ, চিট শিট সহ সকল রেফারেন্স।">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrapper">
     <aside class="sidebar">
       <nav class="sidebar-nav">
-        <h3>রেফারেন্স</h3>
+        <h3>রেফারেন্স টপিকস</h3>
         <ul>
           <li><a href="html-tags-reference.html">HTML ট্যাগ রেফারেন্স</a></li>
           <li><a href="html-attributes-reference.html">HTML অ্যাট্রিবিউট রেফারেন্স</a></li>
           <li><a href="global-attributes.html">গ্লোবাল অ্যাট্রিবিউট</a></li>
           <li><a href="event-attributes.html">ইভেন্ট অ্যাট্রিবিউট</a></li>
+          <li><a href="input-types-reference.html">ইনপুট টাইপ রেফারেন্স</a></li>
+          <li><a href="character-entities.html">ক্যারেক্টার এনটিটি</a></li>
+          <li><a href="color-names.html">কালার নাম ও কোড</a></li>
+          <li><a href="mime-types.html">মাইম টাইপ</a></li>
           <li><a href="cheat-sheet.html">চিট শিট</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
       <div class="container">
-        <h1>HTML রেফারেন্স</h1>
-        
-        <p>দ্রুত খুঁজে দেখার জন্য HTML ট্যাগ ও অ্যাট্রিবিউটের তালিকা।</p>
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>রেফারেন্স</li>
+          </ol>
+        </nav>
 
-        <div class="topics-grid-mini">
-          <a href="html-tags-reference.html" class="topic-card">
-            <h3>HTML ট্যাগ রেফারেন্স</h3>
-            <p>সমস্ত HTML ট্যাগের তালিকা ও বর্ণনা</p>
-          </a>
-          <a href="html-attributes-reference.html" class="topic-card">
-            <h3>HTML অ্যাট্রিবিউট রেফারেন্স</h3>
-            <p>সমস্ত অ্যাট্রিবিউটের তালিকা ও ব্যবহার</p>
-          </a>
-          <a href="cheat-sheet.html" class="topic-card">
-            <h3>চিট শিট</h3>
-            <p>দ্রুত দেখার জন্য এক পৃষ্ঠায় সবকিছু</p>
-          </a>
-        </div>
+        <article class="topic-article">
+          <h1>HTML রেফারেন্স (HTML Reference)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: দ্রুত রেফারেন্স</span>
+            <span>লেভেল: সকল স্তরের জন্য</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML রেফারেন্স কী?</h2>
+            <p>HTML রেফারেন্স হলো HTML ডেভেলপমেন্টের সময় দ্রুত তথ্য পাওয়ার জন্য একটি কম্প্যাক্ট এবং সংগঠিত নির্দেশিকা। এখানে আপনি HTML ট্যাগ, অ্যাট্রিবিউট, গ্লোবাল অ্যাট্রিবিউট, ইভেন্ট অ্যাট্রিবিউট, ইনপুট টাইপ, ক্যারেক্টার এনটিটি, কালার কোড, মাইম টাইপ এবং একটি সম্পূর্ণ চিট শিট পাবেন। এটি শিক্ষানবিস থেকে শুরু করে অভিজ্ঞ ডেভেলপারদের জন্য একটি দ্রুতগতির রেফারেন্স গাইড হিসেবে কাজ করবে। কোনো ট্যাগ বা অ্যাট্রিবিউটের নাম মনে না পড়লে, বা সঠিক সিনট্যাক্স জানতে চাইলে এই সেকশনটি ব্যবহার করুন।</p>
+            
+            <div class="tip-box">
+              <h4>রেফারেন্স ব্যবহারের উপায়:</h4>
+              <ul>
+                <li>কোনো ট্যাগের সিনট্যাক্স দ্রুত দেখতে এই পৃষ্ঠাগুলো ব্যবহার করুন</li>
+                <li>নতুন ট্যাগ বা অ্যাট্রিবিউট সম্পর্কে জানতে ব্রাউজ করুন</li>
+                <li>চিট শিট প্রিন্ট করে ডেস্কে রাখুন দ্রুত রেফারেন্সের জন্য</li>
+                <li>ক্যারেক্টার এনটিটি এবং কালার কোড দ্রুত খুঁজে পেতে ব্যবহার করুন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>রেফারেন্স ক্যাটাগরি</h2>
+            
+            <div class="references-grid">
+              <div class="ref-card">
+                <div class="ref-icon">🏷️</div>
+                <h3>HTML ট্যাগ রেফারেন্স</h3>
+                <p>সকল HTML ট্যাগের তালিকা: ডকুমেন্ট স্ট্রাকচার, ফরম্যাটিং, ফর্ম, মাল্টিমিডিয়া, টেবল, লিস্ট, সিম্যান্টিক ট্যাগ ইত্যাদি। প্রতিটি ট্যাগের ব্যবহার, অ্যাট্রিবিউট এবং উদাহরণ সহ।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">150+ ট্যাগ</span>
+                  <span class="quick-badge">উদাহরণ সহ</span>
+                </div>
+                <a href="html-tags-reference.html" class="ref-link">ট্যাগ রেফারেন্স দেখুন →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">⚙️</div>
+                <h3>HTML অ্যাট্রিবিউট রেফারেন্স</h3>
+                <p>সকল HTML অ্যাট্রিবিউটের তালিকা: ট্যাগ-নির্দিষ্ট অ্যাট্রিবিউট, তাদের মান, ব্যবহারের নিয়ম এবং ব্রাউজার সাপোর্ট তথ্য।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">200+ অ্যাট্রিবিউট</span>
+                  <span class="quick-badge">ব্রাউজার সাপোর্ট</span>
+                </div>
+                <a href="html-attributes-reference.html" class="ref-link">অ্যাট্রিবিউট রেফারেন্স →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">🌐</div>
+                <h3>গ্লোবাল অ্যাট্রিবিউট</h3>
+                <p>সকল HTML এলিমেন্টে ব্যবহারযোগ্য গ্লোবাল অ্যাট্রিবিউট: class, id, style, title, data-*, contenteditable, hidden, tabindex, dir, lang ইত্যাদি।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">25+ গ্লোবাল</span>
+                  <span class="quick-badge">সব এলিমেন্টে</span>
+                </div>
+                <a href="global-attributes.html" class="ref-link">গ্লোবাল অ্যাট্রিবিউট →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">🖱️</div>
+                <h3>ইভেন্ট অ্যাট্রিবিউট</h3>
+                <p>HTML ইভেন্ট হ্যান্ডলার অ্যাট্রিবিউট: onclick, onload, onmouseover, onkeydown, onsubmit ইত্যাদি। উইন্ডো, ফর্ম, কিবোর্ড, মাউস ইভেন্টের সম্পূর্ণ তালিকা।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">50+ ইভেন্ট</span>
+                  <span class="quick-badge">JavaScript রেডি</span>
+                </div>
+                <a href="event-attributes.html" class="ref-link">ইভেন্ট অ্যাট্রিবিউট →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">⌨️</div>
+                <h3>ইনপুট টাইপ রেফারেন্স</h3>
+                <p>HTML5-এর সকল ইনপুট টাইপ: text, email, number, date, color, range, file, checkbox, radio, search, tel, url, time, datetime-local, month, week ইত্যাদি।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">20+ টাইপ</span>
+                  <span class="quick-badge">HTML5 নতুন</span>
+                </div>
+                <a href="input-types-reference.html" class="ref-link">ইনপুট টাইপ রেফারেন্স →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">🔣</div>
+                <h3>ক্যারেক্টার এনটিটি</h3>
+                <p>HTML এনটিটি রেফারেন্স: স্পেশাল ক্যারেক্টার, ম্যাথ সিম্বল, কারেন্সি সিম্বল, অ্যারো, গ্রিক অক্ষর, কপিরাইট, ট্রেডমার্ক ইত্যাদি।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">250+ এনটিটি</span>
+                  <span class="quick-badge">ইউনিকোড</span>
+                </div>
+                <a href="character-entities.html" class="ref-link">ক্যারেক্টার এনটিটি →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">🎨</div>
+                <h3>কালার নাম ও কোড</h3>
+                <p>HTML কালার রেফারেন্স: 140+ প্রি-ডিফাইন্ড কালার নাম, HEX কোড, RGB, HSL, RGBA, HSLA ফরম্যাট। CSS-এ কালার ব্যবহারের সম্পূর্ণ গাইড।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">140+ কালার</span>
+                  <span class="quick-badge">HEX/RGB/HSL</span>
+                </div>
+                <a href="color-names.html" class="ref-link">কালার রেফারেন্স →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">📄</div>
+                <h3>মাইম টাইপ</h3>
+                <p>MIME টাইপ রেফারেন্স: সকল কন্টেন্ট টাইপ যেমন text/html, image/jpeg, application/json, video/mp4, audio/mpeg ইত্যাদি। ফাইল আপলোড এবং HTTP হেডারের জন্য প্রয়োজনীয়।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">100+ টাইপ</span>
+                  <span class="quick-badge">HTTP হেডার</span>
+                </div>
+                <a href="mime-types.html" class="ref-link">মাইম টাইপ →</a>
+              </div>
+              
+              <div class="ref-card">
+                <div class="ref-icon">📋</div>
+                <h3>চিট শিট</h3>
+                <p>HTML চিট শিট: এক পৃষ্ঠায় সকল গুরুত্বপূর্ণ HTML ট্যাগ, অ্যাট্রিবিউট, সিনট্যাক্স, উদাহরণ এবং দ্রুত রেফারেন্সের জন্য প্রিন্টেবল গাইড।</p>
+                <div class="ref-quick">
+                  <span class="quick-badge">প্রিন্টেবল</span>
+                  <span class="quick-badge">দ্রুত রেফারেন্স</span>
+                </div>
+                <a href="cheat-sheet.html" class="ref-link">চিট শিট দেখুন →</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>দ্রুত রেফারেন্স টেবিল</h2>
+            
+            <div class="quick-reference">
+              <h3>সবচেয়ে ব্যবহৃত HTML ট্যাগ</h3>
+              <table class="ref-table">
+                <thead>
+                  <tr><th>ট্যাগ</th><th>বিবরণ</th><th>উদাহরণ</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>&lt;html&gt;</code></td><td>HTML ডকুমেন্টের রুট</td><td><code>&lt;html lang="bn"&gt;</code></td></tr>
+                  <tr><td><code>&lt;head&gt;</code></td><td>ডকুমেন্টের মেটাডেটা</td><td><code>&lt;head&gt;&lt;title&gt;...&lt;/title&gt;&lt;/head&gt;</code></td></tr>
+                  <tr><td><code>&lt;body&gt;</code></td><td>দৃশ্যমান কন্টেন্ট</td><td><code>&lt;body&gt;&lt;h1&gt;Hello&lt;/h1&gt;&lt;/body&gt;</code></td></tr>
+                  <tr><td><code>&lt;h1&gt; - &lt;h6&gt;</code></td><td>হেডিং</td><td><code>&lt;h1&gt;প্রধান শিরোনাম&lt;/h1&gt;</code></td></tr>
+                  <tr><td><code>&lt;p&gt;</code></td><td>প্যারাগ্রাফ</td><td><code>&lt;p&gt;এটি একটি প্যারাগ্রাফ&lt;/p&gt;</code></td></tr>
+                  <tr><td><code>&lt;a&gt;</code></td><td>হাইপারলিংক</td><td><code>&lt;a href="url"&gt;লিংক&lt;/a&gt;</code></td></tr>
+                  <tr><td><code>&lt;img&gt;</code></td><td>ছবি</td><td><code>&lt;img src="image.jpg" alt="বর্ণনা"&gt;</code></td></tr>
+                  <tr><td><code>&lt;div&gt;</code></td><td>ব্লক-লেভেল কন্টেইনার</td><td><code>&lt;div class="container"&gt;...&lt;/div&gt;</code></td></tr>
+                  <tr><td><code>&lt;span&gt;</code></td><td>ইনলাইন কন্টেইনার</td><td><code>&lt;span class="highlight"&gt;টেক্সট&lt;/span&gt;</code></td></tr>
+                  <tr><td><code>&lt;ul&gt; / &lt;ol&gt;</code></td><td>লিস্ট</td><td><code>&lt;ul&gt;&lt;li&gt;আইটেম&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="quick-reference">
+              <h3>সবচেয়ে ব্যবহৃত HTML অ্যাট্রিবিউট</h3>
+              <table class="ref-table">
+                <thead>
+                  <tr><th>অ্যাট্রিবিউট</th><th>বিবরণ</th><th>উদাহরণ</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>class</code></td><td>CSS ক্লাস নির্ধারণ</td><td><code>&lt;div class="container"&gt;</code></td></tr>
+                  <tr><td><code>id</code></td><td>ইউনিক আইডি নির্ধারণ</td><td><code>&lt;div id="header"&gt;</code></td></tr>
+                  <tr><td><code>style</code></td><td>ইনলাইন CSS</td><td><code>&lt;p style="color:red"&gt;</code></td></tr>
+                  <tr><td><code>src</code></td><td>রিসোর্সের উৎস</td><td><code>&lt;img src="image.jpg"&gt;</code></td></tr>
+                  <tr><td><code>href</code></td><td>লিংকের গন্তব্য</td><td><code>&lt;a href="https://example.com"&gt;</code></td></tr>
+                  <tr><td><code>alt</code></td><td>ছবির বিকল্প টেক্সট</td><td><code>&lt;img alt="বিবরণ"&gt;</code></td></tr>
+                  <tr><td><code>title</code></td><td>টুলটিপ টেক্সট</td><td><code>&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;</code></td></tr>
+                  <tr><td><code>target</code></td><td>লিংক খোলার স্থান</td><td><code>&lt;a target="_blank"&gt;</code></td></tr>
+                  <tr><td><code>rel</code></td><td>লিংকের সম্পর্ক</td><td><code>&lt;link rel="stylesheet"&gt;</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>দ্রুত ক্যারেক্টার এনটিটি রেফারেন্স</h2>
+            
+            <div class="quick-entities">
+              <div class="entity-group">
+                <h4>প্রয়োজনীয় এনটিটি</h4>
+                <ul>
+                  <li><code>&amp;lt;</code> → <strong>&lt;</strong> (less than)</li>
+                  <li><code>&amp;gt;</code> → <strong>&gt;</strong> (greater than)</li>
+                  <li><code>&amp;amp;</code> → <strong>&amp;</strong> (ampersand)</li>
+                  <li><code>&amp;quot;</code> → <strong>"</strong> (double quote)</li>
+                  <li><code>&amp;apos;</code> → <strong>'</strong> (apostrophe)</li>
+                  <li><code>&amp;nbsp;</code> → <strong>&nbsp;</strong> (non-breaking space)</li>
+                </ul>
+              </div>
+              <div class="entity-group">
+                <h4>কারেন্সি সিম্বল</h4>
+                <ul>
+                  <li><code>&amp;copy;</code> → <strong>©</strong> (copyright)</li>
+                  <li><code>&amp;reg;</code> → <strong>®</strong> (registered)</li>
+                  <li><code>&amp;trade;</code> → <strong>™</strong> (trademark)</li>
+                  <li><code>&amp;euro;</code> → <strong>€</strong> (euro)</li>
+                  <li><code>&amp;pound;</code> → <strong>£</strong> (pound)</li>
+                  <li><code>&amp;yen;</code> → <strong>¥</strong> (yen)</li>
+                </ul>
+              </div>
+              <div class="entity-group">
+                <h4>অ্যারো সিম্বল</h4>
+                <ul>
+                  <li><code>&amp;larr;</code> → <strong>←</strong> (left arrow)</li>
+                  <li><code>&amp;rarr;</code> → <strong>→</strong> (right arrow)</li>
+                  <li><code>&amp;uarr;</code> → <strong>↑</strong> (up arrow)</li>
+                  <li><code>&amp;darr;</code> → <strong>↓</strong> (down arrow)</li>
+                  <li><code>&amp;harr;</code> → <strong>↔</strong> (left-right arrow)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>দ্রুত কালার রেফারেন্স</h2>
+            
+            <div class="color-reference">
+              <div class="color-group">
+                <h4>প্রাথমিক রং</h4>
+                <div class="color-swatch">
+                  <div class="swatch" style="background:#FF0000;"></div><span>Red - #FF0000</span>
+                  <div class="swatch" style="background:#00FF00;"></div><span>Green - #00FF00</span>
+                  <div class="swatch" style="background:#0000FF;"></div><span>Blue - #0000FF</span>
+                </div>
+              </div>
+              <div class="color-group">
+                <h4>নিউট্রাল রং</h4>
+                <div class="color-swatch">
+                  <div class="swatch" style="background:#000000;"></div><span>Black - #000000</span>
+                  <div class="swatch" style="background:#FFFFFF;"></div><span>White - #FFFFFF</span>
+                  <div class="swatch" style="background:#808080;"></div><span>Gray - #808080</span>
+                </div>
+              </div>
+              <div class="color-group">
+                <h4>ওয়েব সেফ রং</h4>
+                <div class="color-swatch">
+                  <div class="swatch" style="background:#FF6600;"></div><span>Orange - #FF6600</span>
+                  <div class="swatch" style="background:#FFFF00;"></div><span>Yellow - #FFFF00</span>
+                  <div class="swatch" style="background:#800080;"></div><span>Purple - #800080</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ রেফারেন্স লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে সম্পূর্ণ রেফারেন্স দেখুন:</p>
+            
+            <div class="reference-links">
+              <a href="html-tags-reference.html" class="ref-link-big">📖 HTML ট্যাগ রেফারেন্স</a>
+              <a href="html-attributes-reference.html" class="ref-link-big">⚙️ HTML অ্যাট্রিবিউট রেফারেন্স</a>
+              <a href="global-attributes.html" class="ref-link-big">🌐 গ্লোবাল অ্যাট্রিবিউট</a>
+              <a href="event-attributes.html" class="ref-link-big">🖱️ ইভেন্ট অ্যাট্রিবিউট</a>
+              <a href="input-types-reference.html" class="ref-link-big">⌨️ ইনপুট টাইপ রেফারেন্স</a>
+              <a href="character-entities.html" class="ref-link-big">🔣 ক্যারেক্টার এনটিটি</a>
+              <a href="color-names.html" class="ref-link-big">🎨 কালার নাম ও কোড</a>
+              <a href="mime-types.html" class="ref-link-big">📄 মাইম টাইপ</a>
+              <a href="cheat-sheet.html" class="ref-link-big">📋 চিট শিট</a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/projects.html" class="prev-topic">← পূর্ববর্তী: প্রজেক্ট</a>
+              <a href="../exercises/basic.html" class="next-topic">পরবর্তী: অনুশীলন →</a>
+            </div>
+          </section>
+        </article>
       </div>
     </main>
   </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
   
   <script src="../../js/main.js"></script>
 </body>

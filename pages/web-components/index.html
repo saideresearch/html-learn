@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ওয়েব কম্পোনেন্টস | HTML শিখি</title>
+  <meta name="description" content="ওয়েব কম্পোনেন্টস-এর সম্পূর্ণ গাইড: কাস্টম এলিমেন্টস, শ্যাডো ডম, টেমপ্লেট ও স্লট এলিমেন্ট - পুনঃব্যবহারযোগ্য কাস্টম HTML এলিমেন্ট তৈরি করা শিখুন বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>ওয়েব কম্পোনেন্টস টপিকস</h3>
+        <ul>
+          <li><a href="what-are-web-components.html">ওয়েব কম্পোনেন্টস কী?</a></li>
+          <li><a href="custom-elements.html">কাস্টম এলিমেন্টস</a></li>
+          <li><a href="shadow-dom.html">শ্যাডো ডম</a></li>
+          <li><a href="template-slot.html">template ও slot এলিমেন্ট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>ওয়েব কম্পোনেন্টস</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>ওয়েব কম্পোনেন্টস (Web Components)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৪৫ মিনিট</span>
+            <span>লেভেল: উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>ওয়েব কম্পোনেন্টস কী?</h2>
+            <p>ওয়েব কম্পোনেন্টস হলো একটি সেট অফ স্ট্যান্ডার্ড যা আপনাকে পুনঃব্যবহারযোগ্য, এনক্যাপসুলেটেড কাস্টম HTML এলিমেন্ট তৈরি করতে দেয়। এটি তিনটি প্রধান প্রযুক্তির সমন্বয়ে গঠিত: <strong>কাস্টম এলিমেন্টস (Custom Elements)</strong>, <strong>শ্যাডো ডম (Shadow DOM)</strong>, এবং <strong>HTML টেমপ্লেট (HTML Templates)</strong>। এই প্রযুক্তিগুলো ব্যবহার করে আপনি নিজের কাস্টম ট্যাগ তৈরি করতে পারেন যা নিজস্ব স্টাইল, বিহেভিয়ার এবং ফাংশনালিটি নিয়ে আসে। ওয়েব কম্পোনেন্টস যেকোনো ফ্রেমওয়ার্ক (React, Vue, Angular) ছাড়াই নেটিভ ব্রাউজারে কাজ করে এবং একবার তৈরি করলে যেকোনো প্রজেক্টে পুনরায় ব্যবহার করা যায়।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>কাস্টম এলিমেন্টস:</strong> নতুন HTML ট্যাগ তৈরি ও নিয়ন্ত্রণ</li>
+                <li><strong>শ্যাডো ডম:</strong> কম্পোনেন্টের ভিতরের DOM এনক্যাপসুলেশন</li>
+                <li><strong>টেমপ্লেট ও স্লট:</strong> পুনঃব্যবহারযোগ্য মার্কআপ স্ট্রাকচার</li>
+                <li><strong>লাইফসাইকেল কলব্যাক:</strong> এলিমেন্ট তৈরি, সংযুক্ত, বিচ্ছিন্ন হওয়ার ইভেন্ট</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ওয়েব কম্পোনেন্টস কী?</h2>
+            <p>ওয়েব কম্পোনেন্টস তিনটি核心技术 নিয়ে গঠিত যা একসাথে কাজ করে পুনঃব্যবহারযোগ্য, এনক্যাপসুলেটেড কম্পোনেন্ট তৈরি করতে:</p>
+            
+            <div class="info-card">
+              <h4>তিনটি প্রধান উপাদান:</h4>
+              <ul>
+                <li><strong>Custom Elements (কাস্টম এলিমেন্টস):</strong> জাভাস্ক্রিপ্ট ক্লাস ব্যবহার করে নতুন HTML ট্যাগ ডিফাইন করার API</li>
+                <li><strong>Shadow DOM (শ্যাডো ডম):</strong> কম্পোনেন্টের ভিতরের DOM এবং CSS কে প্যারেন্ট পৃষ্ঠা থেকে আলাদা রাখে (এনক্যাপসুলেশন)</li>
+                <li><strong>HTML Templates (&lt;template&gt; & &lt;slot&gt;):</strong> পৃষ্ঠায় রেন্ডার না হওয়া HTML ফ্র্যাগমেন্ট ডিফাইন করে যা পরে ব্যবহার করা যায়</li>
+              </ul>
+            </div>
+
+            <div class="example-box">
+              <h3>একটি সিম্পল ওয়েব কম্পোনেন্ট:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- কাস্টম এলিমেন্ট ব্যবহার --&gt;
+&lt;user-card name="রহিম" email="rahim@example.com"&gt;&lt;/user-card&gt;
+
+&lt;script&gt;
+// কাস্টম এলিমেন্ট ডিফাইন
+class UserCard extends HTMLElement {
+  constructor() {
+    super();
+    // শ্যাডো ডম এটাচ
+    this.attachShadow({ mode: 'open' });
+    
+    // টেমপ্লেট ব্যবহার
+    const template = document.getElementById('user-card-template');
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    
+    // অ্যাট্রিবিউট থেকে ডাটা সেট
+    this.shadowRoot.querySelector('.name').textContent = this.getAttribute('name');
+    this.shadowRoot.querySelector('.email').textContent = this.getAttribute('email');
+  }
+}
+
+// এলিমেন্ট রেজিস্টার
+customElements.define('user-card', UserCard);
+&lt;/script&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f9f9f9;">
+                  <div style="font-weight: bold; color: #4CAF50;">📦 ওয়েব কম্পোনেন্ট উদাহরণ</div>
+                  <div style="margin-top: 8px; padding: 8px; background: #fff; border-radius: 4px;">
+                    <div><strong>নাম:</strong> রহিম</div>
+                    <div><strong>ইমেইল:</strong> rahim@example.com</div>
+                  </div>
+                  <small style="color: #666;">(উপরে কাস্টম এলিমেন্টের ডেমো)</small>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কাস্টম এলিমেন্টস (Custom Elements)</h2>
+            <p>কাস্টম এলিমেন্টস আপনাকে নতুন HTML ট্যাগ তৈরি করতে দেয়। এগুলি দুটি ধরনের হতে পারে: <strong>Autonomous custom elements</strong> (HTMLElement থেকে এক্সটেন্ড) এবং <strong>Customized built-in elements</strong> (বিল্ট-ইন এলিমেন্ট এক্সটেন্ড যেমন HTMLButtonElement)।</p>
+            
+            <div class="example-box">
+              <h3>কাস্টম এলিমেন্ট ডিফাইন ও ব্যবহার:</h3>
+              <div class="code-preview">
+                <pre><code>// কাস্টম এলিমেন্ট ক্লাস
+class PopupInfo extends HTMLElement {
+  constructor() {
+    super();
+    // এলিমেন্ট তৈরি
+    const shadow = this.attachShadow({ mode: 'open' });
+    
+    const wrapper = document.createElement('span');
+    wrapper.setAttribute('class', 'wrapper');
+    
+    const icon = document.createElement('span');
+    icon.setAttribute('class', 'icon');
+    icon.setAttribute('tabindex', '0');
+    
+    const info = document.createElement('span');
+    info.setAttribute('class', 'info');
+    info.textContent = this.getAttribute('data-text');
+    
+    wrapper.appendChild(icon);
+    wrapper.appendChild(info);
+    shadow.appendChild(wrapper);
+  }
+}
+
+// এলিমেন্ট রেজিস্টার (নামে অবশ্যই হাইফেন থাকতে হবে)
+customElements.define('popup-info', PopupInfo);
+
+// HTML-এ ব্যবহার
+&lt;popup-info data-text="এটি একটি তথ্য বার্তা"&gt;&lt;/popup-info&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>কাস্টম এলিমেন্ট লাইফসাইকেল কলব্যাক:</h4>
+              <ul>
+                <li><code>connectedCallback()</code> – এলিমেন্ট DOM-এ যোগ হলে কল হয়</li>
+                <li><code>disconnectedCallback()</code> – এলিমেন্ট DOM থেকে সরানো হলে কল হয়</li>
+                <li><code>attributeChangedCallback(name, oldValue, newValue)</code> – অ্যাট্রিবিউট পরিবর্তনে কল হয়</li>
+                <li><code>adoptedCallback()</code> – এলিমেন্ট অন্য ডকুমেন্টে মুভ হলে কল হয়</li>
+              </ul>
+            </div>
+
+            <div class="example-box">
+              <h3>লাইফসাইকেল কলব্যাক উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>class MyComponent extends HTMLElement {
+  static get observedAttributes() {
+    return ['color', 'size']; // কোন অ্যাট্রিবিউট মনিটর করবে
+  }
+  
+  constructor() {
+    super();
+    console.log('constructor: এলিমেন্ট তৈরি');
+  }
+  
+  connectedCallback() {
+    console.log('connected: DOM-এ যোগ হয়েছে');
+    this.render();
+  }
+  
+  disconnectedCallback() {
+    console.log('disconnected: DOM থেকে সরানো হয়েছে');
+  }
+  
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(`${name} পরিবর্তিত হয়েছে: ${oldValue} → ${newValue}`);
+    this.render();
+  }
+  
+  render() {
+    this.textContent = `রঙ: ${this.getAttribute('color') || 'default'}`;
+  }
+}
+
+customElements.define('my-component', MyComponent);</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>শ্যাডো ডম (Shadow DOM)</h2>
+            <p>শ্যাডো ডম DOM এনক্যাপসুলেশনের জন্য ব্যবহৃত হয়। এটি কম্পোনেন্টের ভিতরের HTML, CSS, এবং JavaScript কে প্যারেন্ট পৃষ্ঠা থেকে আলাদা রাখে। শ্যাডো ডম-এর ভিতরে লেখা CSS বাইরে প্রভাব ফেলে না, এবং বাইরের CSS ভিতরে প্রভাব ফেলে না।</p>
+            
+            <div class="example-box">
+              <h3>শ্যাডো ডম উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>class ShadowDemo extends HTMLElement {
+  constructor() {
+    super();
+    // শ্যাডো ডম এটাচ (open/closed mode)
+    const shadow = this.attachShadow({ mode: 'open' });
+    
+    // শ্যাডো ডম-এর ভিতরে HTML
+    shadow.innerHTML = `
+      &lt;style&gt;
+        .box {
+          background: #4CAF50;
+          color: white;
+          padding: 20px;
+          border-radius: 8px;
+          font-family: monospace;
+        }
+        /* এই স্টাইল বাইরে প্রভাব ফেলবে না */
+      &lt;/style&gt;
+      &lt;div class="box"&gt;
+        &lt;slot&gt;&lt;/slot&gt; &lt;!-- স্লট কন্টেন্ট দেখাবে --&gt;
+      &lt;/div&gt;
+    `;
+  }
+}
+
+customElements.define('shadow-demo', ShadowDemo);</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; padding: 10px; border-radius: 8px;">
+                  <div style="background: #4CAF50; color: white; padding: 15px; border-radius: 6px;">
+                    📦 শ্যাডো ডম-এর ভিতরের কন্টেন্ট
+                    <div style="margin-top: 5px; font-size: 12px; opacity: 0.9;">(বাইরের CSS এখানে প্রভাব ফেলে না)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>শ্যাডো ডম-এর সুবিধা:</h4>
+              <ul>
+                <li><strong>CSS এনক্যাপসুলেশন:</strong> কম্পোনেন্টের স্টাইল বাইরে প্রভাব ফেলে না</li>
+                <li><strong>DOM এনক্যাপসুলেশন:</strong> কম্পোনেন্টের ভিতরের DOM বাইরের স্ক্রিপ্ট থেকে সুরক্ষিত</li>
+                <li><strong>পুনঃব্যবহারযোগ্যতা:</strong> একই কম্পোনেন্ট একাধিক জায়গায় ব্যবহার করা যায়</li>
+                <li><strong>সিম্পলিফাইড সিলেক্টর:</strong> শ্যাডো ডম-এর ভিতরে querySelector শুধু ভিতরের এলিমেন্ট খুঁজে</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>template ও slot এলিমেন্ট</h2>
+            <p><code>&lt;template&gt;</code> এলিমেন্ট পৃষ্ঠায় রেন্ডার না হওয়া HTML ফ্র্যাগমেন্ট সংরক্ষণ করে। <code>&lt;slot&gt;</code> এলিমেন্ট কম্পোনেন্টের ভিতরে প্লেসহোল্ডার তৈরি করে যেখানে বাইরের কন্টেন্ট ইনজেক্ট করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>template ও slot ব্যবহার:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- টেমপ্লেট ডিফাইন --&gt;
+&lt;template id="card-template"&gt;
+  &lt;style&gt;
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 8px;
+      font-family: sans-serif;
+    }
+    .title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+  &lt;/style&gt;
+  &lt;div class="card"&gt;
+    &lt;div class="title"&gt;
+      &lt;slot name="title"&gt;ডিফল্ট টাইটেল&lt;/slot&gt;
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
+      &lt;slot name="content"&gt;ডিফল্ট কন্টেন্ট&lt;/slot&gt;
+    &lt;/div&gt;
+    &lt;div class="footer"&gt;
+      &lt;slot name="footer"&gt;ডিফল্ট ফুটার&lt;/slot&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;!-- কাস্টম এলিমেন্ট --&gt;
+&lt;script&gt;
+class CardComponent extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+    const template = document.getElementById('card-template');
+    shadow.appendChild(template.content.cloneNode(true));
+  }
+}
+customElements.define('card-component', CardComponent);
+&lt;/script&gt;
+
+&lt;!-- ব্যবহার --&gt;
+&lt;card-component&gt;
+  &lt;span slot="title"&gt;স্বাগতম&lt;/span&gt;
+  &lt;div slot="content"&gt;
+    &lt;p&gt;এটি একটি কাস্টম কার্ড কম্পোনেন্ট&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button slot="footer"&gt;ক্লিক করুন&lt;/button&gt;
+&lt;/card-component&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 8px; background: #fff;">
+                  <div style="font-size: 1.2em; font-weight: bold; color: #333;">স্বাগতম</div>
+                  <div style="margin: 10px 0;"><p>এটি একটি কাস্টম কার্ড কম্পোনেন্ট</p></div>
+                  <div><button style="padding: 5px 12px; background: #4CAF50; color: white; border: none; border-radius: 4px;">ক্লিক করুন</button></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tip-box">
+              <p><strong>Slot এর গুরুত্ব:</strong> স্লট কম্পোনেন্টকে ফ্লেক্সিবল করে। নামযুক্ত স্লট (named slots) ব্যবহার করে একাধিক প্লেসহোল্ডার তৈরি করা যায়। <code>&lt;slot&gt;</code> ছাড়া স্লট না থাকলে ডিফল্ট কন্টেন্ট দেখায়।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ ওয়েব কম্পোনেন্ট উদাহরণ</h2>
+            <p>নিচে একটি সম্পূর্ণ ওয়েব কম্পোনেন্ট দেওয়া হলো যা কাস্টম এলিমেন্ট, শ্যাডো ডম, টেমপ্লেট এবং স্লট একসাথে ব্যবহার করে:</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;!-- HTML টেমপ্লেট --&gt;
+&lt;template id="fancy-button-template"&gt;
+  &lt;style&gt;
+    :host {
+      display: inline-block;
+    }
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+  &lt;/style&gt;
+  &lt;button&gt;
+    &lt;slot&gt;ক্লিক করুন&lt;/slot&gt;
+  &lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+class FancyButton extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+    const template = document.getElementById('fancy-button-template');
+    shadow.appendChild(template.content.cloneNode(true));
+    
+    const button = shadow.querySelector('button');
+    button.addEventListener('click', () => {
+      this.dispatchEvent(new CustomEvent('fancy-click', {
+        detail: { message: 'বাটন ক্লিক করা হয়েছে!' },
+        bubbles: true
+      }));
+    });
+  }
+  
+  // অ্যাট্রিবিউট পরিবর্তন পর্যবেক্ষণ
+  static get observedAttributes() {
+    return ['disabled'];
+  }
+  
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'disabled') {
+      const button = this.shadowRoot.querySelector('button');
+      if (newValue !== null) {
+        button.disabled = true;
+        button.style.opacity = '0.5';
+      } else {
+        button.disabled = false;
+        button.style.opacity = '1';
+      }
+    }
+  }
+}
+
+customElements.define('fancy-button', FancyButton);
+&lt;/script&gt;
+
+&lt;!-- ব্যবহার --&gt;
+&lt;fancy-button&gt;আমার কাস্টম বাটন&lt;/fancy-button&gt;
+&lt;fancy-button disabled&gt;ডিজেবলড বাটন&lt;/fancy-button&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ওয়েব কম্পোনেন্টসের সুবিধা ও ব্যবহার</h2>
+            
+            <div class="info-card">
+              <h4>সুবিধা:</h4>
+              <ul>
+                <li><strong>ফ্রেমওয়ার্ক-ইন্ডিপেন্ডেন্ট:</strong> React, Vue, Angular সহ যেকোনো প্রজেক্টে ব্যবহারযোগ্য</li>
+                <li><strong>পুনঃব্যবহারযোগ্যতা:</strong> একবার লিখে যেকোনো জায়গায় ব্যবহার</li>
+                <li><strong>এনক্যাপসুলেশন:</strong> স্টাইল ও বিহেভিয়ার বাইরে প্রভাব ফেলে না</li>
+                <li><strong>নেটিভ ব্রাউজার সাপোর্ট:</strong> আধুনিক সব ব্রাউজারে কাজ করে</li>
+                <li><strong>স্ট্যান্ডার্ড:</strong> W3C স্ট্যান্ডার্ড, লং-টার্ম সাপোর্টেড</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h4>ব্যবহারের ক্ষেত্র:</h4>
+              <ul>
+                <li>ডিজাইন সিস্টেম (UI লাইব্রেরি তৈরি)</li>
+                <li>মাইক্রো-ফ্রন্টএন্ড আর্কিটেকচার</li>
+                <li>থার্ড-পার্টি উইজেট (চার্ট, প্লেয়ার, ফর্ম)</li>
+                <li>লিগ্যাসি প্রজেক্টে আধুনিক UI যোগ করা</li>
+                <li>ফ্রেমওয়ার্ক-অ্যাগনস্টিক কম্পোনেন্ট শেয়ারিং</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ব্রাউজার সাপোর্ট ও টুলস</h2>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>// ব্রাউজার সাপোর্ট চেক
+if ('customElements' in window && 'attachShadow' in Element.prototype) {
+  console.log('ওয়েব কম্পোনেন্টস সাপোর্টেড');
+} else {
+  console.log('পলিফিল প্রয়োজন');
+}
+
+// পলিফিল (পুরনো ব্রাউজারের জন্য)
+// npm install @webcomponents/webcomponentsjs
+// import '@webcomponents/webcomponentsjs';</code></pre>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>টুলস ও রিসোর্স:</h4>
+              <ul>
+                <li><strong>Lit:</strong> Google-এর ওয়েব কম্পোনেন্টস লাইব্রেরি</li>
+                <li><strong>Stencil:</strong> Ionic-এর কম্পোনেন্ট কম্পাইলার</li>
+                <li><strong>Open WC:</strong> ওয়েব কম্পোনেন্টস ডেভেলপমেন্ট টুলকিট</li>
+                <li><strong>webcomponents.org:</strong> কমিউনিটি রিসোর্স ও উদাহরণ</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="what-are-web-components.html" class="topic-card">
+                <h3>🧩 ওয়েব কম্পোনেন্টস কী?</h3>
+                <p>কনসেপ্ট, তিনটি核心技术, ব্রাউজার সাপোর্ট</p>
+              </a>
+              <a href="custom-elements.html" class="topic-card">
+                <h3>⚙️ কাস্টম এলিমেন্টস</h3>
+                <p>Autonomous vs built-in, লাইফসাইকেল কলব্যাক</p>
+              </a>
+              <a href="shadow-dom.html" class="topic-card">
+                <h3>🌑 শ্যাডো ডম</h3>
+                <p>DOM এনক্যাপসুলেশন, mode, event retargeting</p>
+              </a>
+              <a href="template-slot.html" class="topic-card">
+                <h3>📋 template ও slot</h3>
+                <p>টেমপ্লেট ক্লোনিং, named slots, স্লট ফ্যালব্যাক</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/security.html" class="prev-topic">← পূর্ববর্তী: সিকিউরিটি</a>
+              <a href="../references/html-tags.html" class="next-topic">পরবর্তী: HTML ট্যাগ রেফারেন্স →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

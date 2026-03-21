@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>টেবল | HTML শিখি</title>
+  <meta name="description" content="HTML-এ টেবল ব্যবহারের সম্পূর্ণ গাইড: বেসিক টেবল, টেবল হেডার, colspan/rowspan, টেবল স্ট্রাকচার (thead,tbody,tfoot), টেবল ক্যাপশন, কলগ্রুপ ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>টেবল টপিকস</h3>
+        <ul>
+          <li><a href="basic-tables.html">বেসিক টেবল</a></li>
+          <li><a href="table-headers.html">টেবল হেডার</a></li>
+          <li><a href="colspan-rowspan.html">কলস্প্যান ও রোস্প্যান</a></li>
+          <li><a href="table-structure.html">টেবল স্ট্রাকচার (thead,tbody,tfoot)</a></li>
+          <li><a href="table-caption.html">টেবল ক্যাপশন</a></li>
+          <li><a href="colgroup.html">কলগ্রুপ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>টেবল</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>টেবল (HTML Tables)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৩০ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ থেকে মধ্যবর্তী</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML-এ টেবল কী?</h2>
+            <p>HTML টেবল ব্যবহার করে ডেটাকে সারি (row) এবং কলাম (column) আকারে সাজানো হয়। টেবল হলো ডেটা উপস্থাপনের একটি শক্তিশালী মাধ্যম যা তথ্যকে সুসংহত, তুলনামূলক ও সহজবোধ্য করে তোলে। পণ্যের তালিকা, সময়সূচী, পরিসংখ্যান, মূল্য তালিকা ইত্যাদি দেখানোর জন্য টেবল আদর্শ।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code> ট্যাগ ব্যবহার করে বেসিক টেবল তৈরি</li>
+                <li><code>&lt;th&gt;</code> ট্যাগ দিয়ে টেবল হেডার তৈরি</li>
+                <li><code>colspan</code> ও <code>rowspan</code> ব্যবহার করে সেল মার্জ করা</li>
+                <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> দিয়ে টেবলের স্ট্রাকচার নির্ধারণ</li>
+                <li><code>&lt;caption&gt;</code> দিয়ে টেবলের শিরোনাম যোগ করা</li>
+                <li><code>&lt;colgroup&gt;</code> ও <code>&lt;col&gt;</code> ব্যবহার করে কলাম গ্রুপিং ও স্টাইলিং</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>বেসিক টেবল (Basic Table)</h2>
+            <p>সবচেয়ে মৌলিক টেবল তৈরি করতে <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> (table row), এবং <code>&lt;td&gt;</code> (table data) ট্যাগ ব্যবহার করা হয়। প্রতিটি <code>&lt;tr&gt;</code> একটি সারি তৈরি করে এবং প্রতিটি <code>&lt;td&gt;</code> একটি সেল তৈরি করে।</p>
+            
+            <div class="example-box">
+              <h3>সরল টেবল উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;নাম&lt;/td&gt;
+    &lt;td&gt;বয়স&lt;/td&gt;
+    &lt;td&gt;শহর&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;রহিম&lt;/td&gt;
+    &lt;td&gt;২৫&lt;/td&gt;
+    &lt;td&gt;ঢাকা&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;করিম&lt;/td&gt;
+    &lt;td&gt;৩০&lt;/td&gt;
+    &lt;td&gt;চট্টগ্রাম&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                  <tr>
+                    <td style="padding: 8px;">নাম</td>
+                    <td style="padding: 8px;">বয়স</td>
+                    <td style="padding: 8px;">শহর</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">রহিম</td>
+                    <td style="padding: 8px;">২৫</td>
+                    <td style="padding: 8px;">ঢাকা</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">করিম</td>
+                    <td style="padding: 8px;">৩০</td>
+                    <td style="padding: 8px;">চট্টগ্রাম</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tip-box">
+                <p><strong>মনে রাখবেন:</strong> <code>border</code> অ্যাট্রিবিউট টেবলের বর্ডার দেখায়। আধুনিক ডিজাইনে CSS দিয়ে বর্ডার কাস্টমাইজ করা হয়।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>টেবল হেডার (Table Headers - th)</h2>
+            <p><code>&lt;th&gt;</code> ট্যাগ ব্যবহার করে টেবলের হেডার সেল তৈরি করা হয়। এটি সাধারণত <code>&lt;td&gt;</code>-এর মতো কাজ করে কিন্তু টেক্সট বোল্ড এবং সেন্টার অ্যালাইনড দেখায়। হেডার স্ক্রিন রিডার ও SEO-এর জন্যও গুরুত্বপূর্ণ।</p>
+            
+            <div class="example-box">
+              <h3>টেবল হেডার সহ টেবল:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;পণ্যের নাম&lt;/th&gt;
+    &lt;th&gt;মূল্য&lt;/th&gt;
+    &lt;th&gt;পরিমাণ&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ল্যাপটপ&lt;/td&gt;
+    &lt;td&gt;৮৫,০০০ টাকা&lt;/td&gt;
+    &lt;td&gt;১০&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;মাউস&lt;/td&gt;
+    &lt;td&gt;১,২০০ টাকা&lt;/td&gt;
+    &lt;td&gt;৫০&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                  <tr>
+                    <th style="padding: 8px; background: #f5f5f5;">পণ্যের নাম</th>
+                    <th style="padding: 8px; background: #f5f5f5;">মূল্য</th>
+                    <th style="padding: 8px; background: #f5f5f5;">পরিমাণ</th>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">ল্যাপটপ</td>
+                    <td style="padding: 8px;">৮৫,০০০ টাকা</td>
+                    <td style="padding: 8px;">১০</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">মাউস</td>
+                    <td style="padding: 8px;">১,২০০ টাকা</td>
+                    <td style="padding: 8px;">৫০</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কলস্প্যান ও রোস্প্যান (Colspan & Rowspan)</h2>
+            <p><code>colspan</code> এবং <code>rowspan</code> অ্যাট্রিবিউট ব্যবহার করে একাধিক কলাম বা সারি জুড়ে একটি সেল প্রসারিত করা যায়। এটি জটিল টেবল ডিজাইনের জন্য অপরিহার্য।</p>
+            
+            <div class="example-box">
+              <h3>colspan উদাহরণ (একাধিক কলাম মার্জ):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;ব্যক্তিগত তথ্য&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;নাম&lt;/td&gt;
+    &lt;td&gt;রহিম&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;বয়স&lt;/td&gt;
+    &lt;td&gt;২৫&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                  <tr>
+                    <th colspan="2" style="padding: 8px; background: #f5f5f5;">ব্যক্তিগত তথ্য</th>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">নাম</td>
+                    <td style="padding: 8px;">রহিম</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">বয়স</td>
+                    <td style="padding: 8px;">২৫</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>rowspan উদাহরণ (একাধিক সারি মার্জ):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;বিভাগ&lt;/th&gt;
+    &lt;th&gt;শাখা&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;আইটি&lt;/td&gt;
+    &lt;td&gt;সফটওয়্যার&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;নেটওয়ার্কিং&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                  <tr>
+                    <th style="padding: 8px; background: #f5f5f5;">বিভাগ</th>
+                    <th style="padding: 8px; background: #f5f5f5;">শাখা</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" style="padding: 8px;">আইটি</td>
+                    <td style="padding: 8px;">সফটওয়্যার</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">নেটওয়ার্কিং</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>টেবল স্ট্রাকচার (thead, tbody, tfoot)</h2>
+            <p>HTML টেবলকে তিনটি অংশে ভাগ করা যায়: <code>&lt;thead&gt;</code> (হেডার অংশ), <code>&lt;tbody&gt;</code> (মূল কন্টেন্ট), এবং <code>&lt;tfoot&gt;</code> (ফুটার অংশ)। এটি টেবলের স্ট্রাকচার উন্নত করে এবং CSS স্টাইলিং সহজ করে।</p>
+            
+            <div class="example-box">
+              <h3>সম্পূর্ণ টেবল স্ট্রাকচার উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;মাস&lt;/th&gt;
+      &lt;th&gt;আয়&lt;/th&gt;
+      &lt;th&gt;ব্যয়&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;জানুয়ারি&lt;/td&gt;
+      &lt;td&gt;৫০,০০০&lt;/td&gt;
+      &lt;td&gt;৩০,০০০&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ফেব্রুয়ারি&lt;/td&gt;
+      &lt;td&gt;৫৫,০০০&lt;/td&gt;
+      &lt;td&gt;৩২,০০০&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;মোট&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;১,০৫,০০০&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;৬২,০০০&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                  <thead>
+                    <tr style="background: #e0e0e0;">
+                      <th style="padding: 8px;">মাস</th>
+                      <th style="padding: 8px;">আয়</th>
+                      <th style="padding: 8px;">ব্যয়</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="padding: 8px;">জানুয়ারি</td>
+                      <td style="padding: 8px;">৫০,০০০</td>
+                      <td style="padding: 8px;">৩০,০০০</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px;">ফেব্রুয়ারি</td>
+                      <td style="padding: 8px;">৫৫,০০০</td>
+                      <td style="padding: 8px;">৩২,০০০</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr style="background: #f5f5f5;">
+                      <td style="padding: 8px;"><strong>মোট</strong></td>
+                      <td style="padding: 8px;"><strong>১,০৫,০০০</strong></td>
+                      <td style="padding: 8px;"><strong>৬২,০০০</strong></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>টেবল ক্যাপশন (Table Caption)</h2>
+            <p><code>&lt;caption&gt;</code> ট্যাগ ব্যবহার করে টেবলের শিরোনাম বা বিবরণ যোগ করা যায়। এটি টেবলের উপরে বা নিচে (CSS দিয়ে নিয়ন্ত্রণ) প্রদর্শিত হয় এবং টেবলের বিষয়বস্তু সম্পর্কে ধারণা দেয়।</p>
+            
+            <div class="example-box">
+              <h3>caption সহ টেবল:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;caption&gt;শ্রেণি ১০-এর পরীক্ষার ফলাফল&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;রোল নং&lt;/th&gt;
+    &lt;th&gt;নাম&lt;/th&gt;
+    &lt;th&gt;জিপিএ&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;০১&lt;/td&gt;
+    &lt;td&gt;রহিম&lt;/td&gt;
+    &lt;td&gt;৫.০০&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                  <caption style="caption-side: top; margin-bottom: 8px; font-weight: bold;">শ্রেণি ১০-এর পরীক্ষার ফলাফল</caption>
+                  <tr>
+                    <th style="padding: 8px;">রোল নং</th>
+                    <th style="padding: 8px;">নাম</th>
+                    <th style="padding: 8px;">জিপিএ</th>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">০১</td>
+                    <td style="padding: 8px;">রহিম</td>
+                    <td style="padding: 8px;">৫.০০</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কলগ্রুপ (Colgroup & Col)</h2>
+            <p><code>&lt;colgroup&gt;</code> এবং <code>&lt;col&gt;</code> ট্যাগ ব্যবহার করে এক বা একাধিক কলামে গ্রুপিং ও স্টাইলিং প্রয়োগ করা যায়। এটি পুরো কলামে একসাথে CSS ক্লাস বা স্টাইল প্রযোজ্য করতে সাহায্য করে।</p>
+            
+            <div class="example-box">
+              <h3>colgroup ব্যবহার করে কলাম স্টাইলিং:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;colgroup&gt;
+    &lt;col style="background-color: #f0f0f0;"&gt;
+    &lt;col style="background-color: #e0f7fa;"&gt;
+    &lt;col style="background-color: #fff3e0;"&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th&gt;পণ্য&lt;/th&gt;
+    &lt;th&gt;মূল্য&lt;/th&gt;
+    &lt;th&gt;স্টক&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;পেন&lt;/td&gt;
+    &lt;td&gt;২০ টাকা&lt;/td&gt;
+    &lt;td&gt;১০০&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                  <colgroup>
+                    <col style="background-color: #f5f5f5;">
+                    <col style="background-color: #e3f2fd;">
+                    <col style="background-color: #fff8e1;">
+                  </colgroup>
+                  <tr>
+                    <th style="padding: 8px;">পণ্য</th>
+                    <th style="padding: 8px;">মূল্য</th>
+                    <th style="padding: 8px;">স্টক</th>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px;">পেন</td>
+                    <td style="padding: 8px;">২০ টাকা</td>
+                    <td style="padding: 8px;">১০০</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tip-box">
+                <p><strong>উপকারিতা:</strong> <code>&lt;colgroup&gt;</code> ব্যবহার করে আপনি সহজেই পুরো কলামে একসাথে স্টাইল প্রয়োগ করতে পারেন, যা প্রতিটি সেলে আলাদাভাবে স্টাইল দেওয়ার চেয়ে অনেক বেশি কার্যকর।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>টেবলের ব্যবহারিক উদাহরণ</h2>
+            <p>নিচে একটি জটিল টেবলের উদাহরণ দেওয়া হলো যা colspan, rowspan, এবং বিভিন্ন টেবল এলিমেন্ট ব্যবহার করে তৈরি করা হয়েছে:</p>
+            
+            <div class="example-box">
+              <h3>কোর্স সময়সূচী (সাপ্তাহিক রুটিন):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;table border="1"&gt;
+  &lt;caption&gt;ওয়েব ডেভেলপমেন্ট কোর্স সময়সূচী&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;সময়&lt;/th&gt;
+      &lt;th&gt;শনিবার&lt;/th&gt;
+      &lt;th&gt;রবিবার&lt;/th&gt;
+      &lt;th&gt;সোমবার&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;১০:০০ - ১১:৩০&lt;/td&gt;
+      &lt;td&gt;HTML&lt;/td&gt;
+      &lt;td rowspan="2"&gt;CSS&lt;/td&gt;
+      &lt;td&gt;JavaScript&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;১২:০০ - ০১:৩০&lt;/td&gt;
+      &lt;td&gt;প্র্যাকটিস&lt;/td&gt;
+      &lt;td&gt;রিঅ্যাক্ট&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="basic-tables.html" class="topic-card">
+                <h3>📊 বেসিক টেবল</h3>
+                <p>table, tr, td ট্যাগ ব্যবহার করে মৌলিক টেবল তৈরি</p>
+              </a>
+              <a href="table-headers.html" class="topic-card">
+                <h3>📌 টেবল হেডার</h3>
+                <p>th ট্যাগ দিয়ে হেডার সেল তৈরি ও ব্যবহার</p>
+              </a>
+              <a href="colspan-rowspan.html" class="topic-card">
+                <h3>🔗 কলস্প্যান ও রোস্প্যান</h3>
+                <p>একাধিক কলাম ও সারি মার্জ করার কৌশল</p>
+              </a>
+              <a href="table-structure.html" class="topic-card">
+                <h3>🏗️ টেবল স্ট্রাকচার</h3>
+                <p>thead, tbody, tfoot দিয়ে টেবল সংগঠিত করা</p>
+              </a>
+              <a href="table-caption.html" class="topic-card">
+                <h3>📝 টেবল ক্যাপশন</h3>
+                <p>caption ট্যাগ দিয়ে টেবলের শিরোনাম যোগ</p>
+              </a>
+              <a href="colgroup.html" class="topic-card">
+                <h3>🎨 কলগ্রুপ</h3>
+                <p>colgroup ও col দিয়ে কলাম গ্রুপিং ও স্টাইলিং</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/lists.html" class="prev-topic">← পূর্ববর্তী: লিস্ট</a>
+              <a href="../basic/forms.html" class="next-topic">পরবর্তী: ফর্ম →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

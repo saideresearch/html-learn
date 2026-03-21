@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সিকিউরিটি | HTML শিখি</title>
+  <meta name="description" content="HTML ওয়েব সিকিউরিটির সম্পূর্ণ গাইড: XSS প্রতিরোধ, কন্টেন্ট সিকিউরিটি পলিসি (CSP), স্যান্ডবক্স, সাবরিসোর্স ইন্টিগ্রিটি (SRI), ক্লিকজ্যাকিং প্রতিরোধ ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>সিকিউরিটি টপিকস</h3>
+        <ul>
+          <li><a href="xss.html">XSS প্রতিরোধ</a></li>
+          <li><a href="csp.html">কন্টেন্ট সিকিউরিটি পলিসি</a></li>
+          <li><a href="sandbox.html">স্যান্ডবক্স</a></li>
+          <li><a href="sri.html">সাবরিসোর্স ইন্টিগ্রিটি</a></li>
+          <li><a href="clickjacking.html">ক্লিকজ্যাকিং প্রতিরোধ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>সিকিউরিটি</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>ওয়েব সিকিউরিটি (Web Security)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৪৫ মিনিট</span>
+            <span>লেভেল: মধ্যবর্তী থেকে উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>ওয়েব সিকিউরিটি কী?</h2>
+            <p>ওয়েব সিকিউরিটি হলো ওয়েবসাইট এবং ওয়েব অ্যাপ্লিকেশনকে বিভিন্ন সাইবার আক্রমণ থেকে রক্ষা করার প্রক্রিয়া। HTML এবং ব্রাউজার-ভিত্তিক নিরাপত্তা ব্যবস্থা যেমন XSS (ক্রস-সাইট স্ক্রিপ্টিং), ক্লিকজ্যাকিং, এবং তৃতীয় পক্ষের রিসোর্স ম্যানিপুলেশন প্রতিরোধে গুরুত্বপূর্ণ ভূমিকা রাখে। এই অধ্যায়ে আমরা HTML-এর মাধ্যমে প্রয়োগযোগ্য বিভিন্ন নিরাপত্তা ব্যবস্থা শিখব যা আপনার ওয়েবসাইটকে হ্যাকারদের থেকে সুরক্ষিত রাখতে সাহায্য করবে।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>XSS (ক্রস-সাইট স্ক্রিপ্টিং):</strong> ইনজেকশন আক্রমণ কীভাবে প্রতিরোধ করবেন</li>
+                <li><strong>CSP (কন্টেন্ট সিকিউরিটি পলিসি):</strong> ব্রাউজারকে কোন রিসোর্স লোড করতে পারবে তা নিয়ন্ত্রণ</li>
+                <li><strong>স্যান্ডবক্স:</strong> iframe-এ সীমাবদ্ধ পরিবেশ তৈরি</li>
+                <li><strong>SRI (সাবরিসোর্স ইন্টিগ্রিটি):</strong> CDN থেকে লোড করা ফাইলের অখণ্ডতা যাচাই</li>
+                <li><strong>ক্লিকজ্যাকিং প্রতিরোধ:</strong> X-Frame-Options এবং frame-ancestors ব্যবহার</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>XSS প্রতিরোধ (Cross-Site Scripting Prevention)</h2>
+            <p>XSS (ক্রস-সাইট স্ক্রিপ্টিং) হলো সবচেয়ে সাধারণ ওয়েব নিরাপত্তা দুর্বলতা যেখানে আক্রমণকারী ওয়েবসাইটে ম্যালিশিয়াস জাভাস্ক্রিপ্ট ইনজেক্ট করে। HTML-এ সঠিকভাবে কন্টেন্ট এস্কেপিং এবং নিরাপদ অ্যাট্রিবিউট ব্যবহার করে XSS প্রতিরোধ করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>XSS এর উদাহরণ (কীভাবে কাজ করে):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- আক্রমণকারী ইনপুট ফিল্ডে এই কোড দিতে পারে --&gt;
+&lt;script&gt;alert('XSS আক্রমণ!');&lt;/script&gt;
+&lt;img src=x onerror=alert('XSS')&gt;
+
+&lt;!-- HTML এস্কেপিং না করলে --&gt;
+&lt;div&gt; &lt;script&gt;alert('XSS')&lt;/script&gt; &lt;/div&gt; &lt;!-- বিপজ্জনক --&gt;
+
+&lt;!-- সঠিক এস্কেপিং (টেক্সট হিসেবে দেখাবে) --&gt;
+&lt;div&gt; &amp;lt;script&amp;gt;alert('XSS')&amp;lt;/script&amp;gt; &lt;/div&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>XSS প্রতিরোধের উপায়:</h4>
+                <ul>
+                  <li><strong>HTML এস্কেপিং:</strong> &lt; → <code>&amp;lt;</code>, &gt; → <code>&amp;gt;</code>, & → <code>&amp;amp;</code>, " → <code>&amp;quot;</code></li>
+                  <li><strong>HTTP-only Cookies:</strong> <code>Set-Cookie: session=xyz; HttpOnly</code> (JavaScript-এ cookie অ্যাক্সেস রোধ)</li>
+                  <li><strong>CSP (Content Security Policy):</strong> inline script বন্ধ করা</li>
+                  <li><strong>ব্যাকএন্ডে ইনপুট ভ্যালিডেশন ও স্যানিটাইজেশন</strong></li>
+                  <li><code>innerHTML</code> এর পরিবর্তে <code>textContent</code> ব্যবহার</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>নিরাপদ DOM ম্যানিপুলেশন:</h3>
+              <div class="code-preview">
+                <pre><code>// বিপজ্জনক - XSS ঝুঁকি
+element.innerHTML = userInput;
+
+// নিরাপদ - টেক্সট হিসেবে ইনসার্ট
+element.textContent = userInput;
+
+// নিরাপদ attribute সেট
+element.setAttribute('data-value', userInput);
+img.src = validatedUrl; // URL ভ্যালিডেশন প্রয়োজন</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কন্টেন্ট সিকিউরিটি পলিসি (CSP - Content Security Policy)</h2>
+            <p>CSP একটি শক্তিশালী নিরাপত্তা ব্যবস্থা যা ব্রাউজারকে বলে কোন উৎস থেকে কোন ধরনের কন্টেন্ট লোড করা যাবে। এটি XSS, 데이터 ইনজেকশন এবং অন্যান্য আক্রমণ প্রতিরোধে কার্যকর।</p>
+            
+            <div class="example-box">
+              <h3>CSP হেডার উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- HTTP হেডার হিসেবে (সবচেয়ে নিরাপদ) --&gt;
+Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted.cdn.com; style-src 'self' 'unsafe-inline'; img-src *; object-src 'none'; base-uri 'self';
+
+&lt;!-- HTML মেটা ট্যাগ (সীমিত সাপোর্ট) --&gt;
+&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>CSP ডাইরেক্টিভ সমূহ:</h4>
+                <ul>
+                  <li><code>default-src 'self'</code> – ডিফল্ট সোর্স নিজের ডোমেইন</li>
+                  <li><code>script-src 'self'</code> – JavaScript শুধু নিজের ডোমেইন থেকে</li>
+                  <li><code>style-src 'self' 'unsafe-inline'</code> – CSS নিজের ডোমেইন + inline স্টাইল</li>
+                  <li><code>img-src *</code> – ইমেজ যেকোনো জায়গা থেকে</li>
+                  <li><code>font-src https://fonts.googleapis.com</code> – ফন্ট নির্দিষ্ট CDN থেকে</li>
+                  <li><code>object-src 'none'</code> – 플러그িন (Flash, Java) বন্ধ</li>
+                  <li><code>frame-ancestors 'none'</code> – ক্লিকজ্যাকিং প্রতিরোধ</li>
+                  <li><code>report-uri /csp-report</code> – লঙ্ঘন রিপোর্ট পাঠানোর ঠিকানা</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>CSP রিপোর্টিং (Content-Security-Policy-Report-Only):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- শুধু রিপোর্ট করবে, ব্লক করবে না --&gt;
+Content-Security-Policy-Report-Only: default-src 'self'; report-uri /csp-violation
+
+// লঙ্ঘন রিপোর্ট JSON ফরম্যাটে আসে
+{
+  "csp-report": {
+    "document-uri": "https://example.com/page",
+    "violated-directive": "script-src 'self'",
+    "blocked-uri": "https://evil.com/script.js"
+  }
+}</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>প্র্যাকটিস:</strong> প্রথমে Report-Only মোডে চালিয়ে লঙ্ঘন চিহ্নিত করুন, তারপর পূর্ণ CSP প্রয়োগ করুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>স্যান্ডবক্স (Sandbox)</h2>
+            <p><code>sandbox</code> অ্যাট্রিবিউট iframe-এর মধ্যে চলমান কন্টেন্টের ক্ষমতা সীমিত করে। এটি সন্দেহজনক বা থার্ড-পার্টি কন্টেন্ট নিরাপদে এম্বেড করতে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <h3>iframe স্যান্ডবক্স উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- সম্পূর্ণ সীমাবদ্ধ (সবচেয়ে নিরাপদ) --&gt;
+&lt;iframe src="https://untrusted.com" sandbox&gt;&lt;/iframe&gt;
+
+&lt;!-- নির্দিষ্ট পারমিশন সহ --&gt;
+&lt;iframe src="https://untrusted.com" 
+        sandbox="allow-same-origin allow-scripts allow-forms allow-popups"&gt;
+&lt;/iframe&gt;
+
+&lt;!-- allow-same-origin ছাড়া allow-scripts দিলে স্ক্রিপ্ট কাজ করে না --&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>স্যান্ডবক্স পারমিশন:</h4>
+                <ul>
+                  <li><code>allow-same-origin</code> – একই অরিজিনের রিসোর্স অ্যাক্সেস</li>
+                  <li><code>allow-scripts</code> – JavaScript চালানোর অনুমতি</li>
+                  <li><code>allow-forms</code> – ফর্ম সাবমিট করার অনুমতি</li>
+                  <li><code>allow-popups</code> – পপআপ উইন্ডো খোলার অনুমতি</li>
+                  <li><code>allow-top-navigation</code> – top-level ব্রাউজিং কন্টেক্সট নেভিগেট করার অনুমতি</li>
+                  <li><code>allow-modals</code> – মোডাল ডায়ালগ (alert, confirm) দেখানোর অনুমতি</li>
+                  <li><code>allow-presentation</code> – presentation session শুরু করার অনুমতি</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>স্যান্ডবক্স ছাড়া vs স্যান্ডবক্স সহ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- বিপজ্জনক: iframe-এর স্ক্রিপ্ট প্যারেন্ট পেজে অ্যাক্সেস পেতে পারে --&gt;
+&lt;iframe src="malicious.html"&gt;&lt;/iframe&gt;
+
+&lt;!-- নিরাপদ: স্যান্ডবক্স স্ক্রিপ্ট, ফর্ম, নেভিগেশন ব্লক করে --&gt;
+&lt;iframe src="untrusted.html" sandbox&gt;&lt;/iframe&gt;
+
+&lt;!-- নির্দিষ্ট অনুমতি দিয়ে --&gt;
+&lt;iframe src="widget.html" sandbox="allow-same-origin allow-scripts"&gt;&lt;/iframe&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সাবরিসোর্স ইন্টিগ্রিটি (SRI - Subresource Integrity)</h2>
+            <p>SRI ব্রাউজারকে CDN বা থার্ড-পার্টি থেকে লোড করা ফাইলের ক্রিপ্টোগ্রাফিক হ্যাশ যাচাই করতে দেয়। ফাইল পরিবর্তিত হলে ব্রাউজার তা লোড করবে না। এটি CDN হ্যাক বা ম্যান-ইন-দ্য-মিডল আক্রমণ প্রতিরোধ করে।</p>
+            
+            <div class="example-box">
+              <h3>SRI উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- SRI সহ CSS ফাইল --&gt;
+&lt;link rel="stylesheet" 
+      href="https://cdn.example.com/style.css" 
+      integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC" 
+      crossorigin="anonymous"&gt;
+
+&lt;!-- SRI সহ JavaScript ফাইল --&gt;
+&lt;script src="https://cdn.example.com/app.js" 
+        integrity="sha384-Li9vy3DqF8tnTXuiaAJuML3ky+er10rcgNR/VqsVpcw+ThHmYcwiB1pbOxEbzJr7" 
+        crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>SRI হ্যাশ জেনারেট করুন:</strong> <code>openssl dgst -sha384 -binary filename.js | openssl base64 -A</code> অথবা <a href="https://www.srihash.org" target="_blank">srihash.org</a> ব্যবহার করুন।</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>SRI কিভাবে কাজ করে:</h4>
+              <ul>
+                <li>ব্রাউজার ফাইল ডাউনলোড করে</li>
+                <li>হ্যাশ গণনা করে এবং <code>integrity</code> অ্যাট্রিবিউটের সাথে তুলনা করে</li>
+                <li>মিল না-মিললে ফাইল লোড হয় না এবং কনসোলে এরর দেখায়</li>
+                <li><code>crossorigin</code> অ্যাট্রিবিউট CORS-enabled রিসোর্সের জন্য প্রয়োজন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্লিকজ্যাকিং প্রতিরোধ (Clickjacking Prevention)</h2>
+            <p>ক্লিকজ্যাকিং একটি আক্রমণ যেখানে আক্রমণকারী স্বচ্ছ iframe ব্যবহার করে ব্যবহারকারীকে অজান্তে অন্য সাইটে ক্লিক করতে বাধ্য করে। <code>X-Frame-Options</code> হেডার বা CSP-র <code>frame-ancestors</code> ব্যবহার করে এটি প্রতিরোধ করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>ক্লিকজ্যাকিং প্রতিরোধের পদ্ধতি:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- HTTP হেডার (সবচেয়ে সহজ) --&gt;
+X-Frame-Options: DENY
+X-Frame-Options: SAMEORIGIN
+
+&lt;!-- CSP frame-ancestors (আধুনিক, আরও নিয়ন্ত্রণ) --&gt;
+Content-Security-Policy: frame-ancestors 'none';
+Content-Security-Policy: frame-ancestors 'self' https://trusted.com;
+
+&lt;!-- HTML মেটা ট্যাগ (সীমিত কার্যকারিতা) --&gt;
+&lt;meta http-equiv="X-Frame-Options" content="DENY"&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>X-Frame-Options মান:</h4>
+                <ul>
+                  <li><code>DENY</code> – কোনো iframe-এ এম্বেড করা যাবে না</li>
+                  <li><code>SAMEORIGIN</code> – শুধু একই অরিজিনের পৃষ্ঠায় এম্বেড করা যাবে</li>
+                  <li><code>ALLOW-FROM uri</code> – নির্দিষ্ট URI-তে অনুমতি (পুরনো, CSP ব্যবহার ভালো)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>JavaScript দিয়ে ফ্রেম-বাস্টিং (অতিরিক্ত সুরক্ষা):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;script&gt;
+// ফ্রেম-বাস্টিং - iframe-এ থাকলে টপে রিডাইরেক্ট
+if (window.top !== window.self) {
+  window.top.location = window.self.location;
+}
+&lt;/script&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>সেরা প্র্যাকটিস:</strong> HTTP হেডার + CSP একসাথে ব্যবহার করুন। JavaScript ফ্রেম-বাস্টিং শুধু অতিরিক্ত সুরক্ষা হিসেবে রাখুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অতিরিক্ত HTML নিরাপত্তা টিপস</h2>
+            
+            <div class="info-card">
+              <h4>নিরাপদ HTML অনুশীলন:</h4>
+              <ul>
+                <li><strong>HTTPS ব্যবহার করুন:</strong> সব পৃষ্ঠায় HTTPS বাধ্যতামূলক করুন, HSTS (Strict-Transport-Security) হেডার যোগ করুন</li>
+                <li><strong>Referrer Policy:</strong> <code>&lt;meta name="referrer" content="no-referrer"&gt;</code> দিয়ে referrer তথ্য নিয়ন্ত্রণ করুন</li>
+                <li><strong>নিরাপদ cookie অ্যাট্রিবিউট:</strong> <code>Secure; HttpOnly; SameSite=Strict</code></li>
+                <li><strong>X-Content-Type-Options:</strong> <code>X-Content-Type-Options: nosniff</code> – MIME sniffing প্রতিরোধ</li>
+                <li><strong>input সীমাবদ্ধতা:</strong> <code>input</code> এ <code>type="email"</code>, <code>pattern</code>, <code>maxlength</code> ব্যবহার করুন</li>
+              </ul>
+            </div>
+
+            <div class="example-box">
+              <h3>নিরাপদ HTML হেডার (Apache/NGINX কনফিগ):</h3>
+              <div class="code-preview">
+                <pre><code># নিরাপত্তা হেডার
+Header set X-Frame-Options "DENY"
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;"
+
+# HSTS (HTTPS বাধ্যতামূলক)
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সিকিউরিটি চেকলিস্ট</h2>
+            
+            <div class="info-card">
+              <h4>HTML ওয়েবসাইট সিকিউরিটি চেকলিস্ট:</h4>
+              <ul>
+                <li>✅ HTTPS ব্যবহার করুন (SSL/TLS সার্টিফিকেট)</li>
+                <li>✅ CSP (Content Security Policy) কনফিগার করুন</li>
+                <li>✅ X-Frame-Options: DENY বা SAMEORIGIN সেট করুন</li>
+                <li>✅ X-Content-Type-Options: nosniff সেট করুন</li>
+                <li>✅ থার্ড-পার্টি স্ক্রিপ্টে SRI ব্যবহার করুন</li>
+                <li>✅ iframe-এ sandbox অ্যাট্রিবিউট ব্যবহার করুন</li>
+                <li>✅ cookies-এ Secure, HttpOnly, SameSite ফ্ল্যাগ ব্যবহার করুন</li>
+                <li>✅ ইনপুট ডাটা HTML এস্কেপ করুন</li>
+                <li>✅ user-generated HTML এ <code>DOMPurify</code> বা অনুরূপ লাইব্রেরি ব্যবহার করুন</li>
+                <li>✅ নিরাপত্তা হেডার পরীক্ষার জন্য securityheaders.com ব্যবহার করুন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>নিরাপত্তা টুলস ও রিসোর্স</h2>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code># নিরাপত্তা হেডার পরীক্ষার টুলস
+# https://securityheaders.com
+# https://observatory.mozilla.org
+
+# CSP পরীক্ষার টুল
+# https://csp-evaluator.withgoogle.com
+
+# SRI হ্যাশ জেনারেটর
+# https://www.srihash.org
+# openssl dgst -sha384 -binary script.js | openssl base64 -A</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="xss.html" class="topic-card">
+                <h3>⚠️ XSS প্রতিরোধ</h3>
+                <p>ক্রস-সাইট স্ক্রিপ্টিং আক্রমণ প্রতিরোধের কৌশল</p>
+              </a>
+              <a href="csp.html" class="topic-card">
+                <h3>🛡️ কন্টেন্ট সিকিউরিটি পলিসি</h3>
+                <p>CSP হেডার, ডাইরেক্টিভ, রিপোর্টিং</p>
+              </a>
+              <a href="sandbox.html" class="topic-card">
+                <h3>📦 স্যান্ডবক্স</h3>
+                <p>iframe sandbox অ্যাট্রিবিউট ও পারমিশন</p>
+              </a>
+              <a href="sri.html" class="topic-card">
+                <h3>🔐 সাবরিসোর্স ইন্টিগ্রিটি</h3>
+                <p>SRI দিয়ে CDN ফাইলের অখণ্ডতা যাচাই</p>
+              </a>
+              <a href="clickjacking.html" class="topic-card">
+                <h3>🖱️ ক্লিকজ্যাকিং প্রতিরোধ</h3>
+                <p>X-Frame-Options, frame-ancestors, frame-busting</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/performance.html" class="prev-topic">← পূর্ববর্তী: পারফরম্যান্স</a>
+              <a href="../references/html-tags.html" class="next-topic">পরবর্তী: HTML ট্যাগ রেফারেন্স →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বেস্ট প্র্যাকটিস | HTML শিখি</title>
+  <meta name="description" content="HTML বেস্ট প্র্যাকটিসের সম্পূর্ণ গাইড: কোডিং কনভেনশন, ইনডেন্টেশন, নেমিং কনভেনশন, ডকুমেন্ট আউটলাইন, অ্যাক্সেসিবিলিটি, SEO, ক্রস-ব্রাউজার কম্প্যাটিবিলিটি, মোবাইল-ফার্স্ট অ্যাপ্রোচ ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>বেস্ট প্র্যাকটিস টপিকস</h3>
+        <ul>
+          <li><a href="coding-conventions.html">কোডিং কনভেনশন</a></li>
+          <li><a href="indentation.html">ইনডেন্টেশন ও ফরম্যাটিং</a></li>
+          <li><a href="naming-conventions.html">নেমিং কনভেনশন</a></li>
+          <li><a href="document-outline.html">ডকুমেন্ট আউটলাইন</a></li>
+          <li><a href="accessibility-best.html">অ্যাক্সেসিবিলিটি বেস্ট প্র্যাকটিস</a></li>
+          <li><a href="seo-best.html">SEO বেস্ট প্র্যাকটিস</a></li>
+          <li><a href="cross-browser.html">ক্রস-ব্রাউজার কম্প্যাটিবিলিটি</a></li>
+          <li><a href="mobile-first.html">মোবাইল-ফার্স্ট অ্যাপ্রোচ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>বেস্ট প্র্যাকটিস</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML বেস্ট প্র্যাকটিস (Best Practices)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৫০ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ থেকে উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML বেস্ট প্র্যাকটিস কী?</h2>
+            <p>HTML বেস্ট প্র্যাকটিস হলো সেইসব পদ্ধতি এবং নিয়ম যা কোডকে পরিষ্কার, রক্ষণাবেক্ষণযোগ্য, পারফরম্যান্ট, অ্যাক্সেসযোগ্য এবং এসইও-ফ্রেন্ডলি করে তোলে। এটি শুধু কোড লেখার সঠিক উপায় নয়, বরং একটি পেশাদার ডেভেলপারের মানসিকতা। ভালো HTML কোড লিখলে তা ব্রাউজারে দ্রুত লোড হয়, সার্চ ইঞ্জিনে ভালো র্যাঙ্ক করে, স্ক্রিন রিডার ব্যবহারকারীদের জন্য সহজ হয় এবং ভবিষ্যতে পরিবর্তন করাও সহজ হয়। এই অধ্যায়ে আমরা HTML কোড লেখার সময় মেনে চলা উচিত এমন গুরুত্বপূর্ণ অভ্যাস এবং টেকনিক শিখব।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>কোডিং কনভেনশন:</strong> ক্লিন ও কনসিস্টেন্ট কোড লেখার নিয়ম</li>
+                <li><strong>ইনডেন্টেশন ও ফরম্যাটিং:</strong> রিডেবল কোডের জন্য ফরম্যাটিং কৌশল</li>
+                <li><strong>নেমিং কনভেনশন:</strong> ক্লাস, আইডি, ফাইলের নামকরণের সঠিক পদ্ধতি</li>
+                <li><strong>ডকুমেন্ট আউটলাইন:</strong> সঠিক হেডিং হায়ারার্কি বজায় রাখা</li>
+                <li><strong>অ্যাক্সেসিবিলিটি:</strong> সব ব্যবহারকারীর জন্য অ্যাক্সেসযোগ্য ওয়েবসাইট</li>
+                <li><strong>SEO অপটিমাইজেশন:</strong> সার্চ ইঞ্জিনের জন্য HTML অপটিমাইজ করা</li>
+                <li><strong>ক্রস-ব্রাউজার কম্প্যাটিবিলিটি:</strong> সব ব্রাউজারে সমানভাবে কাজ করা</li>
+                <li><strong>মোবাইল-ফার্স্ট:</strong> মোবাইল ডিভাইসকে প্রথমে বিবেচনা করে ডিজাইন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কোডিং কনভেনশন (Coding Conventions)</h2>
+            <p>কোডিং কনভেনশন হলো কোড লেখার সময় মেনে চলা কিছু নিয়ম যা কোডকে সামঞ্জস্যপূর্ণ, পাঠযোগ্য এবং রক্ষণাবেক্ষণযোগ্য করে তোলে।</p>
+            
+            <div class="example-box">
+              <h3>HTML কোডিং কনভেনশন:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ✅ ভালো উদাহরণ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;পৃষ্ঠার শিরোনাম&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;প্রধান শিরোনাম&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;সাব-শিরোনাম&lt;/h2&gt;
+      &lt;p&gt;প্যারাগ্রাফ টেক্সট&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- ❌ খারাপ উদাহরণ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt;&lt;TITLE&gt;No indentation&lt;/TITLE&gt;&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;DIV&gt;&lt;H1&gt;Bad Code&lt;/H1&gt;&lt;/DIV&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>গুরুত্বপূর্ণ কনভেনশন:</h4>
+                <ul>
+                  <li>✅ সব ট্যাগ ছোট হাতের অক্ষরে লিখুন (<code>&lt;div&gt;</code> not <code>&lt;DIV&gt;</code>)</li>
+                  <li>✅ সব অ্যাট্রিবিউট ডাবল কোটেশনে লিখুন (<code>class="example"</code>)</li>
+                  <li>✅ <code>&lt;!DOCTYPE html&gt;</code> সব পৃষ্ঠার শুরুতে দিন</li>
+                  <li>✅ <code>lang</code> অ্যাট্রিবিউট সর্বদা ব্যবহার করুন</li>
+                  <li>✅ বন্ধ ট্যাগগুলো সঠিকভাবে বন্ধ করুন</li>
+                  <li>✅ সিম্যান্টিক এলিমেন্ট ব্যবহার করুন (<code>&lt;div&gt;</code> এর পরিবর্তে <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইনডেন্টেশন ও ফরম্যাটিং (Indentation & Formatting)</h2>
+            <p>সঠিক ইনডেন্টেশন কোডের স্তরবিন্যাস বোঝায় এবং পড়তে সহজ করে। এটি টিম ওয়ার্ক এবং ডিবাগিংয়ের জন্য অপরিহার্য।</p>
+            
+            <div class="example-box">
+              <h3>ইনডেন্টেশন উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ✅ সঠিক ইনডেন্টেশন (২ বা ৪ স্পেস) --&gt;
+&lt;div class="container"&gt;
+  &lt;header&gt;
+    &lt;h1&gt;শিরোনাম&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;ব্লগ&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;আর্টিকেল টাইটেল&lt;/h2&gt;
+      &lt;p&gt;আর্টিকেল কন্টেন্ট...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+
+&lt;!-- ❌ ভুল ইনডেন্টেশন (লেভেল বোঝা যায় না) --&gt;
+&lt;div class="container"&gt;
+&lt;header&gt;
+&lt;h1&gt;শিরোনাম&lt;/h1&gt;
+&lt;nav&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>টিপ:</strong> আপনার এডিটরে auto-formatting চালু রাখুন (Prettier, VS Code Formatter)। ট্যাবের পরিবর্তে ২ বা ৪ স্পেস ব্যবহার করা ভালো অভ্যাস।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>নেমিং কনভেনশন (Naming Conventions)</h2>
+            <p>ক্লাস, আইডি, ফাইল এবং ভেরিয়েবলের নামকরণের সঠিক পদ্ধতি কোডকে অর্থপূর্ণ এবং সহজে বোঝার যোগ্য করে তোলে।</p>
+            
+            <div class="example-box">
+              <h3>নেমিং কনভেনশন উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ✅ BEM (Block Element Modifier) মেথড --&gt;
+&lt;div class="card"&gt;
+  &lt;h3 class="card__title"&gt;টাইটেল&lt;/h3&gt;
+  &lt;p class="card__description"&gt;বিবরণ&lt;/p&gt;
+  &lt;button class="card__button card__button--primary"&gt;ক্লিক&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- ✅ কাবাব-কেস (kebab-case) - HTML/CSS-এর জন্য --&gt;
+&lt;div class="user-profile"&gt;
+  &lt;div class="user-profile-avatar"&gt;&lt;/div&gt;
+  &lt;div class="user-profile-name"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ✅ ক্যামেলকেস (camelCase) - JavaScript-এর জন্য --&gt;
+&lt;script&gt;
+  const userName = 'রহিম';
+  const getUserData = () =&gt; {};
+&lt;/script&gt;
+
+&lt;!-- ❌ ভুল নামকরণ --&gt;
+&lt;div class="UserProfile"&gt; &lt;!-- ক্লাসে বড় হাতের অক্ষর এড়িয়ে চলুন --&gt;
+&lt;div class="user_profile"&gt; &lt;!-- আন্ডারস্কোরের পরিবর্তে হাইফেন ব্যবহার করুন --&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>নেমিং বেস্ট প্র্যাকটিস:</h4>
+                <ul>
+                  <li><strong>HTML/CSS ক্লাস:</strong> kebab-case (<code>user-profile</code>)</li>
+                  <li><strong>JavaScript ভেরিয়েবল/ফাংশন:</strong> camelCase (<code>getUserData</code>)</li>
+                  <li><strong>JavaScript ক্লাস/কম্পোনেন্ট:</strong> PascalCase (<code>UserCard</code>)</li>
+                  <li><strong>ফাইল নাম:</strong> kebab-case বা snake_case (<code>about-us.html</code> বা <code>about_us.html</code>)</li>
+                  <li><strong>ID:</strong> সংক্ষিপ্ত, অর্থপূর্ণ, unique (<code>main-nav</code>)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ডকুমেন্ট আউটলাইন (Document Outline)</h2>
+            <p>সঠিক ডকুমেন্ট আউটলাইন মানে <code>&lt;h1&gt;</code> থেকে <code>&lt;h6&gt;</code> পর্যন্ত হেডিং ট্যাগের সঠিক হায়ারার্কি বজায় রাখা। এটি SEO এবং অ্যাক্সেসিবিলিটি উভয়ের জন্যই গুরুত্বপূর্ণ।</p>
+            
+            <div class="example-box">
+              <h3>সঠিক হেডিং স্ট্রাকচার:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ✅ সঠিক আউটলাইন --&gt;
+&lt;h1&gt;মেইন টাইটেল&lt;/h1&gt;
+&lt;section&gt;
+  &lt;h2&gt;সেকশন ১&lt;/h2&gt;
+  &lt;h3&gt;সাব-সেকশন ১.১&lt;/h3&gt;
+  &lt;h3&gt;সাব-সেকশন ১.২&lt;/h3&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;h2&gt;সেকশন ২&lt;/h2&gt;
+  &lt;h3&gt;সাব-সেকশন ২.১&lt;/h3&gt;
+&lt;/section&gt;
+
+&lt;!-- ❌ ভুল আউটলাইন (লেভেল স্কিপ করা) --&gt;
+&lt;h1&gt;টাইটেল&lt;/h1&gt;
+&lt;h3&gt;সাব-টাইটেল&lt;/h3&gt; &lt;!-- h2 স্কিপ করা --&gt;
+
+&lt;!-- ❌ একাধিক h1 --&gt;
+&lt;h1&gt;প্রথম টাইটেল&lt;/h1&gt;
+&lt;h1&gt;দ্বিতীয় টাইটেল&lt;/h1&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>গোল্ডেন রুল:</strong> একটি পৃষ্ঠায় শুধুমাত্র একটি <code>&lt;h1&gt;</code> ব্যবহার করুন। হেডিং লেভেল স্কিপ করবেন না (h1 → h3 না করে h1 → h2 → h3 করুন)। হেডিং ট্যাগ লেআউটের জন্য নয়, স্ট্রাকচারের জন্য ব্যবহার করুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অ্যাক্সেসিবিলিটি বেস্ট প্র্যাকটিস (Accessibility Best Practices)</h2>
+            <p>অ্যাক্সেসিবিলিটি নিশ্চিত করে যে সব ব্যবহারকারী, বিশেষ করে প্রতিবন্ধী ব্যক্তিরা, আপনার ওয়েবসাইট ব্যবহার করতে পারে।</p>
+            
+            <div class="example-box">
+              <h3>অ্যাক্সেসিবিলিটি চেকলিস্ট:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ১. alt টেক্সট ব্যবহার করুন --&gt;
+&lt;img src="logo.png" alt="HTML শিখি - লোগো"&gt;
+
+&lt;!-- ২. সিম্যান্টিক এলিমেন্ট ব্যবহার করুন --&gt;
+&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+
+&lt;!-- ৩. ফর্মে লেবেল ব্যবহার করুন --&gt;
+&lt;label for="name"&gt;নাম:&lt;/label&gt;
+&lt;input type="text" id="name" name="name"&gt;
+
+&lt;!-- ৪. কিবোর্ড নেভিগেশনের জন্য tabindex --&gt;
+&lt;button tabindex="0"&gt;ক্লিক করুন&lt;/button&gt;
+
+&lt;!-- ৫. ARIA অ্যাট্রিবিউট যেখানে প্রয়োজন --&gt;
+&lt;div role="alert" aria-live="assertive"&gt;ত্রুটি বার্তা&lt;/div&gt;
+
+&lt;!-- ৬. color contrast পর্যাপ্ত রাখুন --&gt;
+&lt;!-- ৭. ভাষা নির্ধারণ করুন --&gt;
+&lt;html lang="bn"&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>SEO বেস্ট প্র্যাকটিস (SEO Best Practices)</h2>
+            <p>SEO-ফ্রেন্ডলি HTML লেখা সার্চ ইঞ্জিনে আপনার সাইটের ভিজিবিলিটি বাড়ায়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;!-- ১. মেটা ট্যাগ --&gt;
+&lt;meta name="description" content="পৃষ্ঠার বিবরণ ১৫০-১৬০ ক্যারেক্টারের মধ্যে"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+
+&lt;!-- ২. ক্যানোনিকাল URL --&gt;
+&lt;link rel="canonical" href="https://example.com/original-page"&gt;
+
+&lt;!-- ৩. Open Graph ট্যাগ --&gt;
+&lt;meta property="og:title" content="পৃষ্ঠার শিরোনাম"&gt;
+&lt;meta property="og:description" content="পৃষ্ঠার বিবরণ"&gt;
+&lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+
+&lt;!-- ৪. সঠিক হেডিং স্ট্রাকচার --&gt;
+&lt;h1&gt;প্রধান কীওয়ার্ড সহ শিরোনাম&lt;/h1&gt;
+&lt;h2&gt;সাব-টপিক&lt;/h2&gt;
+
+&lt;!-- ৫. ছবিতে alt টেক্সট --&gt;
+&lt;img src="image.jpg" alt="দরকারি কীওয়ার্ড সহ বর্ণনা"&gt;
+
+&lt;!-- ৬. সিম্যান্টিক HTML --&gt;
+&lt;article&gt;, &lt;section&gt;, &lt;nav&gt;, &lt;header&gt;, &lt;footer&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্রস-ব্রাউজার কম্প্যাটিবিলিটি (Cross-Browser Compatibility)</h2>
+            <p>আপনার ওয়েবসাইট সব ব্রাউজারে (Chrome, Firefox, Safari, Edge) এবং বিভিন্ন ডিভাইসে সমানভাবে কাজ করা উচিত।</p>
+            
+            <div class="example-box">
+              <h3>ক্রস-ব্রাউজার টেকনিক:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ১. CSS রিসেট বা Normalize.css ব্যবহার করুন --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"&gt;
+
+&lt;!-- ২. ভেন্ডর প্রিফিক্স (অটো-প্রিফিক্সার ব্যবহার করুন) --&gt;
+.element {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+&lt;!-- ৩. ফিচার ডিটেকশন --&gt;
+&lt;script&gt;
+if ('geolocation' in navigator) {
+  // জিওলোকেশন সাপোর্ট করে
+} else {
+  // ফ্যালব্যাক
+}
+&lt;/script&gt;
+
+&lt;!-- ৪. গ্রেসফুল ডিগ্রেডেশন --&gt;
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;p&gt;আপনার ব্রাউজার ভিডিও সাপোর্ট করে না। &lt;a href="video.mp4"&gt;ডাউনলোড করুন&lt;/a&gt;&lt;/p&gt;
+&lt;/video&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মোবাইল-ফার্স্ট অ্যাপ্রোচ (Mobile-First Approach)</h2>
+            <p>মোবাইল-ফার্স্ট মানে প্রথমে মোবাইল ডিভাইসের জন্য ডিজাইন করা, তারপর বড় স্ক্রিনের জন্য উন্নত করা। এটি পারফরম্যান্স এবং ইউজার এক্সপেরিয়েন্স উন্নত করে।</p>
+            
+            <div class="example-box">
+              <h3>মোবাইল-ফার্স্ট CSS:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- viewport মেটা ট্যাগ --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;style&gt;
+/* মোবাইল ফার্স্ট (ডিফল্ট স্টাইল) */
+.container {
+  padding: 16px;
+  width: 100%;
+}
+
+.card {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* ট্যাবলেট (min-width: 768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .card {
+    font-size: 16px;
+  }
+}
+
+/* ডেস্কটপ (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+&lt;/style&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>মোবাইল-ফার্স্ট টিপস:</strong> <code>max-width</code> এর পরিবর্তে <code>min-width</code> ব্যবহার করুন। ছবি responsive করুন (<code>max-width: 100%</code>)। টাচ-ফ্রেন্ডলি বাটন (মিনিমাম 44x44px)। ফন্ট সাইজ মোবাইলে 16px-এর কম না রাখুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>HTML বেস্ট প্র্যাকটিস চেকলিস্ট</h2>
+            
+            <div class="info-card">
+              <h4>চূড়ান্ত চেকলিস্ট:</h4>
+              <ul>
+                <li>✅ <code>&lt;!DOCTYPE html&gt;</code> ডিক্লেয়ার করুন</li>
+                <li>✅ <code>&lt;html lang="bn"&gt;</code> ব্যবহার করুন</li>
+                <li>✅ <code>&lt;meta charset="UTF-8"&gt;</code> ব্যবহার করুন</li>
+                <li>✅ <code>&lt;meta name="viewport"&gt;</code> ব্যবহার করুন (মোবাইল-ফার্স্ট)</li>
+                <li>✅ সিম্যান্টিক এলিমেন্ট ব্যবহার করুন (header, nav, main, article, section, footer)</li>
+                <li>✅ হেডিং হায়ারার্কি সঠিক রাখুন (একটি h1, লেভেল স্কিপ করবেন না)</li>
+                <li>✅ সব ছবিতে <code>alt</code> অ্যাট্রিবিউট ব্যবহার করুন</li>
+                <li>✅ ফর্মে <code>&lt;label&gt;</code> ব্যবহার করুন</li>
+                <li>✅ কিবোর্ড নেভিগেশন সাপোর্ট করুন</li>
+                <li>✅ ইনলাইন স্টাইল এড়িয়ে চলুন (CSS ব্যবহার করুন)</li>
+                <li>✅ জাভাস্ক্রিপ্ট <code>defer</code> বা <code>async</code> ব্যবহার করে লোড করুন</li>
+                <li>✅ ইমেজে <code>width</code> ও <code>height</code> নির্ধারণ করুন (CLS প্রতিরোধ)</li>
+                <li>✅ ক্লাস নাম kebab-case ব্যবহার করুন</li>
+                <li>✅ সঠিক ইনডেন্টেশন বজায় রাখুন</li>
+                <li>✅ ভ্যালিডেটর দিয়ে HTML চেক করুন (validator.w3.org)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>টুলস ও রিসোর্স</h2>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code># HTML ভ্যালিডেটর
+# https://validator.w3.org
+
+# অ্যাক্সেসিবিলিটি টেস্টিং
+# https://wave.webaim.org
+# Chrome DevTools → Lighthouse → Accessibility
+
+# SEO টেস্টিং
+# https://pagespeed.web.dev
+# Google Search Console
+
+# ক্রস-ব্রাউজার টেস্টিং
+# https://www.browserstack.com
+# https://caniuse.com
+
+# কোড ফরম্যাটার
+# Prettier: https://prettier.io
+# VS Code: Shift + Alt + F</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="coding-conventions.html" class="topic-card">
+                <h3>📝 কোডিং কনভেনশন</h3>
+                <p>HTML কোড লেখার মানসম্মত নিয়মাবলী</p>
+              </a>
+              <a href="indentation.html" class="topic-card">
+                <h3>📐 ইনডেন্টেশন ও ফরম্যাটিং</h3>
+                <p>কোড রিডেবিলিটি উন্নত করার কৌশল</p>
+              </a>
+              <a href="naming-conventions.html" class="topic-card">
+                <h3>🏷️ নেমিং কনভেনশন</h3>
+                <p>ক্লাস, আইডি, ফাইলের নামকরণের সঠিক পদ্ধতি</p>
+              </a>
+              <a href="document-outline.html" class="topic-card">
+                <h3>📑 ডকুমেন্ট আউটলাইন</h3>
+                <p>সঠিক হেডিং হায়ারার্কি বজায় রাখা</p>
+              </a>
+              <a href="accessibility-best.html" class="topic-card">
+                <h3>♿ অ্যাক্সেসিবিলিটি বেস্ট প্র্যাকটিস</h3>
+                <p>WAI-ARIA, স্ক্রিন রিডার, কিবোর্ড নেভিগেশন</p>
+              </a>
+              <a href="seo-best.html" class="topic-card">
+                <h3>🔍 SEO বেস্ট প্র্যাকটিস</h3>
+                <p>মেটা ট্যাগ, ক্যানোনিকাল, স্ট্রাকচার্ড ডাটা</p>
+              </a>
+              <a href="cross-browser.html" class="topic-card">
+                <h3>🌐 ক্রস-ব্রাউজার কম্প্যাটিবিলিটি</h3>
+                <p>ফিচার ডিটেকশন, গ্রেসফুল ডিগ্রেডেশন</p>
+              </a>
+              <a href="mobile-first.html" class="topic-card">
+                <h3>📱 মোবাইল-ফার্স্ট অ্যাপ্রোচ</h3>
+                <p>রেসপনসিভ ডিজাইন, viewport, media queries</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/web-components.html" class="prev-topic">← পূর্ববর্তী: ওয়েব কম্পোনেন্টস</a>
+              <a href="../references/html-tags.html" class="next-topic">পরবর্তী: HTML ট্যাগ রেফারেন্স →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

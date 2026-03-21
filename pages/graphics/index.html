@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>গ্রাফিক্স | HTML শিখি</title>
+  <meta name="description" content="HTML-এ গ্রাফিক্সের সম্পূর্ণ গাইড: Canvas বেসিক, Canvas ড্রয়িং, রং ও গ্রেডিয়েন্ট, টেক্সট, ছবি, এনিমেশন, SVG বেসিক, শেপ, পাথ, টেক্সট, Canvas vs SVG ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>গ্রাফিক্স টপিকস</h3>
+        <ul>
+          <li><a href="canvas-basics.html">Canvas বেসিক</a></li>
+          <li><a href="canvas-drawing.html">Canvas ড্রয়িং</a></li>
+          <li><a href="canvas-colors.html">Canvas রং ও গ্রেডিয়েন্ট</a></li>
+          <li><a href="canvas-text.html">Canvas টেক্সট</a></li>
+          <li><a href="canvas-images.html">Canvas ছবি</a></li>
+          <li><a href="canvas-animation.html">Canvas এনিমেশন</a></li>
+          <li><a href="svg-basics.html">SVG বেসিক</a></li>
+          <li><a href="svg-shapes.html">SVG শেপ</a></li>
+          <li><a href="svg-paths.html">SVG পাথ</a></li>
+          <li><a href="svg-text.html">SVG টেক্সট</a></li>
+          <li><a href="svg-vs-canvas.html">Canvas vs SVG</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>গ্রাফিক্স</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>গ্রাফিক্স (HTML Graphics)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৫৫ মিনিট</span>
+            <span>লেভেল: মধ্যবর্তী থেকে উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML গ্রাফিক্স কী?</h2>
+            <p>HTML-এ গ্রাফিক্স তৈরির জন্য দুটি শক্তিশালী টুল রয়েছে: <strong>Canvas</strong> এবং <strong>SVG</strong>। <code>&lt;canvas&gt;</code> এলিমেন্ট জাভাস্ক্রিপ্ট ব্যবহার করে পিক্সেল-ভিত্তিক গ্রাফিক্স, অ্যানিমেশন, এবং গেম ডেভেলপমেন্টের জন্য উপযোগী। অন্যদিকে <strong>SVG (Scalable Vector Graphics)</strong> XML-ভিত্তিক ভেক্টর গ্রাফিক্স যা স্কেলেবল, রেসপনসিভ এবং ডকুমেন্ট অবজেক্ট মডেল (DOM) এর সাথে ইন্টিগ্রেটেড। এই অধ্যায়ে আমরা Canvas এবং SVG-এর সকল গুরুত্বপূর্ণ বিষয় বিস্তারিত শিখব।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>Canvas:</strong> বেসিক ড্রয়িং, শেপ, রং, গ্রেডিয়েন্ট, টেক্সট, ছবি, অ্যানিমেশন</li>
+                <li><strong>SVG:</strong> ভেক্টর গ্রাফিক্স, শেপ, পাথ, টেক্সট, ইন্টারঅ্যাকটিভিটি</li>
+                <li><strong>Canvas vs SVG:</strong> কখন কোনটি ব্যবহার করবেন</li>
+                <li>জাভাস্ক্রিপ্ট দিয়ে ইন্টারঅ্যাকটিভ গ্রাফিক্স তৈরি</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Canvas বেসিক (Canvas Basics)</h2>
+            <p><code>&lt;canvas&gt;</code> এলিমেন্ট হলো একটি ড্রয়িং এরিয়া যা জাভাস্ক্রিপ্ট দিয়ে নিয়ন্ত্রণ করা হয়। এটি 2D গ্রাফিক্স, অ্যানিমেশন, এবং গেম ডেভেলপমেন্টের জন্য আদর্শ।</p>
+            
+            <div class="example-box">
+              <h3>Canvas স্ট্রাকচার:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;canvas id="myCanvas" width="400" height="200" style="border:1px solid #ddd;"&gt;
+  আপনার ব্রাউজার canvas সাপোর্ট করে না।
+&lt;/canvas&gt;
+
+&lt;script&gt;
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+  // ড্রয়িং কোড এখানে
+  ctx.fillStyle = '#4CAF50';
+  ctx.fillRect(20, 20, 150, 100);
+&lt;/script&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <canvas id="demoCanvas" width="400" height="150" style="border:1px solid #ddd; border-radius: 4px; background: #f9f9f9;"></canvas>
+                <script>
+                  const demoCanvas = document.getElementById('demoCanvas');
+                  if(demoCanvas) {
+                    const demoCtx = demoCanvas.getContext('2d');
+                    demoCtx.fillStyle = '#4CAF50';
+                    demoCtx.fillRect(20, 20, 150, 80);
+                    demoCtx.fillStyle = '#2196F3';
+                    demoCtx.fillRect(200, 30, 120, 60);
+                  }
+                </script>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>Canvas এর মূল বৈশিষ্ট্য:</h4>
+              <ul>
+                <li>পিক্সেল-ভিত্তিক (রাস্টার গ্রাফিক্স)</li>
+                <li>জাভাস্ক্রিপ্ট দিয়ে রিয়েল-টাইম ড্রয়িং</li>
+                <li>অ্যানিমেশন ও গেম ডেভেলপমেন্টের জন্য উপযোগী</li>
+                <li>হাই-রেজোলিউশনে দ্রুত পারফরম্যান্স</li>
+                <li>ইমেজ ডাটা ম্যানিপুলেশন সম্ভব</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Canvas ড্রয়িং (Drawing Shapes)</h2>
+            <p>Canvas-এ আয়তক্ষেত্র, বৃত্ত, লাইন, এবং পাথ ব্যবহার করে বিভিন্ন শেপ আঁকা যায়।</p>
+            
+            <div class="example-box">
+              <h3>বিভিন্ন শেপ ড্রয়িং:</h3>
+              <div class="code-preview">
+                <pre><code>// আয়তক্ষেত্র
+ctx.fillRect(x, y, width, height);
+ctx.strokeRect(x, y, width, height);
+
+// বৃত্ত
+ctx.beginPath();
+ctx.arc(x, y, radius, startAngle, endAngle);
+ctx.fill();
+
+// লাইন
+ctx.beginPath();
+ctx.moveTo(x1, y1);
+ctx.lineTo(x2, y2);
+ctx.stroke();</code></pre>
+              </div>
+              <div class="live-preview">
+                <canvas id="shapesCanvas" width="400" height="150" style="border:1px solid #ddd; border-radius: 4px;"></canvas>
+                <script>
+                  const shapesCanvas = document.getElementById('shapesCanvas');
+                  if(shapesCanvas) {
+                    const sCtx = shapesCanvas.getContext('2d');
+                    sCtx.fillStyle = '#FF5722';
+                    sCtx.fillRect(20, 20, 60, 50);
+                    sCtx.beginPath();
+                    sCtx.arc(140, 45, 25, 0, 2 * Math.PI);
+                    sCtx.fillStyle = '#2196F3';
+                    sCtx.fill();
+                    sCtx.beginPath();
+                    sCtx.moveTo(220, 20);
+                    sCtx.lineTo(260, 70);
+                    sCtx.lineTo(180, 70);
+                    sCtx.fillStyle = '#FFC107';
+                    sCtx.fill();
+                    sCtx.beginPath();
+                    sCtx.moveTo(320, 25);
+                    sCtx.lineTo(360, 65);
+                    sCtx.lineTo(280, 65);
+                    sCtx.fillStyle = '#9C27B0';
+                    sCtx.fill();
+                  }
+                </script>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Canvas রং ও গ্রেডিয়েন্ট (Colors & Gradients)</h2>
+            <p>Canvas-এ সলিড রং, লিনিয়ার গ্রেডিয়েন্ট, এবং রেডিয়াল গ্রেডিয়েন্ট ব্যবহার করে আকর্ষণীয় ডিজাইন তৈরি করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>গ্রেডিয়েন্ট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>// লিনিয়ার গ্রেডিয়েন্ট
+const gradient = ctx.createLinearGradient(0, 0, 200, 0);
+gradient.addColorStop(0, 'red');
+gradient.addColorStop(1, 'blue');
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, 200, 100);
+
+// রেডিয়াল গ্রেডিয়েন্ট
+const radialGrad = ctx.createRadialGradient(100, 50, 10, 100, 50, 40);
+radialGrad.addColorStop(0, '#ff6b6b');
+radialGrad.addColorStop(1, '#4ecdc4');
+ctx.fillStyle = radialGrad;
+ctx.fillRect(0, 0, 200, 100);</code></pre>
+              </div>
+              <div class="live-preview">
+                <canvas id="gradientCanvas" width="400" height="100" style="border:1px solid #ddd; border-radius: 4px;"></canvas>
+                <script>
+                  const gradCanvas = document.getElementById('gradientCanvas');
+                  if(gradCanvas) {
+                    const gCtx = gradCanvas.getContext('2d');
+                    const gradient = gCtx.createLinearGradient(0, 0, 200, 0);
+                    gradient.addColorStop(0, '#ff6b6b');
+                    gradient.addColorStop(0.5, '#feca57');
+                    gradient.addColorStop(1, '#48dbfb');
+                    gCtx.fillStyle = gradient;
+                    gCtx.fillRect(0, 0, 200, 100);
+                    const radialGrad = gCtx.createRadialGradient(300, 50, 10, 300, 50, 40);
+                    radialGrad.addColorStop(0, '#ff9ff3');
+                    radialGrad.addColorStop(1, '#f368e0');
+                    gCtx.fillStyle = radialGrad;
+                    gCtx.fillRect(200, 0, 200, 100);
+                  }
+                </script>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Canvas টেক্সট (Text on Canvas)</h2>
+            <p>Canvas-এ <code>fillText()</code> এবং <code>strokeText()</code> মেথড ব্যবহার করে টেক্সট যোগ করা যায়। ফন্ট, সাইজ, এবং অ্যালাইনমেন্ট কাস্টমাইজ করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>Canvas টেক্সট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>ctx.font = '30px Arial';
+ctx.fillStyle = '#333';
+ctx.fillText('HTML Canvas', 50, 50);
+
+ctx.font = 'bold 20px "Segoe UI"';
+ctx.strokeStyle = '#2196F3';
+ctx.strokeText('বাংলা টেক্সট', 50, 100);</code></pre>
+              </div>
+              <div class="live-preview">
+                <canvas id="textCanvas" width="400" height="100" style="border:1px solid #ddd; border-radius: 4px;"></canvas>
+                <script>
+                  const textCanvas = document.getElementById('textCanvas');
+                  if(textCanvas) {
+                    const tCtx = textCanvas.getContext('2d');
+                    tCtx.font = 'bold 24px "Segoe UI", Arial';
+                    tCtx.fillStyle = '#2c3e50';
+                    tCtx.fillText('HTML Canvas', 20, 40);
+                    tCtx.font = '18px "Segoe UI"';
+                    tCtx.fillStyle = '#e67e22';
+                    tCtx.fillText('বাংলা টেক্সট', 20, 80);
+                  }
+                </script>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Canvas ছবি (Images on Canvas)</h2>
+            <p><code>drawImage()</code> মেথড ব্যবহার করে Canvas-এ ছবি আঁকা যায়। ইমেজ ক্রপ, স্কেল, এবং ম্যানিপুলেট করা সম্ভব।</p>
+            
+            <div class="example-box">
+              <h3>Canvas-এ ছবি আঁকা:</h3>
+              <div class="code-preview">
+                <pre><code>const img = new Image();
+img.onload = function() {
+  ctx.drawImage(img, 0, 0, 200, 150);
+};
+img.src = 'image.jpg';</code></pre>
+              </div>
+              <div class="live-preview">
+                <canvas id="imageCanvas" width="400" height="120" style="border:1px solid #ddd; border-radius: 4px; background: #f0f0f0;"></canvas>
+                <script>
+                  const imgCanvas = document.getElementById('imageCanvas');
+                  if(imgCanvas) {
+                    const iCtx = imgCanvas.getContext('2d');
+                    iCtx.fillStyle = '#ddd';
+                    iCtx.fillRect(0, 0, 400, 120);
+                    iCtx.fillStyle = '#666';
+                    iCtx.font = '14px Arial';
+                    iCtx.fillText('🖼️ ছবি এম্বেডের জন্য drawImage() ব্যবহার করুন', 100, 60);
+                  }
+                </script>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Canvas এনিমেশন (Animation)</h2>
+            <p><code>requestAnimationFrame()</code> ব্যবহার করে Canvas-এ মসৃণ অ্যানিমেশন তৈরি করা যায়। ফ্রেম-বাই-ফ্রেম ড্রয়িং এবং মুভিং অবজেক্ট তৈরি সম্ভব।</p>
+            
+            <div class="example-box">
+              <h3>সরল এনিমেশন উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>let x = 0;
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#4CAF50';
+  ctx.fillRect(x, 50, 50, 50);
+  x += 2;
+  if(x > canvas.width) x = -50;
+  requestAnimationFrame(animate);
+}
+animate();</code></pre>
+              </div>
+              <div class="live-preview">
+                <canvas id="animationCanvas" width="400" height="100" style="border:1px solid #ddd; border-radius: 4px;"></canvas>
+                <script>
+                  let animX = 0;
+                  const animCanvas = document.getElementById('animationCanvas');
+                  if(animCanvas) {
+                    const aCtx = animCanvas.getContext('2d');
+                    function animateBox() {
+                      aCtx.clearRect(0, 0, 400, 100);
+                      aCtx.fillStyle = '#4CAF50';
+                      aCtx.fillRect(animX, 25, 50, 50);
+                      animX += 2;
+                      if(animX > 400) animX = -50;
+                      requestAnimationFrame(animateBox);
+                    }
+                    animateBox();
+                  }
+                </script>
+                <small style="display: block; margin-top: 5px;">🟢 চলমান বক্স এনিমেশন</small>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>SVG বেসিক (SVG Basics)</h2>
+            <p>SVG (Scalable Vector Graphics) হলো XML-ভিত্তিক ভেক্টর গ্রাফিক্স ফরম্যাট। এটি স্কেলেবল, রেসপনসিভ, এবং CSS ও JavaScript দিয়ে সহজে নিয়ন্ত্রণ করা যায়। SVG এলিমেন্ট সরাসরি DOM-এর অংশ হয়।</p>
+            
+            <div class="example-box">
+              <h3>SVG উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;circle cx="100" cy="100" r="80" fill="#4CAF50" /&gt;
+  &lt;rect x="50" y="50" width="100" height="100" fill="none" stroke="white" stroke-width="3" /&gt;
+  &lt;text x="100" y="110" text-anchor="middle" fill="white" font-size="20"&gt;SVG&lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" style="border:1px solid #ddd; border-radius: 8px;">
+                  <circle cx="75" cy="75" r="60" fill="#4CAF50" />
+                  <text x="75" y="85" text-anchor="middle" fill="white" font-size="20" font-weight="bold">SVG</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>SVG এর মূল বৈশিষ্ট্য:</h4>
+              <ul>
+                <li>ভেক্টর-ভিত্তিক (স্কেলেবল, পিক্সেলেশন ছাড়া)</li>
+                <li>XML ফরম্যাট, DOM-এর সাথে ইন্টিগ্রেটেড</li>
+                <li>CSS দিয়ে স্টাইলিং ও JavaScript দিয়ে ইন্টারঅ্যাকশন সম্ভব</li>
+                <li>রেসপনসিভ ডিজাইনের জন্য আদর্শ</li>
+                <li>অ্যাক্সেসিবিলিটি সাপোর্ট করে</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>SVG শেপ (Shapes)</h2>
+            <p>SVG-তে বিভিন্ন শেপ যেমন আয়তক্ষেত্র, বৃত্ত, উপবৃত্ত, লাইন, পলিলাইন, পলিগন ইত্যাদি তৈরি করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>বিভিন্ন SVG শেপ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;rect x="10" y="10" width="80" height="60" fill="#FF5722" /&gt;
+&lt;circle cx="150" cy="40" r="30" fill="#2196F3" /&gt;
+&lt;ellipse cx="250" cy="40" rx="35" ry="20" fill="#FFC107" /&gt;
+&lt;polygon points="350,10 370,35 350,60 330,35" fill="#9C27B0" /&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <svg width="400" height="80" style="border:1px solid #ddd; border-radius: 4px;">
+                  <rect x="10" y="10" width="70" height="50" fill="#FF5722" rx="5" />
+                  <circle cx="140" cy="35" r="25" fill="#2196F3" />
+                  <ellipse cx="230" cy="35" rx="30" ry="18" fill="#FFC107" />
+                  <polygon points="310,10 335,35 310,60 285,35" fill="#9C27B0" />
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>SVG পাথ (Paths)</h2>
+            <p><code>&lt;path&gt;</code> এলিমেন্ট SVG-তে সবচেয়ে শক্তিশালী টুল। এটি দিয়ে জটিল আকার, কার্ভ, এবং কাস্টম শেপ তৈরি করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>SVG পাথ উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;path d="M 10 80 Q 95 10 180 80" stroke="blue" fill="none" stroke-width="3"/&gt;
+&lt;path d="M 10,100 L 50,20 L 90,100 Z" fill="orange" stroke="brown" stroke-width="2"/&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <svg width="200" height="100" style="border:1px solid #ddd; border-radius: 4px;">
+                  <path d="M 10 70 Q 95 20 180 70" stroke="#2196F3" fill="none" stroke-width="2"/>
+                  <path d="M 10,85 L 50,30 L 90,85 Z" fill="#FFC107" stroke="#e67e22" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>SVG টেক্সট (Text in SVG)</h2>
+            <p>SVG-তে <code>&lt;text&gt;</code> এলিমেন্ট ব্যবহার করে টেক্সট যোগ করা যায়। টেক্সট পাথে ফোলো করতে পারে, অ্যানিমেটেড হতে পারে, এবং CSS দিয়ে স্টাইল করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>SVG টেক্সট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;svg&gt;
+  &lt;text x="20" y="30" fill="red" font-size="20"&gt;Hello SVG!&lt;/text&gt;
+  &lt;text x="20" y="60" fill="green" font-weight="bold"&gt;বাংলা টেক্সট&lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <svg width="300" height="80" style="border:1px solid #ddd; border-radius: 4px;">
+                  <text x="15" y="25" fill="#e74c3c" font-size="16">Hello SVG!</text>
+                  <text x="15" y="55" fill="#27ae60" font-size="16" font-weight="bold">বাংলা টেক্সট</text>
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Canvas vs SVG - কখন কোনটি ব্যবহার করবেন?</h2>
+            <p>Canvas এবং SVG-এর মধ্যে নির্বাচন প্রকল্পের প্রয়োজন অনুযায়ী করা উচিত। নিচে তুলনামূলক বিশ্লেষণ দেওয়া হলো:</p>
+            
+            <div class="comparison-table">
+              <table class="info-table">
+                <thead>
+                  <tr><th>বৈশিষ্ট্য</th><th>Canvas</th><th>SVG</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>গ্রাফিক্স টাইপ</strong></td><td>রাস্টার (পিক্সেল-ভিত্তিক)</td><td>ভেক্টর (স্কেলেবল)</td></tr>
+                  <tr><td><strong>পারফরম্যান্স</strong></td><td>জটিল অ্যানিমেশনে ভালো</td><td>সহজ গ্রাফিক্সে ভালো, বড় ডাটাতে ধীর</td></tr>
+                  <tr><td><strong>DOM ইন্টিগ্রেশন</strong></td><td>না (শুধু JavaScript)</td><td>হ্যাঁ (প্রত্যেক এলিমেন্ট DOM নোড)</td></tr>
+                  <tr><td><strong>ইভেন্ট হ্যান্ডলিং</strong></td><td>হ্যাঁ (কোঅর্ডিনেট ভিত্তিক)</td><td>হ্যাঁ (প্রত্যেক এলিমেন্টে সরাসরি)</td></tr>
+                  <tr><td><strong>স্কেলিং</strong></td><td>পিক্সেলেশন হয়</td><td>যেকোনো সাইজে পরিষ্কার</td></tr>
+                  <tr><td><strong>উপযোগিতা</strong></td><td>গেম, অ্যানিমেশন, ইমেজ ম্যানিপুলেশন</td><td>আইকন, লোগো, চার্ট, রেসপনসিভ গ্রাফিক্স</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tip-box">
+              <h4>সিদ্ধান্ত নেওয়ার টিপস:</h4>
+              <ul>
+                <li><strong>Canvas ব্যবহার করুন:</strong> যখন রিয়েল-টাইম অ্যানিমেশন, গেম, পিক্সেল ম্যানিপুলেশন, বা উচ্চ ফ্রেম রেট প্রয়োজন</li>
+                <li><strong>SVG ব্যবহার করুন:</strong> যখন স্কেলেবল গ্রাফিক্স, আইকন, লোগো, চার্ট, বা DOM-ভিত্তিক ইন্টারঅ্যাকশন প্রয়োজন</li>
+                <li><strong>সংযুক্ত ব্যবহার:</strong> অনেক বড় প্রকল্পে Canvas এবং SVG একসাথে ব্যবহার করা যায়</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="canvas-basics.html" class="topic-card">
+                <h3>🖌️ Canvas বেসিক</h3>
+                <p>canvas এলিমেন্ট, context, মৌলিক ড্রয়িং</p>
+              </a>
+              <a href="canvas-drawing.html" class="topic-card">
+                <h3>📐 Canvas ড্রয়িং</h3>
+                <p>আয়তক্ষেত্র, বৃত্ত, লাইন, পাথ ড্রয়িং</p>
+              </a>
+              <a href="canvas-colors.html" class="topic-card">
+                <h3>🎨 Canvas রং ও গ্রেডিয়েন্ট</h3>
+                <p>সলিড রং, লিনিয়ার ও রেডিয়াল গ্রেডিয়েন্ট</p>
+              </a>
+              <a href="canvas-text.html" class="topic-card">
+                <h3>📝 Canvas টেক্সট</h3>
+                <p>টেক্সট ড্রয়িং, ফন্ট, অ্যালাইনমেন্ট</p>
+              </a>
+              <a href="canvas-images.html" class="topic-card">
+                <h3>🖼️ Canvas ছবি</h3>
+                <p>drawImage, ইমেজ ম্যানিপুলেশন</p>
+              </a>
+              <a href="canvas-animation.html" class="topic-card">
+                <h3>🎬 Canvas এনিমেশন</h3>
+                <p>requestAnimationFrame, ফ্রেম-বাই-ফ্রেম অ্যানিমেশন</p>
+              </a>
+              <a href="svg-basics.html" class="topic-card">
+                <h3>✨ SVG বেসিক</h3>
+                <p>SVG পরিচিতি, ভিউপোর্ট, ভিউবক্স</p>
+              </a>
+              <a href="svg-shapes.html" class="topic-card">
+                <h3>🔷 SVG শেপ</h3>
+                <p>rect, circle, ellipse, line, polygon, polyline</p>
+              </a>
+              <a href="svg-paths.html" class="topic-card">
+                <h3>🛤️ SVG পাথ</h3>
+                <p>path এলিমেন্ট, M, L, C, Q, Z কমান্ড</p>
+              </a>
+              <a href="svg-text.html" class="topic-card">
+                <h3>🔤 SVG টেক্সট</h3>
+                <p>text এলিমেন্ট, টেক্সট পাথে ফোলো করা</p>
+              </a>
+              <a href="svg-vs-canvas.html" class="topic-card">
+                <h3>⚖️ Canvas vs SVG</h3>
+                <p>দুটির তুলনা ও ব্যবহারের নির্দেশিকা</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/multimedia.html" class="prev-topic">← পূর্ববর্তী: মাল্টিমিডিয়া</a>
+              <a href="../basic/advanced.html" class="next-topic">পরবর্তী: অ্যাডভান্সড টপিক →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

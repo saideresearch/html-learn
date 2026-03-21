@@ -3,51 +3,434 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML অনুশীলন | HTML শিখি</title>
+  <title>অনুশীলনী | HTML শিখি</title>
+  <meta name="description" content="HTML অনুশীলনীর সম্পূর্ণ সংগ্রহ: শিক্ষানবিশ থেকে অ্যাডভান্সড পর্যন্ত ধাপে ধাপে অনুশীলন, MCQ কুইজ, কোডিং চ্যালেঞ্জ - হাতে-কলমে HTML শেখার জন্য প্র্যাকটিক্যাল এক্সারসাইজ।">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrapper">
     <aside class="sidebar">
       <nav class="sidebar-nav">
-        <h3>অনুশীলন</h3>
+        <h3>অনুশীলনী টপিকস</h3>
         <ul>
-          <li><a href="beginner-exercises.html">শিক্ষানবিশ অনুশীলন</a></li>
-          <li><a href="intermediate-exercises.html">মাঝারি অনুশীলন</a></li>
-          <li><a href="advanced-exercises.html">অ্যাডভান্সড অনুশীলন</a></li>
-          <li><a href="projects.html">প্রজেক্ট</a></li>
+          <li><a href="beginner-exercises.html">শিক্ষানবিশ অনুশীলনী</a></li>
+          <li><a href="intermediate-exercises.html">মাঝারি অনুশীলনী</a></li>
+          <li><a href="advanced-exercises.html">অ্যাডভান্সড অনুশীলনী</a></li>
+          <li><a href="mcq-quiz.html">MCQ কুইজ</a></li>
+          <li><a href="coding-challenges.html">কোডিং চ্যালেঞ্জ</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
       <div class="container">
-        <h1>HTML অনুশীলন (Exercises)</h1>
-        
-        <p>অনুশীলনই শেখার চাবিকাঠি। নিচের অনুশীলনগুলো করে আপনি HTML-এ দক্ষ হয়ে উঠবেন।</p>
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>অনুশীলনী</li>
+          </ol>
+        </nav>
 
-        <div class="topics-grid-mini">
-          <a href="beginner-exercises.html" class="topic-card">
-            <h3>শিক্ষানবিশ অনুশীলন</h3>
-            <p>বেসিক HTML ট্যাগ নিয়ে ১০টি অনুশীলন</p>
-          </a>
-          <a href="intermediate-exercises.html" class="topic-card">
-            <h3>মাঝারি অনুশীলন</h3>
-            <p>টেবল, ফর্ম, লিস্ট নিয়ে ১০টি অনুশীলন</p>
-          </a>
-          <a href="advanced-exercises.html" class="topic-card">
-            <h3>অ্যাডভান্সড অনুশীলন</h3>
-            <p>সিম্যান্টিক HTML, মাল্টিমিডিয়া নিয়ে ১০টি অনুশীলন</p>
-          </a>
-          <a href="projects.html" class="topic-card">
-            <h3>প্রজেক্ট</h3>
-            <p>৫টি বাস্তব প্রজেক্ট করে হাতে-কলমে শিখুন</p>
-          </a>
-        </div>
+        <article class="topic-article">
+          <h1>HTML অনুশীলনী (HTML Exercises)</h1>
+          
+          <div class="topic-meta">
+            <span>অনুশীলন সংখ্যা: ৫০+</span>
+            <span>লেভেল: শিক্ষানবিশ থেকে অ্যাডভান্সড</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>অনুশীলন কেন গুরুত্বপূর্ণ?</h2>
+            <p>HTML শেখার সবচেয়ে কার্যকরী পদ্ধতি হলো হাতে-কলমে অনুশীলন করা। তত্ত্বীয় জ্ঞান শুধুমাত্র ধারণা দেয়, কিন্তু প্রকৃত দক্ষতা আসে প্র্যাকটিক্যাল কাজের মাধ্যমে। এই অনুশীলনীগুলো ধাপে ধাপে সাজানো হয়েছে—সহজ থেকে জটিল, মৌলিক HTML ট্যাগ থেকে শুরু করে অ্যাডভান্সড কনসেপ্ট পর্যন্ত। প্রতিটি অনুশীলন শেষে আপনি নতুন কিছু শিখবেন এবং আপনার আত্মবিশ্বাস বাড়বে।</p>
+            
+            <div class="tip-box">
+              <h4>অনুশীলন করার পদ্ধতি:</h4>
+              <ul>
+                <li>প্রথমে নিজে নিজে সমাধান করার চেষ্টা করুন</li>
+                <li>কোড লিখে ব্রাউজারে রিয়েল-টাইম ফলাফল দেখুন</li>
+                <li>সমাধান দেখার আগে কমপক্ষে ১৫-২০ মিনিট চেষ্টা করুন</li>
+                <li>ভুল হলে বারবার চেষ্টা করুন—ভুল থেকেই শেখা হয়</li>
+                <li>সমাধান হয়ে গেলে কোড ভ্যালিডেট করুন (validator.w3.org)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলনী ক্যাটাগরি</h2>
+            
+            <div class="exercises-grid">
+              <div class="exercise-card">
+                <div class="exercise-icon">🌱</div>
+                <h3>শিক্ষানবিশ অনুশীলনী</h3>
+                <p>HTML-এর মৌলিক বিষয়গুলোর উপর অনুশীলন। ডকুমেন্ট স্ট্রাকচার, হেডিং, প্যারাগ্রাফ, লিস্ট, লিংক, ইমেজ, বেসিক ফর্ম।</p>
+                <div class="exercise-stats">
+                  <span class="stat-badge">১৫টি অনুশীলন</span>
+                  <span class="stat-badge difficulty-beginner">শিক্ষানবিশ</span>
+                </div>
+                <a href="beginner-exercises.html" class="exercise-link">অনুশীলন শুরু করুন →</a>
+              </div>
+              
+              <div class="exercise-card">
+                <div class="exercise-icon">📈</div>
+                <h3>মাঝারি অনুশীলনী</h3>
+                <p>টেবল, ফর্ম, মাল্টিমিডিয়া, সিম্যান্টিক HTML, CSS মৌলিক সংমিশ্রণ। মধ্যবর্তী স্তরের চ্যালেঞ্জ।</p>
+                <div class="exercise-stats">
+                  <span class="stat-badge">১৫টি অনুশীলন</span>
+                  <span class="stat-badge difficulty-intermediate">মাঝারি</span>
+                </div>
+                <a href="intermediate-exercises.html" class="exercise-link">অনুশীলন শুরু করুন →</a>
+              </div>
+              
+              <div class="exercise-card">
+                <div class="exercise-icon">🚀</div>
+                <h3>অ্যাডভান্সড অনুশীলনী</h3>
+                <p>Canvas, SVG, ওয়েব কম্পোনেন্টস, অ্যাক্সেসিবিলিটি, SEO, পারফরম্যান্স অপটিমাইজেশন।</p>
+                <div class="exercise-stats">
+                  <span class="stat-badge">১৫টি অনুশীলন</span>
+                  <span class="stat-badge difficulty-advanced">অ্যাডভান্সড</span>
+                </div>
+                <a href="advanced-exercises.html" class="exercise-link">অনুশীলন শুরু করুন →</a>
+              </div>
+              
+              <div class="exercise-card">
+                <div class="exercise-icon">❓</div>
+                <h3>MCQ কুইজ</h3>
+                <p>HTML সম্পর্কিত বহুনির্বাচনী প্রশ্ন (MCQ) দিয়ে আপনার জ্ঞান পরীক্ষা করুন। তত্ত্বীয় ধারণা কতটুকু আয়ত্ত করেছেন যাচাই করুন।</p>
+                <div class="exercise-stats">
+                  <span class="stat-badge">৫০টি প্রশ্ন</span>
+                  <span class="stat-badge difficulty-quiz">কুইজ</span>
+                </div>
+                <a href="mcq-quiz.html" class="exercise-link">কুইজ শুরু করুন →</a>
+              </div>
+              
+              <div class="exercise-card">
+                <div class="exercise-icon">💻</div>
+                <h3>কোডিং চ্যালেঞ্জ</h3>
+                <p>প্রকৃত ওয়েব ডেভেলপমেন্ট পরিস্থিতি ভিত্তিক কোডিং চ্যালেঞ্জ। ছোট ছোট প্রজেক্টের মাধ্যমে আপনার দক্ষতা যাচাই করুন।</p>
+                <div class="exercise-stats">
+                  <span class="stat-badge">১০টি চ্যালেঞ্জ</span>
+                  <span class="stat-badge difficulty-challenge">চ্যালেঞ্জ</span>
+                </div>
+                <a href="coding-challenges.html" class="exercise-link">চ্যালেঞ্জ শুরু করুন →</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>শিক্ষানবিশ অনুশীলনী (প্রথম ধাপ)</h2>
+            <p>যারা HTML শুরু করছেন, তাদের জন্য মৌলিক অনুশীলন। নিচের কিছু নমুনা অনুশীলন দেওয়া হলো:</p>
+            
+            <div class="sample-exercises">
+              <div class="sample-exercise">
+                <h4>অনুশীলন ১: আমার প্রথম ওয়েবপৃষ্ঠা</h4>
+                <p>একটি সম্পূর্ণ HTML ডকুমেন্ট তৈরি করুন যাতে থাকবে:</p>
+                <ul>
+                  <li>সঠিক DOCTYPE এবং html ট্যাগ</li>
+                  <li>একটি শিরোনাম (title) "আমার প্রথম পৃষ্ঠা"</li>
+                  <li>একটি h1 হেডিং "স্বাগতম"</li>
+                  <li>একটি প্যারাগ্রাফ "এটি আমার প্রথম HTML পৃষ্ঠা"</li>
+                </ul>
+                <details class="solution-details">
+                  <summary>সমাধান দেখুন</summary>
+                  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;আমার প্রথম পৃষ্ঠা&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;স্বাগতম&lt;/h1&gt;
+  &lt;p&gt;এটি আমার প্রথম HTML পৃষ্ঠা&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </details>
+              </div>
+
+              <div class="sample-exercise">
+                <h4>অনুশীলন ২: লিস্ট তৈরি</h4>
+                <p>একটি আনঅর্ডারড লিস্ট তৈরি করুন যাতে আপনার প্রিয় ৫টি খাবারের নাম থাকবে।</p>
+                <details class="solution-details">
+                  <summary>সমাধান দেখুন</summary>
+                  <pre><code>&lt;ul&gt;
+  &lt;li&gt>বিরিয়ানি&lt;/li&gt;
+  &lt;li&gt>ফুচকা&lt;/li&gt;
+  &lt;li&gt>চিকেন রোস্ট&lt;/li&gt;
+  &lt;li&gt>কাচ্চি&lt;/li&gt;
+  &lt;li&gt>মোরগ পোলাও&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </details>
+              </div>
+
+              <div class="sample-exercise">
+                <h4>অনুশীলন ৩: লিংক ও ইমেজ</h4>
+                <p>একটি পৃষ্ঠা তৈরি করুন যাতে থাকবে:</p>
+                <ul>
+                  <li>একটি ছবি (অনলাইন থেকে যেকোনো ছবির URL ব্যবহার করুন)</li>
+                  <li>ছবিতে alt টেক্সট দিন</li>
+                  <li>একটি লিংক যা https://www.google.com-এ যাবে এবং নতুন ট্যাবে খুলবে</li>
+                </ul>
+                <details class="solution-details">
+                  <summary>সমাধান দেখুন</summary>
+                  <pre><code>&lt;img src="https://picsum.photos/200/150" alt="র্যান্ডম ইমেজ"&gt;
+&lt;a href="https://www.google.com" target="_blank"&gt;গুগল&lt;/a&gt;</code></pre>
+                </details>
+              </div>
+            </div>
+            
+            <div class="view-all-link">
+              <a href="beginner-exercises.html" class="btn-primary">সমস্ত শিক্ষানবিশ অনুশীলন দেখুন →</a>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মাঝারি অনুশীলনী (দ্বিতীয় ধাপ)</h2>
+            <p>বেসিক HTML আয়ত্ত করার পর এই অনুশীলনগুলো চেষ্টা করুন।</p>
+            
+            <div class="sample-exercises">
+              <div class="sample-exercise">
+                <h4>অনুশীলন ১: টেবল তৈরি</h4>
+                <p>একটি টেবল তৈরি করুন যাতে ৩টি কলাম থাকবে: নাম, বয়স, শহর। কমপক্ষে ৩টি সারি ডাটা যোগ করুন। টেবলে হেডার ব্যবহার করুন।</p>
+                <details class="solution-details">
+                  <summary>সমাধান দেখুন</summary>
+                  <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;নাম&lt;/th&gt;
+    &lt;th&gt;বয়স&lt;/th&gt;
+    &lt;th&gt;শহর&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;রহিম&lt;/td&gt;
+    &lt;td&gt;২৫&lt;/td&gt;
+    &lt;td&gt;ঢাকা&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;করিম&lt;/td&gt;
+    &lt;td&gt;৩০&lt;/td&gt;
+    &lt;td&gt;চট্টগ্রাম&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;সুমন&lt;/td&gt;
+    &lt;td&gt;২৮&lt;/td&gt;
+    &lt;td&gt;রাজশাহী&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </details>
+              </div>
+
+              <div class="sample-exercise">
+                <h4>অনুশীলন ২: যোগাযোগ ফর্ম</h4>
+                <p>একটি যোগাযোগ ফর্ম তৈরি করুন যাতে থাকবে: নাম, ইমেইল, বিষয়, বার্তা এবং একটি সাবমিট বাটন। ফর্মে লেবেল ব্যবহার করুন।</p>
+                <details class="solution-details">
+                  <summary>সমাধান দেখুন</summary>
+                  <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;নাম:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+  
+  &lt;label for="email"&gt;ইমেইল:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+  
+  &lt;label for="subject"&gt;বিষয়:&lt;/label&gt;
+  &lt;input type="text" id="subject" name="subject"&gt;&lt;br&gt;
+  
+  &lt;label for="message"&gt;বার্তা:&lt;/label&gt;
+  &lt;textarea id="message" name="message" rows="5"&gt;&lt;/textarea&gt;&lt;br&gt;
+  
+  &lt;button type="submit"&gt;পাঠান&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </details>
+              </div>
+            </div>
+            
+            <div class="view-all-link">
+              <a href="intermediate-exercises.html" class="btn-primary">সমস্ত মাঝারি অনুশীলন দেখুন →</a>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>MCQ কুইজ (নমুনা প্রশ্ন)</h2>
+            <p>HTML সম্পর্কে আপনার জ্ঞান পরীক্ষা করতে কুইজ দিন।</p>
+            
+            <div class="sample-quiz">
+              <div class="quiz-question">
+                <p><strong>প্রশ্ন ১:</strong> HTML এর পূর্ণরূপ কী?</p>
+                <div class="quiz-options">
+                  <label><input type="radio" name="q1"> Hyper Text Markup Language</label>
+                  <label><input type="radio" name="q1"> High Text Markup Language</label>
+                  <label><input type="radio" name="q1"> Hyper Tabular Markup Language</label>
+                  <label><input type="radio" name="q1"> None of the above</label>
+                </div>
+                <details class="answer-details">
+                  <summary>উত্তর দেখুন</summary>
+                  <p>✅ সঠিক উত্তর: Hyper Text Markup Language</p>
+                </details>
+              </div>
+              
+              <div class="quiz-question">
+                <p><strong>প্রশ্ন ২:</strong> নিচের কোন ট্যাগটি HTML-এ সবচেয়ে বড় হেডিং তৈরি করে?</p>
+                <div class="quiz-options">
+                  <label><input type="radio" name="q2"> &lt;h6&gt;</label>
+                  <label><input type="radio" name="q2"> &lt;heading&gt;</label>
+                  <label><input type="radio" name="q2"> &lt;h1&gt;</label>
+                  <label><input type="radio" name="q2"> &lt;head&gt;</label>
+                </div>
+                <details class="answer-details">
+                  <summary>উত্তর দেখুন</summary>
+                  <p>✅ সঠিক উত্তর: &lt;h1&gt;</p>
+                </details>
+              </div>
+              
+              <div class="quiz-question">
+                <p><strong>প্রশ্ন ৩:</strong> একটি লিংক নতুন ট্যাবে খোলার জন্য কোন অ্যাট্রিবিউট ব্যবহার করা হয়?</p>
+                <div class="quiz-options">
+                  <label><input type="radio" name="q3"> target="_self"</label>
+                  <label><input type="radio" name="q3"> target="_blank"</label>
+                  <label><input type="radio" name="q3"> target="_new"</label>
+                  <label><input type="radio" name="q3"> target="_top"</label>
+                </div>
+                <details class="answer-details">
+                  <summary>উত্তর দেখুন</summary>
+                  <p>✅ সঠিক উত্তর: target="_blank"</p>
+                </details>
+              </div>
+            </div>
+            
+            <div class="view-all-link">
+              <a href="mcq-quiz.html" class="btn-primary">সম্পূর্ণ MCQ কুইজ শুরু করুন →</a>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কোডিং চ্যালেঞ্জ (নমুনা)</h2>
+            <p>প্রকৃত ওয়েব ডেভেলপমেন্ট পরিস্থিতি ভিত্তিক চ্যালেঞ্জ।</p>
+            
+            <div class="sample-challenge">
+              <div class="challenge-card">
+                <h4>চ্যালেঞ্জ ১: নেভিগেশন মেনু তৈরি করুন</h4>
+                <p>একটি নেভিগেশন মেনু তৈরি করুন যাতে ৪টি লিংক থাকবে: হোম, ব্লগ, সার্ভিসেস, কন্টাক্ট। লিংকগুলো সঠিকভাবে সাজান এবং মেনুটি একটি <code>&lt;nav&gt;</code> এলিমেন্টের ভিতরে রাখুন।</p>
+                <details class="solution-details">
+                  <summary>সমাধান দেখুন</summary>
+                  <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;ব্লগ&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;সার্ভিসেস&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;কন্টাক্ট&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </details>
+              </div>
+              
+              <div class="challenge-card">
+                <h4>চ্যালেঞ্জ ২: প্রোডাক্ট কার্ড তৈরি করুন</h4>
+                <p>একটি পণ্যের কার্ড তৈরি করুন যাতে থাকবে: পণ্যের ছবি (placeholder), পণ্যের নাম, মূল্য, এবং একটি "কিনুন" বাটন। ছবির জন্য placeholder হিসেবে LoremFlick বা যেকোনো ডামি ইমেজ URL ব্যবহার করুন।</p>
+              </div>
+            </div>
+            
+            <div class="view-all-link">
+              <a href="coding-challenges.html" class="btn-primary">সমস্ত কোডিং চ্যালেঞ্জ দেখুন →</a>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অনুশীলন করার টিপস</h2>
+            
+            <div class="info-card">
+              <h4>সফলভাবে অনুশীলন করার কৌশল:</h4>
+              <ul>
+                <li><strong>প্রতিদিন অনুশীলন করুন:</strong> নিয়মিত ৩০-৪৫ মিনিট অনুশীলন করলে দক্ষতা দ্রুত বৃদ্ধি পায়</li>
+                <li><strong>কোড নিজে টাইপ করুন:</strong> কপি-পেস্ট এড়িয়ে চলুন, নিজে টাইপ করলে ভালোভাবে মনে থাকে</li>
+                <li><strong>ভুল থেকে শিখুন:</strong> ভুল হলে বারবার চেষ্টা করুন, ভুল করাই শেখার অংশ</li>
+                <li><strong>ব্রাউজারে পরীক্ষা করুন:</strong> কোড লেখার পর ব্রাউজারে রান করে ফলাফল দেখুন</li>
+                <li><strong>ডেভেলপার টুলস ব্যবহার করুন:</strong> Chrome DevTools দিয়ে কোড ডিবাগ করুন</li>
+                <li><strong>অন্যের কোড পড়ুন:</strong> GitHub-এ অন্যের HTML কোড দেখে নতুন জিনিস শিখুন</li>
+                <li><strong>প্রজেক্ট তৈরি করুন:</strong> অনুশীলন শেষে ছোট ছোট প্রজেক্ট তৈরি করুন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ অনুশীলনী লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি অনুশীলনী শুরু করুন:</p>
+            
+            <div class="exercises-mini-grid">
+              <a href="beginner-exercises.html" class="mini-exercise">🌱 শিক্ষানবিশ অনুশীলনী (১৫টি)</a>
+              <a href="intermediate-exercises.html" class="mini-exercise">📈 মাঝারি অনুশীলনী (১৫টি)</a>
+              <a href="advanced-exercises.html" class="mini-exercise">🚀 অ্যাডভান্সড অনুশীলনী (১৫টি)</a>
+              <a href="mcq-quiz.html" class="mini-exercise">❓ MCQ কুইজ (৫০টি প্রশ্ন)</a>
+              <a href="coding-challenges.html" class="mini-exercise">💻 কোডিং চ্যালেঞ্জ (১০টি)</a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/tips-tricks.html" class="prev-topic">← পূর্ববর্তী: টিপস ও ট্রিক্স</a>
+              <a href="../projects/beginner.html" class="next-topic">পরবর্তী: প্রজেক্ট →</a>
+            </div>
+          </section>
+        </article>
       </div>
     </main>
   </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
   
   <script src="../../js/main.js"></script>
 </body>

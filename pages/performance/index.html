@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>পারফরম্যান্স | HTML শিখি</title>
+  <meta name="description" content="HTML ওয়েব পারফরম্যান্স অপটিমাইজেশনের সম্পূর্ণ গাইড: পেজ স্পিড, লেজি লোডিং, প্রিলোড ও প্রিফেচ, অ্যাসিঙ্ক ও ডিফার, ইমেজ অপটিমাইজেশন, ক্যাশিং, ক্রিটিকাল রেন্ডারিং পাথ ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>পারফরম্যান্স টপিকস</h3>
+        <ul>
+          <li><a href="page-speed.html">পেজ স্পিড</a></li>
+          <li><a href="lazy-loading.html">লেজি লোডিং</a></li>
+          <li><a href="preload-prefetch.html">প্রিলোড ও প্রিফেচ</a></li>
+          <li><a href="async-defer.html">অ্যাসিঙ্ক ও ডিফার</a></li>
+          <li><a href="image-optimization.html">ইমেজ অপটিমাইজেশন</a></li>
+          <li><a href="caching.html">ক্যাশিং</a></li>
+          <li><a href="critical-rendering-path.html">ক্রিটিকাল রেন্ডারিং পাথ</a></li>
+          <li><a href="preconnect-dns.html">প্রিকানেক্ট ও ডিএনএস-প্রিফেচ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>পারফরম্যান্স</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>ওয়েব পারফরম্যান্স (Web Performance)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৫০ মিনিট</span>
+            <span>লেভেল: মধ্যবর্তী থেকে উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>ওয়েব পারফরম্যান্স কী?</h2>
+            <p>ওয়েব পারফরম্যান্স হলো ওয়েবসাইটের লোডিং স্পিড, রেসপন্সিভনেস এবং ভিজ্যুয়াল স্থিতিশীলতা পরিমাপ ও উন্নত করার প্রক্রিয়া। দ্রুত লোড হওয়া ওয়েবসাইট শুধু ইউজার এক্সপেরিয়েন্সই উন্নত করে না, বরং SEO র্যাঙ্কিং, কনভার্সন রেট এবং ব্যবহারকারীর ধারণার উপরও বিশাল প্রভাব ফেলে। Google-এর গবেষণা অনুযায়ী, ৩ সেকেন্ডের বেশি লোড হতে থাকলে ৫৩% মোবাইল ব্যবহারকারী সাইট ছেড়ে চলে যায়। এই অধ্যায়ে আমরা HTML, CSS, JavaScript এবং রিসোর্স অপটিমাইজেশনের মাধ্যমে ওয়েব পারফরম্যান্স উন্নত করার কৌশল শিখব।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>পেজ স্পিড মেট্রিক্স:</strong> FCP, LCP, TTI, CLS বুঝতে শেখা</li>
+                <li><strong>রিসোর্স অপটিমাইজেশন:</strong> লেজি লোডিং, প্রিলোড, প্রিফেচ, অ্যাসিঙ্ক/ডিফার</li>
+                <li><strong>ইমেজ অপটিমাইজেশন:</strong> ফরম্যাট নির্বাচন, কম্প্রেশন, responsive images</li>
+                <li><strong>ক্যাশিং স্ট্রাটেজি:</strong> ব্রাউজার ক্যাশ, HTTP ক্যাশ হেডার</li>
+                <li><strong>ক্রিটিকাল রেন্ডারিং পাথ:</strong> রেন্ডার-ব্লকিং রিসোর্স কমানো</li>
+                <li><strong>নেটওয়ার্ক অপটিমাইজেশন:</strong> preconnect, dns-prefetch</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>পেজ স্পিড (Page Speed) ও Core Web Vitals</h2>
+            <p>পেজ স্পিড পরিমাপের জন্য Google-এর Core Web Vitals তিনটি গুরুত্বপূর্ণ মেট্রিক নির্ধারণ করেছে যা ইউজার এক্সপেরিয়েন্স পরিমাপ করে।</p>
+            
+            <div class="info-card">
+              <h4>Core Web Vitals মেট্রিক্স:</h4>
+              <ul>
+                <li><strong>LCP (Largest Contentful Paint):</strong> পৃষ্ঠার প্রধান কন্টেন্ট লোড হতে সময়। <span style="color: green;">গুড: ≤ 2.5 সেকেন্ড</span></li>
+                <li><strong>FID (First Input Delay):</strong> ব্যবহারকারীর প্রথম ইন্টারঅ্যাকশনে ব্রাউজারের রেসপন্স সময়। <span style="color: green;">গুড: ≤ 100ms</span></li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> পৃষ্ঠা লোডের সময় লেআউটের স্থিতিশীলতা। <span style="color: green;">গুড: ≤ 0.1</span></li>
+              </ul>
+            </div>
+
+            <div class="example-box">
+              <h3>পারফরম্যান্স মনিটরিং টুলস:</h3>
+              <div class="code-preview">
+                <pre><code>// Lighthouse in Chrome DevTools
+// PageSpeed Insights: https://pagespeed.web.dev
+// Web Vitals JavaScript লাইব্রেরি
+import {getLCP, getFID, getCLS} from 'web-vitals';
+
+getLCP(console.log);
+getFID(console.log);
+getCLS(console.log);</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>টিপ:</strong> Chrome DevTools-এর Performance ট্যাব ব্যবহার করে রিয়েল-টাইমে আপনার সাইটের পারফরম্যান্স বিশ্লেষণ করুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>লেজি লোডিং (Lazy Loading)</h2>
+            <p>লেজি লোডিং এমন একটি কৌশল যেখানে ইমেজ, iframe, বা ভিডিও শুধুমাত্র তখনই লোড হয় যখন তা ব্যবহারকারীর ভিউপোর্টে আসে। এটি প্রাথমিক পৃষ্ঠা লোডের সময় এবং ডাটা খরচ কমায়।</p>
+            
+            <div class="example-box">
+              <h3>নেটিভ লেজি লোডিং:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ইমেজ লেজি লোডিং --&gt;
+&lt;img src="image.jpg" loading="lazy" alt="লেজি লোড ইমেজ"&gt;
+
+&lt;!-- iframe লেজি লোডিং --&gt;
+&lt;iframe src="video.html" loading="lazy"&gt;&lt;/iframe&gt;
+
+&lt;!-- কাস্টম JavaScript লেজি লোডিং (Intersection Observer) --&gt;
+&lt;img data-src="image.jpg" class="lazy" alt="লেজি লোড"&gt;
+
+&lt;script&gt;
+const lazyImages = document.querySelectorAll('.lazy');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      observer.unobserve(img);
+    }
+  });
+});
+lazyImages.forEach(img => observer.observe(img));
+&lt;/script&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>ব্রাউজার সাপোর্ট:</strong> <code>loading="lazy"</code> আধুনিক সব ব্রাউজারে সাপোর্টেড। পুরনো ব্রাউজারের জন্য Intersection Observer ব্যবহার করুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্রিলোড ও প্রিফেচ (Preload & Prefetch)</h2>
+            <p><code>preload</code> এবং <code>prefetch</code> রিসোর্স লোডিং অগ্রাধিকার নিয়ন্ত্রণ করে। preload গুরুত্বপূর্ণ রিসোর্স তাড়াতাড়ি লোড করে, prefetch ভবিষ্যতে প্রয়োজন হতে পারে এমন রিসোর্স ব্যাকগ্রাউন্ডে লোড করে।</p>
+            
+            <div class="example-box">
+              <h3>প্রিলোড ও প্রিফেচ উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- প্রিলোড: গুরুত্বপূর্ণ রিসোর্স তাড়াতাড়ি লোড করুন --&gt;
+&lt;link rel="preload" href="critical-font.woff2" as="font" type="font/woff2" crossorigin&gt;
+&lt;link rel="preload" href="hero-image.jpg" as="image"&gt;
+&lt;link rel="preload" href="style.css" as="style"&gt;
+
+&lt;!-- প্রিফেচ: পরবর্তী পৃষ্ঠার জন্য রিসোর্স প্রি-লোড --&gt;
+&lt;link rel="prefetch" href="next-page.html"&gt;
+&lt;link rel="prefetch" href="next-page-script.js"&gt;
+
+&lt;!-- মডিউল প্রিলোড --&gt;
+&lt;link rel="modulepreload" href="app.js"&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>কখন ব্যবহার করবেন:</h4>
+                <ul>
+                  <li><strong>preload:</strong> LCP ইমেজ, ক্রিটিকাল CSS, ফন্ট, গুরুত্বপূর্ণ স্ক্রিপ্ট</li>
+                  <li><strong>prefetch:</strong> পরবর্তী পৃষ্ঠার রিসোর্স, নেভিগেশন প্রেডিকশন</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অ্যাসিঙ্ক ও ডিফার (Async vs Defer)</h2>
+            <p><code>async</code> এবং <code>defer</code> অ্যাট্রিবিউট JavaScript লোডিং পদ্ধতি নিয়ন্ত্রণ করে। এগুলি রেন্ডার-ব্লকিং প্রতিরোধ করে পৃষ্ঠা লোড দ্রুত করে।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;!-- ডিফল্ট (রেন্ডার-ব্লকিং) --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;!-- অ্যাসিঙ্ক: প্যারালাল ডাউনলোড, ডাউনলোড শেষে সাথে সাথে এক্সিকিউট --&gt;
+&lt;script async src="analytics.js"&gt;&lt;/script&gt;
+
+&lt;!-- ডিফার: প্যারালাল ডাউনলোড, HTML পার্স শেষে এক্সিকিউট --&gt;
+&lt;script defer src="app.js"&gt;&lt;/script&gt;</code></pre>
+              </div>
+              <div class="comparison-table">
+                <table class="info-table">
+                  <thead><tr><th>অ্যাট্রিবিউট</th><th>ডাউনলোড</th><th>এক্সিকিউশন টাইম</th><th>অর্ডার নিশ্চিত?</th></tr></thead>
+                  <tbody>
+                    <tr><td>ডিফল্ট</td><td>HTML পার্স ব্লক করে</td><td>ডাউনলোড শেষে সাথে</td><td>হ্যাঁ</td></tr>
+                    <tr><td>async</td><td>প্যারালাল</td><td>ডাউনলোড শেষে সাথে (HTML পার্স পজ)</td><td>না</td></tr>
+                    <tr><td>defer</td><td>প্যারালাল</td><td>HTML পার্স শেষে</td><td>হ্যাঁ</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tip-box">
+                <p><strong>বেস্ট প্র্যাকটিস:</strong> থার্ড-পার্টি স্ক্রিপ্ট (analytics) জন্য <code>async</code>, অ্যাপ্লিকেশন স্ক্রিপ্টের জন্য <code>defer</code>, এবং ক্রিটিকাল স্ক্রিপ্টের জন্য <code>async</code> অথবা inline ব্যবহার করুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইমেজ অপটিমাইজেশন (Image Optimization)</h2>
+            <p>ইমেজ সাধারণত ওয়েবপৃষ্ঠার সবচেয়ে বড় রিসোর্স। সঠিক ফরম্যাট নির্বাচন, কম্প্রেশন, এবং responsive images ব্যবহার করে পারফরম্যান্স ব্যাপকভাবে উন্নত করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>ইমেজ অপটিমাইজেশন টেকনিক:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- আধুনিক ফরম্যাট (WebP/AVIF) --&gt;
+&lt;picture&gt;
+  &lt;source srcset="image.avif" type="image/avif"&gt;
+  &lt;source srcset="image.webp" type="image/webp"&gt;
+  &lt;img src="image.jpg" alt="অপটিমাইজড ইমেজ"&gt;
+&lt;/picture&gt;
+
+&lt;!-- responsive images with srcset --&gt;
+&lt;img src="small.jpg"
+     srcset="small.jpg 480w,
+             medium.jpg 800w,
+             large.jpg 1200w"
+     sizes="(max-width: 600px) 480px,
+            (max-width: 1000px) 800px,
+            1200px"
+     alt="রেসপনসিভ ইমেজ"&gt;
+
+&lt;!-- width/height অ্যাট্রিবিউট CLS প্রতিরোধে --&gt;
+&lt;img src="image.jpg" width="800" height="600" alt="ক্লিএস সুরক্ষিত"&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>ইমেজ অপটিমাইজেশন চেকলিস্ট:</h4>
+                <ul>
+                  <li>WebP বা AVIF ফরম্যাট ব্যবহার করুন</li>
+                  <li>ইমেজ কম্প্রেস করুন (TinyPNG, Squoosh, ImageOptim)</li>
+                  <li><code>loading="lazy"</code> ব্যবহার করুন</li>
+                  <li><code>width</code> ও <code>height</code> অ্যাট্রিবিউট দিন (CLS প্রতিরোধ)</li>
+                  <li>responsive images-এর জন্য <code>srcset</code> ও <code>sizes</code> ব্যবহার করুন</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্যাশিং (Caching)</h2>
+            <p>ক্যাশিং ব্রাউজারে রিসোর্স সংরক্ষণ করে পরবর্তী ভিজিটে দ্রুত লোড নিশ্চিত করে। HTTP ক্যাশ হেডার এবং Service Workers এর মাধ্যমে ক্যাশিং নিয়ন্ত্রণ করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>HTTP ক্যাশ হেডার (Server-side):</h3>
+              <div class="code-preview">
+                <pre><code># .htaccess (Apache) বা server config
+&lt;FilesMatch "\.(css|js|jpg|png|webp|woff2)$"&gt;
+  Header set Cache-Control "max-age=31536000, public, immutable"
+&lt;/FilesMatch&gt;
+
+&lt;FilesMatch "\.(html|php)$"&gt;
+  Header set Cache-Control "max-age=3600, must-revalidate"
+&lt;/FilesMatch&gt;
+
+# HTML meta tag (limited)
+&lt;meta http-equiv="Cache-Control" content="no-cache"&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>ক্যাশিং স্ট্রাটেজি:</strong> স্ট্যাটিক রিসোর্স (CSS, JS, ইমেজ) জন্য long-term cache (1 year), HTML ফাইলের জন্য short-term cache (1 hour)। ফাইল পরিবর্তনে ক্যাশ ইনভ্যালিডেশনের জন্য ফাইলে hash ব্যবহার করুন (style.abc123.css)।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্রিটিকাল রেন্ডারিং পাথ (Critical Rendering Path)</h2>
+            <p>ক্রিটিকাল রেন্ডারিং পাথ হলো ব্রাউজার HTML, CSS, JavaScript প্রক্রিয়া করে প্রথম পেইন্ট তৈরি করার প্রক্রিয়া। রেন্ডার-ব্লকিং রিসোর্স কমানো এই পাথকে অপটিমাইজ করে।</p>
+            
+            <div class="example-box">
+              <h3>CRP অপটিমাইজেশন টেকনিক:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ক্রিটিকাল CSS inline করুন --&gt;
+&lt;style&gt;
+  /* above-the-fold কন্টেন্টের জন্য প্রয়োজনীয় CSS */
+  body { margin: 0; font-family: sans-serif; }
+  .header { background: #333; color: white; }
+&lt;/style&gt;
+
+&lt;!-- নন-ক্রিটিকাল CSS defer বা preload --&gt;
+&lt;link rel="preload" href="full-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"&gt;
+&lt;noscript&gt;&lt;link rel="stylesheet" href="full-styles.css"&gt;&lt;/noscript&gt;
+
+&lt;!-- JavaScript defer --&gt;
+&lt;script defer src="app.js"&gt;&lt;/script&gt;
+
+&lt;!-- প্রিলোড গুরুত্বপূর্ণ ফন্ট --&gt;
+&lt;link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>রেন্ডার-ব্লকিং রিসোর্স চিহ্নিত করুন:</h4>
+                <ul>
+                  <li>CSS ডিফল্টভাবে রেন্ডার-ব্লকিং করে (ক্রিটিকাল CSS inline করুন)</li>
+                  <li>JavaScript (defer/async ব্যবহার করুন)</li>
+                  <li>ফন্ট (preload ব্যবহার করুন)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্রিকানেক্ট ও ডিএনএস-প্রিফেচ (Preconnect & DNS-Prefetch)</h2>
+            <p>প্রিকানেক্ট এবং DNS-প্রিফেচ থার্ড-পার্টি রিসোর্স (API, ফন্ট, CDN) এর জন্য সংযোগ স্থাপনের সময় কমায়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;!-- DNS প্রিফেচ: DNS lookup আগেই করে রাখে --&gt;
+&lt;link rel="dns-prefetch" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="dns-prefetch" href="https://analytics.google.com"&gt;
+
+&lt;!-- প্রিকানেক্ট: DNS lookup + TCP handshake + TLS negotiation --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+
+&lt;!-- থার্ড-পার্টি রিসোর্সের জন্য ব্যবহার করুন --&gt;
+&lt;link rel="preconnect" href="https://api.example.com"&gt;
+&lt;link rel="preconnect" href="https://cdn.example.com"&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>কখন ব্যবহার করবেন:</strong> প্রিকানেক্ট শুধুমাত্র গুরুত্বপূর্ণ থার্ড-পার্টি অরিজিনের জন্য ব্যবহার করুন (অতিরিক্ত ব্যবহারে ব্যাকফায়ার হতে পারে)। DNS-প্রিফেচ বেশি নিরাপদ এবং সব অরিজিনের জন্য ব্যবহারযোগ্য।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>পারফরম্যান্স বেস্ট প্র্যাকটিস চেকলিস্ট</h2>
+            
+            <div class="info-card">
+              <h4>HTML পারফরম্যান্স চেকলিস্ট:</h4>
+              <ul>
+                <li>✅ <code>&lt;link rel="preload"&gt;</code> দিয়ে ক্রিটিকাল রিসোর্স প্রিলোড করুন</li>
+                <li>✅ ইমেজে <code>loading="lazy"</code> ব্যবহার করুন</li>
+                <li>✅ স্ক্রিপ্টে <code>defer</code> বা <code>async</code> ব্যবহার করুন</li>
+                <li>✅ ক্রিটিকাল CSS inline করুন, বাকি CSS defer করুন</li>
+                <li>✅ ইমেজের জন্য <code>width</code> ও <code>height</code> নির্ধারণ করুন (CLS প্রতিরোধ)</li>
+                <li>✅ WebP/AVIF ফরম্যাট ব্যবহার করুন</li>
+                <li>✅ থার্ড-পার্টি স্ক্রিপ্টে <code>async</code> ব্যবহার করুন</li>
+                <li>✅ প্রিকানেক্ট ও DNS-প্রিফেচ ব্যবহার করুন</li>
+                <li>✅ ক্যাশ হেডার সঠিকভাবে কনফিগার করুন</li>
+                <li>✅ Core Web Vitals মনিটর করুন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>পারফরম্যান্স টুলস ও মেট্রিক্স</h2>
+            
+            <div class="example-box">
+              <h3>পারফরম্যান্স মাপার টুলস:</h3>
+              <div class="code-preview">
+                <pre><code>// 1. Google PageSpeed Insights
+// https://pagespeed.web.dev
+
+// 2. Lighthouse in Chrome DevTools
+// F12 → Lighthouse Tab
+
+// 3. Web Vitals Extension
+// Chrome Web Store থেকে ইনস্টল করুন
+
+// 4. Performance API
+// নেভিগেশন টাইমিং
+const perfData = performance.getEntriesByType('navigation')[0];
+console.log(`DOM লোড: ${perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart}ms`);
+console.log(`পূর্ণ লোড: ${perfData.loadEventEnd - perfData.loadEventStart}ms`);
+
+// Resource Timing
+performance.getEntriesByType('resource').forEach(resource => {
+  console.log(`${resource.name}: ${resource.duration}ms`);
+});</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="page-speed.html" class="topic-card">
+                <h3>⚡ পেজ স্পিড</h3>
+                <p>Core Web Vitals, FCP, LCP, CLS, FID</p>
+              </a>
+              <a href="lazy-loading.html" class="topic-card">
+                <h3>🖼️ লেজি লোডিং</h3>
+                <p>native lazy loading, Intersection Observer</p>
+              </a>
+              <a href="preload-prefetch.html" class="topic-card">
+                <h3>⏩ প্রিলোড ও প্রিফেচ</h3>
+                <p>রিসোর্স লোডিং অগ্রাধিকার নিয়ন্ত্রণ</p>
+              </a>
+              <a href="async-defer.html" class="topic-card">
+                <h3>📜 অ্যাসিঙ্ক ও ডিফার</h3>
+                <p>JavaScript লোডিং অপটিমাইজেশন</p>
+              </a>
+              <a href="image-optimization.html" class="topic-card">
+                <h3>🖼️ ইমেজ অপটিমাইজেশন</h3>
+                <p>ফরম্যাট, কম্প্রেশন, responsive images</p>
+              </a>
+              <a href="caching.html" class="topic-card">
+                <h3>💾 ক্যাশিং</h3>
+                <p>HTTP ক্যাশ, Service Workers, Cache API</p>
+              </a>
+              <a href="critical-rendering-path.html" class="topic-card">
+                <h3>🎯 ক্রিটিকাল রেন্ডারিং পাথ</h3>
+                <p>রেন্ডার-ব্লকিং রিসোর্স অপটিমাইজেশন</p>
+              </a>
+              <a href="preconnect-dns.html" class="topic-card">
+                <h3>🔌 প্রিকানেক্ট ও DNS-প্রিফেচ</h3>
+                <p>থার্ড-পার্টি সংযোগ দ্রুত করা</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/apis.html" class="prev-topic">← পূর্ববর্তী: HTML5 APIs</a>
+              <a href="../projects/beginner.html" class="next-topic">পরবর্তী: প্রোজেক্ট →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

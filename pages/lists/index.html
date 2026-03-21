@@ -3,11 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>লিস্ট টিউটোরিয়াল | HTML শিখি</title>
+  <title>লিস্ট | HTML শিখি</title>
+  <meta name="description" content="HTML-এ লিস্ট ব্যবহারের সম্পূর্ণ গাইড: আনঅর্ডারড লিস্ট (ul), অর্ডারড লিস্ট (ol), ডেসক্রিপশন লিস্ট (dl), নেস্টেড লিস্ট, লিস্ট স্টাইলিং ইত্যাদি বাংলায়।">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrapper">
     <aside class="sidebar">
       <nav class="sidebar-nav">
@@ -17,37 +41,361 @@
           <li><a href="ordered-lists.html">অর্ডারড লিস্ট (ol)</a></li>
           <li><a href="description-lists.html">ডেসক্রিপশন লিস্ট (dl)</a></li>
           <li><a href="nested-lists.html">নেস্টেড লিস্ট</a></li>
+          <li><a href="list-styling.html">লিস্ট স্টাইলিং</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
       <div class="container">
-        <h1>HTML লিস্ট টিউটোরিয়াল</h1>
-        
-        <p>HTML-এ তিন ধরনের লিস্ট আছে: আনঅর্ডারড লিস্ট, অর্ডারড লিস্ট, এবং ডেসক্রিপশন লিস্ট। নিচের টপিকগুলো থেকে বিস্তারিত শিখুন।</p>
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>লিস্ট</li>
+          </ol>
+        </nav>
 
-        <div class="topics-grid-mini">
-          <a href="unordered-lists.html" class="topic-card">
-            <h3>আনঅর্ডারড লিস্ট (ul)</h3>
-            <p>বুলেট পয়েন্ট দিয়ে তালিকা তৈরি করা</p>
-          </a>
-          <a href="ordered-lists.html" class="topic-card">
-            <h3>অর্ডারড লিস্ট (ol)</h3>
-            <p>সংখ্যা বা অক্ষর দিয়ে সাজানো তালিকা</p>
-          </a>
-          <a href="description-lists.html" class="topic-card">
-            <h3>ডেসক্রিপশন লিস্ট (dl)</h3>
-            <p>টার্ম ও তার বিবরণ দেওয়ার জন্য</p>
-          </a>
-          <a href="nested-lists.html" class="topic-card">
-            <h3>নেস্টেড লিস্ট</h3>
-            <p>একের ভিতর আরেকটি লিস্ট তৈরি করা</p>
-          </a>
-        </div>
+        <article class="topic-article">
+          <h1>লিস্ট (HTML Lists)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ২৫ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML-এ লিস্ট কী?</h2>
+            <p>HTML-এ লিস্ট হলো একটি গুরুত্বপূর্ণ উপাদান যা তথ্যকে সুসংহত ও সাজানোভাবে উপস্থাপন করতে সাহায্য করে। ওয়েবপৃষ্ঠায় মেনু তৈরি, কন্টেন্টের সূচী, বৈশিষ্ট্য তালিকা, বা যেকোনো ধরণের আইটেমের গ্রুপিংয়ের জন্য লিস্ট ব্যবহার করা হয়। HTML তিনটি প্রধান ধরণের লিস্ট সাপোর্ট করে: আনঅর্ডারড লিস্ট (বুলেটেড), অর্ডারড লিস্ট (নম্বরযুক্ত), এবং ডেসক্রিপশন লিস্ট (টার্ম ও সংজ্ঞা)।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li>আনঅর্ডারড লিস্ট (ul) ব্যবহার করে বুলেট পয়েন্ট তৈরি</li>
+                <li>অর্ডারড লিস্ট (ol) ব্যবহার করে সংখ্যা বা রোমান সংখ্যাসহ লিস্ট</li>
+                <li>ডেসক্রিপশন লিস্ট (dl) ব্যবহার করে শব্দ ও তার সংজ্ঞা দেখানো</li>
+                <li>নেস্টেড লিস্ট তৈরি করে জটিল তথ্য উপস্থাপন</li>
+                <li>CSS দিয়ে লিস্টের ডিজাইন ও স্টাইলিং</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>আনঅর্ডারড লিস্ট (Unordered List - ul)</h2>
+            <p><code>&lt;ul&gt;</code> ট্যাগ ব্যবহার করে আনঅর্ডারড লিস্ট তৈরি করা হয়। এতে প্রতিটি আইটেমের আগে বুলেট পয়েন্ট (●, ○, ■) দেখায়। এই লিস্ট সাধারণত এমন জায়গায় ব্যবহার করা হয় যেখানে আইটেমগুলোর ক্রম গুরুত্বপূর্ণ নয়।</p>
+            
+            <div class="example-box">
+              <h3>আনঅর্ডারড লিস্ট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>বিভিন্ন বুলেট স্টাইল (CSS সহ):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ul style="list-style-type: square;"&gt;
+  &lt;li&gt;স্কয়ার বুলেট&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul style="list-style-type: circle;"&gt;
+  &lt;li&gt;সার্কেল বুলেট&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ul style="list-style-type: square;">
+                  <li>স্কয়ার বুলেট</li>
+                </ul>
+                <ul style="list-style-type: circle;">
+                  <li>সার্কেল বুলেট</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অর্ডারড লিস্ট (Ordered List - ol)</h2>
+            <p><code>&lt;ol&gt;</code> ট্যাগ ব্যবহার করে অর্ডারড লিস্ট তৈরি করা হয়। এতে প্রতিটি আইটেমের আগে সংখ্যা (1, 2, 3), রোমান সংখ্যা (I, II, III), বা অক্ষর (A, B, C) দেখায়। এই লিস্ট ব্যবহার করা হয় যেখানে ক্রম বা র্যাংকিং গুরুত্বপূর্ণ।</p>
+            
+            <div class="example-box">
+              <h3>অর্ডারড লিস্ট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ol&gt;
+  &lt;li&gt>প্রথম ধাপ&lt;/li&gt;
+  &lt;li&gt;দ্বিতীয় ধাপ&lt;/li&gt;
+  &lt;li&gt;তৃতীয় ধাপ&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ol>
+                  <li>প্রথম ধাপ</li>
+                  <li>দ্বিতীয় ধাপ</li>
+                  <li>তৃতীয় ধাপ</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>type অ্যাট্রিবিউট দিয়ে বিভিন্ন স্টাইল:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ol type="A"&gt;
+  &lt;li&gt;বড় হাতের অক্ষর&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol type="i"&gt;
+  &lt;li&gt;ছোট হাতের রোমান&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol start="5"&gt;
+  &lt;li&gt;৫ থেকে শুরু&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ol type="A">
+                  <li>বড় হাতের অক্ষর</li>
+                </ol>
+                <ol type="i">
+                  <li>ছোট হাতের রোমান</li>
+                </ol>
+                <ol start="5">
+                  <li>৫ থেকে শুরু</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ডেসক্রিপশন লিস্ট (Description List - dl)</h2>
+            <p><code>&lt;dl&gt;</code> (description list), <code>&lt;dt&gt;</code> (description term), এবং <code>&lt;dd&gt;</code> (description definition) ট্যাগ ব্যবহার করে ডেসক্রিপশন লিস্ট তৈরি করা হয়। এটি শব্দ বা টার্ম এবং তার সংজ্ঞা বা বিবরণ দেখানোর জন্য আদর্শ।</p>
+            
+            <div class="example-box">
+              <h3>ডেসক্রিপশন লিস্ট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;হাইপারটেক্সট মার্কআপ ল্যাঙ্গুয়েজ - ওয়েবপৃষ্ঠার কাঠামো তৈরি করে।&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;ক্যাসকেডিং স্টাইল শিট - ওয়েবপৃষ্ঠার ডিজাইন নির্ধারণ করে।&lt;/dd&gt;
+  &lt;dt&gt;JavaScript&lt;/dt&gt;
+  &lt;dd&gt;ওয়েবপৃষ্ঠায় ইন্টারঅ্যাকটিভিটি যোগ করে।&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <dl style="margin: 0;">
+                  <dt><strong>HTML</strong></dt>
+                  <dd style="margin-left: 20px; margin-bottom: 10px;">হাইপারটেক্সট মার্কআপ ল্যাঙ্গুয়েজ - ওয়েবপৃষ্ঠার কাঠামো তৈরি করে।</dd>
+                  <dt><strong>CSS</strong></dt>
+                  <dd style="margin-left: 20px; margin-bottom: 10px;">ক্যাসকেডিং স্টাইল শিট - ওয়েবপৃষ্ঠার ডিজাইন নির্ধারণ করে।</dd>
+                  <dt><strong>JavaScript</strong></dt>
+                  <dd style="margin-left: 20px;">ওয়েবপৃষ্ঠায় ইন্টারঅ্যাকটিভিটি যোগ করে।</dd>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>নেস্টেড লিস্ট (Nested Lists)</h2>
+            <p>একটি লিস্টের ভিতরে আরেকটি লিস্ট তৈরি করাকে নেস্টেড লিস্ট বলে। এটি ব্যবহার করে সাব-ক্যাটাগরি, মেনু বা জটিল তথ্য উপস্থাপন করা যায়। নেস্টেড লিস্ট আনঅর্ডারড, অর্ডারড বা ডেসক্রিপশন লিস্টের ভিতরে যেকোনো ধরনের লিস্ট হতে পারে।</p>
+            
+            <div class="example-box">
+              <h3>নেস্টেড লিস্ট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;ফ্রন্ট-এন্ড ডেভেলপমেন্ট
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ব্যাক-এন্ড ডেভেলপমেন্ট
+    &lt;ul&gt;
+      &lt;li&gt;PHP&lt;/li&gt;
+      &lt;li&gt;Python&lt;/li&gt;
+      &lt;li&gt;Node.js&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ul>
+                  <li>ফ্রন্ট-এন্ড ডেভেলপমেন্ট
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                  </li>
+                  <li>ব্যাক-এন্ড ডেভেলপমেন্ট
+                    <ul>
+                      <li>PHP</li>
+                      <li>Python</li>
+                      <li>Node.js</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>লিস্ট স্টাইলিং (CSS দিয়ে)</h2>
+            <p>CSS ব্যবহার করে লিস্টের চেহারা সম্পূর্ণ কাস্টমাইজ করা যায়। বুলেট বা নম্বরের ধরন পরিবর্তন, ইমেজ বুলেট ব্যবহার, মার্জিন, প্যাডিং, এবং হোভার ইফেক্ট যোগ করা সম্ভব।</p>
+            
+            <div class="example-box">
+              <h3>কাস্টম বুলেট ইমেজ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ul style="list-style-image: url('arrow.png');"&gt;
+  &lt;li&gt;কাস্টম বুলেট সহ আইটেম&lt;/li&gt;
+  &lt;li&gt;আরেকটি আইটেম&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style="list-style: none; padding-left: 0;"&gt;
+  &lt;li&gt;✓ বুলেট ছাড়া লিস্ট&lt;/li&gt;
+  &lt;li&gt;✓ কাস্টম সিম্বল ব্যবহার&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ul style="list-style: none; padding-left: 0;">
+                  <li>✓ বুলেট ছাড়া লিস্ট</li>
+                  <li>✓ কাস্টম সিম্বল ব্যবহার</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>লিস্ট স্টাইলিং CSS প্রপার্টি:</h4>
+              <ul>
+                <li><code>list-style-type</code> – বুলেট বা নম্বরের ধরন (disc, circle, square, decimal, lower-roman, ইত্যাদি)</li>
+                <li><code>list-style-image</code> – কাস্টম ইমেজ বুলেট ব্যবহার</li>
+                <li><code>list-style-position</code> – বুলেটের অবস্থান (inside/outside)</li>
+                <li><code>list-style</code> – শর্টহ্যান্ড প্রপার্টি</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>লিস্টের ব্যবহারিক উদাহরণ</h2>
+            <p>ওয়েব ডেভেলপমেন্টে লিস্ট বিভিন্নভাবে ব্যবহার করা হয়। নিচে কিছু সাধারণ ব্যবহার দেখানো হলো:</p>
+            
+            <div class="example-box">
+              <h3>নেভিগেশন মেনু (CSS সহ):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ul class="nav-menu"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;ব্লগ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;যোগাযোগ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ul style="display: flex; list-style: none; padding: 0; gap: 20px; background: #f0f0f0; padding: 10px; border-radius: 8px;">
+                  <li><a href="#" style="text-decoration: none; color: #333;">হোম</a></li>
+                  <li><a href="#" style="text-decoration: none; color: #333;">ব্লগ</a></li>
+                  <li><a href="#" style="text-decoration: none; color: #333;">যোগাযোগ</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>টু-ডু লিস্ট (টাস্ক লিস্ট):</h3>
+              <div class="code-preview">
+                <pre><code>&lt;ul style="list-style: none;"&gt;
+  &lt;li&gt;☐ HTML শিখা&lt;/li&gt;
+  &lt;li&gt;☑ CSS শিখা (সম্পন্ন)&lt;/li&gt;
+  &lt;li&gt;☐ JavaScript শিখা&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <ul style="list-style: none; padding-left: 0;">
+                  <li>☐ HTML শিখা</li>
+                  <li>☑ CSS শিখা (সম্পন্ন)</li>
+                  <li>☐ JavaScript শিখা</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="unordered-lists.html" class="topic-card">
+                <h3>📋 আনঅর্ডারড লিস্ট (ul)</h3>
+                <p>বুলেট পয়েন্ট ব্যবহার করে লিস্ট তৈরি করা শিখুন</p>
+              </a>
+              <a href="ordered-lists.html" class="topic-card">
+                <h3>🔢 অর্ডারড লিস্ট (ol)</h3>
+                <p>সংখ্যা, রোমান সংখ্যা বা অক্ষর দিয়ে সাজানো লিস্ট</p>
+              </a>
+              <a href="description-lists.html" class="topic-card">
+                <h3>📖 ডেসক্রিপশন লিস্ট (dl)</h3>
+                <p>শব্দ ও তার সংজ্ঞা উপস্থাপনের আদর্শ পদ্ধতি</p>
+              </a>
+              <a href="nested-lists.html" class="topic-card">
+                <h3>🌳 নেস্টেড লিস্ট</h3>
+                <p>লিস্টের ভিতরে লিস্ট তৈরি করে জটিল তথ্য উপস্থাপন</p>
+              </a>
+              <a href="list-styling.html" class="topic-card">
+                <h3>🎨 লিস্ট স্টাইলিং</h3>
+                <p>CSS দিয়ে লিস্টের ডিজাইন ও কাস্টমাইজেশন</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/text-formatting.html" class="prev-topic">← পূর্ববর্তী: টেক্সট ফরম্যাটিং</a>
+              <a href="../basic/tables.html" class="next-topic">পরবর্তী: টেবিল →</a>
+            </div>
+          </section>
+        </article>
       </div>
     </main>
   </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
   
   <script src="../../js/main.js"></script>
 </body>

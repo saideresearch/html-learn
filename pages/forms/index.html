@@ -3,11 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML ফর্ম | HTML শিখি</title>
+  <title>ফর্ম | HTML শিখি</title>
+  <meta name="description" content="HTML-এ ফর্ম ব্যবহারের সম্পূর্ণ গাইড: ফর্ম এলিমেন্ট, ইনপুট টাইপ, ইনপুট অ্যাট্রিবিউট, সিলেক্ট ড্রপডাউন, টেক্সটএরিয়া, ফর্ম ভ্যালিডেশন, কনস্ট্রেইন্ট ভ্যালিডেশন API ইত্যাদি বাংলায়।">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrapper">
     <aside class="sidebar">
       <nav class="sidebar-nav">
@@ -15,40 +39,420 @@
         <ul>
           <li><a href="form-elements.html">ফর্ম এলিমেন্ট</a></li>
           <li><a href="input-types.html">ইনপুট টাইপ</a></li>
-          <li><a href="form-attributes.html">ফর্ম অ্যাট্রিবিউট</a></li>
+          <li><a href="input-attributes.html">ইনপুট অ্যাট্রিবিউট</a></li>
+          <li><a href="select-dropdown.html">সিলেক্ট ও ড্রপডাউন</a></li>
+          <li><a href="textarea.html">টেক্সটএরিয়া</a></li>
+          <li><a href="fieldset-legend.html">ফিল্ডসেট ও লিজেন্ড</a></li>
+          <li><a href="datalist.html">ডাটালিস্ট</a></li>
+          <li><a href="output.html">আউটপুট</a></li>
+          <li><a href="progress-meter.html">প্রগ্রেস ও মিটার</a></li>
           <li><a href="form-validation.html">ফর্ম ভ্যালিডেশন</a></li>
-          <li><a href="form-examples.html">ফর্ম উদাহরণ</a></li>
+          <li><a href="form-validation-api.html">কনস্ট্রেইন্ট ভ্যালিডেশন API</a></li>
+          <li><a href="custom-validation.html">কাস্টম ভ্যালিডেশন</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
       <div class="container">
-        <h1>HTML ফর্ম টিউটোরিয়াল</h1>
-        
-        <p>HTML ফর্ম ব্যবহারকারীর কাছ থেকে ডাটা সংগ্রহ করার জন্য ব্যবহৃত হয়। ফর্মের মাধ্যমে ইউজার ইনপুট নিয়ে সার্ভারে পাঠানো যায়।</p>
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>ফর্ম</li>
+          </ol>
+        </nav>
 
-        <div class="topics-grid-mini">
-          <a href="form-elements.html" class="topic-card">
-            <h3>ফর্ম এলিমেন্ট</h3>
-            <p>form, input, label, button, fieldset, legend</p>
-          </a>
-          <a href="input-types.html" class="topic-card">
-            <h3>ইনপুট টাইপ</h3>
-            <p>text, password, email, number, date, radio, checkbox</p>
-          </a>
-          <a href="form-attributes.html" class="topic-card">
-            <h3>ফর্ম অ্যাট্রিবিউট</h3>
-            <p>action, method, required, placeholder, pattern</p>
-          </a>
-          <a href="form-validation.html" class="topic-card">
-            <h3>ফর্ম ভ্যালিডেশন</h3>
-            <p>বিল্ট-ইন ভ্যালিডেশন, কাস্টম ভ্যালিডেশন</p>
-          </a>
-        </div>
+        <article class="topic-article">
+          <h1>ফর্ম (HTML Forms)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৫০ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ থেকে অ্যাডভান্সড</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML ফর্ম কী?</h2>
+            <p>HTML ফর্ম হলো ওয়েবপৃষ্ঠার সবচেয়ে গুরুত্বপূর্ণ ইন্টারঅ্যাকটিভ উপাদান যা ব্যবহারকারীর কাছ থেকে ডেটা সংগ্রহ করে সার্ভারে প্রেরণ করে। লগইন, রেজিস্ট্রেশন, সার্চ, ফিডব্যাক, অর্ডার ফর্ম—প্রায় সব ধরনের ইউজার ইনপুটের জন্য ফর্ম ব্যবহার করা হয়। HTML5-এ ফর্মের ক্ষমতা অনেক বেড়েছে, যেখানে ভ্যালিডেশন, বিভিন্ন ইনপুট টাইপ, এবং উন্নত ইউজার এক্সপেরিয়েন্সের জন্য অনেক নতুন এলিমেন্ট ও অ্যাট্রিবিউট যোগ করা হয়েছে।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><code>&lt;form&gt;</code> এলিমেন্ট ও এর অ্যাট্রিবিউট (action, method)</li>
+                <li>২০+ ইনপুট টাইপ (text, email, number, date, color, file ইত্যাদি)</li>
+                <li>ইনপুট অ্যাট্রিবিউট (required, placeholder, pattern, min/max)</li>
+                <li>সিলেক্ট ড্রপডাউন, টেক্সটএরিয়া, ডাটালিস্ট</li>
+                <li>ফর্ম গ্রুপিং (fieldset, legend)</li>
+                <li>প্রগ্রেস বার ও মিটার এলিমেন্ট</li>
+                <li>HTML5 ফর্ম ভ্যালিডেশন ও কনস্ট্রেইন্ট ভ্যালিডেশন API</li>
+                <li>কাস্টম ভ্যালিডেশন তৈরি</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফর্ম এলিমেন্ট (form element)</h2>
+            <p><code>&lt;form&gt;</code> ট্যাগ হলো ফর্মের মূল কন্টেইনার। এটির মাধ্যমে সব ইনপুট ফিল্ড, বাটন, এবং অন্যান্য ফর্ম এলিমেন্ট গুচ্ছবদ্ধ হয়। <code>action</code> অ্যাট্রিবিউট দিয়ে ডেটা কোথায় পাঠানো হবে এবং <code>method</code> অ্যাট্রিবিউট দিয়ে ডেটা পাঠানোর পদ্ধতি (GET বা POST) নির্ধারণ করা হয়।</p>
+            
+            <div class="example-box">
+              <h3>বেসিক ফর্ম স্ট্রাকচার:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;form action="/submit-form" method="POST"&gt;
+  &lt;label for="name"&gt;নাম:&lt;/label&gt;
+  &lt;input type="text" id="name" name="username"&gt;
+  
+  &lt;label for="email"&gt;ইমেইল:&lt;/label&gt;
+  &lt;input type="email" id="email" name="useremail"&gt;
+  
+  &lt;button type="submit"&gt;পাঠান&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <form style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #f9f9f9;">
+                  <div style="margin-bottom: 10px;">
+                    <label for="demo-name" style="display: block; margin-bottom: 5px;">নাম:</label>
+                    <input type="text" id="demo-name" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 4px;">
+                  </div>
+                  <div style="margin-bottom: 10px;">
+                    <label for="demo-email" style="display: block; margin-bottom: 5px;">ইমেইল:</label>
+                    <input type="email" id="demo-email" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 4px;">
+                  </div>
+                  <button type="submit" style="background: #4CAF50; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">পাঠান</button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইনপুট টাইপ (Input Types)</h2>
+            <p>HTML5-এ <code>&lt;input&gt;</code> ট্যাগের <code>type</code> অ্যাট্রিবিউটের মাধ্যমে বিভিন্ন ধরনের ইনপুট ফিল্ড তৈরি করা যায়। প্রতিটি টাইপ ইউজার ইনপুট গ্রহণের জন্য আলাদা ফাংশনালিটি ও ভ্যালিডেশন প্রদান করে।</p>
+            
+            <div class="example-box">
+              <h3>গুরুত্বপূর্ণ ইনপুট টাইপসমূহ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;input type="text"&gt;        &lt;!-- সাধারণ টেক্সট --&gt;
+&lt;input type="email"&gt;       &lt;!-- ইমেইল ভ্যালিডেশন --&gt;
+&lt;input type="password"&gt;    &lt;!-- পাসওয়ার্ড (ডট দেখায়) --&gt;
+&lt;input type="number"&gt;      &lt;!-- সংখ্যা ইনপুট --&gt;
+&lt;input type="date"&gt;        &lt;!-- তারিখ পিকার --&gt;
+&lt;input type="color"&gt;       &lt;!-- কালার পিকার --&gt;
+&lt;input type="file"&gt;        &lt;!-- ফাইল আপলোড --&gt;
+&lt;input type="range"&gt;       &lt;!-- স্লাইডার --&gt;
+&lt;input type="checkbox"&gt;    &lt;!-- চেকবক্স --&gt;
+&lt;input type="radio"&gt;       &lt;!-- রেডিও বাটন --&gt;
+&lt;input type="search"&gt;      &lt;!-- সার্চ ফিল্ড --&gt;
+&lt;input type="tel"&gt;         &lt;!-- টেলিফোন নম্বর --&gt;
+&lt;input type="url"&gt;         &lt;!-- URL ইনপুট --&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="display: grid; grid-template-columns: 120px 1fr; gap: 10px; align-items: center;">
+                  <span>টেক্সট:</span><input type="text" value="সাধারণ টেক্সট" style="padding: 4px;">
+                  <span>ইমেইল:</span><input type="email" placeholder="example@mail.com" style="padding: 4px;">
+                  <span>পাসওয়ার্ড:</span><input type="password" value="secret" style="padding: 4px;">
+                  <span>নম্বর:</span><input type="number" value="25" style="padding: 4px;">
+                  <span>তারিখ:</span><input type="date" style="padding: 4px;">
+                  <span>রঙ:</span><input type="color" value="#4CAF50" style="width: 50px;">
+                  <span>রেঞ্জ:</span><input type="range" style="width: 150px;">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইনপুট অ্যাট্রিবিউট (Input Attributes)</h2>
+            <p>ইনপুট ফিল্ডের আচরণ ও ভ্যালিডেশন নিয়ন্ত্রণের জন্য বিভিন্ন অ্যাট্রিবিউট ব্যবহার করা হয়। HTML5-এ অনেক নতুন অ্যাট্রিবিউট যোগ হয়েছে যা জাভাস্ক্রিপ্ট ছাড়াই ফর্ম ভ্যালিডেশন সম্ভব করে।</p>
+            
+            <div class="example-box">
+              <h3>প্রয়োজনীয় অ্যাট্রিবিউট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;input type="text" required&gt;                     &lt;!-- ফিল্ড পূরণ করা বাধ্যতামূলক --&gt;
+&lt;input type="email" placeholder="আপনার ইমেইল"&gt;   &lt;!-- প্লেসহোল্ডার টেক্সট --&gt;
+&lt;input type="text" pattern="[A-Za-z]{3,}"&gt;       &lt;!-- রেগুলার এক্সপ্রেশন ভ্যালিডেশন --&gt;
+&lt;input type="number" min="18" max="60"&gt;          &lt;!-- ন্যূনতম ও সর্বোচ্চ মান --&gt;
+&lt;input type="text" readonly value="শুধু পঠনযোগ্য"&gt;
+&lt;input type="text" disabled value="নিষ্ক্রিয়"&gt;
+&lt;input type="text" autofocus&gt;                    &lt;!-- পৃষ্ঠা লোডে ফোকাস --&gt;
+&lt;input type="text" autocomplete="off"&gt;           &lt;!-- অটোকমপ্লিট বন্ধ --&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>টিপ:</strong> <code>required</code>, <code>pattern</code>, <code>min</code>, <code>max</code> অ্যাট্রিবিউট ব্যবহার করে HTML-এ ক্লায়েন্ট-সাইড ভ্যালিডেশন সহজে বাস্তবায়ন করা যায়।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সিলেক্ট ও ড্রপডাউন (Select & Dropdown)</h2>
+            <p><code>&lt;select&gt;</code> এবং <code>&lt;option&gt;</code> ট্যাগ ব্যবহার করে ড্রপডাউন মেনু তৈরি করা হয়। এটি ব্যবহারকারীকে প্রি-ডিফাইন্ড অপশন থেকে একটি বা একাধিক মান নির্বাচনের সুযোগ দেয়।</p>
+            
+            <div class="example-box">
+              <h3>ড্রপডাউন উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;select name="city"&gt;
+  &lt;option value=""&gt;শহর নির্বাচন করুন&lt;/option&gt;
+  &lt;option value="dhaka"&gt;ঢাকা&lt;/option&gt;
+  &lt;option value="ctg"&gt;চট্টগ্রাম&lt;/option&gt;
+  &lt;option value="khulna"&gt;খুলনা&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- একাধিক নির্বাচনের জন্য --&gt;
+&lt;select name="subjects" multiple size="3"&gt;
+  &lt;option&gt;HTML&lt;/option&gt;
+  &lt;option&gt;CSS&lt;/option&gt;
+  &lt;option&gt;JavaScript&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <select style="padding: 6px; margin-bottom: 10px; width: 200px;">
+                  <option>শহর নির্বাচন করুন</option>
+                  <option>ঢাকা</option>
+                  <option>চট্টগ্রাম</option>
+                  <option>খুলনা</option>
+                </select>
+                <br>
+                <select multiple size="3" style="padding: 4px; width: 150px;">
+                  <option>HTML</option>
+                  <option>CSS</option>
+                  <option>JavaScript</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>টেক্সটএরিয়া (Textarea)</h2>
+            <p><code>&lt;textarea&gt;</code> ট্যাগ ব্যবহার করে বহুলাইন টেক্সট ইনপুট ফিল্ড তৈরি করা হয়। এটি মন্তব্য, বার্তা, বা দীর্ঘ টেক্সট সংগ্রহের জন্য উপযোগী।</p>
+            
+            <div class="example-box">
+              <h3>textarea উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;textarea name="message" rows="5" cols="40" placeholder="আপনার মন্তব্য লিখুন..."&gt;&lt;/textarea&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <textarea rows="4" cols="40" placeholder="আপনার মন্তব্য লিখুন..." style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 100%;"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফিল্ডসেট ও লিজেন্ড (Fieldset & Legend)</h2>
+            <p><code>&lt;fieldset&gt;</code> এবং <code>&lt;legend&gt;</code> ট্যাগ ব্যবহার করে ফর্মের সম্পর্কিত ইনপুট ফিল্ডগুলিকে গ্রুপ করা যায়। এটি ফর্মকে আরও সংগঠিত ও ব্যবহারবান্ধব করে।</p>
+            
+            <div class="example-box">
+              <h3>fieldset ও legend উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;ব্যক্তিগত তথ্য&lt;/legend&gt;
+  &lt;label&gt;নাম: &lt;input type="text"&gt;&lt;/label&gt;
+  &lt;label&gt;ইমেইল: &lt;input type="email"&gt;&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset&gt;
+  &lt;legend&gt;পছন্দের বিষয়&lt;/legend&gt;
+  &lt;label&gt;&lt;input type="checkbox"&gt; HTML&lt;/label&gt;
+  &lt;label&gt;&lt;input type="checkbox"&gt; CSS&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <fieldset style="border: 1px solid #ccc; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
+                  <legend style="font-weight: bold;">ব্যক্তিগত তথ্য</legend>
+                  <div style="margin-bottom: 8px;"><label>নাম: <input type="text" style="margin-left: 8px;"></label></div>
+                  <div><label>ইমেইল: <input type="email" style="margin-left: 8px;"></label></div>
+                </fieldset>
+                <fieldset style="border: 1px solid #ccc; border-radius: 6px; padding: 12px;">
+                  <legend style="font-weight: bold;">পছন্দের বিষয়</legend>
+                  <label><input type="checkbox"> HTML</label> &nbsp;
+                  <label><input type="checkbox"> CSS</label>
+                </fieldset>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ডাটালিস্ট (Datalist)</h2>
+            <p><code>&lt;datalist&gt;</code> ট্যাগ <code>&lt;input&gt;</code> ফিল্ডের সাথে ব্যবহার করে অটোকমপ্লিট সাজেশন প্রদান করে। এটি ব্যবহারকারীকে প্রি-ডিফাইন্ড অপশনের সাথে সাথে নিজের ইনপুট দেওয়ার সুযোগ দেয়।</p>
+            
+            <div class="example-box">
+              <h3>datalist উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;input list="browsers" placeholder="ব্রাউজার নির্বাচন করুন"&gt;
+&lt;datalist id="browsers"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Edge"&gt;
+  &lt;option value="Safari"&gt;
+&lt;/datalist&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <input list="demo-browsers" placeholder="ব্রাউজার নির্বাচন করুন" style="padding: 6px; width: 200px;">
+                <datalist id="demo-browsers">
+                  <option value="Chrome">
+                  <option value="Firefox">
+                  <option value="Edge">
+                  <option value="Safari">
+                </datalist>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>আউটপুট (Output)</h2>
+            <p><code>&lt;output&gt;</code> ট্যাগ ব্যবহার করে গণনা বা স্ক্রিপ্টের ফলাফল প্রদর্শন করা হয়। এটি সাধারণত ফর্মের মধ্যে ব্যবহার করা হয় এবং জাভাস্ক্রিপ্টের সাথে ইন্টারঅ্যাক্ট করে।</p>
+            
+            <div class="example-box">
+              <h3>output সহ রেঞ্জ স্লাইডার:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;form oninput="result.value = parseInt(a.value)"&gt;
+  &lt;input type="range" id="a" value="50"&gt;
+  &lt;output name="result" for="a"&gt;50&lt;/output&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <form oninput="demoOutput.value = parseInt(demoRange.value)">
+                  <input type="range" id="demoRange" value="50" style="width: 200px;">
+                  <output name="demoOutput" for="demoRange" style="font-weight: bold; margin-left: 10px;">50</output>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্রগ্রেস ও মিটার (Progress & Meter)</h2>
+            <p><code>&lt;progress&gt;</code> ট্যাগ কাজের অগ্রগতি দেখায় (যেমন ফাইল আপলোড), আর <code>&lt;meter&gt;</code> ট্যাগ একটি নির্দিষ্ট রেঞ্জের মধ্যে মান প্রদর্শন করে (যেমন ডিস্ক ব্যবহার)।</p>
+            
+            <div class="example-box">
+              <h3>progress এবং meter উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;
+&lt;meter value="0.6" min="0" max="1"&gt;60%&lt;/meter&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div>অগ্রগতি: <progress value="70" max="100" style="width: 200px;"></progress> 70%</div>
+                <div>স্টোরেজ: <meter value="0.6" min="0" max="1" style="width: 200px;"></meter> 60%</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফর্ম ভ্যালিডেশন ও API</h2>
+            <p>HTML5-এ বিল্ট-ইন ফর্ম ভ্যালিডেশন রয়েছে যা জাভাস্ক্রিপ্ট ছাড়াই ইনপুট যাচাই করতে পারে। <code>required</code>, <code>pattern</code>, <code>type="email"</code> ইত্যাদি অ্যাট্রিবিউট স্বয়ংক্রিয় ভ্যালিডেশন প্রদান করে। আরও উন্নত নিয়ন্ত্রণের জন্য কনস্ট্রেইন্ট ভ্যালিডেশন API (Constraint Validation API) ব্যবহার করা হয়।</p>
+            
+            <div class="example-box">
+              <h3>HTML5 ভ্যালিডেশন উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;form&gt;
+  &lt;input type="text" required placeholder="নাম (required)"&gt;
+  &lt;input type="email" required placeholder="ইমেইল (required)"&gt;
+  &lt;input type="text" pattern="[0-9]{11}" placeholder="মোবাইল (১১ ডিজিট)"&gt;
+  &lt;button type="submit"&gt;জমা দিন&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>কনস্ট্রেইন্ট ভ্যালিডেশন API:</strong> <code>checkValidity()</code>, <code>setCustomValidity()</code>, <code>validity</code> প্রপার্টি ব্যবহার করে জাভাস্ক্রিপ্টের মাধ্যমে কাস্টম ভ্যালিডেশন মেসেজ ও নিয়ন্ত্রণ করা যায়।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="form-elements.html" class="topic-card">
+                <h3>📋 ফর্ম এলিমেন্ট</h3>
+                <p>form ট্যাগ, action, method, enctype অ্যাট্রিবিউট</p>
+              </a>
+              <a href="input-types.html" class="topic-card">
+                <h3>⌨️ ইনপুট টাইপ</h3>
+                <p>২০+ ইনপুট টাইপের বিস্তারিত ব্যবহার</p>
+              </a>
+              <a href="input-attributes.html" class="topic-card">
+                <h3>⚙️ ইনপুট অ্যাট্রিবিউট</h3>
+                <p>required, pattern, placeholder, autofocus ইত্যাদি</p>
+              </a>
+              <a href="select-dropdown.html" class="topic-card">
+                <h3>📌 সিলেক্ট ও ড্রপডাউন</h3>
+                <p>select, option, optgroup, multiple নির্বাচন</p>
+              </a>
+              <a href="textarea.html" class="topic-card">
+                <h3>📝 টেক্সটএরিয়া</h3>
+                <p>মাল্টিলাইন টেক্সট ইনপুট ও অ্যাট্রিবিউট</p>
+              </a>
+              <a href="fieldset-legend.html" class="topic-card">
+                <h3>🔲 ফিল্ডসেট ও লিজেন্ড</h3>
+                <p>ফর্ম গ্রুপিং ও স্ট্রাকচারিং</p>
+              </a>
+              <a href="datalist.html" class="topic-card">
+                <h3>💡 ডাটালিস্ট</h3>
+                <p>অটোকমপ্লিট সাজেশন ও ইনপুট হেল্পার</p>
+              </a>
+              <a href="output.html" class="topic-card">
+                <h3>📤 আউটপুট</h3>
+                <p>গণনার ফলাফল প্রদর্শন</p>
+              </a>
+              <a href="progress-meter.html" class="topic-card">
+                <h3>📊 প্রগ্রেস ও মিটার</h3>
+                <p>অগ্রগতি ও পরিমাপ প্রদর্শন</p>
+              </a>
+              <a href="form-validation.html" class="topic-card">
+                <h3>✅ ফর্ম ভ্যালিডেশন</h3>
+                <p>HTML5 বিল্ট-ইন ভ্যালিডেশন</p>
+              </a>
+              <a href="form-validation-api.html" class="topic-card">
+                <h3>🔧 কনস্ট্রেইন্ট ভ্যালিডেশন API</h3>
+                <p>জাভাস্ক্রিপ্ট দিয়ে উন্নত ভ্যালিডেশন নিয়ন্ত্রণ</p>
+              </a>
+              <a href="custom-validation.html" class="topic-card">
+                <h3>🎨 কাস্টম ভ্যালিডেশন</h3>
+                <p>কাস্টম ভ্যালিডেশন মেসেজ ও নিয়ম তৈরি</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/tables.html" class="prev-topic">← পূর্ববর্তী: টেবল</a>
+              <a href="../basic/media.html" class="next-topic">পরবর্তী: মিডিয়া এলিমেন্ট →</a>
+            </div>
+          </section>
+        </article>
       </div>
     </main>
   </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
   
   <script src="../../js/main.js"></script>
 </body>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মাল্টিমিডিয়া | HTML শিখি</title>
+  <meta name="description" content="HTML-এ মাল্টিমিডিয়া ব্যবহারের সম্পূর্ণ গাইড: অডিও, ভিডিও, ভিডিও ও অডিও ফরম্যাট, সোর্স ট্যাগ, ট্র্যাক ও সাবটাইটেল, আইফ্রেম, ইউটিউব এম্বেড, গুগল ম্যাপ এম্বেড ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>মাল্টিমিডিয়া টপিকস</h3>
+        <ul>
+          <li><a href="audio.html">অডিও</a></li>
+          <li><a href="video.html">ভিডিও</a></li>
+          <li><a href="video-formats.html">ভিডিও ফরম্যাট</a></li>
+          <li><a href="audio-formats.html">অডিও ফরম্যাট</a></li>
+          <li><a href="source-tag.html">সোর্স ট্যাগ</a></li>
+          <li><a href="track-subtitles.html">ট্র্যাক ও সাবটাইটেল</a></li>
+          <li><a href="iframe.html">আইফ্রেম</a></li>
+          <li><a href="embed-object.html">এম্বেড ও অবজেক্ট</a></li>
+          <li><a href="youtube-embed.html">ইউটিউব এম্বেড</a></li>
+          <li><a href="maps-embed.html">গুগল ম্যাপ এম্বেড</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>মাল্টিমিডিয়া</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>মাল্টিমিডিয়া (HTML Multimedia)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৪০ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ থেকে মধ্যবর্তী</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>HTML মাল্টিমিডিয়া কী?</h2>
+            <p>HTML মাল্টিমিডিয়া হলো ওয়েবপৃষ্ঠায় অডিও, ভিডিও, অ্যানিমেশন, এবং ইন্টারঅ্যাকটিভ কন্টেন্ট যুক্ত করার প্রযুক্তি। HTML5-এ <code>&lt;audio&gt;</code> এবং <code>&lt;video&gt;</code> এলিমেন্ট যোগ করার আগে মাল্টিমিডিয়া কন্টেন্ট দেখানোর জন্য ফ্ল্যাশ বা থার্ড-পার্টি প্লাগইনের প্রয়োজন হতো। এখন HTML5-এর মাধ্যমে নেটিভভাবে অডিও ও ভিডিও চালানো যায়, যা দ্রুত, নিরাপদ এবং মোবাইল-ফ্রেন্ডলি।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><code>&lt;audio&gt;</code> ট্যাগ ব্যবহার করে অডিও প্লেয়ার তৈরি</li>
+                <li><code>&lt;video&gt;</code> ট্যাগ ব্যবহার করে ভিডিও প্লেয়ার তৈরি</li>
+                <li>বিভিন্ন অডিও ও ভিডিও ফরম্যাট (MP3, WAV, OGG, MP4, WebM)</li>
+                <li><code>&lt;source&gt;</code> ট্যাগ দিয়ে একাধিক ফরম্যাট সাপোর্ট</li>
+                <li><code>&lt;track&gt;</code> ট্যাগ দিয়ে সাবটাইটেল ও ক্যাপশন যোগ</li>
+                <li><code>&lt;iframe&gt;</code> ব্যবহার করে ইউটিউব, গুগল ম্যাপ এম্বেড</li>
+                <li><code>&lt;embed&gt;</code> ও <code>&lt;object&gt;</code> ট্যাগের ব্যবহার</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অডিও (Audio Element)</h2>
+            <p><code>&lt;audio&gt;</code> ট্যাগ ব্যবহার করে ওয়েবপৃষ্ঠায় অডিও ফাইল চালানো যায়। এটি MP3, WAV, OGG ফরম্যাট সমর্থন করে। <code>controls</code> অ্যাট্রিবিউট যোগ করলে প্লে/পজ, ভলিউম, টাইম ইন্ডিকেটর সহ একটি নেটিভ প্লেয়ার দেখায়।</p>
+            
+            <div class="example-box">
+              <h3>অডিও উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;audio controls&gt;
+  &lt;source src="audio/sample.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio/sample.ogg" type="audio/ogg"&gt;
+  আপনার ব্রাউজার অডিও এলিমেন্ট সাপোর্ট করে না।
+&lt;/audio&gt;
+
+&lt;!-- অটোপ্লে ও লুপ সহ --&gt;
+&lt;audio controls autoplay loop&gt;
+  &lt;source src="music/background.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center;">
+                  <div style="background: #e0e0e0; padding: 20px; border-radius: 8px;">
+                    🎵 অডিও প্লেয়ার উদাহরণ
+                    <div style="margin-top: 10px;">▶️ ⏸️ 🔈</div>
+                    <small style="color: #666;">(ডেমো প্লেয়ার - MP3 ফাইল প্রয়োজন)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>অডিও অ্যাট্রিবিউটসমূহ:</h4>
+              <ul>
+                <li><code>controls</code> – প্লে/পজ, ভলিউম নিয়ন্ত্রণ দেখায়</li>
+                <li><code>autoplay</code> – পৃষ্ঠা লোড হলে স্বয়ংক্রিয়ভাবে চালায়</li>
+                <li><code>loop</code> – অডিও শেষ হলে পুনরায় শুরু করে</li>
+                <li><code>muted</code> – ডিফল্টভাবে মিউট করা অবস্থায় শুরু করে</li>
+                <li><code>preload</code> – অডিও প্রি-লোড করার পদ্ধতি (auto, metadata, none)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ভিডিও (Video Element)</h2>
+            <p><code>&lt;video&gt;</code> ট্যাগ ব্যবহার করে ওয়েবপৃষ্ঠায় ভিডিও ফাইল চালানো যায়। এটি MP4, WebM, OGG ফরম্যাট সমর্থন করে। <code>width</code> এবং <code>height</code> অ্যাট্রিবিউট দিয়ে ভিডিওর সাইজ নিয়ন্ত্রণ করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>ভিডিও উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;video width="640" height="360" controls&gt;
+  &lt;source src="video/sample.mp4" type="video/mp4"&gt;
+  &lt;source src="video/sample.webm" type="video/webm"&gt;
+  আপনার ব্রাউজার ভিডিও এলিমেন্ট সাপোর্ট করে না।
+&lt;/video&gt;
+
+&lt;!-- পোস্টার ইমেজ ও পিকচার-ইন-পিকচার সহ --&gt;
+&lt;video width="640" height="360" controls poster="thumbnail.jpg"&gt;
+  &lt;source src="video/movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center;">
+                  <div style="background: #000; color: #fff; padding: 60px 20px; border-radius: 8px;">
+                    🎬 ভিডিও প্লেয়ার উদাহরণ
+                    <div style="margin-top: 10px;">▶️ ⏸️ 📺 🔈 ⤴️</div>
+                    <small>(ডেমো প্লেয়ার - MP4/WebM ফাইল প্রয়োজন)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>ভিডিও অ্যাট্রিবিউটসমূহ:</h4>
+              <ul>
+                <li><code>controls</code> – প্লে, পজ, ভলিউম, ফুলস্ক্রিন নিয়ন্ত্রণ</li>
+                <li><code>autoplay</code> – স্বয়ংক্রিয়ভাবে ভিডিও চালায়</li>
+                <li><code>loop</code> – ভিডিও শেষ হলে পুনরায় চালায়</li>
+                <li><code>muted</code> – মিউটেড অবস্থায় শুরু করে</li>
+                <li><code>poster</code> – ভিডিও লোড না হওয়া পর্যন্ত দেখানোর ইমেজ</li>
+                <li><code>preload</code> – ভিডিও প্রি-লোড পদ্ধতি</li>
+                <li><code>playsinline</code> – মোবাইলে ইনলাইন প্লেব্যাক (ফুলস্ক্রিন না হয়ে)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ভিডিও ও অডিও ফরম্যাট</h2>
+            <p>বিভিন্ন ব্রাউজার বিভিন্ন মাল্টিমিডিয়া ফরম্যাট সমর্থন করে। সঠিক ফরম্যাট নির্বাচন করলে সর্বাধিক ব্রাউজার সামঞ্জস্যতা নিশ্চিত করা যায়।</p>
+            
+            <div class="comparison-table">
+              <table class="info-table">
+                <thead>
+                  <tr>
+                    <th>ফরম্যাট</th>
+                    <th>ফাইল এক্সটেনশন</th>
+                    <th>ব্রাউজার সাপোর্ট</th>
+                    <th>ব্যবহার</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>MP4</strong></td>
+                    <td>.mp4</td>
+                    <td>সব আধুনিক ব্রাউজার</td>
+                    <td>ভিডিওর জন্য সর্বোত্তম</td>
+                  </tr>
+                  <tr>
+                    <td><strong>WebM</strong></td>
+                    <td>.webm</td>
+                    <td>Chrome, Firefox, Edge, Opera</td>
+                    <td>ওপেন সোর্স, উচ্চ কম্প্রেশন</td>
+                  </tr>
+                  <tr>
+                    <td><strong>OGG</strong></td>
+                    <td>.ogv (ভিডিও), .ogg (অডিও)</td>
+                    <td>Chrome, Firefox, Edge</td>
+                    <td>ওপেন সোর্স বিকল্প</td>
+                  </tr>
+                  <tr>
+                    <td><strong>MP3</strong></td>
+                    <td>.mp3</td>
+                    <td>সব আধুনিক ব্রাউজার</td>
+                    <td>অডিওর জন্য সর্বোত্তম</td>
+                  </tr>
+                  <tr>
+                    <td><strong>WAV</strong></td>
+                    <td>.wav</td>
+                    <td>সব ব্রাউজার</td>
+                    <td>আনকম্প্রেসড, বড় সাইজ</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সোর্স ট্যাগ (Source Tag)</h2>
+            <p><code>&lt;source&gt;</code> ট্যাগ <code>&lt;audio&gt;</code> এবং <code>&lt;video&gt;</code> এলিমেন্টের ভিতরে একাধিক ফরম্যাট নির্ধারণ করতে ব্যবহৃত হয়। ব্রাউজার প্রথম সাপোর্টেড ফরম্যাটটি নির্বাচন করে।</p>
+            
+            <div class="example-box">
+              <h3>একাধিক সোর্স সহ ভিডিও:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;video controls width="640"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.webm" type="video/webm"&gt;
+  &lt;source src="movie.ogv" type="video/ogg"&gt;
+  &lt;p&gt;আপনার ব্রাউজার ভিডিও সাপোর্ট করে না।&lt;/p&gt;
+&lt;/video&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ট্র্যাক ও সাবটাইটেল (Track Element)</h2>
+            <p><code>&lt;track&gt;</code> ট্যাগ ব্যবহার করে ভিডিওতে সাবটাইটেল, ক্যাপশন, বা অডিও বিবরণ যোগ করা যায়। এটি <code>&lt;video&gt;</code> এলিমেন্টের ভিতরে ব্যবহার করা হয়।</p>
+            
+            <div class="example-box">
+              <h3>সাবটাইটেল সহ ভিডিও:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;video controls width="640"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;track kind="subtitles" src="subtitles_bn.vtt" srclang="bn" label="বাংলা"&gt;
+  &lt;track kind="subtitles" src="subtitles_en.vtt" srclang="en" label="English"&gt;
+  &lt;track kind="captions" src="captions.vtt" srclang="bn" label="ক্যাপশন"&gt;
+&lt;/video&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>ট্র্যাকের ধরন:</strong> <code>subtitles</code> (সাবটাইটেল), <code>captions</code> (ক্যাপশন - শব্দের বিবরণ), <code>descriptions</code> (ভিজ্যুয়াল বিবরণ), <code>chapters</code> (অধ্যায়), <code>metadata</code> (মেটাডেটা)।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>আইফ্রেম (iframe)</h2>
+            <p><code>&lt;iframe&gt;</code> ট্যাগ ব্যবহার করে অন্য ওয়েবপৃষ্ঠা বা বাহ্যিক কন্টেন্ট (যেমন YouTube ভিডিও, Google Maps) বর্তমান পৃষ্ঠায় এম্বেড করা যায়। এটি একটি ইনলাইন ফ্রেম তৈরি করে।</p>
+            
+            <div class="example-box">
+              <h3>iframe উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;iframe src="https://example.com" width="600" height="400" title="উদাহরণ সাইট"&gt;&lt;/iframe&gt;
+
+&lt;!-- নিরাপত্তা অ্যাট্রিবিউট সহ --&gt;
+&lt;iframe src="https://example.com" 
+        width="600" height="400" 
+        sandbox="allow-same-origin allow-scripts"
+        loading="lazy"&gt;
+&lt;/iframe&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>iframe অ্যাট্রিবিউট:</h4>
+              <ul>
+                <li><code>src</code> – এম্বেড করা পৃষ্ঠার URL</li>
+                <li><code>srcdoc</code> – ইনলাইন HTML কন্টেন্ট</li>
+                <li><code>sandbox</code> – নিরাপত্তা সীমাবদ্ধতা</li>
+                <li><code>loading="lazy"</code> – লেজি লোডিং (পারফরম্যান্স উন্নত করে)</li>
+                <li><code>allow</code> – অনুমতি নীতি (পূর্ণস্ক্রিন, অটোপ্লে ইত্যাদি)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইউটিউব ভিডিও এম্বেড</h2>
+            <p>ইউটিউব থেকে ভিডিও এম্বেড করার সবচেয়ে সহজ উপায় হলো YouTube-এর শেয়ার অপশন থেকে Embed Code কপি করে <code>&lt;iframe&gt;</code> ব্যবহার করা।</p>
+            
+            <div class="example-box">
+              <h3>YouTube এম্বেড উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+  title="YouTube ভিডিও" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;!-- প্লেলিস্ট এম্বেড --&gt;
+&lt;iframe src="https://www.youtube.com/embed/videoseries?list=PLxyz"&gt;&lt;/iframe&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center;">
+                  <div style="background: #000; color: #fff; padding: 60px 20px; border-radius: 8px;">
+                    📺 YouTube এম্বেড উদাহরণ
+                    <div style="margin-top: 10px;">(YouTube ভিডিও আইডি প্রয়োজন)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tip-box">
+                <p><strong>টিপ:</strong> YouTube URL-এ <code>/embed/</code> ব্যবহার করে ভিডিও এম্বেড করা হয়। <code>autoplay=1</code>, <code>mute=1</code>, <code>loop=1</code> প্যারামিটার যোগ করে প্লেব্যাক কাস্টমাইজ করা যায়।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>গুগল ম্যাপ এম্বেড (Google Maps Embed)</h2>
+            <p>গুগল ম্যাপ থেকে লোকেশন এম্বেড করতে Google Maps-এর Share অপশন থেকে "Embed a map" নির্বাচন করে কোড কপি করতে হয়।</p>
+            
+            <div class="example-box">
+              <h3>গুগল ম্যাপ এম্বেড উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.123!2d90.412!3d23.710!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQyJzM2LjAiTiA5MMKwMjQnNDMuMiJF!5e0!3m2!1sen!2sbd!4v1234567890" 
+  width="600" 
+  height="450" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy"&gt;
+&lt;/iframe&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center;">
+                  <div style="background: #e0e0e0; padding: 60px 20px; border-radius: 8px;">
+                    🗺️ গুগল ম্যাপ এম্বেড উদাহরণ
+                    <div style="margin-top: 10px;">(মানচিত্র স্থানাঙ্ক প্রয়োজন)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>এম্বেড ও অবজেক্ট (Embed & Object)</h2>
+            <p><code>&lt;embed&gt;</code> এবং <code>&lt;object&gt;</code> ট্যাগ বহিরাগত রিসোর্স (PDF, ফ্ল্যাশ, SVG, ইত্যাদি) এম্বেড করতে ব্যবহৃত হয়। HTML5-এ <code>&lt;embed&gt;</code> সরল, <code>&lt;object&gt;</code> বেশি কাস্টমাইজযোগ্য।</p>
+            
+            <div class="example-box">
+              <h3>এম্বেড ও অবজেক্ট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- PDF এম্বেড --&gt;
+&lt;embed src="document.pdf" type="application/pdf" width="500" height="400"&gt;
+
+&lt;!-- SVG এম্বেড --&gt;
+&lt;object data="image.svg" type="image/svg+xml" width="300" height="200"&gt;
+  &lt;img src="fallback.png" alt="ফলব্যাক ইমেজ"&gt;
+&lt;/object&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>নোট:</strong> আধুনিক ওয়েব ডেভেলপমেন্টে বেশিরভাগ ক্ষেত্রে <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, এবং <code>&lt;iframe&gt;</code> ব্যবহার করা হয়। <code>&lt;embed&gt;</code> এবং <code>&lt;object&gt;</code> নির্দিষ্ট ব্যবহারের জন্য সংরক্ষিত।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মাল্টিমিডিয়া অ্যাক্সেসিবিলিটি</h2>
+            <p>মাল্টিমিডিয়া কন্টেন্ট অ্যাক্সেসযোগ্য করতে নিম্নলিখিত বিষয়গুলো মেনে চলা জরুরি:</p>
+            
+            <div class="info-card">
+              <ul>
+                <li><strong>সাবটাইটেল/ক্যাপশন:</strong> <code>&lt;track&gt;</code> ট্যাগ দিয়ে সাবটাইটেল যোগ করুন</li>
+                <li><strong>ট্রান্সক্রিপ্ট:</strong> অডিও/ভিডিওর সম্পূর্ণ টেক্সট সংস্করণ প্রদান করুন</li>
+                <li><strong>কীবোর্ড কন্ট্রোল:</strong> নিশ্চিত করুন সব কন্ট্রোল কীবোর্ড দিয়ে অ্যাক্সেসযোগ্য</li>
+                <li><strong>অটোপ্লে এড়িয়ে চলুন:</strong> অটোপ্লে স্ক্রিন রিডার ব্যবহারকারীদের জন্য সমস্যা তৈরি করতে পারে</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="audio.html" class="topic-card">
+                <h3>🎵 অডিও</h3>
+                <p>audio ট্যাগ, অ্যাট্রিবিউট, অডিও ফরম্যাট</p>
+              </a>
+              <a href="video.html" class="topic-card">
+                <h3>🎬 ভিডিও</h3>
+                <p>video ট্যাগ, নিয়ন্ত্রণ, পোস্টার ইমেজ</p>
+              </a>
+              <a href="video-formats.html" class="topic-card">
+                <h3>📹 ভিডিও ফরম্যাট</h3>
+                <p>MP4, WebM, OGG তুলনা ও ব্যবহার</p>
+              </a>
+              <a href="audio-formats.html" class="topic-card">
+                <h3>🎧 অডিও ফরম্যাট</h3>
+                <p>MP3, WAV, OGG ফরম্যাটের বৈশিষ্ট্য</p>
+              </a>
+              <a href="source-tag.html" class="topic-card">
+                <h3>🔗 সোর্স ট্যাগ</h3>
+                <p>একাধিক ফরম্যাট ও ব্রাউজার সামঞ্জস্যতা</p>
+              </a>
+              <a href="track-subtitles.html" class="topic-card">
+                <h3>📝 ট্র্যাক ও সাবটাইটেল</h3>
+                <p>WebVTT ফাইল দিয়ে সাবটাইটেল যোগ</p>
+              </a>
+              <a href="iframe.html" class="topic-card">
+                <h3>🖼️ আইফ্রেম</h3>
+                <p>iframe দিয়ে বাহ্যিক কন্টেন্ট এম্বেড</p>
+              </a>
+              <a href="embed-object.html" class="topic-card">
+                <h3>📎 এম্বেড ও অবজেক্ট</h3>
+                <p>PDF, SVG, ফ্ল্যাশ এম্বেড</p>
+              </a>
+              <a href="youtube-embed.html" class="topic-card">
+                <h3>▶️ ইউটিউব এম্বেড</h3>
+                <p>YouTube ভিডিও প্যারামিটার সহ এম্বেড</p>
+              </a>
+              <a href="maps-embed.html" class="topic-card">
+                <h3>🗺️ গুগল ম্যাপ এম্বেড</h3>
+                <p>মানচিত্র লোকেশন এম্বেড</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/semantic-html.html" class="prev-topic">← পূর্ববর্তী: সিম্যান্টিক HTML</a>
+              <a href="../basic/graphics.html" class="next-topic">পরবর্তী: গ্রাফিক্স (Canvas & SVG) →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

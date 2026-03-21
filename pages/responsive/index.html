@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>রেসপনসিভ ডিজাইন | HTML শিখি</title>
+  <meta name="description" content="HTML রেসপনসিভ ডিজাইনের সম্পূর্ণ গাইড: ভিউপোর্ট, মিডিয়া কোয়েরি, রেসপনসিভ ইমেজ, ফ্লেক্সিবল গ্রিড, মোবাইল ফার্স্ট ডিজাইন ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>রেসপনসিভ ডিজাইন টপিকস</h3>
+        <ul>
+          <li><a href="viewport.html">ভিউপোর্ট</a></li>
+          <li><a href="media-queries.html">মিডিয়া কোয়েরি</a></li>
+          <li><a href="responsive-images.html">রেসপনসিভ ইমেজ</a></li>
+          <li><a href="flexible-grids.html">ফ্লেক্সিবল গ্রিড</a></li>
+          <li><a href="mobile-first.html">মোবাইল ফার্স্ট ডিজাইন</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>রেসপনসিভ ডিজাইন</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>রেসপনসিভ ডিজাইন (Responsive Web Design)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৪৫ মিনিট</span>
+            <span>লেভেল: মধ্যবর্তী</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>রেসপনসিভ ডিজাইন কী?</h2>
+            <p>রেসপনসিভ ওয়েব ডিজাইন হলো এমন একটি ডিজাইন পদ্ধতি যেখানে ওয়েবসাইটের লেআউট এবং কন্টেন্ট স্বয়ংক্রিয়ভাবে বিভিন্ন ডিভাইসের স্ক্রিন সাইজ অনুযায়ী অ্যাডজাস্ট হয়। ডেস্কটপ, ট্যাবলেট, মোবাইল—সব ডিভাইসে একই HTML কোড ব্যবহার করে ভিন্ন ভিন্ন লেআউট প্রদর্শন করা যায়। ২০১০ সালের পর থেকে মোবাইল ইন্টারনেট ব্যবহারের ব্যাপক বৃদ্ধির কারণে রেসপনসিভ ডিজাইন ওয়েব ডেভেলপমেন্টের অপরিহার্য অংশ হয়ে উঠেছে। এই অধ্যায়ে আমরা ভিউপোর্ট, মিডিয়া কোয়েরি, রেসপনসিভ ইমেজ, ফ্লেক্সিবল গ্রিড এবং মোবাইল-ফার্স্ট ডিজাইনের কৌশল শিখব।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>ভিউপোর্ট:</strong> মোবাইল ডিভাইসে সঠিক স্কেলিং নিয়ন্ত্রণ</li>
+                <li><strong>মিডিয়া কোয়েরি:</strong> বিভিন্ন স্ক্রিন সাইজে আলাদা CSS প্রয়োগ</li>
+                <li><strong>রেসপনসিভ ইমেজ:</strong> srcset, sizes, picture এলিমেন্ট</li>
+                <li><strong>ফ্লেক্সিবল গ্রিড:</strong> CSS Grid ও Flexbox দিয়ে অ্যাডাপটিভ লেআউট</li>
+                <li><strong>মোবাইল ফার্স্ট:</strong> মোবাইলকে প্রাধান্য দিয়ে ডিজাইন শুরু</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ভিউপোর্ট (Viewport)</h2>
+            <p>ভিউপোর্ট মেটা ট্যাগ মোবাইল ডিভাইসে ওয়েবপৃষ্ঠার স্কেলিং এবং প্রস্থ নিয়ন্ত্রণ করে। এটি রেসপনসিভ ডিজাইনের ভিত্তি।</p>
+            
+            <div class="example-box">
+              <h3>ভিউপোর্ট সেটআপ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- মৌলিক ভিউপোর্ট সেটিং (প্রতিটি পৃষ্ঠায় প্রয়োজন) --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;!-- অতিরিক্ত অপশন --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>ভিউপোর্ট অ্যাট্রিবিউট সমূহ:</h4>
+                <ul>
+                  <li><code>width=device-width</code> – ডিভাইসের প্রস্থ অনুযায়ী পৃষ্ঠার প্রস্থ সেট করে</li>
+                  <li><code>initial-scale=1.0</code> – প্রাথমিক জুম লেভেল নির্ধারণ করে</li>
+                  <li><code>maximum-scale</code> – সর্বোচ্চ জুম লিমিট (অ্যাক্সেসিবিলিটির জন্য user-scalable=yes রাখা ভালো)</li>
+                  <li><code>user-scalable</code> – ব্যবহারকারীকে জুম করার অনুমতি দেয় কি না</li>
+                </ul>
+              </div>
+              <div class="tip-box">
+                <p><strong>গুরুত্বপূর্ণ:</strong> ভিউপোর্ট মেটা ট্যাগ ছাড়া মোবাইল ডিভাইসে ওয়েবপৃষ্ঠা ডেস্কটপ সংস্করণের মতো ছোট আকারে দেখাবে। রেসপনসিভ ডিজাইনের জন্য এই ট্যাগ অপরিহার্য।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মিডিয়া কোয়েরি (Media Queries)</h2>
+            <p>মিডিয়া কোয়েরি CSS-এর একটি শক্তিশালী ফিচার যা বিভিন্ন স্ক্রিন সাইজ, রেজোলিউশন, ওরিয়েন্টেশন অনুযায়ী ভিন্ন ভিন্ন স্টাইল প্রয়োগ করতে দেয়।</p>
+            
+            <div class="example-box">
+              <h3>মিডিয়া কোয়েরি উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>/* ডিফল্ট (মোবাইল) স্টাইল */
+.container {
+  padding: 16px;
+  width: 100%;
+}
+.card {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* ট্যাবলেট (min-width: 768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .card {
+    font-size: 16px;
+    display: inline-block;
+    width: 48%;
+    margin: 1%;
+  }
+}
+
+/* ডেস্কটপ (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  .card {
+    width: 31%;
+    margin: 1%;
+  }
+}
+
+/* ল্যান্ডস্কেপ ওরিয়েন্টেশন */
+@media (orientation: landscape) {
+  .banner {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* উচ্চ রেজোলিউশন ডিসপ্লে (Retina) */
+@media (min-resolution: 2dppx) {
+  .logo {
+    background-image: url('logo@2x.png');
+    background-size: contain;
+  }
+}</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; background: #f9f9f9; text-align: center;">
+                  <div style="background: #4CAF50; color: white; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+                    📱 রেসপনসিভ ডেমো
+                  </div>
+                  <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                    <div style="background: #e0e0e0; padding: 10px; border-radius: 4px; flex: 1 1 200px;">কার্ড ১</div>
+                    <div style="background: #e0e0e0; padding: 10px; border-radius: 4px; flex: 1 1 200px;">কার্ড ২</div>
+                    <div style="background: #e0e0e0; padding: 10px; border-radius: 4px; flex: 1 1 200px;">কার্ড ৩</div>
+                  </div>
+                  <small style="display: block; margin-top: 10px; color: #666;">ব্রাউজার রিসাইজ করে দেখুন লেআউট পরিবর্তন হয়</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>মিডিয়া কোয়েরি ব্রেকপয়েন্ট:</h4>
+              <ul>
+                <li><strong>মোবাইল:</strong> 320px - 480px (ডিফল্ট)</li>
+                <li><strong>ট্যাবলেট:</strong> 768px - 1024px</li>
+                <li><strong>ডেস্কটপ:</strong> 1024px - 1200px</li>
+                <li><strong>ওয়াইডস্ক্রিন:</strong> 1200px+</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>রেসপনসিভ ইমেজ (Responsive Images)</h2>
+            <p>রেসপনসিভ ইমেজ টেকনিক ব্যবহার করে বিভিন্ন স্ক্রিন সাইজ এবং রেজোলিউশনের জন্য উপযুক্ত ইমেজ লোড করা যায়। এটি পারফরম্যান্স এবং ভিজুয়াল কোয়ালিটি উন্নত করে।</p>
+            
+            <div class="example-box">
+              <h3>srcset ও sizes অ্যাট্রিবিউট:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- srcset: বিভিন্ন প্রস্থের ইমেজ --&gt;
+&lt;img src="image-small.jpg"
+     srcset="image-small.jpg 480w,
+             image-medium.jpg 800w,
+             image-large.jpg 1200w"
+     sizes="(max-width: 600px) 480px,
+            (max-width: 1000px) 800px,
+            1200px"
+     alt="রেসপনসিভ ইমেজ"&gt;
+
+&lt;!-- picture এলিমেন্ট (আর্ট ডিরেকশন) --&gt;
+&lt;picture&gt;
+  &lt;source media="(min-width: 800px)" srcset="landscape-large.jpg"&gt;
+  &lt;source media="(min-width: 400px)" srcset="landscape-medium.jpg"&gt;
+  &lt;img src="portrait-small.jpg" alt="আর্ট ডিরেকশন ইমেজ"&gt;
+&lt;/picture&gt;
+
+&lt;!-- আধুনিক ফরম্যাট (WebP/AVIF) সহ --&gt;
+&lt;picture&gt;
+  &lt;source srcset="image.avif" type="image/avif"&gt;
+  &lt;source srcset="image.webp" type="image/webp"&gt;
+  &lt;img src="image.jpg" alt="আধুনিক ফরম্যাট সহ ইমেজ"&gt;
+&lt;/picture&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>টিপ:</strong> <code>loading="lazy"</code> অ্যাট্রিবিউট ব্যবহার করে অফস্ক্রিন ইমেজ লেজি লোড করুন। <code>width</code> এবং <code>height</code> অ্যাট্রিবিউট CLS (Cumulative Layout Shift) প্রতিরোধে সাহায্য করে।</p>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>CSS দিয়ে রেসপনসিভ ইমেজ:</h3>
+              <div class="code-preview">
+                <pre><code>/* কন্টেইনারের সাথে অ্যাডাপ্ট */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ব্যাকগ্রাউন্ড ইমেজ রেসপনসিভ */
+.hero {
+  background-image: url('hero-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url('hero-desktop.jpg');
+  }
+}</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফ্লেক্সিবল গ্রিড (Flexible Grids)</h2>
+            <p>CSS Grid এবং Flexbox আধুনিক রেসপনসিভ লেআউট তৈরির শক্তিশালী টুল। এগুলি শতাংশ-ভিত্তিক এবং অ্যাডাপটিভ লেআউট সহজে তৈরি করতে দেয়।</p>
+            
+            <div class="example-box">
+              <h3>CSS Grid রেসপনসিভ লেআউট:</h3>
+              <div class="code-preview">
+                <pre><code>/* ফ্লুইড গ্রিড (minmax ফাংশন সহ) */
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* মিডিয়া কোয়েরি সহ গ্রিড */
+.grid-container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr; /* মোবাইল: ১ কলাম */
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* ট্যাবলেট: ২ কলাম */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* ডেস্কটপ: ৩ কলাম */
+  }
+}</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px;">
+                  <div style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div style="background: #e3f2fd; padding: 20px; text-align: center; border-radius: 6px;">আইটেম ১</div>
+                    <div style="background: #e8f5e9; padding: 20px; text-align: center; border-radius: 6px;">আইটেম ২</div>
+                    <div style="background: #fff3e0; padding: 20px; text-align: center; border-radius: 6px;">আইটেম ৩</div>
+                    <div style="background: #f3e5f5; padding: 20px; text-align: center; border-radius: 6px;">আইটেম ৪</div>
+                  </div>
+                  <small style="display: block; margin-top: 12px; text-align: center; color: #666;">✨ auto-fit + minmax: ব্রাউজার রিসাইজ করে দেখুন</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>Flexbox রেসপনসিভ লেআউট:</h3>
+              <div class="code-preview">
+                <pre><code>.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.flex-item {
+  flex: 1 1 250px; /* grow, shrink, basis */
+  min-width: 200px;
+}
+
+/* নেভিগেশন মেনু */
+.nav {
+  display: flex;
+  flex-direction: column; /* মোবাইলে স্ট্যাক */
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row; /* ডেস্কটপে রো */
+    justify-content: space-around;
+  }
+}</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মোবাইল ফার্স্ট ডিজাইন (Mobile-First Design)</h2>
+            <p>মোবাইল ফার্স্ট একটি ডিজাইন কৌশল যেখানে প্রথমে মোবাইল ডিভাইসের জন্য ডিজাইন করা হয়, তারপর বড় স্ক্রিনের জন্য উন্নত করা হয়। এটি পারফরম্যান্স এবং ইউজার এক্সপেরিয়েন্স উন্নত করে।</p>
+            
+            <div class="example-box">
+              <h3>মোবাইল ফার্স্ট CSS স্ট্রাকচার:</h3>
+              <div class="code-preview">
+                <pre><code>/* === মোবাইল ফার্স্ট (ডিফল্ট) === */
+/* 320px - 767px */
+.container {
+  padding: 16px;
+  width: 100%;
+}
+
+.hero {
+  font-size: 24px;
+  padding: 32px 16px;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* === ট্যাবলেট (min-width: 768px) === */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  .hero {
+    font-size: 32px;
+    padding: 48px 24px;
+  }
+  
+  .button {
+    width: auto;
+    padding: 10px 24px;
+  }
+}
+
+/* === ডেস্কটপ (min-width: 1024px) === */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .hero {
+    font-size: 48px;
+    padding: 64px 32px;
+  }
+}</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>মোবাইল ফার্স্ট সুবিধা:</h4>
+                <ul>
+                  <li>📱 মোবাইল ইউজারদের জন্য অপটিমাইজড (বেশিরভাগ ট্রাফিক মোবাইল থেকে)</li>
+                  <li>⚡ কম CSS কোড (min-width মিডিয়া কোয়েরি ব্যবহার)</li>
+                  <li>🎯 পারফরম্যান্স (মোবাইলে ছোট ইমেজ, কম রিকোয়েস্ট)</li>
+                  <li>🔍 SEO ফ্রেন্ডলি (Google মোবাইল-ফার্স্ট ইনডেক্সিং)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>রেসপনসিভ টাইপোগ্রাফি</h2>
+            <p>ফন্ট সাইজ এবং লাইন হাইট স্ক্রিন সাইজ অনুযায়ী অ্যাডজাস্ট করা উচিত। <code>clamp()</code>, <code>vw</code>, এবং <code>rem</code> ব্যবহার করে ফ্লুইড টাইপোগ্রাফি তৈরি করা যায়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>/* ফ্লুইড টাইপোগ্রাফি */
+body {
+  font-size: 16px; /* বেস সাইজ */
+  line-height: 1.5;
+}
+
+h1 {
+  /* clamp(min, preferred, max) */
+  font-size: clamp(24px, 5vw, 48px);
+}
+
+h2 {
+  font-size: clamp(20px, 4vw, 36px);
+}
+
+/* vw-ভিত্তিক ফন্ট (শুধুমাত্র প্রয়োজন হলে) */
+.responsive-text {
+  font-size: calc(16px + 0.5vw);
+}
+
+/* CSS 변수 সহ */
+:root {
+  --font-scale: 1.2;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-scale: 1.4;
+  }
+}</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>টেস্টিং ও ডিবাগিং টুলস</h2>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code># Chrome DevTools
+# F12 → Toggle Device Toolbar (Ctrl+Shift+M)
+# বিভিন্ন ডিভাইস প্রিসেট (iPhone, iPad, Pixel)
+# কাস্টম সাইজ সেট করা যায়
+
+# Firefox DevTools
+# F12 → Responsive Design Mode (Ctrl+Shift+M)
+
+# অনলাইন টুলস
+# https://responsively.app - রেসপনসিভ টেস্টিং অ্যাপ
+# https://www.browserstack.com - রিয়েল ডিভাইস টেস্টিং
+
+# লাইভ রিলোডিং
+# VS Code: Live Server এক্সটেনশন</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>রেসপনসিভ ডিজাইন চেকলিস্ট</h2>
+            
+            <div class="info-card">
+              <h4>চূড়ান্ত চেকলিস্ট:</h4>
+              <ul>
+                <li>✅ <code>&lt;meta name="viewport"&gt;</code> ট্যাগ যোগ করুন</li>
+                <li>✅ মোবাইল ফার্স্ট অ্যাপ্রোচ অনুসরণ করুন</li>
+                <li>✅ মিডিয়া কোয়েরি ব্যবহার করুন (<code>min-width</code> পছন্দনীয়)</li>
+                <li>✅ ইমেজ রেসপনসিভ করুন (<code>max-width: 100%</code>, <code>srcset</code>, <code>picture</code>)</li>
+                <li>✅ ফ্লেক্সিবল গ্রিড/লেআউট (Grid/Flexbox) ব্যবহার করুন</li>
+                <li>✅ টাচ-ফ্রেন্ডলি এলিমেন্ট (min 44x44px)</li>
+                <li>✅ ফন্ট সাইজ মোবাইলে 16px-এর কম নয়</li>
+                <li>✅ ফর্ম এলিমেন্ট রেসপনসিভ করুন</li>
+                <li>✅ বিভিন্ন ব্রাউজার ও ডিভাইসে টেস্ট করুন</li>
+                <li>✅ পারফরম্যান্স চেক করুন (Lighthouse, PageSpeed Insights)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="viewport.html" class="topic-card">
+                <h3>📱 ভিউপোর্ট</h3>
+                <p>viewport meta ট্যাগ, স্কেলিং কন্ট্রোল</p>
+              </a>
+              <a href="media-queries.html" class="topic-card">
+                <h3>🎨 মিডিয়া কোয়েরি</h3>
+                <p>min-width, max-width, orientation, resolution</p>
+              </a>
+              <a href="responsive-images.html" class="topic-card">
+                <h3>🖼️ রেসপনসিভ ইমেজ</h3>
+                <p>srcset, sizes, picture, WebP/AVIF</p>
+              </a>
+              <a href="flexible-grids.html" class="topic-card">
+                <h3>📐 ফ্লেক্সিবল গ্রিড</h3>
+                <p>CSS Grid, Flexbox, auto-fit, minmax</p>
+              </a>
+              <a href="mobile-first.html" class="topic-card">
+                <h3>📱 মোবাইল ফার্স্ট ডিজাইন</h3>
+                <p>mobile-first approach, progressive enhancement</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/best-practices.html" class="prev-topic">← পূর্ববর্তী: বেস্ট প্র্যাকটিস</a>
+              <a href="../references/html-tags.html" class="next-topic">পরবর্তী: HTML ট্যাগ রেফারেন্স →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

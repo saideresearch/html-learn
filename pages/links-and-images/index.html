@@ -4,10 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>লিংক ও ইমেজ | HTML শিখি</title>
+  <meta name="description" content="HTML-এ লিংক ও ইমেজ ব্যবহারের সম্পূর্ণ গাইড: a ট্যাগ, img ট্যাগ, ইমেজ ফরম্যাট, রেসপনসিভ ইমেজ, ফ্যাভিকন, ফিগার, srcset, লিংক টাইপস ইত্যাদি বাংলায়।">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/pages.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrapper">
     <aside class="sidebar">
       <nav class="sidebar-nav">
@@ -15,39 +39,328 @@
         <ul>
           <li><a href="links.html">লিংক (a ট্যাগ)</a></li>
           <li><a href="images.html">ইমেজ (img ট্যাগ)</a></li>
+          <li><a href="image-formats.html">ইমেজ ফরম্যাট</a></li>
+          <li><a href="responsive-images.html">রেসপনসিভ ইমেজ</a></li>
           <li><a href="image-maps.html">ইমেজ ম্যাপ</a></li>
           <li><a href="favicon.html">ফ্যাভিকন</a></li>
+          <li><a href="figure-caption.html">ফিগার ও ক্যাপশন</a></li>
+          <li><a href="srcset-sizes.html">srcset ও sizes অ্যাট্রিবিউট</a></li>
+          <li><a href="decoding-attribute.html">decoding অ্যাট্রিবিউট</a></li>
+          <li><a href="link-types.html">লিংক টাইপস (rel অ্যাট্রিবিউট)</a></li>
         </ul>
       </nav>
     </aside>
 
-    <main class="page-content">
+    <main id="main-content" class="page-content">
       <div class="container">
-        <h1>লিংক ও ইমেজ</h1>
-        
-        <p>এই অধ্যায়ে আমরা HTML-এ লিংক ও ইমেজ ব্যবহার করা শিখব। লিংক ব্যবহারকারীকে এক পৃষ্ঠা থেকে অন্য পৃষ্ঠায় নিয়ে যায়, আর ইমেজ ওয়েবপৃষ্ঠাকে ভিজুয়ালি সমৃদ্ধ করে।</p>
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>লিংক ও ইমেজ</li>
+          </ol>
+        </nav>
 
-        <div class="topics-grid-mini">
-          <a href="links.html" class="topic-card">
-            <h3>লিংক (a ট্যাগ)</h3>
-            <p>হাইপারলিংক তৈরি করা, টার্গেট অ্যাট্রিবিউট, ইন্টারনাল ও এক্সটারনাল লিংক</p>
-          </a>
-          <a href="images.html" class="topic-card">
-            <h3>ইমেজ (img ট্যাগ)</h3>
-            <p>ছবি যোগ করা, alt টেক্সট, width/height অ্যাট্রিবিউট</p>
-          </a>
-          <a href="image-maps.html" class="topic-card">
-            <h3>ইমেজ ম্যাপ</h3>
-            <p>একটি ছবির বিভিন্ন অংশে আলাদা লিংক দেওয়া</p>
-          </a>
-          <a href="favicon.html" class="topic-card">
-            <h3>ফ্যাভিকন</h3>
-            <p>ব্রাউজার ট্যাবে ছোট আইকন যোগ করা</p>
-          </a>
-        </div>
+        <article class="topic-article">
+          <h1>লিংক ও ইমেজ (Links & Images)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৩৫ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ থেকে মধ্যবর্তী</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>লিংক ও ইমেজ কী?</h2>
+            <p>HTML-এ লিংক এবং ইমেজ হলো ওয়েবপৃষ্ঠার সবচেয়ে গুরুত্বপূর্ণ উপাদান। লিংক ব্যবহার করে আমরা এক পৃষ্ঠা থেকে অন্য পৃষ্ঠায় যেতে পারি, আর ইমেজ ব্যবহার করে পৃষ্ঠাকে আকর্ষণীয় এবং তথ্যবহুল করতে পারি। এই অধ্যায়ে আমরা <code>&lt;a&gt;</code> ট্যাগ থেকে শুরু করে <code>&lt;img&gt;</code> ট্যাগ, বিভিন্ন ইমেজ ফরম্যাট, রেসপনসিভ ইমেজ, ফ্যাভিকন, ফিগার এবং আরও অনেক কিছু বিস্তারিত শিখব।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li>হাইপারলিংক তৈরি করা এবং বিভিন্ন ধরনের লিংক</li>
+                <li>ইমেজ যোগ করা এবং ইমেজ অপ্টিমাইজেশন</li>
+                <li>রেসপনসিভ ইমেজের কৌশল</li>
+                <li>ওয়েবসাইটের ফ্যাভিকন সেট করা</li>
+                <li>অ্যাডভান্সড ইমেজ টেকনিক (srcset, sizes, decoding)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>লিংক (a ট্যাগ) - মৌলিক ব্যবহার</h2>
+            <p><code>&lt;a&gt;</code> ট্যাগ (অ্যাঙ্কর ট্যাগ) ব্যবহার করে ওয়েবপৃষ্ঠায় লিংক তৈরি করা হয়। <code>href</code> অ্যাট্রিবিউট দিয়ে গন্তব্য উল্লেখ করতে হয়।</p>
+            
+            <div class="example-box">
+              <h3>সরল লিংক উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;a href="https://www.example.com"&gt;একটি ওয়েবসাইট&lt;/a&gt;
+&lt;a href="about.html"&gt;আমাদের সম্পর্কে&lt;/a&gt;
+&lt;a href="#section1"&gt;সেকশন ১-এ যান&lt;/a&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <p><a href="#">একটি ওয়েবসাইট</a> (উদাহরণ লিংক)</p>
+                <p><a href="#">আমাদের সম্পর্কে</a></p>
+                <p><a href="#">সেকশন ১-এ যান</a></p>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>টার্গেট অ্যাট্রিবিউট সহ লিংক:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;a href="https://www.google.com" target="_blank" rel="noopener noreferrer"&gt;
+  নতুন ট্যাবে গুগল খুলুন
+&lt;/a&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <p><a href="#" target="_blank">নতুন ট্যাবে খুলুন (উদাহরণ)</a></p>
+              </div>
+              <div class="tip-box">
+                <p><strong>টিপ:</strong> <code>target="_blank"</code> ব্যবহার করলে লিংক নতুন ট্যাবে খোলে। নিরাপত্তার জন্য <code>rel="noopener noreferrer"</code> যোগ করা ভালো অভ্যাস।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইমেজ (img ট্যাগ)</h2>
+            <p><code>&lt;img&gt;</code> ট্যাগ ব্যবহার করে ওয়েবপৃষ্ঠায় ছবি যোগ করা হয়। এটি একটি সেলফ-ক্লোজিং ট্যাগ এবং <code>src</code> (ছবির উৎস) ও <code>alt</code> (বিকল্প টেক্সট) অ্যাট্রিবিউট ব্যবহার করা আবশ্যক।</p>
+            
+            <div class="example-box">
+              <h3>ইমেজ যোগ করার উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;img src="images/nature.jpg" alt="সুন্দর একটি প্রাকৃতিক দৃশ্য" width="300" height="200"&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%234CAF50'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='16'%3Eপ্রাকৃতিক দৃশ্য%3C/text%3E%3C/svg%3E" alt="সুন্দর একটি প্রাকৃতিক দৃশ্য" width="300" height="200">
+                <p><em>উদাহরণ ইমেজ (প্লেসহোল্ডার)</em></p>
+              </div>
+              <div class="tip-box">
+                <h4>alt অ্যাট্রিবিউট কেন গুরুত্বপূর্ণ?</h4>
+                <p>alt টেক্সট স্ক্রিন রিডার ব্যবহারকারীদের জন্য ছবির বর্ণনা দেয় এবং ছবি লোড না হলে দেখায়। SEO-এর জন্যও এটি অপরিহার্য।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ইমেজ ফরম্যাট: কখন কোনটি ব্যবহার করবেন?</h2>
+            <p>ওয়েবের জন্য সঠিক ইমেজ ফরম্যাট নির্বাচন করা খুবই গুরুত্বপূর্ণ। নিচে প্রধান ফরম্যাটগুলোর ব্যবহার তুলে ধরা হলো:</p>
+            
+            <div class="comparison-table">
+              <table class="info-table">
+                <thead>
+                  <tr><th>ফরম্যাট</th><th>সেরা ব্যবহার</th><th>বৈশিষ্ট্য</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>JPEG/JPG</strong></td><td>ফটোগ্রাফ, জটিল ছবি</td><td>লসি কম্প্রেশন, ছোট ফাইল সাইজ</td></tr>
+                  <tr><td><strong>PNG</strong></td><td>লোগো, আইকন, স্বচ্ছতা প্রয়োজন</td><td>লসলেস কম্প্রেশন, স্বচ্ছতা সাপোর্ট</td></tr>
+                  <tr><td><strong>WebP</strong></td><td>সব ধরনের ছবি (আধুনিক ব্রাউজার)</td><td>উচ্চমান, ছোট সাইজ, স্বচ্ছতা ও অ্যানিমেশন সাপোর্ট</td></tr>
+                  <tr><td><strong>SVG</strong></td><td>আইকন, লোগো, ভেক্টর গ্রাফিক্স</td><td>স্কেলেবল, কোড-ভিত্তিক, ছোট সাইজ</td></tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="example-box">
+              <h3>SVG ইমেজের উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;svg width="100" height="100" viewBox="0 0 100 100"&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+&lt;/svg&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" fill="#2196F3" />
+                </svg>
+                <p><em>SVG হিসেবে সরাসরি HTML-এ লেখা বৃত্ত</em></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>রেসপনসিভ ইমেজ ও আধুনিক টেকনিক</h2>
+            <p>আধুনিক ওয়েবসাইটে বিভিন্ন ডিভাইসের স্ক্রিন সাইজ অনুযায়ী সঠিক ইমেজ দেখানো জরুরি। <code>srcset</code>, <code>sizes</code> এবং <code>&lt;picture&gt;</code> এলিমেন্ট ব্যবহার করে এটি করা হয়।</p>
+            
+            <div class="example-box">
+              <h3>srcset ও sizes অ্যাট্রিবিউট:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;img src="small.jpg"
+     srcset="small.jpg 480w,
+             medium.jpg 800w,
+             large.jpg 1200w"
+     sizes="(max-width: 600px) 480px,
+            (max-width: 1000px) 800px,
+            1200px"
+     alt="রেসপনসিভ ইমেজ"&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>কীভাবে কাজ করে:</strong> ব্রাউজার স্ক্রিনের প্রস্থ ও sizes অ্যাট্রিবিউট দেখে srcset থেকে উপযুক্ত ইমেজ বেছে নেয়। এটি পারফরম্যান্স ও ইউজার এক্সপেরিয়েন্স উন্নত করে।</p>
+              </div>
+            </div>
+
+            <div class="example-box">
+              <h3>picture এলিমেন্ট - আর্ট ডিরেকশন:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;picture&gt;
+  &lt;source media="(min-width: 800px)" srcset="large-landscape.jpg"&gt;
+  &lt;source media="(min-width: 400px)" srcset="medium-portrait.jpg"&gt;
+  &lt;img src="default.jpg" alt="ডিভাইস অনুযায়ী ভিন্ন ছবি"&gt;
+&lt;/picture&gt;</code></pre>
+              </div>
+              <p><code>&lt;picture&gt;</code> এলিমেন্ট ব্যবহার করে আপনি বিভিন্ন স্ক্রিন সাইজ বা ওরিয়েন্টেশনের জন্য সম্পূর্ণ ভিন্ন ইমেজ দিতে পারেন (যেমন ল্যান্ডস্কেপ বনাম পোর্ট্রেট)।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফ্যাভিকন (Favicon)</h2>
+            <p>ফ্যাভিকন হলো ব্রাউজারের ট্যাব, বুকমার্ক এবং অ্যাড্রেস বারে ছোট আইকন। এটি আপনার ওয়েবসাইটের ব্র্যান্ডিংয়ের অংশ।</p>
+            
+            <div class="example-box">
+              <h3>ফ্যাভিকন যোগ করার নিয়ম:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;link rel="icon" type="image/x-icon" href="images/favicon.ico"&gt;
+&lt;!-- অথবা PNG ফরম্যাটে --&gt;
+&lt;link rel="icon" type="image/png" href="images/favicon.png"&gt;</code></pre>
+              </div>
+              <p>সাধারণত <code>&lt;head&gt;</code> সেকশনের মধ্যে এই লিংক যোগ করতে হয়। আধুনিক ব্রাউজারে SVG ফরম্যাটেও ফ্যাভিকন ব্যবহার করা যায়।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ফিগার ও ক্যাপশন (figure & figcaption)</h2>
+            <p><code>&lt;figure&gt;</code> এবং <code>&lt;figcaption&gt;</code> এলিমেন্ট ব্যবহার করে ইমেজ, ডায়াগ্রাম, কোড ব্লক ইত্যাদির সাথে ক্যাপশন যোগ করা যায়। এটি সিমেন্টিক HTML-এর অংশ।</p>
+            
+            <div class="example-box">
+              <h3>figure এবং figcaption উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;figure&gt;
+  &lt;img src="diagram.png" alt="HTML স্ট্রাকচার ডায়াগ্রাম"&gt;
+  &lt;figcaption&gt;চিত্র ১: HTML ডকুমেন্টের মৌলিক কাঠামো&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <figure style="margin:0; border:1px solid #ddd; padding:8px; border-radius:8px;">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23FFC107'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='black' font-size='12'%3EHTML ডায়াগ্রাম%3C/text%3E%3C/svg%3E" alt="HTML স্ট্রাকচার ডায়াগ্রাম" width="200" height="150">
+                  <figcaption style="text-align:center; margin-top:5px;">চিত্র: HTML ডকুমেন্টের কাঠামো (উদাহরণ)</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>লিংক টাইপস (rel অ্যাট্রিবিউট)</h2>
+            <p><code>rel</code> অ্যাট্রিবিউট লিংক এবং ডকুমেন্টের মধ্যে সম্পর্ক নির্ধারণ করে। এটি SEO এবং ব্রাউজারের আচরণের জন্য গুরুত্বপূর্ণ।</p>
+            
+            <div class="info-card">
+              <h3>গুরুত্বপূর্ণ rel মানসমূহ:</h3>
+              <ul>
+                <li><code>rel="noopener"</code> – নিরাপত্তার জন্য <code>target="_blank"</code> এর সাথে ব্যবহার করুন</li>
+                <li><code>rel="noreferrer"</code> – রেফারার তথ্য লুকিয়ে রাখে</li>
+                <li><code>rel="nofollow"</code> – সার্চ ইঞ্জিনকে লিংক ফলো না করতে বলে</li>
+                <li><code>rel="stylesheet"</code> – CSS ফাইলের জন্য</li>
+                <li><code>rel="icon"</code> – ফ্যাভিকনের জন্য</li>
+                <li><code>rel="prev"</code> / <code>rel="next"</code> – পেজিনেশনের জন্য</li>
+              </ul>
+            </div>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;a href="https://external.com" rel="nofollow noopener"&gt;বহিরাগত লিংক&lt;/a&gt;
+&lt;link rel="prev" href="page-1.html"&gt;
+&lt;link rel="next" href="page-3.html"&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="links.html" class="topic-card">
+                <h3>লিংক (a ট্যাগ)</h3>
+                <p>হাইপারলিংকের সবকিছু: href, target, ইমেইল লিংক, অ্যাঙ্কর লিংক</p>
+              </a>
+              <a href="images.html" class="topic-card">
+                <h3>ইমেজ (img ট্যাগ)</h3>
+                <p>img ট্যাগের ব্যবহার, alt টেক্সট, ইমেজ ম্যাপিং</p>
+              </a>
+              <a href="image-formats.html" class="topic-card">
+                <h3>ইমেজ ফরম্যাট</h3>
+                <p>JPEG, PNG, WebP, SVG – কোনটি কখন ব্যবহার করবেন</p>
+              </a>
+              <a href="responsive-images.html" class="topic-card">
+                <h3>রেসপনসিভ ইমেজ</h3>
+                <p>মোবাইল, ট্যাবলেট, ডেস্কটপের জন্য আলাদা ছবি প্রদর্শন</p>
+              </a>
+              <a href="image-maps.html" class="topic-card">
+                <h3>ইমেজ ম্যাপ</h3>
+                <p>ছবির বিভিন্ন অংশে আলাদা লিংক যুক্ত করুন</p>
+              </a>
+              <a href="favicon.html" class="topic-card">
+                <h3>ফ্যাভিকন</h3>
+                <p>ওয়েবসাইটের ব্রাউজার ট্যাব আইকন তৈরি ও যোগ করা</p>
+              </a>
+              <a href="figure-caption.html" class="topic-card">
+                <h3>ফিগার ও ক্যাপশন</h3>
+                <p>সিমেন্টিক ইমেজ ক্যাপশন যোগ করা</p>
+              </a>
+              <a href="srcset-sizes.html" class="topic-card">
+                <h3>srcset ও sizes</h3>
+                <p>আধুনিক রেসপনসিভ ইমেজ টেকনিক</p>
+              </a>
+              <a href="decoding-attribute.html" class="topic-card">
+                <h3>decoding অ্যাট্রিবিউট</h3>
+                <p>sync, async, auto – ইমেজ ডিকোডিং অপ্টিমাইজেশন</p>
+              </a>
+              <a href="link-types.html" class="topic-card">
+                <h3>লিংক টাইপস (rel)</h3>
+                <p>rel অ্যাট্রিবিউটের মাধ্যমে লিংকের সম্পর্ক নির্ধারণ</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/text-formatting.html" class="prev-topic">← পূর্ববর্তী: টেক্সট ফরম্যাটিং</a>
+              <a href="../basic/attributes.html" class="next-topic">পরবর্তী: অ্যাট্রিবিউট →</a>
+            </div>
+          </section>
+        </article>
       </div>
     </main>
   </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
   
   <script src="../../js/main.js"></script>
 </body>

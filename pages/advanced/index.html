@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অ্যাডভান্সড HTML | HTML শিখি</title>
+  <meta name="description" content="HTML-এর অ্যাডভান্সড টপিকসমূহ: মেটা ট্যাগস, SEO, সোশ্যাল মিডিয়া মেটা, ভিউপোর্ট, ক্যানোনিকাল, অ্যাক্সেসিবিলিটি, ARIA, JSON-LD, মাইক্রোডাটা, ডাটা অ্যাট্রিবিউট ইত্যাদি বাংলায় সম্পূর্ণ গাইড।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>অ্যাডভান্সড টপিকস</h3>
+        <ul>
+          <li><a href="meta-tags.html">মেটা ট্যাগস</a></li>
+          <li><a href="meta-seo.html">SEO মেটা ট্যাগ</a></li>
+          <li><a href="meta-social.html">সোশ্যাল মিডিয়া মেটা</a></li>
+          <li><a href="viewport.html">ভিউপোর্ট</a></li>
+          <li><a href="canonical.html">ক্যানোনিকাল URL</a></li>
+          <li><a href="hreflang.html">হরেফল্যাং</a></li>
+          <li><a href="accessibility.html">অ্যাক্সেসিবিলিটি</a></li>
+          <li><a href="aria.html">ARIA রোলস ও অ্যাট্রিবিউট</a></li>
+          <li><a href="keyboard.html">কিবোর্ড নেভিগেশন</a></li>
+          <li><a href="seo-basics.html">SEO বেসিক</a></li>
+          <li><a href="microdata.html">মাইক্রোডাটা</a></li>
+          <li><a href="json-ld.html">JSON-LD</a></li>
+          <li><a href="character-entities.html">ক্যারেক্টার এনটিটি</a></li>
+          <li><a href="url-encoding.html">URL এনকোডিং</a></li>
+          <li><a href="data-attributes.html">ডাটা-* অ্যাট্রিবিউট</a></li>
+          <li><a href="dir-translate.html">dir ও translate অ্যাট্রিবিউট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>অ্যাডভান্সড</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>অ্যাডভান্সড HTML (Advanced HTML)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৬০ মিনিট</span>
+            <span>লেভেল: উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>অ্যাডভান্সড HTML কী?</h2>
+            <p>অ্যাডভান্সড HTML হলো সেইসব টপিক যা একটি ওয়েবসাইটকে পেশাদার, এসইও-ফ্রেন্ডলি, অ্যাক্সেসযোগ্য এবং আধুনিক ব্রাউজার ও ডিভাইসের সাথে সামঞ্জস্যপূর্ণ করে তোলে। এখানে আমরা মেটা ট্যাগ, SEO অপটিমাইজেশন, সোশ্যাল মিডিয়া ইন্টিগ্রেশন, অ্যাক্সেসিবিলিটি (ARIA), স্ট্রাকচার্ড ডাটা (JSON-LD, মাইক্রোডাটা), URL এনকোডিং, ডাটা অ্যাট্রিবিউট ইত্যাদি বিষয় শিখব।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>মেটা ট্যাগ:</strong> SEO, সোশ্যাল মিডিয়া, ভিউপোর্ট কন্ট্রোল</li>
+                <li><strong>অ্যাক্সেসিবিলিটি:</strong> ARIA রোলস, কিবোর্ড নেভিগেশন, স্ক্রিন রিডার অপটিমাইজেশন</li>
+                <li><strong>স্ট্রাকচার্ড ডাটা:</strong> JSON-LD, মাইক্রোডাটা দিয়ে সার্চ ইঞ্জিন বুস্ট</li>
+                <li><strong>HTML অপটিমাইজেশন:</strong> ক্যানোনিকাল URL, hreflang, ক্যারেক্টার এনটিটি</li>
+                <li><strong>অ্যাট্রিবিউট:</strong> ডাটা-* অ্যাট্রিবিউট, dir, translate</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মেটা ট্যাগস (Meta Tags)</h2>
+            <p>মেটা ট্যাগ <code>&lt;head&gt;</code> সেকশনে থাকে এবং ব্রাউজার, সার্চ ইঞ্জিন ও সোশ্যাল মিডিয়া প্ল্যাটফর্মকে পৃষ্ঠা সম্পর্কে তথ্য প্রদান করে। এটি SEO এবং ইউজার এক্সপেরিয়েন্সের জন্য অত্যন্ত গুরুত্বপূর্ণ।</p>
+            
+            <div class="example-box">
+              <h3>মৌলিক মেটা ট্যাগ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="পৃষ্ঠার বিবরণ - SEO-তে গুরুত্বপূর্ণ"&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+&lt;meta name="author" content="সাঈদী হোসাইন"&gt;
+&lt;meta name="robots" content="index, follow"&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>গুরুত্বপূর্ণ মেটা ট্যাগ:</h4>
+              <ul>
+                <li><code>charset</code> – এনকোডিং নির্ধারণ (UTF-8 সর্বোত্তম)</li>
+                <li><code>viewport</code> – রেসপনসিভ ডিজাইনের জন্য অপরিহার্য</li>
+                <li><code>description</code> – সার্চ রেজাল্টে স্নিপেট হিসেবে দেখায়</li>
+                <li><code>robots</code> – সার্চ ইঞ্জিন ক্রলারকে নির্দেশনা দেয় (index/noindex, follow/nofollow)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>SEO মেটা ট্যাগ (SEO Meta Tags)</h2>
+            <p>SEO (Search Engine Optimization) মেটা ট্যাগ সার্চ ইঞ্জিনকে পৃষ্ঠার বিষয়বস্তু বুঝতে এবং র্যাঙ্কিং উন্নত করতে সাহায্য করে।</p>
+            
+            <div class="example-box">
+              <h3>SEO মেটা ট্যাগ উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;meta name="description" content="HTML শেখার সম্পূর্ণ বাংলা গাইড - শুরু থেকে অ্যাডভান্সড"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+&lt;meta name="googlebot" content="index, follow"&gt;
+&lt;link rel="canonical" href="https://example.com/page"&gt;
+&lt;meta name="referrer" content="no-referrer-when-downgrade"&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>SEO টিপস:</strong> description ১৫০-১৬০ ক্যারেক্টারের মধ্যে রাখুন, robots ট্যাগ দিয়ে ডুপ্লিকেট কন্টেন্ট কন্ট্রোল করুন, এবং canonical ট্যাগ দিয়ে মূল URL নির্ধারণ করুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সোশ্যাল মিডিয়া মেটা (Open Graph & Twitter Cards)</h2>
+            <p>সোশ্যাল মিডিয়ায় লিংক শেয়ার করলে কীভাবে প্রিভিউ দেখাবে তা নির্ধারণ করে Open Graph (Facebook, LinkedIn) এবং Twitter Card মেটা ট্যাগ।</p>
+            
+            <div class="example-box">
+              <h3>Open Graph মেটা ট্যাগ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;meta property="og:title" content="HTML শিখি - বাংলায় HTML টিউটোরিয়াল"&gt;
+&lt;meta property="og:description" content="বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট"&gt;
+&lt;meta property="og:image" content="https://example.com/images/og-image.jpg"&gt;
+&lt;meta property="og:url" content="https://example.com"&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta property="og:locale" content="bn_BD"&gt;
+
+&lt;!-- Twitter Card --&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="HTML শিখি"&gt;
+&lt;meta name="twitter:description" content="বাংলায় HTML শেখার সম্পূর্ণ গাইড"&gt;
+&lt;meta name="twitter:image" content="https://example.com/images/twitter-image.jpg"&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ভিউপোর্ট (Viewport)</h2>
+            <p>ভিউপোর্ট মেটা ট্যাগ মোবাইল ডিভাইসে ওয়েবপৃষ্ঠার স্কেলিং এবং প্রস্থ নিয়ন্ত্রণ করে। রেসপনসিভ ওয়েব ডিজাইনের জন্য এটি অপরিহার্য।</p>
+            
+            <div class="example-box">
+              <h3>ভিউপোর্ট সেটিংস:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;!-- অন্যান্য অপশন --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>viewport অ্যাট্রিবিউট:</strong> <code>width=device-width</code> ডিভাইসের প্রস্থ অনুযায়ী পৃষ্ঠার প্রস্থ সেট করে, <code>initial-scale=1.0</code> জুম লেভেল নির্ধারণ করে।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্যানোনিকাল URL (Canonical URL)</h2>
+            <p><code>rel="canonical"</code> ট্যাগ ডুপ্লিকেট কন্টেন্ট সমস্যা সমাধানে ব্যবহৃত হয়। এটি সার্চ ইঞ্জিনকে বলে যে কোন URL মূল পৃষ্ঠা।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;link rel="canonical" href="https://www.example.com/original-page"&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p>উদাহরণস্বরূপ, যদি একই কন্টেন্ট <code>/page</code>, <code>/page?ref=123</code>, এবং <code>/page?utm_source=facebook</code> এ থাকে, তাহলে canonical URL দিয়ে মূল পৃষ্ঠা নির্ধারণ করুন।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>হরেফল্যাং (hreflang)</h2>
+            <p><code>hreflang</code> অ্যাট্রিবিউট বহুভাষিক ওয়েবসাইটে বিভিন্ন ভাষার সংস্করণ নির্ধারণ করতে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;link rel="alternate" hreflang="bn" href="https://example.com/bn/page"&gt;
+&lt;link rel="alternate" hreflang="en" href="https://example.com/en/page"&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://example.com/page"&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>অ্যাক্সেসিবিলিটি (Accessibility)</h2>
+            <p>ওয়েব অ্যাক্সেসিবিলিটি নিশ্চিত করে যে সব ব্যবহারকারী, বিশেষ করে প্রতিবন্ধী ব্যক্তিরা, ওয়েবসাইট ব্যবহার করতে পারে। HTML-এ সিম্যান্টিক এলিমেন্ট, ARIA অ্যাট্রিবিউট, এবং কিবোর্ড নেভিগেশন গুরুত্বপূর্ণ ভূমিকা রাখে।</p>
+            
+            <div class="example-box">
+              <h3>অ্যাক্সেসিবিলিটি উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- স্ক্রিন রিডারের জন্য alt টেক্সট --&gt;
+&lt;img src="logo.png" alt="HTML শিখি - লোগো"&gt;
+
+&lt;!-- ল্যান্ডমার্ক এলিমেন্ট --&gt;
+&lt;header&gt;...&lt;/header&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+
+&lt;!-- aria-label দিয়ে বর্ণনা --&gt;
+&lt;button aria-label="মেনু খুলুন"&gt;☰&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ARIA রোলস ও অ্যাট্রিবিউট</h2>
+            <p>ARIA (Accessible Rich Internet Applications) অ্যাট্রিবিউট ডায়নামিক কন্টেন্ট এবং কাস্টম কন্ট্রোলকে অ্যাক্সেসযোগ্য করে তোলে।</p>
+            
+            <div class="example-box">
+              <h3>ARIA অ্যাট্রিবিউট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;div role="button" tabindex="0" aria-label="সাবমিট"&gt;Submit&lt;/div&gt;
+&lt;nav aria-label="প্রধান নেভিগেশন"&gt;...&lt;/nav&gt;
+&lt;div role="alert" aria-live="assertive"&gt;ত্রুটি ঘটেছে!&lt;/div&gt;
+&lt;input type="text" aria-describedby="name-help"&gt;
+&lt;span id="name-help"&gt;আপনার পূর্ণ নাম লিখুন&lt;/span&gt;</code></pre>
+              </div>
+              <div class="info-card">
+                <h4>গুরুত্বপূর্ণ ARIA অ্যাট্রিবিউট:</h4>
+                <ul>
+                  <li><code>role</code> – এলিমেন্টের ভূমিকা (button, navigation, alert, etc.)</li>
+                  <li><code>aria-label</code> – এলিমেন্টের লেবেল নির্ধারণ</li>
+                  <li><code>aria-hidden</code> – এলিমেন্ট স্ক্রিন রিডার থেকে লুকানোর জন্য</li>
+                  <li><code>aria-live</code> – ডায়নামিক কন্টেন্ট আপডেট ঘোষণা</li>
+                  <li><code>aria-expanded</code> – এক্সপান্ডেবল এলিমেন্টের অবস্থা</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>কিবোর্ড নেভিগেশন (Keyboard Navigation)</h2>
+            <p>কিবোর্ড ব্যবহারকারীদের জন্য ওয়েবসাইট নেভিগেট করা নিশ্চিত করা অ্যাক্সেসিবিলিটির গুরুত্বপূর্ণ অংশ। <code>tabindex</code> অ্যাট্রিবিউট কিবোর্ড ফোকাস কন্ট্রোল করে।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;!-- ফোকাসযোগ্য এলিমেন্ট --&gt;
+&lt;a href="#"&gt;লিংক&lt;/a&gt;
+&lt;button&gt;বাটন&lt;/button&gt;
+&lt;input type="text"&gt;
+
+&lt;!-- কাস্টম ফোকাস অর্ডার --&gt;
+&lt;div tabindex="0"&gt;কিবোর্ড ফোকাস পাবে&lt;/div&gt;
+&lt;div tabindex="-1"&gt;JavaScript দিয়ে ফোকাস দেওয়া যাবে&lt;/div&gt;
+
+&lt;!-- স্কিপ লিংক --&gt;
+&lt;a href="#main-content" class="skip-link"&gt;প্রধান কন্টেন্টে যান&lt;/a&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>বেস্ট প্র্যাকটিস:</strong> শুধুমাত্র ইন্টারঅ্যাকটিভ এলিমেন্টে <code>tabindex="0"</code> ব্যবহার করুন। <code>tabindex="1"</code> বা তার বেশি এড়িয়ে চলুন, কারণ এটি স্বাভাবিক ফোকাস অর্ডার নষ্ট করে।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>SEO বেসিক (SEO Basics)</h2>
+            <p>সার্চ ইঞ্জিন অপটিমাইজেশন (SEO) ওয়েবসাইটের ভিজিবিলিটি বাড়াতে গুরুত্বপূর্ণ ভূমিকা রাখে। HTML-এ সঠিক স্ট্রাকচার, মেটা ট্যাগ, এবং কন্টেন্ট মার্কআপ SEO-তে সাহায্য করে।</p>
+            
+            <div class="info-card">
+              <h4>HTML SEO বেস্ট প্র্যাকটিস:</h4>
+              <ul>
+                <li>প্রতিটি পৃষ্ঠায় একটি মাত্র <code>&lt;h1&gt;</code> ব্যবহার করুন</li>
+                <li>সিম্যান্টিক HTML এলিমেন্ট ব্যবহার করুন (header, nav, main, article, section)</li>
+                <li>ছবিতে <code>alt</code> অ্যাট্রিবিউট ব্যবহার করুন</li>
+                <li>মেটা description তৈরি করুন</li>
+                <li>URL স্ট্রাকচার পরিষ্কার রাখুন</li>
+                <li>মোবাইল-ফ্রেন্ডলি ডিজাইন নিশ্চিত করুন (viewport)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>মাইক্রোডাটা (Microdata)</h2>
+            <p>মাইক্রোডাটা HTML এলিমেন্টে স্ট্রাকচার্ড ডাটা যোগ করার একটি পদ্ধতি। এটি সার্চ ইঞ্জিনকে রিচ স্নিপেট (রিভিউ, ইভেন্ট, প্রোডাক্ট ইত্যাদি) দেখাতে সাহায্য করে।</p>
+            
+            <div class="example-box">
+              <h3>মাইক্রোডাটা উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;div itemscope itemtype="https://schema.org/Product"&gt;
+  &lt;span itemprop="name"&gt;HTML কোর্স&lt;/span&gt;
+  &lt;div itemprop="review" itemscope itemtype="https://schema.org/Review"&gt;
+    &lt;span itemprop="reviewRating"&gt;5&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;meta itemprop="price" content="2999"&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>JSON-LD (JavaScript Object Notation for Linked Data)</h2>
+            <p>JSON-LD হলো Google-এর প্রস্তাবিত স্ট্রাকচার্ড ডাটা ফরম্যাট। এটি <code>&lt;script&gt;</code> ট্যাগের মধ্যে JSON ফরম্যাটে ডাটা সংরক্ষণ করে।</p>
+            
+            <div class="example-box">
+              <h3>JSON-LD উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HTML শিখুন বাংলায়",
+  "author": {
+    "@type": "Person",
+    "name": "সাঈদী হোসাইন"
+  },
+  "datePublished": "2024-01-15",
+  "description": "HTML শেখার সম্পূর্ণ বাংলা টিউটোরিয়াল"
+}
+&lt;/script&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>JSON-LD এর সুবিধা:</strong> এটি HTML কন্টেন্ট থেকে আলাদা, সহজে ইমপ্লিমেন্ট করা যায় এবং Google সহ সব সার্চ ইঞ্জিন সমর্থন করে।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ক্যারেক্টার এনটিটি (Character Entities)</h2>
+            <p>HTML-এ কিছু বিশেষ ক্যারেক্টার রিজার্ভড। এগুলি সরাসরি ব্যবহার না করে এনটিটি ব্যবহার করতে হয়।</p>
+            
+            <div class="example-box">
+              <h3>সাধারণ ক্যারেক্টার এনটিটি:</h3>
+              <div class="code-preview">
+                <pre><code>&amp;lt;   &lt;  (less than)
+&amp;gt;   &gt;  (greater than)
+&amp;amp;  &amp;  (ampersand)
+&amp;quot; "  (double quote)
+&amp;apos; '  (apostrophe)
+&amp;nbsp;   (non-breaking space)
+&amp;copy;   ©  (copyright)
+&amp;reg;    ®  (registered trademark)
+&amp;euro;   €  (euro)
+&amp;trade;  ™  (trademark)</code></pre>
+              </div>
+              <div class="live-preview">
+                <p>উদাহরণ: &copy; ২০২৬ HTML শিখি | &amp;nbsp; &amp;lt; &amp;gt; &amp;euro;</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>URL এনকোডিং (URL Encoding)</h2>
+            <p>URL-এ কিছু ক্যারেক্টার (% সাইন, স্পেস, ইত্যাদি) সঠিকভাবে ট্রান্সমিট করতে এনকোড করা প্রয়োজন।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>স্পেস → %20
+/ → %2F
+? → %3F
+# → %23
+& → %26
+= → %3D
+
+উদাহরণ: https://example.com/search?q=HTML%20শিখি</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ডাটা-* অ্যাট্রিবিউট (data-* Attributes)</h2>
+            <p><code>data-*</code> অ্যাট্রিবিউট কাস্টম ডাটা HTML এলিমেন্টে সংরক্ষণ করতে ব্যবহার করা হয়। জাভাস্ক্রিপ্ট এই ডাটা অ্যাক্সেস করতে পারে।</p>
+            
+            <div class="example-box">
+              <h3>data-* অ্যাট্রিবিউট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;button data-user-id="12345" data-role="admin" data-theme="dark"&gt;
+  ক্লিক করুন
+&lt;/button&gt;
+
+&lt;!-- JavaScript দিয়ে অ্যাক্সেস --&gt;
+&lt;script&gt;
+  const btn = document.querySelector('button');
+  console.log(btn.dataset.userId); // "12345"
+  console.log(btn.dataset.role);   // "admin"
+&lt;/script&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>নামকরণ নিয়ম:</strong> <code>data-</code> এর পরে ছোট হাতের অক্ষর, হাইফেন দিয়ে ভাগ করা যায়। JavaScript-এ <code>dataset</code> প্রপার্টি ক্যামেলকেসে রূপান্তর করে (উদাহরণ: <code>data-user-id</code> → <code>userId</code>)।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>dir ও translate অ্যাট্রিবিউট</h2>
+            <p><code>dir</code> অ্যাট্রিবিউট টেক্সটের দিকনির্দেশনা (left-to-right বা right-to-left) নির্ধারণ করে। <code>translate</code> অ্যাট্রিবিউট ব্রাউজারকে টেক্সট অনুবাদ করার অনুমতি দেয় কি না তা নির্ধারণ করে।</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;p dir="ltr"&gt;Left to Right Text&lt;/p&gt;
+&lt;p dir="rtl"&gt;السلام عليكم&lt;/p&gt;
+&lt;p translate="no"&gt;এই টেক্সট অনুবাদ করা যাবে না&lt;/p&gt;
+&lt;p translate="yes"&gt;এই টেক্সট অনুবাদযোগ্য&lt;/p&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <p dir="ltr">Left to Right Text</p>
+                <p dir="rtl">السلام عليكم</p>
+                <p><small>(dir অ্যাট্রিবিউটের প্রভাব উপরের উদাহরণে দেখা যাচ্ছে)</small></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="meta-tags.html" class="topic-card">
+                <h3>🏷️ মেটা ট্যাগস</h3>
+                <p>charset, description, keywords, robots</p>
+              </a>
+              <a href="meta-seo.html" class="topic-card">
+                <h3>📈 SEO মেটা ট্যাগ</h3>
+                <p>সার্চ ইঞ্জিন অপটিমাইজেশনের জন্য মেটা ট্যাগ</p>
+              </a>
+              <a href="meta-social.html" class="topic-card">
+                <h3>📱 সোশ্যাল মিডিয়া মেটা</h3>
+                <p>Open Graph, Twitter Cards</p>
+              </a>
+              <a href="viewport.html" class="topic-card">
+                <h3>📱 ভিউপোর্ট</h3>
+                <p>রেসপনসিভ ডিজাইনের জন্য viewport সেটিংস</p>
+              </a>
+              <a href="canonical.html" class="topic-card">
+                <h3>🔗 ক্যানোনিকাল URL</h3>
+                <p>ডুপ্লিকেট কন্টেন্ট সমস্যা সমাধান</p>
+              </a>
+              <a href="hreflang.html" class="topic-card">
+                <h3>🌐 হরেফল্যাং</h3>
+                <p>বহুভাষিক ওয়েবসাইটের জন্য ভাষা নির্ধারণ</p>
+              </a>
+              <a href="accessibility.html" class="topic-card">
+                <h3>♿ অ্যাক্সেসিবিলিটি</h3>
+                <p>সব ব্যবহারকারীর জন্য অ্যাক্সেসযোগ্য ওয়েবসাইট</p>
+              </a>
+              <a href="aria.html" class="topic-card">
+                <h3>🎯 ARIA রোলস ও অ্যাট্রিবিউট</h3>
+                <p>aria-label, aria-live, role</p>
+              </a>
+              <a href="keyboard.html" class="topic-card">
+                <h3>⌨️ কিবোর্ড নেভিগেশন</h3>
+                <p>tabindex, ফোকাস ম্যানেজমেন্ট</p>
+              </a>
+              <a href="seo-basics.html" class="topic-card">
+                <h3>🔍 SEO বেসিক</h3>
+                <p>HTML-এ SEO বেস্ট প্র্যাকটিস</p>
+              </a>
+              <a href="microdata.html" class="topic-card">
+                <h3>📊 মাইক্রোডাটা</h3>
+                <p>itemscope, itemprop, itemtype</p>
+              </a>
+              <a href="json-ld.html" class="topic-card">
+                <h3>📄 JSON-LD</h3>
+                <p>স্ট্রাকচার্ড ডাটার আধুনিক ফরম্যাট</p>
+              </a>
+              <a href="character-entities.html" class="topic-card">
+                <h3>🔣 ক্যারেক্টার এনটিটি</h3>
+                <p>HTML এনটিটি, সিম্বল, স্পেশাল ক্যারেক্টার</p>
+              </a>
+              <a href="url-encoding.html" class="topic-card">
+                <h3>🔗 URL এনকোডিং</h3>
+                <p>URL সেফ ক্যারেক্টার কনভার্সন</p>
+              </a>
+              <a href="data-attributes.html" class="topic-card">
+                <h3>💾 ডাটা-* অ্যাট্রিবিউট</h3>
+                <p>কাস্টম ডাটা স্টোরেজ</p>
+              </a>
+              <a href="dir-translate.html" class="topic-card">
+                <h3>🌍 dir ও translate</h3>
+                <p>টেক্সট দিকনির্দেশনা ও অনুবাদ কন্ট্রোল</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/graphics.html" class="prev-topic">← পূর্ববর্তী: গ্রাফিক্স</a>
+              <a href="../references/html-tags.html" class="next-topic">পরবর্তী: HTML ট্যাগ রেফারেন্স →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

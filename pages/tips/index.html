@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>টিপস ও ট্রিক্স | HTML শিখি</title>
+  <meta name="description" content="HTML ডেভেলপমেন্টের টিপস ও ট্রিক্স: VS Code শর্টকাট, Emmet snippets, ডিবাগিং টিপস, সাধারণ ভুল, ব্রাউজার ডেভ টুলস - দক্ষতা বাড়ানোর জন্য ব্যবহারিক গাইড।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>টিপস ও ট্রিক্স</h3>
+        <ul>
+          <li><a href="shortcuts.html">VS Code শর্টকাট</a></li>
+          <li><a href="emmet.html">Emmet snippets</a></li>
+          <li><a href="debugging.html">ডিবাগিং টিপস</a></li>
+          <li><a href="common-mistakes.html">সাধারণ ভুল</a></li>
+          <li><a href="browser-tools.html">ব্রাউজার ডেভ টুলস</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>টিপস ও ট্রিক্স</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>HTML টিপস ও ট্রিক্স (Tips & Tricks)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৩৫ মিনিট</span>
+            <span>লেভেল: সকল স্তরের জন্য</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>টিপস ও ট্রিক্স কেন গুরুত্বপূর্ণ?</h2>
+            <p>HTML ডেভেলপমেন্টে দক্ষতা বাড়ানোর জন্য শুধু সিনট্যাক্স জানা যথেষ্ট নয়—সঠিক টুলস, শর্টকাট, এবং বেস্ট প্র্যাকটিস জানা জরুরি। এই অধ্যায়ে আমরা VS Code-এর শক্তিশালী শর্টকাট, Emmet snippets দিয়ে দ্রুত কোড লেখার কৌশল, ডিবাগিং টিপস, নতুন ডেভেলপারদের সাধারণ ভুল এবং ব্রাউজার ডেভেলপার টুলস ব্যবহারের ব্যবহারিক গাইড শেয়ার করব। এই টিপসগুলো অনুশীলন করলে আপনার কোডিং স্পিড, নির্ভুলতা এবং সমস্যা সমাধানের ক্ষমতা বহুগুণ বেড়ে যাবে।</p>
+            
+            <div class="tip-box">
+              <h4>শিখবেন যা:</h4>
+              <ul>
+                <li><strong>VS Code শর্টকাট:</strong> দ্রুত নেভিগেশন, এডিটিং, এবং কাস্টমাইজেশন</li>
+                <li><strong>Emmet Snippets:</strong> সংক্ষিপ্ত কোড দিয়ে জটিল HTML স্ট্রাকচার তৈরি</li>
+                <li><strong>ডিবাগিং টিপস:</strong> সাধারণ HTML/CSS সমস্যা দ্রুত শনাক্ত ও সমাধান</li>
+                <li><strong>সাধারণ ভুল:</strong> নতুন ডেভেলপাররা যে ভুলগুলো করে এবং সেগুলো এড়ানোর উপায়</li>
+                <li><strong>ব্রাউজার ডেভ টুলস:</strong> Chrome DevTools, Firefox DevTools-এর শক্তিশালী ফিচার</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>VS Code শর্টকাট (VS Code Shortcuts)</h2>
+            <p>Visual Studio Code হল একটি অত্যন্ত জনপ্রিয় কোড এডিটর। এই শর্টকাটগুলো আয়ত্ত করলে আপনার ডেভেলপমেন্ট স্পিড অনেক বেড়ে যাবে।</p>
+            
+            <div class="example-box">
+              <h3>প্রয়োজনীয় শর্টকাট:</h3>
+              <div class="shortcuts-grid">
+                <div class="shortcut-card">
+                  <kbd>Ctrl + P</kbd>
+                  <span>দ্রুত ফাইল খোলা</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + Shift + P</kbd>
+                  <span>কমান্ড প্যালেট</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + S</kbd>
+                  <span>ফাইল সেভ করা</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + Z / Y</kbd>
+                  <span>আনডু / রিডু</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + C / X / V</kbd>
+                  <span>কপি / কাট / পেস্ট</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + F</kbd>
+                  <span>খুঁজুন</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + H</kbd>
+                  <span>রিপ্লেস করুন</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + Shift + F</kbd>
+                  <span>গ্লোবাল সার্চ</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + D</kbd>
+                  <span>একই টেক্সট সিলেক্ট করুন</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Alt + ↑ / ↓</kbd>
+                  <span>লাইন উপরে/নিচে সরান</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + /</kbd>
+                  <span>কমেন্ট/আনকমেন্ট</span>
+                </div>
+                <div class="shortcut-card">
+                  <kbd>Ctrl + Space</kbd>
+                  <span>ইন্টেলিসেন্স ট্রিগার</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>অ্যাডভান্সড শর্টকাট:</h4>
+              <ul>
+                <li><kbd>Ctrl + Shift + L</kbd> – একই টেক্সটের সব জায়গা সিলেক্ট করে এডিট করুন</li>
+                <li><kbd>Alt + Shift + F</kbd> – ডকুমেন্ট ফরম্যাট করুন</li>
+                <li><kbd>Ctrl + B</kbd> – সাইডবার টগল করুন</li>
+                <li><kbd>Ctrl + `</kbd> – টার্মিনাল খুলুন/বন্ধ করুন</li>
+                <li><kbd>Ctrl + Shift + E</kbd> – এক্সপ্লোরারে যান</li>
+                <li><kbd>Ctrl + Shift + G</kbd> – সোর্স কন্ট্রোলে যান</li>
+                <li><kbd>F2</kbd> – সিম্বল রিনেম করুন</li>
+                <li><kbd>F12</kbd> – ডেফিনেশনে যান</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>Emmet Snippets</h2>
+            <p>Emmet হল VS Code-এ বিল্ট-ইন একটি শক্তিশালী টুল যা সংক্ষিপ্ত কোড লিখে দ্রুত HTML স্ট্রাকচার তৈরি করতে সাহায্য করে। এটি প্রতিটি ফ্রন্ট-এন্ড ডেভেলপারের জানা উচিত।</p>
+            
+            <div class="example-box">
+              <h3>Emmet বেসিক উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>// এই সংক্ষিপ্ত কোড লিখে Tab চাপলেই HTML তৈরি হয়ে যাবে
+
+! → সম্পূর্ণ HTML5 ডকুমেন্ট স্ট্রাকচার
+div → &lt;div&gt;&lt;/div&gt;
+a → &lt;a href=""&gt;&lt;/a&gt;
+img → &lt;img src="" alt=""&gt;
+
+// ক্লাস ও আইডি সহ
+div.container → &lt;div class="container"&gt;&lt;/div&gt;
+section#main → &lt;section id="main"&gt;&lt;/section&gt;
+div.wrapper.content → &lt;div class="wrapper content"&gt;&lt;/div&gt;
+
+// চাইল্ড এবং সিবলিং এলিমেন্ট
+nav>ul>li → &lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;
+div+p+div → &lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;/div&gt;
+
+// রিপিটেশন এবং নাম্বারিং
+ul>li*5 → ৫টি li এলিমেন্ট
+ul>li.item$*3 → &lt;li class="item1"&gt;&lt;/li&gt;&lt;li class="item2"&gt;&lt;/li&gt;&lt;li class="item3"&gt;&lt;/li&gt;
+
+// অ্যাট্রিবিউট
+a[href=https://example.com] → &lt;a href="https://example.com"&gt;&lt;/a&gt;
+input[type=text] → &lt;input type="text"&gt;
+
+// কম্বিনেশন
+div.container>h1.title+ul>li.item*3 → একটি সম্পূর্ণ জটিল স্ট্রাকচার</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>Emmet প্র্যাকটিস:</strong> এই সংক্ষিপ্ত কোডগুলো ট্রাই করুন: <code>nav>ul>li*5>a</code>, <code>div.grid>div.card*3>img+h3+p</code>, <code>form>input:text+input:email+button</code></p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>প্রয়োজনীয় Emmet সংক্ষিপ্ত রূপ:</h4>
+              <ul>
+                <li><code>!</code> – HTML5 ডকুমেন্ট স্ট্রাকচার</li>
+                <li><code>link:css</code> – CSS ফাইল লিংক</li>
+                <li><code>script:src</code> – বাহ্যিক জাভাস্ক্রিপ্ট ফাইল</li>
+                <li><code>meta:vp</code> – ভিউপোর্ট মেটা ট্যাগ</li>
+                <li><code>input:r</code> – রেডিও বাটন</li>
+                <li><code>input:c</code> – চেকবক্স</li>
+                <li><code>table>tr*3>td*4</code> – ৩ সারি ৪ কলামের টেবিল</li>
+                <li><code>lorem</code> – Lorem ipsum প্লেসহোল্ডার টেক্সট</li>
+                <li><code>lorem10</code> – ১০টি শব্দের প্লেসহোল্ডার টেক্সট</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ডিবাগিং টিপস (Debugging Tips)</h2>
+            <p>HTML ও CSS ডিবাগিংয়ের জন্য কার্যকর কৌশল।</p>
+            
+            <div class="example-box">
+              <h3>CSS ডিবাগিং:</h3>
+              <div class="code-preview">
+                <pre><code>/* ১. আউটলাইন পদ্ধতি - এলিমেন্টের সীমানা দ্রুত দেখা */
+* {
+  outline: 1px solid red !important;
+}
+
+/* ২. ব্যাকগ্রাউন্ড পদ্ধতি - এলিমেন্ট আসলে কতটুকু জায়গা নিচ্ছে */
+.debug {
+  background-color: rgba(255, 0, 0, 0.2) !important;
+}
+
+/* ৩. বর্ডার পদ্ধতি */
+.element {
+  border: 2px solid blue !important;
+}
+
+/* ৪. অস্থায়ীভাবে স্টাইল যোগ করা */
+.element {
+  background: #ff0 !important;
+  color: #000 !important;
+  display: block !important;
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>HTML/CSS সাধারণ সমস্যা ও সমাধান:</h4>
+              <ul>
+                <li><strong>এলিমেন্ট দেখা যাচ্ছে না?</strong> – display প্রপার্টি চেক করুন, display:none বা visibility:hidden আছে কিনা দেখুন</li>
+                <li><strong>CSS কাজ করছে না?</strong> – সিলেক্টরের প্রাধান্য (specificity), বানান ভুল, ক্যাশ সমস্যা চেক করুন</li>
+                <li><strong>লেআউট এলোমেলো?</strong> – Flexbox Inspector বা Grid Inspector ব্যবহার করুন</li>
+                <li><strong>ছবি দেখা যাচ্ছে না?</strong> – পাথ সঠিক কিনা, ফাইলের নামের বড়/ছোট হাতের অক্ষর, ফাইল আছে কিনা চেক করুন</li>
+                <li><strong>মোবাইলে জুম সমস্যা?</strong> – ভিউপোর্ট মেটা ট্যাগ সঠিকভাবে সেট করা আছে কিনা দেখুন</li>
+                <li><strong>ফর্ম সাবমিট হচ্ছে না?</strong> – form-এর action ও method অ্যাট্রিবিউট চেক করুন</li>
+              </ul>
+            </div>
+
+            <div class="tip-box">
+              <p><strong>ডিবাগিং গোল্ডেন রুল:</strong> সবচেয়ে সহজ সম্ভাবনাগুলো আগে চেক করুন (বানান ভুল, পাথ ভুল, ক্লোজিং ট্যাগ মিসিং), তারপর ডেভেলপার টুলস ব্যবহার করে ধাপে ধাপে সমস্যা চিহ্নিত করুন। Chrome DevTools-এর Elements প্যানেলে লাইভ HTML/CSS এডিট করা যায়, যা টেস্টিংয়ের জন্য দারুণ কাজে দেয়।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সাধারণ ভুল (Common Mistakes)</h2>
+            <p>নতুন ডেভেলপাররা যে ভুলগুলো প্রায়ই করে এবং সেগুলো এড়ানোর উপায়।</p>
+            
+            <div class="example-box">
+              <h3>❌ ভুল উদাহরণ বনাম ✅ সঠিক উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- ❌ DOCTYPE দেওয়া হয়নি --&gt;
+&lt;html&gt;
+...
+&lt;/html&gt;
+
+&lt;!-- ✅ সবসময় DOCTYPE যোগ করুন --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;...&lt;/html&gt;
+
+&lt;!-- ❌ ব্লক এলিমেন্ট ইনলাইন এলিমেন্টের ভিতরে --&gt;
+&lt;span&gt;&lt;div&gt;ভুল&lt;/div&gt;&lt;/span&gt;
+
+&lt;!-- ✅ ব্লক এলিমেন্ট ইনলাইন এলিমেন্টের ভিতরে দেওয়া যাবে না --&gt;
+&lt;div&gt;&lt;span&gt;সঠিক&lt;/span&gt;&lt;/div&gt;
+
+&lt;!-- ❌ একাধিক h1 ট্যাগ --&gt;
+&lt;h1&gt;টাইটেল ১&lt;/h1&gt;
+&lt;h1&gt;টাইটেল ২&lt;/h1&gt;
+
+&lt;!-- ✅ একটি পৃষ্ঠায় শুধুমাত্র একটি h1 থাকা উচিত --&gt;
+&lt;h1&gt;মূল টাইটেল&lt;/h1&gt;
+&lt;h2&gt;সাব-টাইটেল&lt;/h2&gt;
+
+&lt;!-- ❌ ইমেজে alt অ্যাট্রিবিউট নেই --&gt;
+&lt;img src="logo.png"&gt;
+
+&lt;!-- ✅ সবসময় alt অ্যাট্রিবিউট যোগ করুন --&gt;
+&lt;img src="logo.png" alt="ওয়েবসাইট লোগো"&gt;
+
+&lt;!-- ❌ সিম্যান্টিক এলিমেন্টের পরিবর্তে div ব্যবহার --&gt;
+&lt;div class="header"&gt;&lt;/div&gt;
+&lt;div class="nav"&gt;&lt;/div&gt;
+
+&lt;!-- ✅ সিম্যান্টিক এলিমেন্ট ব্যবহার করুন --&gt;
+&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;</code></pre>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>অন্যান্য সাধারণ ভুল:</h4>
+              <ul>
+                <li><strong>ট্যাগ বন্ধ করতে ভুলে যাওয়া</strong> – অটো-কমপ্লিট ব্যবহার করুন, নিয়মিত HTML ভ্যালিডেট করুন</li>
+                <li><strong>অ্যাট্রিবিউটের মান কোটেশনে না দেওয়া</strong> – সবসময় ডাবল কোটেশন ব্যবহার করুন</li>
+                <li><strong>ফাইলের নামের বড়/ছোট হাতের অক্ষর ভুল</strong> – সবসময় ছোট হাতের অক্ষর এবং হাইফেন ব্যবহার করুন</li>
+                <li><strong>ইনলাইন স্টাইল অতিরিক্ত ব্যবহার</strong> – বাহ্যিক CSS ফাইল ব্যবহার করুন</li>
+                <li><strong>ব্রাউজার কম্প্যাটিবিলিটি ইগনোর করা</strong> – প্রধান ব্রাউজারে টেস্ট করুন, caniuse.com ব্যবহার করুন</li>
+                <li><strong>রেসপনসিভ ডিজাইন ইগনোর করা</strong> – ভিউপোর্ট ও মিডিয়া কোয়েরি ব্যবহার করুন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>ব্রাউজার ডেভ টুলস (Browser DevTools)</h2>
+            <p>ব্রাউজার ডেভেলপার টুলস ফ্রন্ট-এন্ড ডেভেলপমেন্টের সবচেয়ে গুরুত্বপূর্ণ টুল। Chrome DevTools এবং Firefox DevTools শক্তিশালী ডিবাগিং ফিচার সরবরাহ করে।</p>
+            
+            <div class="example-box">
+              <h3>Chrome DevTools খোলার শর্টকাট:</h3>
+              <div class="devtools-grid">
+                <div class="devtool-card">
+                  <kbd>F12</kbd> বা <kbd>Ctrl + Shift + I</kbd>
+                  <span>DevTools খোলা</span>
+                </div>
+                <div class="devtool-card">
+                  <kbd>Ctrl + Shift + C</kbd>
+                  <span>এলিমেন্ট সিলেক্ট মোড</span>
+                </div>
+                <div class="devtool-card">
+                  <kbd>Ctrl + Shift + J</kbd>
+                  <span>সরাসরি কনসোল খোলা</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4>DevTools প্রধান প্যানেল:</h4>
+              <ul>
+                <li><strong>Elements</strong> – HTML/CSS দেখুন ও এডিট করুন, বক্স মডেল চেক করুন</li>
+                <li><strong>Console</strong> – জাভাস্ক্রিপ্ট কনসোল, এরর দেখুন, JS কোড রান করুন</li>
+                <li><strong>Sources</strong> – সোর্স কোড ডিবাগ করুন, ব্রেকপয়েন্ট সেট করুন</li>
+                <li><strong>Network</strong> – নেটওয়ার্ক রিকোয়েস্ট মনিটর করুন, লোড টাইম দেখুন</li>
+                <li><strong>Performance</strong> – পারফরম্যান্স অ্যানালাইসিস করুন</li>
+                <li><strong>Application</strong> – স্টোরেজ দেখুন (localStorage, sessionStorage, cookies)</li>
+                <li><strong>Lighthouse</strong> – ওয়েবসাইট কোয়ালিটি টেস্ট (পারফরম্যান্স, SEO, অ্যাক্সেসিবিলিটি)</li>
+                <li><strong>Rendering</strong> – লেআউট ডিবাগিং, CLS চেক করুন</li>
+              </ul>
+            </div>
+
+            <div class="tip-box">
+              <h4>ইউজফুল টিপস:</h4>
+              <ul>
+                <li><strong>দ্রুত HTML এডিট:</strong> Elements প্যানেলে যে কোনো এলিমেন্টে রাইট-ক্লিক → Edit as HTML</li>
+                <li><strong>এলিমেন্টের স্টেট ফোর্স করা:</strong> Styles প্যানেলে :hov বাটন ক্লিক করে :active, :hover, :focus স্টেট ফোর্স করুন</li>
+                <li><strong>ডিভাইস সিমুলেশন:</strong> ডিভাইস টুলবার আইকনে ক্লিক করে বিভিন্ন মোবাইল ডিভাইসে টেস্ট করুন</li>
+                <li><strong>রিয়েল-টাইম কালার পিকার:</strong> Styles প্যানেলে কালার স্কোয়ারে ক্লিক করে কালার পিকার ব্যবহার করুন</li>
+                <li><strong>CSS Grid/Flex ডিবাগ:</strong> Elements প্যানেলে গ্রিড বা ফ্লেক্স আইকনে ক্লিক করে ভিজুয়ালাইজ করুন</li>
+                <li><strong>কনসোল শর্টকাট:</strong> $0 দিয়ে বর্তমানে সিলেক্ট করা এলিমেন্ট অ্যাক্সেস করুন, $1 দিয়ে আগের সিলেক্ট করা এলিমেন্ট</li>
+                <li><strong>লগ প্রিজার্ভ:</strong> কনসোলে "Preserve log" চেক করে পৃষ্ঠা রিলোডের পরও লগ দেখুন</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>দক্ষতা বৃদ্ধির টিপস合集</h2>
+            
+            <div class="tips-compilation">
+              <div class="tip-category">
+                <h3>📝 কোড লেখা</h3>
+                <ul>
+                  <li>HTML স্ট্রাকচার দ্রুত তৈরি করতে Emmet ব্যবহার করুন</li>
+                  <li>Prettier এক্সটেনশন ইন্সটল করে কোড অটো-ফরম্যাট করুন</li>
+                  <li>লাইভ প্রিভিউয়ের জন্য Live Server ব্যবহার করুন</li>
+                  <li>Auto Save চালু রাখুন (File → Auto Save)</li>
+                  <li>মাল্টি-কার্সর এডিটিং ব্যবহার করুন (Alt + Click)</li>
+                </ul>
+              </div>
+              <div class="tip-category">
+                <h3>🔍 ডিবাগিং</h3>
+                <ul>
+                  <li>ব্রাউজার DevTools-এ লাইভ HTML/CSS এডিট করে টেস্ট করুন</li>
+                  <li>জাভাস্ক্রিপ্ট দ্রুত ডিবাগে console.log() ব্যবহার করুন</li>
+                  <li>debugger স্টেটমেন্ট দিয়ে ব্রেকপয়েন্ট সেট করুন</li>
+                  <li>Network প্যানেলে রিসোর্স লোডিং স্ট্যাটাস দেখুন</li>
+                </ul>
+              </div>
+              <div class="tip-category">
+                <h3>🚀 ওয়ার্কফ্লো</h3>
+                <ul>
+                  <li>ভার্সন কন্ট্রোলের জন্য Git ব্যবহার করুন</li>
+                  <li>GitHub Pages বা Netlify দিয়ে দ্রুত ডিপ্লয় করুন</li>
+                  <li>ব্রাউজার কম্প্যাটিবিলিটি চেক করতে caniuse.com ব্যবহার করুন</li>
+                  <li>HTML ভ্যালিডেট করতে validator.w3.org ব্যবহার করুন</li>
+                  <li>পারফরম্যান্স অপটিমাইজ করতে PageSpeed Insights ব্যবহার করুন</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>প্রস্তাবিত এক্সটেনশন ও টুলস</h2>
+            
+            <div class="info-card">
+              <h4>VS Code-এর জন্য প্রস্তাবিত এক্সটেনশন:</h4>
+              <ul>
+                <li><strong>Live Server</strong> – HTML-এর রিয়েল-টাইম প্রিভিউ</li>
+                <li><strong>Prettier</strong> – কোড ফরম্যাটিং</li>
+                <li><strong>HTML CSS Support</strong> – CSS ক্লাস নামের অটো-কমপ্লিট</li>
+                <li><strong>Auto Rename Tag</strong> – পেয়ার ট্যাগ অটোমেটিক রিনেম</li>
+                <li><strong>Path Intellisense</strong> – পাথ অটো-কমপ্লিট</li>
+                <li><strong>Material Icon Theme</strong> – ফাইল আইকন থিম</li>
+                <li><strong>Bracket Pair Colorizer</strong> – ব্র্যাকেট কালার ম্যাচিং</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h4>অনলাইন টুলস:</h4>
+              <ul>
+                <li><strong>CodePen / CodeSandbox</strong> – অনলাইন কোড এডিটর</li>
+                <li><strong>Can I Use</strong> – ব্রাউজার কম্প্যাটিবিলিটি চেক</li>
+                <li><strong>CSS Tricks</strong> – CSS টিপস ও গাইড</li>
+                <li><strong>MDN Web Docs</strong> – HTML/CSS/JS-এর অথরিটেটিভ ডকুমেন্টেশন</li>
+                <li><strong>W3C Validator</strong> – HTML/CSS ভ্যালিডেশন</li>
+                <li><strong>PageSpeed Insights</strong> – পারফরম্যান্স টেস্ট</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টিপস লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="shortcuts.html" class="topic-card">
+                <h3>⌨️ VS Code শর্টকাট</h3>
+                <p>সম্পূর্ণ শর্টকাট লিস্ট, কোডিং স্পিড বাড়ান</p>
+              </a>
+              <a href="emmet.html" class="topic-card">
+                <h3>⚡ Emmet snippets</h3>
+                <p>Emmet সিনট্যাক্স সম্পূর্ণ গাইড, দ্রুত HTML তৈরি</p>
+              </a>
+              <a href="debugging.html" class="topic-card">
+                <h3>🐛 ডিবাগিং টিপস</h3>
+                <p>HTML/CSS সমস্যা চিহ্নিত করার কৌশল</p>
+              </a>
+              <a href="common-mistakes.html" class="topic-card">
+                <h3>⚠️ সাধারণ ভুল</h3>
+                <p>শিক্ষানবিশদের সাধারণ ভুল ও সমাধান</p>
+              </a>
+              <a href="browser-tools.html" class="topic-card">
+                <h3>🔧 ব্রাউজার ডেভ টুলস</h3>
+                <p>Chrome/Firefox ডেভেলপার টুলস সম্পূর্ণ গাইড</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/references.html" class="prev-topic">← পূর্ববর্তী: রেফারেন্স</a>
+              <a href="../exercises/basic.html" class="next-topic">পরবর্তী: অনুশীলন →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>

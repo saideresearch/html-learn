@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সিম্যান্টিক HTML | HTML শিখি</title>
+  <meta name="description" content="HTML-এ সিম্যান্টিক এলিমেন্টের সম্পূর্ণ গাইড: header, nav, section, article, aside, footer, main, figure, details, summary, dialog, mark, time, bdi, bdo, wbr ইত্যাদি বাংলায়।">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">প্রধান কন্টেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../../index.html">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="180" height="50">
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="../../index.html">হোম</a></li>
+          <li><a href="../introduction/">শুরু করুন</a></li>
+          <li><a href="../basic/" class="active">বেসিক</a></li>
+          <li><a href="../exercises/">অনুশীলন</a></li>
+          <li><a href="../projects/">প্রজেক্ট</a></li>
+          <li><a href="../references/">রেফারেন্স</a></li>
+          <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>সিম্যান্টিক HTML টপিকস</h3>
+        <ul>
+          <li><a href="what-is-semantic.html">সিম্যান্টিক HTML কী?</a></li>
+          <li><a href="header-nav.html">header ও nav</a></li>
+          <li><a href="section-article.html">section ও article</a></li>
+          <li><a href="aside-footer.html">aside ও footer</a></li>
+          <li><a href="main.html">main এলিমেন্ট</a></li>
+          <li><a href="figure-figcaption.html">figure ও figcaption</a></li>
+          <li><a href="mark-time.html">mark ও time</a></li>
+          <li><a href="details-summary.html">details ও summary</a></li>
+          <li><a href="dialog.html">dialog এলিমেন্ট</a></li>
+          <li><a href="base-element.html">base এলিমেন্ট</a></li>
+          <li><a href="bdi-bdo.html">bdi ও bdo এলিমেন্ট</a></li>
+          <li><a href="wbr-element.html">wbr এলিমেন্ট</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content" class="page-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ol>
+            <li><a href="../../index.html">হোম</a></li>
+            <li><a href="../basic/">বেসিক</a></li>
+            <li>সিম্যান্টিক HTML</li>
+          </ol>
+        </nav>
+
+        <article class="topic-article">
+          <h1>সিম্যান্টিক HTML (Semantic HTML)</h1>
+          
+          <div class="topic-meta">
+            <span>পড়তে সময়: ৪৫ মিনিট</span>
+            <span>লেভেল: শিক্ষানবিশ থেকে উন্নত</span>
+          </div>
+
+          <section class="topic-section">
+            <h2>সিম্যান্টিক HTML কী?</h2>
+            <p>সিম্যান্টিক HTML হলো এমন একটি পদ্ধতি যেখানে HTML এলিমেন্ট ব্যবহার করে তাদের অর্থ বা উদ্দেশ্য প্রকাশ করা হয়। অর্থাৎ, <code>&lt;div&gt;</code> বা <code>&lt;span&gt;</code>-এর মতো জেনেরিক এলিমেন্টের পরিবর্তে <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> ইত্যাদি এলিমেন্ট ব্যবহার করা হয় যা কোড পড়তে সহজ করে এবং ব্রাউজার ও সার্চ ইঞ্জিনকে পৃষ্ঠার স্ট্রাকচার বুঝতে সাহায্য করে।</p>
+            
+            <div class="tip-box">
+              <h4>সিম্যান্টিক HTML কেন গুরুত্বপূর্ণ?</h4>
+              <ul>
+                <li><strong>SEO উন্নতি:</strong> সার্চ ইঞ্জিন সিম্যান্টিক এলিমেন্ট বুঝতে পারে এবং কন্টেন্টের গুরুত্ব নির্ণয় করে</li>
+                <li><strong>অ্যাক্সেসিবিলিটি:</strong> স্ক্রিন রিডার ব্যবহারকারীরা সিম্যান্টিক এলিমেন্টের মাধ্যমে পৃষ্ঠা সহজে নেভিগেট করতে পারে</li>
+                <li><strong>কোড রিডেবিলিটি:</strong> ডেভেলপাররা সহজেই পৃষ্ঠার স্ট্রাকচার বুঝতে পারে</li>
+                <li><strong>মেইনটেনেন্স:</strong> কোড সংগঠিত ও রক্ষণাবেক্ষণ করা সহজ হয়</li>
+              </ul>
+            </div>
+
+            <div class="example-box">
+              <h3>নন-সিম্যান্টিক vs সিম্যান্টিক:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;!-- নন-সিম্যান্টিক (শুধু div-এর ব্যবহার) --&gt;
+&lt;div class="header"&gt;&lt;/div&gt;
+&lt;div class="nav"&gt;&lt;/div&gt;
+&lt;div class="content"&gt;&lt;/div&gt;
+&lt;div class="footer"&gt;&lt;/div&gt;
+
+&lt;!-- সিম্যান্টিক (অর্থপূর্ণ এলিমেন্ট) --&gt;
+&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;
+&lt;main&gt;&lt;/main&gt;
+&lt;footer&gt;&lt;/footer&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>header ও nav এলিমেন্ট</h2>
+            <p><code>&lt;header&gt;</code> এলিমেন্ট একটি সেকশন বা পৃষ্ঠার জন্য পরিচায়ক কন্টেন্ট ধারণ করে। সাধারণত লোগো, শিরোনাম, এবং নেভিগেশন লিংক থাকে। <code>&lt;nav&gt;</code> এলিমেন্ট মূল নেভিগেশন লিংক গ্রুপের জন্য ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <h3>header ও nav উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;header&gt;
+  &lt;h1&gt;আমার ব্লগ&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/blog"&gt;ব্লগ&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/about"&gt;আমাদের সম্পর্কে&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; padding: 12px; border-radius: 8px; background: #f9f9f9;">
+                  <h3 style="margin: 0 0 8px 0;">আমার ব্লগ</h3>
+                  <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 15px;">
+                    <li><a href="#" style="text-decoration: none;">হোম</a></li>
+                    <li><a href="#" style="text-decoration: none;">ব্লগ</a></li>
+                    <li><a href="#" style="text-decoration: none;">আমাদের সম্পর্কে</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>section ও article এলিমেন্ট</h2>
+            <p><code>&lt;section&gt;</code> এলিমেন্ট একটি থিম্যাটিক গ্রুপ কন্টেন্টের জন্য ব্যবহৃত হয়। সাধারণত একটি সেকশনে শিরোনাম থাকে। <code>&lt;article&gt;</code> এলিমেন্ট স্বয়ংসম্পূর্ণ কন্টেন্টের জন্য, যেমন ব্লগ পোস্ট, নিউজ আর্টিকেল, ফোরাম পোস্ট ইত্যাদি।</p>
+            
+            <div class="example-box">
+              <h3>section ও article উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;section&gt;
+  &lt;h2&gt;লেটেস্ট ব্লগ পোস্ট&lt;/h2&gt;
+  &lt;article&gt;
+    &lt;h3&gt;HTML সিম্যান্টিক এলিমেন্ট&lt;/h3&gt;
+    &lt;p&gt;সিম্যান্টিক এলিমেন্ট কেন গুরুত্বপূর্ণ...&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h3&gt;CSS গ্রিড লেআউট&lt;/h3&gt;
+    &lt;p&gt;আধুনিক ওয়েব ডিজাইনের জন্য CSS গ্রিড...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; padding: 12px; border-radius: 8px;">
+                  <h3 style="margin: 0 0 10px 0;">লেটেস্ট ব্লগ পোস্ট</h3>
+                  <div style="margin-bottom: 12px; padding: 8px; background: #fff; border-left: 3px solid #4CAF50;">
+                    <h4 style="margin: 0 0 5px 0;">HTML সিম্যান্টিক এলিমেন্ট</h4>
+                    <p style="margin: 0;">সিম্যান্টিক এলিমেন্ট কেন গুরুত্বপূর্ণ...</p>
+                  </div>
+                  <div style="padding: 8px; background: #fff; border-left: 3px solid #2196F3;">
+                    <h4 style="margin: 0 0 5px 0;">CSS গ্রিড লেআউট</h4>
+                    <p style="margin: 0;">আধুনিক ওয়েব ডিজাইনের জন্য CSS গ্রিড...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tip-box">
+              <p><strong>টিপ:</strong> <code>&lt;article&gt;</code> কন্টেন্ট স্বয়ংসম্পূর্ণ হওয়া উচিত—অর্থাৎ এটি পৃষ্ঠার বাকি অংশ থেকে আলাদা করে পাঠানো বা পুনরায় ব্যবহারযোগ্য। <code>&lt;section&gt;</code> সাধারণত একটি বড় অংশের মধ্যে বিষয়ভিত্তিক গ্রুপিং করে।</p>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>aside ও footer এলিমেন্ট</h2>
+            <p><code>&lt;aside&gt;</code> এলিমেন্ট প্রধান কন্টেন্টের সাথে সম্পর্কিত কিন্তু পরোক্ষ কন্টেন্টের জন্য (যেমন সাইডবার, বিজ্ঞাপন, সম্পর্কিত লিংক)। <code>&lt;footer&gt;</code> এলিমেন্ট একটি সেকশন বা পৃষ্ঠার ফুটার তথ্য ধারণ করে (কপিরাইট, যোগাযোগ তথ্য, সাইটম্যাপ লিংক ইত্যাদি)।</p>
+            
+            <div class="example-box">
+              <h3>aside ও footer উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;article&gt;
+  &lt;p&gt;মূল আর্টিকেল কন্টেন্ট...&lt;/p&gt;
+  &lt;aside&gt;
+    &lt;h4&gt;সম্পর্কিত পোস্ট&lt;/h4&gt;
+    &lt;ul&gt;
+      &lt;li&gt;HTML টিউটোরিয়াল&lt;/li&gt;
+      &lt;li&gt;CSS বেসিক&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/aside&gt;
+&lt;/article&gt;
+&lt;footer&gt;
+  &lt;p&gt;&copy; ২০২৬ আমার ওয়েবসাইট&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <div style="border: 1px solid #ddd; padding: 12px; border-radius: 8px;">
+                  <p>মূল আর্টিকেল কন্টেন্ট...</p>
+                  <div style="background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                    <h4 style="margin: 0 0 5px 0;">সম্পর্কিত পোস্ট</h4>
+                    <ul style="margin: 0; padding-left: 20px;">
+                      <li>HTML টিউটোরিয়াল</li>
+                      <li>CSS বেসিক</li>
+                    </ul>
+                  </div>
+                  <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #ddd; text-align: center; font-size: 12px;">
+                    &copy; ২০২৬ আমার ওয়েবসাইট
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>main এলিমেন্ট</h2>
+            <p><code>&lt;main&gt;</code> এলিমেন্ট পৃষ্ঠার প্রধান কন্টেন্ট নির্দেশ করে। একটি পৃষ্ঠায় শুধুমাত্র একটি <code>&lt;main&gt;</code> এলিমেন্ট থাকতে পারে এবং এটি হেডার, ফুটার, নেভিগেশন, অথবা সাইডবারের বাইরে অনন্য কন্টেন্ট ধারণ করে।</p>
+            
+            <div class="example-box">
+              <h3>main এলিমেন্ট স্ট্রাকচার:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;body&gt;
+  &lt;header&gt;...&lt;/header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;প্রধান নিবন্ধ&lt;/h1&gt;
+      &lt;p&gt;এটি পৃষ্ঠার প্রধান কন্টেন্ট।&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  &lt;aside&gt;...&lt;/aside&gt;
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>figure ও figcaption এলিমেন্ট</h2>
+            <p><code>&lt;figure&gt;</code> এবং <code>&lt;figcaption&gt;</code> এলিমেন্ট একসাথে ব্যবহার করে ছবি, ডায়াগ্রাম, কোড ব্লক ইত্যাদির সাথে ক্যাপশন যোগ করা যায়। এটি কন্টেন্টকে সিম্যান্টিকভাবে সংযুক্ত করে।</p>
+            
+            <div class="example-box">
+              <h3>figure ও figcaption উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;figure&gt;
+  &lt;img src="diagram.png" alt="HTML স্ট্রাকচার ডায়াগ্রাম"&gt;
+  &lt;figcaption&gt;চিত্র ১: HTML ডকুমেন্টের সিম্যান্টিক স্ট্রাকচার&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <figure style="margin: 0; border: 1px solid #ddd; padding: 8px; border-radius: 8px; text-align: center;">
+                  <div style="background: #e0e0e0; padding: 20px; border-radius: 4px;">📊 HTML ডায়াগ্রাম (উদাহরণ)</div>
+                  <figcaption style="margin-top: 8px; font-size: 12px; color: #666;">চিত্র: HTML ডকুমেন্টের সিম্যান্টিক স্ট্রাকচার</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>mark ও time এলিমেন্ট</h2>
+            <p><code>&lt;mark&gt;</code> এলিমেন্ট টেক্সট হাইলাইট করতে ব্যবহৃত হয় (যেমন সার্চ রেজাল্টে ম্যাচিং টেক্সট)। <code>&lt;time&gt;</code> এলিমেন্ট তারিখ ও সময় প্রকাশের জন্য ব্যবহার করা হয়, যা মেশিন-রিডেবল ফরম্যাটে রূপান্তরিত করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>mark ও time উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;আমার প্রিয় প্রোগ্রামিং ভাষা হলো &lt;mark&gt;HTML&lt;/mark&gt;।&lt;/p&gt;
+&lt;p&gt;আমার জন্ম তারিখ: &lt;time datetime="1995-05-15"&gt;১৫ মে, ১৯৯৫&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;আমি &lt;time datetime="2024-01-01"&gt;২০২৪&lt;/time&gt; সালে কোডিং শুরু করি।&lt;/p&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <p>আমার প্রিয় প্রোগ্রামিং ভাষা হলো <mark style="background: #ffeb3b;">HTML</mark>।</p>
+                <p>আমার জন্ম তারিখ: <time datetime="1995-05-15">১৫ মে, ১৯৯৫</time></p>
+                <p>আমি <time datetime="2024-01-01">২০২৪</time> সালে কোডিং শুরু করি।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>details ও summary এলিমেন্ট</h2>
+            <p><code>&lt;details&gt;</code> এবং <code>&lt;summary&gt;</code> এলিমেন্ট ব্যবহার করে এক্সপান্ডেবল/কোলাপ্সেবল কন্টেন্ট তৈরি করা যায়। ব্যবহারকারী summary-এ ক্লিক করলে বিস্তারিত তথ্য দেখতে পায়।</p>
+            
+            <div class="example-box">
+              <h3>details ও summary উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;details&gt;
+  &lt;summary&gt;HTML কি?&lt;/summary&gt;
+  &lt;p&gt;HTML হলো হাইপারটেক্সট মার্কআপ ল্যাঙ্গুয়েজ যা ওয়েবপৃষ্ঠার কাঠামো তৈরি করে।&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details open&gt;
+  &lt;summary&gt;সিম্যান্টিক এলিমেন্টের সুবিধা&lt;/summary&gt;
+  &lt;ul&gt;
+    &lt;li&gt;SEO উন্নতি করে&lt;/li&gt;
+    &lt;li&gt;অ্যাক্সেসিবিলিটি বাড়ায়&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/details&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <details style="margin-bottom: 8px; border: 1px solid #ddd; padding: 8px; border-radius: 6px;">
+                  <summary style="font-weight: bold; cursor: pointer;">HTML কি?</summary>
+                  <p style="margin: 8px 0 0 0;">HTML হলো হাইপারটেক্সট মার্কআপ ল্যাঙ্গুয়েজ যা ওয়েবপৃষ্ঠার কাঠামো তৈরি করে।</p>
+                </details>
+                <details open style="border: 1px solid #ddd; padding: 8px; border-radius: 6px;">
+                  <summary style="font-weight: bold; cursor: pointer;">সিম্যান্টিক এলিমেন্টের সুবিধা</summary>
+                  <ul style="margin: 8px 0 0 20px;">
+                    <li>SEO উন্নতি করে</li>
+                    <li>অ্যাক্সেসিবিলিটি বাড়ায়</li>
+                  </ul>
+                </details>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>dialog এলিমেন্ট</h2>
+            <p><code>&lt;dialog&gt;</code> এলিমেন্ট ব্যবহার করে মোডাল বা ডায়ালগ বক্স তৈরি করা যায়। এটি JavaScript-এর <code>showModal()</code> এবং <code>close()</code> মেথড দিয়ে নিয়ন্ত্রণ করা হয়।</p>
+            
+            <div class="example-box">
+              <h3>dialog উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;dialog id="myDialog"&gt;
+  &lt;p&gt;এটি একটি ডায়ালগ বক্স&lt;/p&gt;
+  &lt;button onclick="document.getElementById('myDialog').close()"&gt;বন্ধ করুন&lt;/button&gt;
+&lt;/dialog&gt;
+&lt;button onclick="document.getElementById('myDialog').showModal()"&gt;ডায়ালগ খুলুন&lt;/button&gt;</code></pre>
+              </div>
+              <div class="tip-box">
+                <p><strong>নোট:</strong> <code>&lt;dialog&gt;</code> এলিমেন্ট আধুনিক ব্রাউজারে সমর্থিত। এটি পপআপ, কনফার্মেশন বক্স, বা ফর্ম মোডাল তৈরিতে ব্যবহার করা যায়।</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>bdi, bdo ও wbr এলিমেন্ট</h2>
+            <p><code>&lt;bdi&gt;</code> (Bidirectional Isolation) টেক্সটের দিকনির্দেশনা আলাদা করতে, <code>&lt;bdo&gt;</code> (Bidirectional Override) টেক্সটের দিকনির্দেশনা ওভাররাইড করতে এবং <code>&lt;wbr&gt;</code> (Word Break Opportunity) লং শব্দ ভাঙার সম্ভাব্য স্থান নির্ধারণ করতে ব্যবহৃত হয়।</p>
+            
+            <div class="example-box">
+              <h3>bdi, bdo, wbr উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;p&gt;আরবি টেক্সট: &lt;bdi&gt;السلام عليكم&lt;/bdi&gt;&lt;/p&gt;
+&lt;p&gt;&lt;bdo dir="rtl"&gt;এই টেক্সট ডান থেকে বামে দেখাবে&lt;/bdo&gt;&lt;/p&gt;
+&lt;p&gt;VeryLongWordWithoutBreak&lt;wbr&gt;AndAnotherPart&lt;/p&gt;</code></pre>
+              </div>
+              <div class="live-preview">
+                <p>আরবি টেক্সট: <bdi>السلام عليكم</bdi></p>
+                <p><bdo dir="rtl">এই টেক্সট ডান থেকে বামে দেখাবে</bdo></p>
+                <p>VeryLongWordWithoutBreak<wbr>AndAnotherPart</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>base এলিমেন্ট</h2>
+            <p><code>&lt;base&gt;</code> এলিমেন্ট পৃষ্ঠার সমস্ত আপেক্ষিক URL-এর জন্য বেস URL নির্ধারণ করে। এটি <code>&lt;head&gt;</code> সেকশনে একবার ব্যবহার করা যায়।</p>
+            
+            <div class="example-box">
+              <h3>base এলিমেন্ট উদাহরণ:</h3>
+              <div class="code-preview">
+                <pre><code>&lt;head&gt;
+  &lt;base href="https://example.com/"&gt;
+  &lt;base target="_blank"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href="about.html"&gt;about.html আসলে https://example.com/about.html&lt;/a&gt;
+&lt;/body&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সিম্যান্টিক HTML ডকুমেন্টের সম্পূর্ণ উদাহরণ</h2>
+            <p>নিচে একটি সম্পূর্ণ সিম্যান্টিক HTML ডকুমেন্টের কাঠামো দেখানো হলো যা ওয়েবসাইট তৈরির জন্য আদর্শ:</p>
+            
+            <div class="example-box">
+              <div class="code-preview">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="bn"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;সিম্যান্টিক HTML উদাহরণ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;আমার ওয়েবসাইট&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;হোম&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/blog"&gt;ব্লগ&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;আমাদের সম্পর্কে&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;header&gt;
+        &lt;h2&gt;সিম্যান্টিক HTML-এর গুরুত্ব&lt;/h2&gt;
+        &lt;p&gt;প্রকাশিত: &lt;time datetime="2024-01-15"&gt;১৫ জানুয়ারি, ২০২৪&lt;/time&gt;&lt;/p&gt;
+      &lt;/header&gt;
+      &lt;section&gt;
+        &lt;h3&gt;অ্যাক্সেসিবিলিটি&lt;/h3&gt;
+        &lt;p&gt;সিম্যান্টিক HTML স্ক্রিন রিডার ব্যবহারকারীদের জন্য অত্যন্ত উপকারী...&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section&gt;
+        &lt;h3&gt;SEO সুবিধা&lt;/h3&gt;
+        &lt;p&gt;সার্চ ইঞ্জিন সিম্যান্টিক এলিমেন্ট বুঝতে পারে...&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;aside&gt;
+        &lt;h4&gt;সম্পর্কিত লিংক&lt;/h4&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;HTML টিউটোরিয়াল&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/aside&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;&copy; ২০২৬ আমার ওয়েবসাইট। সর্বস্বত্ব সংরক্ষিত।&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section class="topic-section">
+            <h2>সম্পূর্ণ টপিক লিস্ট</h2>
+            <p>নিচের লিংকগুলোতে ক্লিক করে প্রতিটি টপিক বিস্তারিত শিখুন:</p>
+            
+            <div class="topics-grid-mini">
+              <a href="what-is-semantic.html" class="topic-card">
+                <h3>🏷️ সিম্যান্টিক HTML কী?</h3>
+                <p>সিম্যান্টিক এলিমেন্টের ধারণা ও উপকারিতা</p>
+              </a>
+              <a href="header-nav.html" class="topic-card">
+                <h3>📌 header ও nav</h3>
+                <p>পৃষ্ঠার হেডার ও নেভিগেশন এলিমেন্ট</p>
+              </a>
+              <a href="section-article.html" class="topic-card">
+                <h3>📄 section ও article</h3>
+                <p>কন্টেন্ট গ্রুপিং ও স্বয়ংসম্পূর্ণ আর্টিকেল</p>
+              </a>
+              <a href="aside-footer.html" class="topic-card">
+                <h3>📎 aside ও footer</h3>
+                <p>সাইডবার ও ফুটার এলিমেন্টের ব্যবহার</p>
+              </a>
+              <a href="main.html" class="topic-card">
+                <h3>🎯 main এলিমেন্ট</h3>
+                <p>পৃষ্ঠার প্রধান কন্টেন্ট নির্ধারণ</p>
+              </a>
+              <a href="figure-figcaption.html" class="topic-card">
+                <h3>🖼️ figure ও figcaption</h3>
+                <p>ছবি ও ক্যাপশন সিম্যান্টিকভাবে সংযুক্ত</p>
+              </a>
+              <a href="mark-time.html" class="topic-card">
+                <h3>✨ mark ও time</h3>
+                <p>টেক্সট হাইলাইট ও সময় নির্ধারণ</p>
+              </a>
+              <a href="details-summary.html" class="topic-card">
+                <h3>📂 details ও summary</h3>
+                <p>এক্সপান্ডেবল কন্টেন্ট তৈরি</p>
+              </a>
+              <a href="dialog.html" class="topic-card">
+                <h3>💬 dialog এলিমেন্ট</h3>
+                <p>মোডাল ও ডায়ালগ বক্স</p>
+              </a>
+              <a href="base-element.html" class="topic-card">
+                <h3>🔗 base এলিমেন্ট</h3>
+                <p>বেস URL নির্ধারণ</p>
+              </a>
+              <a href="bdi-bdo.html" class="topic-card">
+                <h3>🔄 bdi ও bdo এলিমেন্ট</h3>
+                <p>টেক্সট দিকনির্দেশনা নিয়ন্ত্রণ</p>
+              </a>
+              <a href="wbr-element.html" class="topic-card">
+                <h3>✂️ wbr এলিমেন্ট</h3>
+                <p>শব্দ ভাঙার অবস্থান নির্ধারণ</p>
+              </a>
+            </div>
+            
+            <div class="topic-navigation">
+              <a href="../basic/forms.html" class="prev-topic">← পূর্ববর্তী: ফর্ম</a>
+              <a href="../basic/media.html" class="next-topic">পরবর্তী: মিডিয়া এলিমেন্ট →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <img src="../../images/logo.png" alt="HTML শিখি" width="150" height="40">
+          <p>বাংলায় HTML শেখার সম্পূর্ণ ওয়েবসাইট। শুরু থেকে অ্যাডভান্সড পর্যন্ত প্রতিটি টপিক সহজ উদাহরণ ও অনুশীলন সহ।</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>গুরুত্বপূর্ণ লিংক</h3>
+          <ul>
+            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+            <li><a href="../../contact.html">যোগাযোগ</a></li>
+            <li><a href="../../privacy.html">গোপনীয়তা নীতি</a></li>
+            <li><a href="../../terms.html">ব্যবহারের শর্তাবলী</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact footer-links">
+          <h3>যোগাযোগ</h3>
+          <p>ইমেইল: <a href="mailto:saide@offsecplatform.com">saide@offsecplatform.com</a></p>
+          <p>ফেসবুক: <a href="https://www.facebook.com/offsecplatform">/offsecplatform</a></p>
+          <p>এক্স: <a href="https://x.com/saide87765">/saide87765</a></p>
+          <p>লিংকডইন: <a href="https://www.linkedin.com/in/saide-hossain/">/saide-hossain</a></p>
+          <p>ইউটিউব: <a href="https://www.youtube.com/@saide-hossain">@saide-hossain</a></p>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ <a href="https://offsecplatform.com">সাঈদী হোসাইন</a>। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../../js/main.js"></script>
+</body>
+</html>
